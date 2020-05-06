@@ -1,0 +1,81 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'switch_grid.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{157.0428125bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,2.20347231)%
+    \put(0,0){\includegraphics[width=\unitlength]{switch_grid.pdf}}%
+    \put(0.54077822,1.86857998){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{(a)}}}%
+    \put(0.76821607,1.66052005){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{A}}}%
+    \put(0.89556988,1.66052005){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{B}}}%
+    \put(0.06267598,1.55345175){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{path 1}}}%
+    \put(0.31993067,1.71146157){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{path 2}}}%
+    \put(0.73637762,1.5484487){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{path 3}}}%
+    \put(0.06267598,1.06950728){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{path 4}}}%
+    \put(0.31993067,1.2275171){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{path 5}}}%
+    \put(0.1671061,1.17657558){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{A}}}%
+    \put(0.29445991,1.17657558){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{B}}}%
+    \put(0.6688801,1.20204634){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{path 6}}}%
+    \put(0.76821607,1.17657558){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{A}}}%
+    \put(0.89556988,1.17657558){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{B}}}%
+    \put(0.26901418,0.91814934){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{(d)}}}%
+    \put(0.87012415,0.91814934){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{(e)}}}%
+    \put(0.26901418,1.4020938){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{(b)}}}%
+    \put(0.87012415,1.4020938){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{(c)}}}%
+    \put(0.15226635,1.9181996){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{valve}}}%
+    \put(0.32546753,2.17800136){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{channel}}}%
+    \put(0.52040161,0.00901665){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{(f)}}}%
+    \put(0.35194262,0.60230816){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_{1}$}}}%
+    \put(0.70747552,0.25450231){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_{2}$}}}%
+    \put(0.46397417,0.22655474){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$p_ {r,1}$}}}%
+    \put(0.75394225,0.52615115){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$p_r$}}}%
+    \put(0.34970475,0.35138448){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$p_ {r,2}$}}}%
+    \put(0.25313397,0.49756867){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$p_ {r,3}$}}}%
+    \put(0.44366892,0.46341167){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$p'_r$}}}%
+  \end{picture}%
+\endgroup%

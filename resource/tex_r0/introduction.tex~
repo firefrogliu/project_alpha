@@ -1,0 +1,323 @@
+\section{Introduction}
+
+Microfluidic biochips have revolutionized the traditional slow and error-prone
+biochemical experiment flow by manipulating fluids at nanoliter level. With
+this miniaturization, bioassays can be scaled down and executed by moving tiny
+fluid samples between exact locations. Operations for manipulating fluid
+samples, e.g., split,  move, mix, and detect, are available in these chips to
+implement complex bioassays. The execution of bioassays  is coordinated by
+microcontrollers, so that  a high efficiency and precision can be achieved
+\cite{JMSQ07,JEMP08,KrCh10}.   On biochips, genomic bioassay protocols, such as
+nucleic-acid isolation, DNA purification, and DNA sequencing, have been
+demonstrated successfully. In addition,  these technologies have attracted a
+lot of commercial attention, such as from Illumina \cite{illumina} and Agilent
+\cite{agilent}.
+
+%Microfluidic biochip technologies have many advantages due to its
+%miniaturization.  Since all the atomic operations are performed at the
+%nanoliter level, only tiny amount of reagents are required, thus reducing the
+%cost of the whole experiment.  
+%In addition, fluid samples
+%and reagents of tiny volumes can be moved very quickly on biochips and react within a very
+%short time, leading to a fast response time for such chips. 
+%Furthermore, this miniaturization enables the
+%support of a large number of reactions in an experiment with the same volumes of
+%samples in the traditional test flow, so that complex bioassays such as
+%exhaustive disease diagnosis may become possible. 
+%Moreover,
+%with this miniaturization, large system integration may finally become feasible
+%to enable complex bioassays 
+
+%The state-of-the-art microfluidic technologies can be categorized into two
+%groups.
+%In the first group, fluid droplets are located on a patterned array of electrodes and
+%moved by the force of electrowetting. 
+%This technique has the advantage of dynamic reconfiguration
+%but it is limited when dealing
+%with some applications due to the applied high voltage.  The second group of
+In flow-based microfluidic biochips, 
+%which we will focus on in this paper, use
+microvalves are used to control the movement of fluids.  
+The structure of a microvalve
+is shown in \figname~\ref{fig:valve_mixer_storage}(a).  In this structure, a
+flow channel is constructed on a substrate for the transportation of fluids.
+Above the flow channel, a control channel is constructed and
+connected to an air pressure. Since both channels are built from
+elastic materials, air pressure applied in the control channel squeezes the
+flow channel tightly, so that the movement of the fluid segment is blocked.
+If the pressure in the control channel is released, the fluid
+segment can resume its movement to the target device. Consequently, a valve is
+formed at the intersection of the two channels to control fluid movement.
+%Compared with electrowetting-driven biochips, valve-based biochips
+%can execute nearly all experiments so that they have
+%become the focus of the research community in recent years. 
+
+Valves can also be used to build complex devices. For example, the
+structure of a mixer is shown in \figname~\ref{fig:valve_mixer_storage}(b).  If
+the three valves at the top of the mixer are actuated alternately by applying
+and releasing air pressure in their control channels in a given pattern similar
+to peristalsis, a
+circular flow around the device can be formed to mix different fluids.
+%These valves are thus called peristalsis valves. 
+Furthermore, 
+storage units can be constructed from normal flow channels with multiplexer-like
+controlling valves at each port. These units can be used to store intermediate
+results of operations temporarily.
+\figname~\ref{fig:valve_mixer_storage}(c) shows a schematic of a mixer
+connected to a storage unit comprising eight cells \cite{AminTA09}. 
+%Consequently, only one fluid sample can enter or leave the 
+%storage unit at a given moment.
+
+%Accompanying the rapid advance of flow-based biochips, 
+In view of the advantages of flow-based biochips, design automation methods for
+them has gained much attention recently. For architectural synthesis, 
+the method in \cite{MinhassPMB12} proposes a top-down
+flow to generate efficient biochip architectures, while 
+the methods in \cite{TsengLSH15,Liu2017} explore the concept of
+distributed channel storage to improve execution efficiency.
+The flow channel routing problem considering obstacles 
+is solved using an algorithm based on rectilinear Steiner minimum tree
+in \cite{LinLCLH14}.
+To avoid contamination in executing operations, 
+path searching is used in \cite{HuHC16} to generate washing solutions for 
+devices and channel segments. 
+Control logic synthesis is investigated in \cite{MinhassPMH13,WZYH17,Zhu2018iccad}
+to reduce the complexity of control layer for switching valves.
+In addition, pressure-propagation delay in the control layer is 
+minimized in  \cite{HuDHC17} to reduce the response
+time of valves and synchronize their actuations.
+%The control layer design of biochips has been investigated in 
+Furthermore, flow layer and control layer codesign is investigated in
+\cite{YaoWRCH15} to achieve valid routing results on both layers, and
+length-matching in routing control channels is investigated in \cite{YaoHC15}.
+Moreover, fault models of manufacturing defects 
+and an ATPG-based test strategy for flow-based biochips are proposed
+in \cite{HuYHC14,HuHC14}. 
+Fault localization and design-for-testibility
+for flow-based biochips have been addressed in \cite{Liu2018dac,aledate19}.
+
+The chip structure demonstrated in \figname~\ref{fig:valve_mixer_storage}(c)
+is designed by researchers manually
+%in the microfluidic field with 
+using preliminary tools such as AutoCAD to draw the channels at different
+layers. 
+%After the schematic is finished, a chip is manufactured by
+%etching the substrate on which fluid and control channels are formed. This
+%design flow, however, only works with chips of small scale containing only 
+%a limited number of channels and devices. 
+%%To take advantage of 
+With the advances of manufacturing technologies, many thousands of valves can
+already be integrated into a single chip.
+%as small as a coin. 
+%the locations of
+%devices and their channel connections can only be determined by computer
+%algorithms for an efficient design.  Another limitation of the traditional
+%biochip structure in \figname~\ref{fig:valve_mixer_storage}(c) comes from the
+%irregularities of devices. 
+It is thus challenging to design a whole biochip with the irregular structure
+shown in \figname~\ref{fig:valve_mixer_storage}(c).
+%Similar to 
+%the case in 
+Consequently, 
+%of components, however, is not considered in 
+%However, the irregular architecture of 
+%traditional biochip design.
+%the round mixers
+%and the irregular transportation channels 
+%in the traditional architecture 
+%such as shown in \figname~\ref{fig:valve_mixer_storage}(c) 
+%still hinder the further improvement of integration for large-scale
+%biochemical analyses.
+%Noticing the requirements of system integration, researchers 
+%in the microfluidic society 
+%have been exploring different chip architectures. 
+%For example, 
+%has enabled the development of 
+fully programmable valve arrays (FPVAs)
+%The concept of a regular structure has been 
+%have been demonstrated in 
+%attempted in the early work
+%Quake et. al 
+have emerged with a regular structure to make the large number of valves and
+channels available to bioassays \cite{JMSQ07,matrix11}.
+%and the first prototype toward large-scale integration has
+%been demonstrated in the work Maerkl et. al 
+\figname~\ref{fig:archi}(a) shows a part of the large FPVA demonstrated in
+\cite{matrix11}. A drawing of partial enlargement of four valves controlling
+the four directions of the fluid segment  in an enclosed fluid cell is shown in
+\figname~\ref{fig:archi}(b). In this architecture, valves (solid blocks) are
+arranged regularly along horizontal and vertical flow channels (light color).
+These valves are controlled by air pressure through the control
+channels (narrow channels). By opening two valves and closing the other two,
+the fluid segment inside a cell can be moved to the intended direction.
+%for transportation. 
+Consequently, flexible flow paths can be formed by opening
+and closing a set of valves, as shown in \figname~\ref{fig:archi}(c). 
+%the semiconductor industry,
+%such a large-scale integration usually involves in a regular component structure, at least at
+%physical level. 
+%This regularity 
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/valve_mixer_storage_own_mixer.pdf_tex}
+\caption{Components and structure of flow-based biochips. (a)
+Microvalve structure. (b) Mixer. (c) Biochip with eight
+storage cells \cite{AminTA09}.}
+\label{fig:valve_mixer_storage}
+}
+\end{figure}
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/archi.pdf_tex}
+\caption{Fully programmable valve array (FPVA) \cite{matrix11}.
+(a) Architecture. (b) Valve and cell. (c) Flow path construction. }
+\label{fig:archi}
+}
+\end{figure}
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/dynamic_devices.pdf_tex}
+\caption{FPVA with dynamic devices. (a) A 4$\times$2 dynamic mixer.
+(b) A 2$\times$4 dynamic mixer. (c) Dynamic mixers of different orientations
+sharing the same area. (d) FPVA with a long channel and always-closed
+valves (obstacles). The x-axis and y-axis show the coordinates of the valves and
+cells.}
+\label{fig:dynamic_devices}
+}
+\end{figure}
+
+
+Besides flow paths, devices such as mixers can also be constructed on 
+an FPVA, taking advantage of its flexibility and reconfigurability.
+For example, a 4$\times$2 mixer and a 2$\times$4 mixer can be constructed as
+shown in 
+\figname~\ref{fig:dynamic_devices}(a) and \figname~\ref{fig:dynamic_devices}(b),
+respectively. In such a dynamic mixer, the eight valves along the enclosed channel 
+function as peristalsis valves, which switch in a given pattern 
+to drive the fluid segment inside the channel. Compared with the
+traditional mixer shown in \figname~\ref{fig:valve_mixer_storage}(b), these dynamic
+mixers have different shapes and more peristalsis valves, eight in each case, to
+form a 
+%strong 
+circular flow for mixing.
+Furthermore, the two mixers in 
+\figname~\ref{fig:dynamic_devices}(a) and \ref{fig:dynamic_devices}(b)
+can share the same chip area as shown in \figname~\ref{fig:dynamic_devices}(c)
+if the two mixers are not used at the same time, providing more
+flexibility to schedule operations on such a chip.
+%On valve arrays, further special devices such as heaters and detectors can 
+%also be built at certain locations. In addition, fluid samples 
+%can be transported between devices by forming a temporary flow path
+%between two devices. After the transportation is finished, the flow path can
+%be released and the valves can be reused for other functions.
+The videos shown in \cite{PMD_mixing, PMD_transportation} demonstrate
+real cases of dynamic device mapping and fluid transportation on an FPVA.
+
+FPVAs have a significant advantage for large-scale integration
+due to their regular structure.
+%compared with the traditional nonregular architecture with dedicated round mixers as shown in 
+%\figname~\ref{fig:valve_mixer_storage}(c). 
+%A counterpart of this regular structure is the DRAM %(random-access memory)
+%array in the semiconductor industry, where the manufacturing technology of DRAM
+%chips is normally a generation more advanced than that of other chips, e.g.,
+%microprocessors. Furthermore, 
+The ability of dynamic reconfigurability gives
+them the convenience to execute nearly any bioassays, provided specific devices
+such as filters and heaters are also built in the chips. 
+%%This a characteristic very similar to the one of FPGA (field programmable gate
+%%array) in semiconductor industry, and it 
+%This allows chip vendors to focus on improving the integration scale without
+%worrying about the applications. On the other hand, the increasing integration
+%of such reconfigurable chips provide customers the ability to execute very
+%complex experiments automatically, 
+%This is a great advantage specially for small
+%%%%tributary local
+%hospitals or research units which usually cannot afford expensive equipment.
+%In addition, this flexibility endows them with a great potential 
+%of fault tolerance, since defected valves and cells can be circumvented easily
+%by scheduling operations onto other regions on a chip.
+%
+%
+%In view of the potential of FPVAs,
+%programmable valve arrays, 
+%For valve arrays specifically, 
+%For FPVAs specifically,
+%design solutions have also started to appear for these chips. 
+To facilitate the application of FPVAs, 
+the method in \cite{TsengLHS15,TBMTtcad} explores
+dynamic mapping of operations to reduce the
+maximum number of switching activities of valves, so that valve wearing can be balanced
+across all the valves in a chip.
+%Test paths and cuts for detecting defects in valve
+%arrays are explored in \cite{CBBK17}.  In addition, 
+In \cite{pump}, flow routing considering
+pressure-routes in establishing transportation paths on an FPVA is investigated
+to achieve a better assay completion time. In addition, a
+close-to-optimal physical design solution can also be achieved by adapting the
+formulation based on satisfiability in \cite{grimmer2017close}.
+
+%\subsection{Contributions}
+
+%For testing valve arrays, the method in \cite{CBBK17} 
+
+%As mentioned above, 
+In the manufacturing process of FPVAs, defects may appear 
+at valves and in flow and control channels.
+%
+%in some biochips after manufacturing.
+Therefore, 
+an efficient design automation method is also required to generate test patterns
+%These test patterns are applied to the chips after manufacturing 
+to identify chips with defects. To reduce test cost, the number of these test
+patterns should be as small as possible.
+In this paper, we address this test generation problem for FPVAs 
+with the following contributions:
+
+\begin{itemize}
+
+\item The first systematic formulation of test strategy with test paths and cuts 
+  is proposed to enable efficient test of FPVAs after manufacturing.
+
+\item The generation of test patterns
+  %Cut generation 
+  considers fault masking 
+  %between test patterns 
+  to cover multiple faults in the flow layer and the control layer.
+
+\item Leakage in control channels is covered by additional test
+  paths that are orthogonal to the test paths for stuck-at-0 faults.
+  
+\item Multiple ports of FPVAs are taken advantage of to improve test
+  efficiency. 
+  
+\item The proposed test framework is completely compatible with existing test
+  framework for traditional flow-based biochips,
+  %such as shown in \figname~\ref{fig:valve_mixer_storage}(c), 
+  so that no additional cost of the test platform is incurred. 
+  
+\item  When adapted to test traditional biochips, the number of test patterns
+  is significantly smaller than that from previously methods based on ATPG, leading
+  to a higher test efficiency.
+
+\end{itemize}
+
+
+The rest of this paper is organized as follows. In
+Section~\ref{sec:formulation} we review the state of the art of
+testing traditional flow-based biochips and formulate the test problem for FPVAs.
+In Section~\ref{sec:test_strategy} we present the general test strategy 
+for FPVAs. 
+%proposed framework and its implementation.
+In Section~\ref{sec:path_cut}, the models and their implementation for generating test paths and cuts
+are explained in detail.
+In Section~\ref{sec:multi_port}, test models are extended to cover biochips
+with multiple ports and to adapt the proposed method to test traditional flow-based biochips.
+Simulation results are shown in Section~\ref{sec:results} and
+conclusions are drawn in Section~\ref{sec:conclusion}.
+

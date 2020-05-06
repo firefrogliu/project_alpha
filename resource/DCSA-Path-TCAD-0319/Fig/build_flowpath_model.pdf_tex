@@ -1,0 +1,72 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'build_flowpath_model.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{136.67017088bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.90906539)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{build_flowpath_model.pdf}}%
+    \put(0.28327728,0.51925483){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{build_flowpath_model.pdf}}%
+    \put(0.57878201,0.66611257){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{build_flowpath_model.pdf}}%
+    \put(0.4323466,0.22381339){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{build_flowpath_model.pdf}}%
+    \put(0.7263201,0.37328572){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{build_flowpath_model.pdf}}%
+    \put(0.57992112,0.89619349){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Pump}}}%
+    \put(0.97603018,0.37729825){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Waste}}}%
+    \put(0.42776315,0.00021388){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Waste}}}%
+    \put(0.0224541,0.52508118){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Pump}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{build_flowpath_model.pdf}}%
+    \put(0.38214485,0.54072652){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$e_i$}}}%
+    \put(0.35816665,0.32533769){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$f_r$}}}%
+    \put(0.46875599,0.39683424){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$n_i$}}}%
+    \put(0.37781749,0.60379779){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$u^r_{e_i} = 1$}}}%
+    \put(0.55802197,0.45821253){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$u^r_{n_i} = 1$}}}%
+  \end{picture}%
+\endgroup%

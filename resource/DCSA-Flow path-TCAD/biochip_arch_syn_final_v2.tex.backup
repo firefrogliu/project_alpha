@@ -1,0 +1,227 @@
+\documentclass[journal]{IEEEtran}
+
+% \usepackage{balance}
+% \usepackage{fancyhdr}
+
+% \usepackage{color}
+\newcommand{\subparagraph}{}
+%\usepackage{mathrsfs}
+\usepackage{amssymb,amsmath}
+%amsthm for theorem definition, must after amsmath.
+%\proof is already defined in amsthm, so undefine it before loading
+% \makeatletter
+% \let\oldproof\proof
+% \let\oldendproof\endproof
+% \let\proof\@undefined
+% \let\endproof\@undefined
+% \makeatother
+
+
+% \makeatletter
+%change spaces around equations in amsmath
+% \g@addto@macro\normalsize{%
+%   \setlength\abovedisplayskip{5pt}
+%   \setlength\belowdisplayskip{5pt}
+%   \setlength\abovedisplayshortskip{-3pt}
+%   \setlength\belowdisplayshortskip{-3pt}
+% }
+% \makeatother
+% \usepackage{amsthm}
+
+\usepackage[ampersand]{easylist}
+%adapted from the itemize macro in easlist
+% \ListProperties(Hang=true,Hide=1000,
+% Margin1=0em,Style1*=\textbullet\hskip .5em,
+% Margin2=3.7em,Style2*=--\hskip .5em,
+% Margin3=5.9em,Style3*=$\ast$\hskip .5em,
+% Margin4=7.8em,Style4*=$\cdot$\hskip .5em)
+
+\makeatletter
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+\makeatother
+% \usepackage{booktabs}
+\usepackage[binary-units=true]{siunitx}
+
+% \usepackage{multirow}
+
+%\usepackage[algoruled,noline,linesnumbered]{algorithm2e}
+%\usepackage[algoruled,noline, noend,linesnumbered]{algorithm2e}
+\usepackage[algoruled,noline,longend,linesnumbered]{algorithm2e}
+% \SetAlgorithmName{Procedure}{}{}
+% \setlength{\algomargin}{2.5em}
+% \SetNlSkip{1.2em}
+%\SetNlSty{textbf}{L}{}
+
+%\usepackage{algorithmic}
+
+\usepackage{graphicx}
+\usepackage{pgfplots}
+
+
+% \setlength\thinmuskip{0mu}
+% \setlength\medmuskip{0mu}
+% \setlength\thickmuskip{0mu} 
+
+%subparagraph not defined in IEEEtran but needed by titlesec
+% \usepackage[compact]{titlesec}
+% \usepackage{titlesec}
+% \titlespacing{\section}{0pt}{2pt}{1pt}
+% \titlespacing{\subsection}{0pt}{2pt}{1pt}
+
+%\setlength{\jot}{0pt}
+
+%\setlength{\abovedisplayskip}{4pt plus 1pt minus 1pt}
+%\setlength{\abovedisplayshortskip}{6pt plus 1pt minus 0.5pt}
+%\setlength{\belowdisplayskip}{4pt plus 1pt minus 1pt}
+%\setlength{\belowdisplayshortskip}{6pt plus 1pt minus 0.5pt}
+% \setlength\floatsep{10pt plus 0.5pt minus 0.5pt}
+% \setlength\dblfloatsep{10pt plus 0.5pt minus 0.5pt}
+% \setlength\intextsep{1pt plus 0.5pt minus 0.5pt}
+% \setlength\textfloatsep{0pt plus 1pt minus 1pt}
+%\setlength\dbltextfloatsep{1.5pt plus 1pt minus 1pt}
+%\setlength\abovecaptionskip{-2pt plus 0.5pt minus 0.5pt}
+%\setlength\belowcaptionskip{1pt plus 0.5pt minus 0.5pt}
+
+% \setlength\evensidemargin{-2.19pc}
+% \setlength\oddsidemargin{-2.19pc}
+% \setlength\topmargin{-6pc}                % Nominal distance from top of
+%%page to top of
+%\textheight 666pt   %%original    % 9 1/4 column height
+% \setlength\textheight{710pt}
+%\textwidth 42pc     %%original    % Width of text line.
+% \setlength\textwidth{43.5pc}         % Width of text line.
+%\setlength\topmargin{-5.5pc}
+%\setlength\columnsep{1pc}         %    Space between columns
+% \setlength\columnsep{1pc}         %    Space between columns
+
+%
+%%\makeatletter % access to internal commands
+%%\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\ }
+%%%\makeatother
+
+%\setcounter{page}{1}
+%\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{0pt}
+%\fancyhf{}
+%\rfoot{\small \thepage/\pageref{LastPage}}
+%\rhead{\small \thepage}
+
+\begin{document}
+
+%\clubpenalty=1000
+%\widowpenalty = 1000
+%%\hyphenpenalty=1000
+%\tolerance=1000
+%\sloppy
+
+
+
+\graphicspath{{Fig/}}
+\def\figname{Fig.}
+\def\algname{Algorithm}
+%\def\algname{Procedure}
+%\newcommand{\figurefontsize}{\fontsize{7.0pt}{1}\selectfont}
+\newcommand{\figurefontsize}{\small}
+\newcommand{\papertitle}{\titlenym: 
+Transport or Store? Synthesizing Flow-based Microfluidic Biochips using Distributed Channel Storage}
+
+\title{\papertitle}
+%\author{Chunfeng Liu$^1$, Bing Li$^1$, Bhargab B. Bhattacharya$^2$, Tsung-Yi
+%Ho$^{34}$, Ulf Schlichtmann$^1$\\
+%$^1$Institute for Electronic Design Automation, Technical University of Munich (TUM), Munich, Germany\hfill\\
+%$^2$Indian Statistical Institute, Kolkata, India\hspace{18pt} 
+%$^3$National Tsing Hua University, Hsinchu, Taiwan \hfill\\
+%$^4$Institute for Advanced Study, Technical University of Munich (TUM), Garching, Germany\hfill
+%}
+%\author{ -20pt Chunfeng Liu, Bing Li, Hailong Yao, Paul Pop, Tsung-Yi Ho, Ulf
+%Schlichtmann
+%}
+\author{
+	\fontsize{12pt}{1}\selectfont
+Chunfeng Liu$^{1,2}$, Bing Li$^1$, Hailong Yao$^3$, 
+Paul Pop$^{4}$, Tsung-Yi Ho$^{2,5}$, Ulf Schlichtmann$^1$\\
+	\fontsize{9.3pt}{1}\selectfont
+$^1$Institute for Electronic Design Automation, 
+$^2$Institute for Advanced Study, 
+Technical University of Munich, Germany\\
+	\fontsize{9.3pt}{1}\selectfont
+$^3$Tsinghua University, Beijing, China, $^4$Technical University of Denmark,
+$^5$National Tsing Hua University, Hsinchu, Taiwan\\
+	\fontsize{9pt}{1}\selectfont
+\{chunfeng.liu, b.li, ulf.schlichtmann\}@tum.de,
+hailongyao@tsinghua.edu.cn,
+paupo@dtu.dk, tyho@cs.nthu.edu.tw
+
+Chunfeng Liu, Bing Li, Hailong Yao, Paul Pop, Tsung-Yi Ho and Ulf Schlichtmann
+\thanks{A preliminary version of this paper was published in
+the Proceedings of Design Automation Conference (DAC), 2017\cite{liu2017transport}.
+%The major improvement of this paper over \cite{Zhang2016} includes a
+%concrete path selection algorithm and a method to assign paths into test
+%batches considering the relation between their delays and prediction accuracy. 
+}
+
+        \thanks{Grace Li Zhang, Bing Li, and Ulf Schlichtmann are with the Institute for
+Electronic Design Automation,
+        \tum, Munich 80333, Germany (e-mail: grace-li.zhang@tum.de; b.li@tum.de;
+ulf.schlichtmann@tum.de).}
+        \thanks{Yiyu Shi is with the
+Department of Computer Science and Engineering,  University of Notre Dame
+ (e-mail: yshi4@nd.edu).}
+         \thanks{Jiang Hu is with the
+Department of Electrical and Computer Engineering,  Texas A\&M University
+ (e-mail: jianghu@tamu.edu).
+}
+
+
+
+\maketitle
+
+%\thispagestyle{fancy}
+
+
+\input{abstract}
+%\input{abstract_09_17}
+\input{introduction}
+\input{motivation}
+\input{caching_synthesis}
+\input{valve_sharing}
+%%\input{discussion}
+\input{results}
+
+\input{conclusion}
+\input{acknowledgment}
+
+
+
+%\renewcommand{\baselinestretch}{2} 
+\let\oldthebibliography=\thebibliography
+\let\endoldthebibliography=\endthebibliography
+\renewenvironment{thebibliography}[1]{%
+\begin{oldthebibliography}{#1}%
+%\vspace{-1pt}
+%\setlength{\parskip}{0ex}%
+\setlength{\itemsep}{0.1ex}%
+%%\def\baselinestretch{0.7}
+%%%%%bil
+\fontsize{6pt}{1}\selectfont
+%\vskip 1pt
+%\scriptsize
+%\small
+%\reffontsize
+}%
+{%
+\end{oldthebibliography}%
+}
+
+%\bibliographystyle{abbrv}
+%\bibliographystyle{unsrt}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,CONFabrv,bibfile}
+
+
+\end{document}
+
+

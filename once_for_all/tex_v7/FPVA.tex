@@ -1,0 +1,88 @@
+
+Biochips considered in microsynthesis above are relatively small-scale.
+These chips are very useful in small biochemical labs or in the scenarios such
+as point-of-care testing. With the advance of manufacturing technology, 
+the integration of biochips has increased tremendously.
+Recent advances in manufacturing technologies have enabled a
+valve density reaching 1 million per cm$^2$ %\si{\square\centi\metre}
+\cite{C2LC40258K}, and consequently,
+fully programmable valve arrays (FPVAs) have emerged
+for more flexible and highly reconfigurable flow-based biochips
+%attempted in the early work
+%Quake et. al 
+\cite{JMSQ07,matrix11}.
+%and the first prototype toward large-scale integration has
+%been demonstrated in the work Maerkl et. al 
+
+\begin{wrapfigure}[27]{R}{0.5\textwidth}
+{
+\vskip -10pt
+\figurefontsize
+\centering
+\input{Fig/fpva_arch.pdf_tex}
+\caption{Fully programmable valve array (FPVA).
+(a) Architecture \cite{matrix11}. (b)/(c) A 4$\times$2/2$\times$4 dynamic
+mixer.
+(d) Dynamic mixers of different orientations sharing the same area.}
+\label{fig:archi}
+}
+\end{wrapfigure}
+
+A part of the large valve array in \cite{matrix11} is shown in 
+\figname~\ref{fig:archi}(a) to demonstrate the architecture of FPVA, and
+videos of fluid transportation and mixing on such a chip can be found from 
+\cite{fpva2,fpva3}.
+%and a drawing of partial enlargement of four valves
+%controlling the four directions of the fluid sample in an enclosed cell at a
+%crossing point is shown in \figname~\ref{fig:archi}b.  
+In this architecture,
+valves (solid blocks) are arranged in a regular structure 
+along horizontal and vertical
+flow channels (light color). These valves are controlled by air pressure
+sources through control channels (narrow channels). 
+Similar to the connection grid in \figname~\ref{fig:switch_grid}(f),
+transportation paths can be formed by opening and closing specific valves 
+on the array, respectively. In addition, the channels also function as
+temporary storage caches. The difference between this valve array and the
+connection grid is that the former is manufactured directly in this regular
+structure to increase integration scale, while the latter is only used to
+synthesize a small-scale biochip architecture.
+
+%by opening two valves and closing the other two at an intersection of flow channels like 
+%flow paths
+%the fluid sample stored there %at the crossing point 
+%can be directed to a target location.  
+%
+%the intended direction %for transportation 
+%by forming temporary transportation channels.
+%Consequently, flexible flow
+%paths can be formed by opening and closing a set of valves, as shown in
+%\figname~\ref{fig:archi}c. 
+
+%For example, even a biochip designed in 2008 has contained
+%25K valves \cite{JMPK08}. This large-scale system integration enables
+%laboratories to execute a large number of biochemical assays on a chip
+%simultaneously, opening the door for the long-aspired exhaustive diagnoses 
+%to identify illness automatically in hospitals.
+
+Besides transportation channels, mixers can also be constructed on 
+the valve array directly, taking advantage of the flexibility and reconfigurability
+of such biochips.
+%\cite{TsengLHS15}.
+For example, a 4$\times$2 mixer and a 2$\times$4 mixer can be constructed as
+in \figname~\ref{fig:archi}(b) and \ref{fig:archi}(c),
+respectively. In such a dynamic mixer, the eight valves along the enclosed
+channel function as peristalsis valves, which switch in a given pattern 
+to drive the fluid samples and reagents inside the channel for mixing, similar
+to the three valves in \figname~\ref{fig:valve_mixer_chip}(b).
+Compared with the traditional mixer in \figname~\ref{fig:valve_mixer_chip}(b), these
+dynamic mixers have a different shape and more peristalsis valves, eight in each case, to
+form a strong circular mixing flow. % mix different samples.
+Moreover, the two mixers in \figname~\ref{fig:archi}(b) and \ref{fig:archi}(c)
+can share the same area on the biochip as shown in \figname~\ref{fig:archi}(d),
+provided that they are not used at the same time. 
+
+In short, a given area of the valve array can execute various functions such 
+as mixing and flow transportation, as well as detection if the corresponding sensors are
+included in the area. This flexibility provides a great potential in 
+executing large-scale bioassays efficiently. 

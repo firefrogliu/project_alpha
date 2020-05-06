@@ -1,0 +1,129 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{color}
+\newcommand{\subparagraph}{}
+
+\usepackage{amssymb,amsmath}
+
+\usepackage[ampersand]{easylist}
+
+\makeatletter
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+\makeatother
+
+\usepackage[binary-units=true]{siunitx}
+
+
+\usepackage[algoruled,noline,longend,linesnumbered]{algorithm2e}
+
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{cite}
+\usepackage{subfig}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[para]{threeparttable}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{lipsum}
+%\usepackage{pdfpages}
+
+\begin{document}
+
+%\clubpenalty=1000
+%\widowpenalty = 1000
+%%\hyphenpenalty=1000
+%\tolerance=1000
+%\sloppy
+\allowdisplaybreaks[1]
+
+\graphicspath{{Fig/}}
+\def\figname{Fig.}
+\def\algname{Algorithm}
+%\def\algname{Procedure}
+%\newcommand{\figurefontsize}{\fontsize{7.0pt}{1}\selectfont}
+\newcommand{\figurefontsize}{\small}
+\newcommand{\papertitle}{DCSA: Distributed Channel-Storage Architecture for Flow-Based Microfluidic Biochips}
+\newcommand{\tum}{Technical University of Munich (TUM)}
+
+%\input{cover_letter}
+
+\title{\papertitle}
+
+\author{	
+
+Chunfeng Liu, Xing Huang, Bing Li, Hailong Yao, Paul Pop, Tsung-Yi Ho and Ulf Schlichtmann
+ \thanks{A preliminary version of this paper was published in
+the Proceedings of the 54th Annual Design Automation Conference (DAC), 2017 \cite{liu2017transport}. Major extensions beyond [1] include a detailed analysis of the design challenges involved in flow-path planning, an updated problem formulation considering resource binding and scheduling, architectural synthesis, and flow-path planning simultaneously, an effective ILP-based flow-path planning method, a deadlock removal strategy, two transportation-conflict elimination techniques, as well as comprehensive experimental evaluations.
+}
+\thanks{Chunfeng Liu, Bing Li, and Ulf Schlichtmann are with the Chair of
+  Electronic Design Automation, Technical University of Munich, Germany (e-mail: chunfeng.liu@tum.de; b.li@tum.de; ulf.schlichtmann@tum.de).}
+
+\thanks{Xing Huang is with the College of Mathematics and Computer Science, Fuzhou University, Fuzhou, China (e-mail: xing.huang1010@gmail.com).}
+
+\thanks{Xing Huang and Tsung-Yi Ho are with the Department of Computer Science, National Tsing Hua University, Hsinchu, Taiwan (e-mail: xing.huang1010@gmail.com, tyho@cs.nthu.edu.tw).}
+
+\thanks{Hailong Yao is with the Department of Computer Science and Technology, Tsinghua University, Beijing, China (e-mail: hailongyao@tsinghua.edu.cn).}
+
+\thanks{Paul Pop is with the Department of Applied Mathematics and Computer Science, Technical University of Denmark, Denmark (e-mail: paupo@dtu.dk).}
+}
+
+
+
+\maketitle
+ \markboth{IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS}
+ {Liu \MakeLowercase{\textit{et al.}}: \papertitle}
+
+
+ \IEEEpeerreviewmaketitle
+
+%\thispagestyle{fancy}
+
+
+\input{abstract}
+\input{introduction}
+\input{motivation}
+\input{caching_synthesis}
+\input{flow_paths}
+%%\input{discussion}
+\input{results}
+
+\input{conclusion}
+%\input{acknowledgment}
+
+
+
+% %\renewcommand{\baselinestretch}{2}
+% \let\oldthebibliography=\thebibliography
+% \let\endoldthebibliography=\endthebibliography
+% \renewenvironment{thebibliography}[1]{%
+% \begin{oldthebibliography}{#1}%
+% %\vspace{-1pt}
+% %\setlength{\parskip}{0ex}%
+% \setlength{\itemsep}{0.1ex}%
+% %%\def\baselinestretch{0.7}
+% %%%%%bil
+% \fontsize{6pt}{1}\selectfont
+% %\vskip 1pt
+% %\scriptsize
+% %\small
+% %\reffontsize
+% }%
+% {%
+% \end{oldthebibliography}%
+% }
+%
+% %\bibliographystyle{abbrv}
+% %\bibliographystyle{unsrt}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,CONFabrv,bibfile}
+\input{biographies}
+%\clearpage
+%\includepdf[pages=1-last]{a49Liu.pdf}
+\end{document}
+
+

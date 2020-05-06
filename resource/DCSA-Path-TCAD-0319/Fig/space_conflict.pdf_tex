@@ -1,0 +1,96 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'space_conflict.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{278.25604678bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.44289502)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{space_conflict.pdf}}%
+    \put(0.21137142,0.19335422){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{space_conflict.pdf}}%
+    \put(0.3700407,0.31385243){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(-0.39141551,-0.37815377){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.03518938\unitlength}\centering \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{space_conflict.pdf}}%
+    \put(0.10663207,0.25339637){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{space_conflict.pdf}}%
+    \put(0.25126736,0.04519811){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.1199033,0.28007883){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_2,o_2\to o_4$}}}}%
+    \put(0.23795007,0.00641729){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(a)}}}%
+    \put(0.06832138,0.31089724){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_1$}}}%
+    \put(0.06832138,0.25339627){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_2$}}}%
+    \put(0.06812521,0.19409868){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_3$}}}%
+    \put(0.06812521,0.13659778){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_4$}}}%
+    \put(0.16228303,0.07514358){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$t_1$}}}%
+    \put(0.20472877,0.07547739){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$t_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{space_conflict.pdf}}%
+    \put(0.10978737,0.31107847){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{space_conflict.pdf}}%
+    \put(0.08090586,0.33860516){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_1,o_1\to o_3$}}}}%
+    \put(0.30854476,0.16512884){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$o_4\to o_5$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{space_conflict.pdf}}%
+    \put(0.61960668,0.2686834){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{space_conflict.pdf}}%
+    \put(0.7647488,0.34081493){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{space_conflict.pdf}}%
+    \put(0.6928245,0.12357219){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{space_conflict.pdf}}%
+    \put(0.83721465,0.19698807){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{space_conflict.pdf}}%
+    \put(0.50865023,0.27091272){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Pump}}}%
+    \put(0.76385621,0.43657277){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Pump}}}%
+    \put(0.94836382,0.19895891){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Waste}}}%
+    \put(0.55829986,0.28464316){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_1$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{space_conflict.pdf}}%
+    \put(0.24019926,0.13928555){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0.16967288,0.36592229){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$concurruncy$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{space_conflict.pdf}}%
+    \put(0.71431073,0.0054856){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(b)}}}%
+    \put(0.69057336,0.03674779){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Waste}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{space_conflict.pdf}}%
+    \put(0.7791883,0.21475479){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_2$}}}}%
+  \end{picture}%
+\endgroup%

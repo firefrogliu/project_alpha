@@ -1,0 +1,215 @@
+\section{Construct flow paths and flow-path-aware architectural synthesis}\label{sec:flow_paths}
+
+In this section, we explain the strategy and implementation to build flow paths. We also introduce an architectural synthesis method that augument a original biochip, to make it possible to construct flow paths on this biochip.
+
+\subsection{Construct flow paths on a given biochip architecture}\label{sec:constructing_paths_given}
+
+\begin{figure}
+\figurefontsize
+\centering
+%\includegraphics[width=3.00in,height=1.50in]{Fig/valveSharing.eps}
+\input{Fig/concurrent_set.pdf_tex}
+\caption{Divide flow paths into different concurrent sets. (a) Scheduling and binding information. (b) Flow paths are divided into 3 concurrent sets.}
+\label{fig:concurrent_set}
+\end{figure}
+
+
+Scheduling and binding define a series of transportations from a device to another device or a channel segement for temporary storage, or vice versa. Based on a certain scheduling scheme, transportations could occur simultaneously, as shown in Fig. \ref{fig:concurrent_set} (a). In such a case, concurrent flow paths need to be built according to the requirements of flow transportation or distributed storage. These concurrent flow paths cannot share the same pumps, wastes, channels or switches, otherwise, contamination may occur. To construct these parellel transportation paths on a biochip, the transportation requirements need to be identified from the results of the scheduling and binding first. More specifically, transportations that occur simultaneously need to be identified from the scheduling and binding. Parellel flow paths without space conflicts then are constructed for these transportations to avoid contamination.
+
+To identify these parellel transportations, a scanline algorithm \cite{lane1979generalized} is deployed to divide transportations into several concurrent transportation sets, as Fig. \ref{fig:concurrent_set} (b) shows. The scanline scan the time axis, maintaining a concurrent transportation set. At each moment when a transportation occur, this transportation is tested if it has overlap with any transportation in the concurrent transportation set. If it does, it is added to the concurrent transportation set, otherwise, the old concurrent transportation set is saved and the algorithm maintain a new concurrent transportation set with the transportation being scanned as its solo element. After transportations are divided into different concurrent sets, we could focus on finding flow paths for transportations in a same concurrent set, since only for these transportations, conflicts in space need to be resolved. Note that in the worst case, a huge concurrent transportation set could be found if all transportation in a scheduling scheme are tangled together. It may be infeasible to build parellel flow paths for all the transportations in this huge concurrent set due to the exchange network capcity or port number limits on a biochip. To deal with this situation, we put a hard limit on the size of a concurrent transportation set. When a concurrent transportation set reaches its size limit, other transportations that occur later are postponed and put into new concurrent sets. This will be explained in detail later.
+
+\begin{figure}
+\figurefontsize
+\centering
+%\includegraphics[width=3.00in,height=1.50in]{Fig/valveSharing.eps}
+\input{Fig/build_flowpath_model.pdf_tex}
+\caption{Build flow paths upon a synthesis result.}
+\label{fig:build_flowpath_model}
+\end{figure}
+
+ %For transportations in a concurrent set, flow paths needs to be constructed for each of the transportations. A flow path needs to be connected to a pump port to conduct the pressure genereted by this pump. It also needs to be connected to a certain waste port, to release the pressure in this continuous path from the pump to the waste port. 
+
+
+As discussed above, when transportations are put into different concurrent sets, we could focus on constructing flow paths in a single concurrent set. Given a concurrent transportation set $T_c$, for each transportation $t_r$ in $T$, we need to find a flow path $f_r$ on a biochip architecture. In Section~\ref{sec:channel_storage_synthesis}, a architectural synthesis result is carved out  from a connection grid, where nodes represent devices or switches, and edges represent channel segements, as shown in Fig~\ref{fig:build_flowpath_model}. Note that after the previous synthesis phase, locations of pump ports and waste ports are not decided yet. We put pumps and wastes in arbitrary positions to illustrate how to construct flow paths at this moment. 
+
+First we need to formulate which nodes or switches are on a certain flow path. We use a 0-1 variable $u^r_{n_k}$ to represent whether a node $n_k$ is on the flow path $f_r$. Assume $t_r$ is a transportation between the device $d_i$ and the device $d_j$, which are bound to node $n_i$ and node $n_j$ respectively. The flow path $f_r$ starts with a pump port and ends with a waste port, running through $n_i$ and $n_j$. This can be constrained as
+
+\begin{align}
+% \sum_{e_j\in E_s}e_{j,r}=\sum_{e_j\in E_t}e_{j,r}=1,\quad 
+& \sum_{n_k\in N_p}u^r_{n_k} = 1, \sum_{n_k\in N_w}u^r_{n_k} = 1 \label{eq:flow_node_1} \\ 
+&  u^r_{n_i} = 1, u^r_{n_j} = 1\label{eq:flow_node_2}
+\end{align}
+where 
+%$E_s$, $E_t$ and 
+$N_p$ is the node set where all pump ports reside and  
+$N_w$ is the node set where all waste ports reside.
+
+
+Suppose the transportation $t_r$ starts from device $d_i$, carrying intermediate fluid to an channe segment $c_j$, which is bound to edge $e_j$, we need to alter the constraints \text{(\ref{eq:flow_node_2})} with the following constraint.
+\begin{align}
+&  u^r_{n_i} = 1, u^r_{e_j} = 1\label{eq:flow_node_3}
+\end{align}
+where $u^r_{e_j}$ is a 0-1 variable representing whether an edge $e^r_j$ is on the flow path $f_r$.
+
+Next we need to formulate which edges or channel segements are on a certain flow path. Because the flow path $f_r$ starts from a pump port and ends at a waste node, at one of these two ports, only one of the
+four edges incident to the port can be covered in the flow path. At
+each other node on $f_r$, exactly two edges are covered by
+the $f_r$, as illustrated with path pr in Fig. \ref{fig:build_flowpath_model}. Consequently,
+we can construct the flow path with the following constraints:
+\begin{align}\label{eq:continuous}
+&  \sum_{e_j\in E_{n_p}}u^r_{e_j} - (1-u^r_{n_p})M <= 1,\quad \forall n_p\in N_p\\
+&  \sum_{e_j\in E_{n_p}}u^r_{e_j} + (1-u^r_{n_p})M >= 1,\quad \forall n_p\in N_p\\
+&  \sum_{e_j\in E_{n_w}}u^r_{e_j} - (1-u^r_{n_w})M <= 1,\quad \forall n_w\in N_w\\
+&  \sum_{e_j\in E_{n_w}}u^r_{e_j} + (1-u^r_{n_w})M >= 1,\quad \forall n_w\in N_w\\
+&  \sum_{e_j\in E_{n_k}}u^r_{e_j} - (1-u^r_{n_k})M <= 2,\quad \forall n_k\in N\backslash \{N_p,N_w\}\\
+&  \sum_{e_j\in E_{n_k}}u^r_{e_j} + (1-u^r_{n_k})M >= 2,\quad \forall n_k\in N\backslash \{N_p,N_w\}\label{eq:continuous_last}
+\end{align}
+where $E_{n_p}$,$E_{n_w}$ and $E_{n_k}$ are the sets of edges incident to the node $n_p$, the node $n_w$ and the node $n_k$, respectively. $N_p$ and $N_w$ are the node set where all pump ports and waste ports reside, as mentioned before, while  
+$N$ represents all nodes in the connection grid.
+
+Another thing that needs to be considered is that a flow path $f_r$ needs to bypass the nodes $N_b$ where devices irrelevant to this transportation reside, and the channel segements $E_b$ where irrelevant intermediate liquids are cached. This can be constrained as
+\begin{align}\label{eq:bypass}
+&   u^r_{n} = 0\quad \forall n\in N_b,\quad
+   u^r_{e} = 0\quad \forall e\in E_b
+\end{align}
+
+Lastly, if two flow paths $f_r$ and $f_s$ have overlap in time series, we need to resolve the space conflicts between them, which can be described as the flow path $f_r$ and the flow path $f_r$ cannot share the same node with the following constraints
+
+\begin{align}\label{eq:nonconflict}
+& u^r_{n_k} + u^s_{n_k} <=1 \quad \forall n_k\in N
+\end{align}
+
+
+In practice, the transportation time and the pressure needed to drive liquids in flow paths are affected by the lenth of flow paths. The former could affect the overall assay execution time, while the latter determines the probability of whether valve leakage would happen in a transportation, i.e. the more pump pressure is put into a channel, the more likely liquids would leak through a closed valve. Because of this, we want the flow paths as short as possible. The exact shortest flow paths for a concurrent transportation set can be determined by solving the following optimization problem
+\begin{align}\label{eq:ILP_flow_paths}
+&\text{minimize} & \quad \sum_{f_r\in F} \sum_{e_j\in E} u^r_{e_j} \\\label{eq:ILP_flow_paths_last}
+\text{subject to} & \quad 
+\text{(\ref{eq:flow_node_1})--(\ref{eq:nonconflict})}
+\end{align}
+where $F$ is the flow path set and $E$ is the edge set or the channel segment set in a biochip architecture.
+\subsection{Postpone transportations}\label{sec:ILP_flow_paths}
+
+
+\begin{figure}
+\figurefontsize
+\centering
+%\includegraphics[width=3.00in,height=1.50in]{Fig/valveSharing.eps}
+\input{Fig/postpone_model.pdf_tex}
+\caption{Different choices to postpone flow paths. (a) Original scheduling and binding information. (b) $f_1$ is postponed. (b) $f_2$ is postponed.}
+\label{fig:postpone_model}
+\end{figure}
+
+
+The ILP formulation defined in \text{(\ref{eq:ILP_flow_paths})--(\ref{eq:ILP_flow_paths_last})} can be unsolvable. This is because a given biochip architecture does not always provide enough channel segments or ports to let all transportations in a concurrent set to run simultaneously. Fig. \ref{fig:demo_1} is a demonstration of when multiple transportations occurs at the same time, space conflicts between them are unresolvable. As discussed in Secion.\ref{sec:motivation}, one approach to deal with this situation is to postpone one or more transportations to reduce the concurrency at a given moment. 
+
+Postponing transportations may prolong the overall assay execution time, while different Postponing choices could prolong the assay execution differently, as Fig. \ref{fig:postpone_model} demonstrates. In Fig. \ref{fig:postpone_model} (a), $f_1$ is postponed to the moment $f_3$ is finished, while in Fig. \ref{fig:postpone_model} (b), $f_2$ is postponed to the moment $f_1$ is finished. The exact consequence of postponing one transportation is the operations relying on the liquid carrid by this transportation needs to be postponed too, which will trigger a chain action that transportations relying on these operations are also postponed, leading to the overal assay execution time being prolonged. We want to find a best postponing choice, in which the least assay prolonged time is introduced, in the meantime, the concurrency is reduced so that flow paths can run without time conflicts. 
+
+We formulate the choices to postpone certain transportations and their consequences in the ILP formulation. Given $C$ as the choice set that contains all possiblility to postpone certain channels, we use a 0-1 variable $c_i$ that represents the choice $i$ has been made. We alter the non-conflict constraint~\ref{eq:nonconflict} as follows.
+\begin{align}\label{eq:nonconflict_postpone}
+& u^r_{n_k} + u^s_{n_k} - c_i <=2 \quad \forall n_k\in N, \forall c_i\in C\quad\\\label{eq:ILP_flow_paths_post_last}
+\text{if in $c_i$, $f_r$ and $f_s$ have overlap in time series}\quad
+\end{align}
+
+We need to choose the best choice to postpone certain flow paths in which least assay prolonged time is introduced. First, a list scheduling algorithm \cite{lawler1993sequencing} is applied here to calculate how much time one assay is prolonged when one or more of its transportations are postponed. The assay prolonged time is set to cost function of a transportation postponing choice. Then each choice's cost function is added to the objective of the ILP formulation. We alter the ILP formulation \text{(\ref{eq:ILP_flow_paths})--(\ref{eq:ILP_flow_paths_last})} as follow.
+
+
+\begin{align}\label{eq:ILP_flow_paths_post}
+&\text{minimize}  \quad \sum_{f_r\in F} \sum_{e_j\in E} u^r_{e_j}
++ \sum_{c_i\in C} p * c_i  \\
+\begin{split}
+&\text{subject to}  \quad
+\text{(\ref{eq:flow_node_1})--(\ref{eq:bypass}),(\ref{eq:nonconflict_postpone})}.\\
+\end{split}
+\end{align}
+where $C$ is the set of all choices could be made when postponing certain transportation, $c_i$ is 0-1 variable that represents the choice $i$ has been made.
+
+
+
+\subsection{Storage deadlock}\label{sec:res_storage_deadlock}
+
+\begin{figure}
+\figurefontsize
+\centering
+%\includegraphics[width=3.00in,height=1.50in]{Fig/valveSharing.eps}
+\input{Fig/storage_deadlock.pdf_tex}
+\caption{Storage deadlock. (a) Sequencing graph. (b) Scheduling and binding. $f_1$ and $f_2$ are cached in channel segements when $f_3$ is running. (c) $f_3$ is blocked by cached liquids. }
+\label{fig:storage_deadlock}
+\end{figure}
+
+After allowing postponing certain transportations in a concurrent set, the ILP formulation to construct flow paths becomes \text{(\ref{eq:ILP_flow_paths_post})--(\ref{eq:ILP_flow_paths_post_last})}. For this ILP formulation, a feasible answer still may not exist. Fig.~\ref{fig:storage_deadlock} demonstrates such a situation. When we try to construct the flow path $f_3$ from the device $d_3$ to the device $d_1$, all possible routes are blocked by the liquid cached in $e_1$ and $e_2$. And these liquids are needed for the operation scheduled running on $d_3$ after $f_3$ finishes its transportation. We call this situation a storage deadlock. 
+% That is because in the worst case scenario, when all the concurrency among transportations is eliminated, for a certain flow path, there are still not enough channel resources to construct a flow path that bypasses all busy devices or storages caching intermediate liquids. 
+
+To resolve a storage deadlock without introducing extra resources to the orginal biochip architecture, these cached liquids that are blocking the flow paths need to be moved away. To formualte which channel currently caching intermediate liquid are blocking the transportations and whether they should be moved away, we use a 0-1 variable $m_i$ to indicate whether a cached liquid stored in the edge $e_i$ needs to be moved away to resolve the storage deadlock. The the constraint \text{(\ref{eq:bypass})} then is altered to:
+
+\begin{align}\label{eq:bypass_move}
+   u^r_{e_i} + m_i >= 0\quad \forall e_i\in E_b
+\end{align}
+
+
+The punishment of moving this liquid is added into the objective of the ILP formulation. The altered ILP formulation is as follows.
+
+\begin{align}\label{eq:ILP_flow_paths_deadlock}
+\text{minimize} & \quad \sum_{f_r\in F} \sum_{e_j\in E} u^r_{e_j}
++ \sum_{c_i\in C} p * c_i + \sum_{m_i \ in M} B * m_i \\\label{eq:ILP_flow_paths_deadlock_last}
+ \begin{split}
+\text{subject to} & \quad
+\text{(\ref{eq:flow_node_1})--(\ref{eq:continuous_last}),(\ref{eq:bypass_move})}.
+ \end{split}
+\end{align}
+where $B$ is a big integer to help put punishment on the objective.
+
+Solving this ILP formulation will tell us to cached liquids that need to be moved away to let other flow paths run. If a 0-1 varialbe $m_i$ is set to 1 in the optimized results of this ILP formulation, it indicates that the liquid cached in the corresponding channel segment $e_i$ needs to be moved away. 
+We still need to find a new location for caching the liquid. This new location cached liquid cannot block the flow paths either. After solving the ILP formulation above, the flow paths are already known. The new locations for the liquids that will be moved away are chosen from the channel segments which are not on these flow paths. A dedicated flow path will be constructed to move these liquids to their new location. 
+The flow paths for moving the cached liquids are constructed by the same method described in \text{(\ref{eq:flow_node_1})--(\ref{eq:continuous_last})}. 
+
+
+\subsection{Augument a biochip architecture to enable flow path construction}\label{sec:GA}
+As discussed before, in a biochip architecture without enough channels and switches, the sparse exchange network may not support concurrent flow paths running together. In the worst case, for a single flow path could not be constructed if too many channel segments are caching intermediate fluids. When this happens, channels and switches need to be added to the original biochip architecture. Another thing is that the locations of pump ports and waste ports are not decided by the previous architectural synthesis. Both the locations of these newly added resources and ports will affect the feasiblity of constructing flow paths and the overall assay execution time. In the proposed method, we deploy Genetic Algorithm \cite{mitchell1998introduction} to find valid biochip architectures that need least amount of resources added and can achieve least assay execution time.
+
+Genetic Algorithm is a stochastic population-based optimization algorithm. Members of the population are called genes. At the beginning of the algorithm, genes are randomly generated into the whole search space. A gene is represented by a sequence of binaries, called its ''DNA''. Each gene represents a possible solution to the optimization problem. A evaluation function is appied to every gene in a population. In each iteration, half of the population are selected based on their performance during evaluations. A second generation is generated through applying a combination of genetic operations ''crossover'' and ''mutation'' to the selected genes. These genetic operations will be explained in details later.
+
+In the proposed method, a gene represents an augumented biochip architecture, which adds channel segments, switches and pump/waste ports to a given architecture. A gene consists of two
+parts of information: 1) where are the pump ports and waste ports; 2) where are the newly added channels. Therefore, we use two multidimensional vectors to denote these genes.
+
+We still use an connection grid to help decide how to augument the original architectural synthesis result. A vector $\vec{x}^{p}= [p_0,p_1,...,p_m]$ is used to denote where pump ports and waste ports locate.  The definition of $x_i$ is as follows.
+\begin{equation}
+  p_i =
+  \begin{cases}
+    1 & \text{if the node $n_i$ is a pump port or waste port}\\
+    0 & \text{otherwise}
+  \end{cases}
+\end{equation}
+
+A vector $\vec{x}^{q} = [q_0,q_1,...,q_n]$ is used to denote where new channes segments are added. The $q_i$ is defined as
+\begin{equation}
+  q_i =
+  \begin{cases}
+    1 & \text{if the edge $e_i$ is a newly added edge}\\
+    0 & \text{otherwise}
+  \end{cases}
+\end{equation}
+
+A gene is defined as the combination of the two vectors
+$\vec{x} = [\vec{x}^{p}, \vec{x}^{q}]$. The performance of a gene is evaluated by two criteria. First, if the biochip architecture represented by a gene is valid for constructing flow paths, and if it is valid, what is the overall assay execution time. This part of evaluation could be done by constructing flow paths on a biochip architecture which a gene is representing, using the same method proposed in in Section. \ref{sec:constructing_paths_given}. Second, the overall resources usage. 
+
+The Genetic Algorithm of finding the best biochip architecture valid for constructing flow paths runs as follows.
+\begin{enumerate} 
+  \item
+  Given a architectural synthesis, to decide the possible augumented biochip architectures, choices of locations of pump ports, waste ports and newly added channels are randomly genereted. Each choice is converted to a gene. The first generation is formed by these genes.
+  \item \label{item:iteration_begin}
+  For each gene $x_i$ in the current generation $X$, the gene is converted to a biochip architecture. The method to construct flow paths proposed in Section. \ref{sec:constructing_paths_given} is applied to each architecture, to assess the performance ${eva}_i$ of the gene $x_i$. 
+  \item
+  Half the genes of the current generation are selected. The probability of a gene $x_i$ being selected is equal to \text{${eva}_i \backslash \sum_{x_k in X} {eva}_k$}.
+  \item \label{item:new_gen}
+  Genetic operations crossover and mutation are applied to the selected genes. The crossover operation exchanges certain bits randomly among two genes. The mutation operation flips certain bits of a gene randomly. New genes are put together to form a new generation. 
+  \item
+  Repeat Step (2) to (4). After certain number of iterations, the algorithm quits, returning the best gene in the current generation together with its corresponding biochip architecture. 
+\end{enumerate}
+
+
+
+
+
+
+
+

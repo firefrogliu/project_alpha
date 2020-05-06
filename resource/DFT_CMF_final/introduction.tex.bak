@@ -1,0 +1,193 @@
+\section{Introduction}
+
+Microfluidic biochips are revolutionizing the traditional biochemical
+experiment flow in biochemical and pharmaceutical laboratories  with their
+high execution efficiency and miniaturized fluid manipulation \cite{JEMP08,
+EVNR03,JMSQ07}.  In such a chip, microdevices are built to execute specific
+operations, such as mixing and detection.  Between devices, microchannels are
+constructed to transport fluid samples following the protocol of a bioassay.
+All these functions are performed at nanoliter level and controlled by a
+microcontroller without human intervention.  With their efficiency and
+reliability, these miniaturized and automated chips 
+%thus give them a great potential.  to accelerate the advance in the
+%biochemical field due to the reduced experiment time and lowered consumption
+%of very expensive reagents.  and they 
+have been reshaping many fields such as pharmacy, biotechnology and health
+care.  For example, genomic bioassay protocols, such as nucleic-acid
+isolation, DNA purification and DNA sequencing, have been successfully
+demonstrated with microfluidic biochips in recent years.  In addition, this
+technology has also attracted a lot of commercial attention, e.g., from
+Illumina \cite{illum}.
+%a market leader in DNA sequencing. 
+
+Structurally, a continuous flow-based biochip is built from basic components
+such as microchannels and microvalves, henceforth named as channels and valves
+for simplicity.  Flow channels are tiny transportation paths between devices
+through which reaction samples and reagents are moved between different
+devices.  Above flow channels, control channels are built to conduct air
+pressure to intersections of flow channels and control channels to form
+valves, as illustrated in \figname~\ref{fig:valve_mixer_chip}(a).  These
+channels are built from elastic materials, so that air pressure in a control
+channel squeezes the flow channel downwards to block the movement of the fluid
+sample underneath.  If the pressure in the control channel is removed, the
+fluid sample can resume its movement. 
+%Since the channel width has been miniaturized down to 50 um \cite{Studer04}
+%due to the advance of manufacturing technology, a huge number of channels and
+%valves can already be integrated into a single biochip to perform large-scale
+%experiments and diagnoses.
+
+With valves as basic controlling components, complex devices and
+transportation network can be constructed.
+Figure~\ref{fig:valve_mixer_chip}(b) shows a mixer (reaction loop) surrounded
+by flow channels (green), control channels (yellow and red) and valves (yellow
+or red blocks). These channels and valves together form a network similar to
+the road transportation system. If fluid channels should cross, valves are
+built to form a switch. 
+%as in \figname~\ref{fig:valve_mixer_chip}(b).
+At any moment, only two out of the valves of a switch open to direct fluid
+transportation; the other valves are closed to avoid fluid contamination.  
+
+\begin{figure}
+\figurefontsize
+\centering
+\input{Fig/valve_mixer_chip.pdf_tex}
+\caption{Components and structure of flow-based biochips. 
+(a) Valves constructed at intersections of flow/control channels. 
+(b) Biochip containing a mixer surrounded by a transportation channel network 
+\cite{ESWD13}.}
+\label{fig:valve_mixer_chip}
+\end{figure}
+
+\begin{figure}
+\figurefontsize
+\centering
+\input{Fig/sequencing_graph.pdf_tex}
+\caption{Sequencing graph of a bioassay \cite{MinhassPMB12}.}
+\label{fig:sequencing_graph}
+\end{figure}
+
+Biochips are used to execute biochemical applications, which are usually
+specified using sequencing graphs $\mathcal{G}=(\mathcal{O},\mathcal{E})$,
+such as in \figname~\ref{fig:sequencing_graph}, where $\mathcal{O}$ is the set
+of nodes 
+%representing operations,
+and $\mathcal{E}$ is the set of edges. 
+%in the graph specifying the dependency relation between operations. 
+A node $O_i \in \mathcal{O}$ in the sequencing graph represents an operation,
+whose type $\tau_i$ and duration $u_i$ are specified by the user.  An edge
+$e_{ij}\in \mathcal{E}$ from $O_i$ to $O_j$ in the sequencing graph specifies
+that $O_i$ must be executed before $O_j$ and the result of $O_i$ is the input
+of $O_j$. 
+
+In a biochip, the number of dedicated devices is usually smaller than the
+number operations in an application, so that the operations need to be
+executed with time multiplexing. 
+%This timing-multiplexed application requires that 
+Accordingly, intermediate reaction results need to be moved between different
+devices, leading to different fluid segments being transported inside the
+channel network between devices.  For example, if $O_i$ and $O_j$ in a
+sequencing graph are executed by different devices, 
+%the required %fluid transportation must be performed by the channel network
+%between devices. 
+the result of $O_i$ must be transported to the device executing $O_j$ through
+channels.  If the target device executing $O_j$ is still occupied, this result
+of $O_i$ should stored temporarily, e.g., inside the channel, leading to a
+distributed storage \cite{Liu2017}. The overall execution time of an
+application is determined by the time when the last operation is finished.
+This execution time one of the major performances in biochip design.
+
+As in the semiconductor industry, design automation tools are also needed to
+support the development of microfluidic biochips.  Since the synthesis flow of
+biochips is similar to the synthesis flow for integrated circuits
+\cite{Micheli94}, researchers in the electronic design automation community
+have started to expand into this area in recent years
+\cite{ChakrabartyFZ10,PopAC15}. Among them, the method in \cite{MinhassPMB12}
+proposes a top-down flow to generate a biochip architecture while minimizing
+the execution time of a bioassay. The flow channel routing problem considering
+obstacles is solved with an algorithm based on rectilinear Steiner minimum
+tree in \cite{LinLCLH14}. To avoid contamination, path searching is used in
+\cite{HuHC16} to wash devices and channel segments. 
+%
+Control logic synthesis is investigated in \cite{MinhassPMH13} to reduce the
+number of control pins. The method 
+%is improved further 
+in \cite{HuDHC17} minimizes pressure-propagation delay in the control layer to
+reduce the response time of valves and synchronize their actuation.
+%The control layer design of biochips has been investigated in 
+Furthermore, flow layer and control layer codesign is investigated in
+\cite{YaoWRCH15} to a achieve valid routing 
+%on both flow and control layers 
+iteratively, and length-matching in routing control channels is considered in
+\cite{YaoHC15} as well. 
+
+Similar to ICs, manufactured biochips may also contain defects. For example, a
+channel might be blocked so that fluid segments cannot be moved through it. In
+addition, a valve may not be closed properly, leading to fluid contamination
+when executing an application. Accordingly, test of biochips has become
+another important research topics recently.  In \cite{HuYHC14}, types of
+defects after manufacturing of flow-based biochips are analyzed and the test
+problem is converted into an ATPG equivalence in the IC design domain to
+generate test vectors.  In addition, the method in  \cite{Liudate17} examines
+the relation between test vectors and pressure measurements directly and
+constructs test vectors accordingly.  Furthermore, \cite{HuYHC14} is expanded
+in \cite{HuHC14} to improve the testability of a chip by modifying it after
+untestable scenarios are observed.  These methods, however, do not consider
+cost reduction of the overall test platform, where multiple test devices are
+still needed.  In addition, the modification of chip architecture for
+testability may affect the execution efficiency of an application by 
+the chip, which, unfortunately, has not been considered in existing test 
+solutions.
+
+In this paper, we propose a design-for-testability (DFT) method to reduce the
+cost of the overall test platform. In addition, we introduce a codesign
+framework that improves testability and execution efficiency of the biochip
+architecture simultaneously. The major contributions of this paper are as
+follows.
+\begin{itemize} 
+
+    \newlength{\mylength} 
+    \setlength\mylength{\parskip}
+    \setlength\parskip{-3.5mm}
+    %\setlength\itemsep{0.01em}
+
+  \item 
+
+  We propose a design-for-testability method for flow-based biochips that
+  reduces the number of required test devices, e.g., pressure sources and
+  meters. By adding additional channels and valves at proper locations, test
+  vectors only rely on a single pressure source and a single pressure meter,
+  so that both the cost and the complexity of the test platform are reduced. 
+
+  \setlength\parskip{\mylength}
+  \item 
+
+   The newly introduced channels and valves are also used to improve the
+   execution efficiency of applications. When adding channels and valves to
+   improve testability, the configuration that provides shortest execution
+   time of the application is selected.  
+
+ \item 
+
+   The control channels of new valves can also be shared with those of valves
+   originally existing in the biochip, so that the control logic does not need
+   any change.  Consequently, no additional control port is required.
+   %To provide the pressure to turn on or off the introduced valves. 
+   This sharing of control port still allows a valid set of test vectors,
+   while the execution efficiency of the application is maintained.
+
+   \item
+
+   The new chip architecture is constructed automatically using a two-level
+   particle swarm optimization (PSO) method 
+   to improve a given chip architecture and generate efficient schedules for
+   applications. Test vectors and valve sharing scheme are also returned as
+   the output of this PSO method.
+
+\end{itemize}
+
+The rest of this paper is organized as follows. In
+Section~\ref{sec:motivation}, we explain the motivation and formulate the
+design-for-testability problem.  In Section~\ref{sec:model}, we provide a
+detailed description of the proposed two-level PSO framework.  Experimental
+results are reported in Section~\ref{sec:results}.  Conclusions are drawn in
+Section~\ref{sec:conclusion}.

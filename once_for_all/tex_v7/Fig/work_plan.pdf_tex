@@ -1,0 +1,97 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'work_plan.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{450.05992304bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.18008682)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{work_plan.pdf}}%
+    \put(0.0433479,0.13361793){\color[rgb]{0.8,0.8,0.8}\makebox(0,0)[b]{\smash{Months}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{work_plan.pdf}}%
+    \put(0.00138503,0.16246672){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{[Project Synthesizing Flow-based Microfluidic Biochips]}}}}%
+    \put(0.12752101,0.1355233){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1}}}%
+    \put(0.71744942,0.13554248){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{25}}}%
+    \put(0.59394924,0.13554248){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{20}}}%
+    \put(0.47090172,0.13552332){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{15}}}%
+    \put(0.27507771,0.13555393){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{7}}}%
+    \put(0.86506776,0.13554246){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{31}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{work_plan.pdf}}%
+    \put(0.10512308,0.1098049){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Phases}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{work_plan.pdf}}%
+    \put(0.1063228,0.05860547){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Stud.}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{work_plan.pdf}}%
+    \put(0.10469923,0.03224046){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{BA/MA}}}%
+    \put(0.36038273,0.03446433){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Microsynthesis}}}%
+    \put(0.98703144,0.13554248){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{36}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{work_plan.pdf}}%
+    \put(0.10512308,0.08384287){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{WPs}}}%
+    \put(0.36095027,0.08422435){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP2}}}%
+    \put(0.18936985,0.08432389){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP1}}}%
+    \put(0.92644794,0.08435448){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP6}}}%
+    \put(0.77882678,0.08446168){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP5}}}%
+    \put(0.64348079,0.08434298){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP4}}}%
+    \put(0.520615,0.08434298){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP3}}}%
+    \put(0.10512308,0.00740602){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Publications}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{work_plan.pdf}}%
+    \put(0.83958489,0.00579933){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{P3}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{work_plan.pdf}}%
+    \put(0.44652164,0.00577433){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{P1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{work_plan.pdf}}%
+    \put(0.9874026,0.00579933){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{P4}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{work_plan.pdf}}%
+    \put(0.69208943,0.0056443){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{P2}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{work_plan.pdf}}%
+    \put(0.40964875,0.11063604){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Microsynthesis of biochips}}}%
+    \put(0.55746767,0.0592308){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Implementation and Test Assistance}}}%
+    \put(0.77791093,0.11067431){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Macrosynthesis }}}%
+    \put(0.90159065,0.03465965){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{System Integration}}}%
+    \put(0.9268647,0.11071645){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Cyber-phys. Int.}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{work_plan.pdf}}%
+    \put(0.58152824,0.03446438){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Control/Flow Codesign}}}%
+    \put(0.10512308,0.13540465){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Month:}}}%
+  \end{picture}%
+\endgroup%

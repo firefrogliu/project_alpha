@@ -1,0 +1,104 @@
+\section{Introduction}
+The emergence of microfluidic biochips has reshaped the traditional biochemical procedures due to their high execution efficiency and miniaturized fluid manipulation \cite{EVNR03,JMSQ07}.
+With this miniaturization, biochemical assays can be scaled down to nanoliter volumes,
+so that precious reagents can be saved to reduce the cost of experiments.
+Since operations executed on a biochip are automated and controlled
+by a microcontroller, the reliability in executing biochemical experiments
+can also be improved significantly compared with the traditional
+manual-based experimental flow \cite{hu2017computer}. Accordingly, this lab-on-a-chip device is now increasingly being used in many areas of biochemistry and biomedical applications, such as immunoassays \cite{kartalov2006high}, drug discovery \cite{einav2008discovery}, and DNA analysis \cite{hong2006molecular}.
+
+Microfluidic biochips based on continuous flow use valves
+to control the movement of samples and reagents.  The structure of a biochip
+is illustrated in \figname~\ref{fig:valve_mixer_storage}(a) \cite{zhu2018multi}.
+On top of the glass substrate, a flow channel is constructed for the transportation of fluids.
+Above the flow channel, a control channel connected to an air pressure source is used to control the open/closed state of the valve. Both channels are built from elastic materials, so that air pressure
+in the control channel squeezes the flow channel below to block the movement
+of the fluid. Conversely, if the pressure in the control channel is released,
+the fluid can resume its movement.
+
+With valves as the basic controlling components, complex devices can
+be constructed \cite{squires2005microfluidics}. For example,
+%mixers can be built from channels and valves to execute mixing operations,
+the structure of a mixer is shown in \figname~\ref{fig:valve_mixer_storage}(b) \cite{HuDHC17}. The
+three valves at the top form a peristaltic pump by switching alternately at a
+sufficiently high frequency to drive the mixing of fluids.
+%The other six valves are used to control the entering and exiting of fluids.
+Besides mixers, a dedicated storage unit can also be built from channels and
+valves. \figname~\ref{fig:valve_mixer_storage}(c) shows the schematic
+of a biochip with a mixer connected to a storage unit \cite{AminTA09}, where eight side-by-side cells are used to store fluid samples. Furthermore, at a port of the storage unit, valves in a multiplexer-like structure direct a fluid sample to enter or leave a specific cell. This concept of dedicated storage, however, suffers from several limitations including constrained capacity of the storage unit, limited access bandwidth at input/output ports, and large area occupation \cite{Chen2019DCSA}.
+
+Biochips are used to execute operations in biochemical assays, whose protocols
+%by time multiplexing.
+%With the dedicated devices discussed above, a biochip can be built to execute
+%an
+%Such an assay %or assay, which
+are usually described by sequencing graphs. In
+\figname~\ref{fig:pcr}(a), the sequencing graph of
+the mixing phase of the polymerase chain reaction
+(PCR) is illustrated \cite{zhang2002microelectrofluidic}. This assay takes eight input samples ($i_1$-$i_8$) and processes them with seven mixing operations ($o_1$-$o_7$) to generate copies
+of a DNA sequence. Moreover, the edges in the sequencing graph define the dependency of
+operations, where a parent operation should always be executed before its child operations.
+%Moreover, it is unusual to assign each operation an independent device due to cost constraints. Instead, devices are reused to execute the operations according to their dependencies.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/valve_mixer_storage_own_mixer.pdf_tex}
+\caption{Components and structure of flow-based biochips. (a)
+Valve structure. (b) Mixer. (c) A biochip with eight
+storage cells \cite{AminTA09}.}
+\label{fig:valve_mixer_storage}
+}
+%\vspace{-0.5cm}
+\end{figure}
+
+To design a high-efficiency chip architecture for bioassay execution, the traditional design flow is usually divided into two phases \cite{MinhassPMB12}. In the first stage, biochemical operations are bound to specific devices and scheduled to execute according to the dependencies specified by the sequencing graph. The target of this step is to find a resource binding and scheduling solution such that the total execution time of the bioassay is minimized. Then, in the second stage, physical design is performed to assign exact locations for the allocated devices and construct flow channels to connect them, thereby generating a biochip architecture with minimized total cost.
+
+With a certain biochip architecture, when executing a bioassay, each fluid transportation task needs to be mapped to one or more continuous flow-channels to form a complete flow path between devices. Moreover, to drive the movement of fluid sample and recover the corresponding waste liquid, a pressure pump and a waste port need to be placed at the start and end of the flow path, respectively. More importantly, all these flow paths as well as the placement positions of corresponding pressure pumps and waste ports should be considered systematically, so that all the transportation tasks can be performed without any conflict, while the extra resources (e.g., pumps, ports, etc.) introduced to the biochip are minimized.
+
+%Continuous-flow microfluic biochips manipulate fluids through etched channel segments. Given the biochip architecture and the scheduling and binding information, we need to design the fluid transportation routes to move the fluid to their right place at the right time. A fluid transportation route consists of several flow channel segments, which are definded by the open/closed states of valves along these channel segments. To actually drive the fluid to move in the flow channel segments, a pressure pump and a waste port are needed to connected to the start and the end of the route. The pressure generated by the pump push the fluid through these channel segments, while the pressure or the waste is released at the waste port. This route that connects a pressure pump, several flow channel segments and a waste prt is called a flow path. Before the assay is executed, flow paths need to be constructed to manipulate fluid around a microfluidic biochip intended.
+
+Over the past few years, a number of methodologies have been proposed to deal with the design challenges of biochips. The method in \cite{MinhassPMB12} proposes a top-down flow to generate a biochip architecture while minimizing the execution time of the assay. The methods in \cite{LinLCLH14} and \cite{huang2019timing} propose to solve the flow-channel routing problem considering obstacles, while placement/routing iterations are performed in \cite{WangRYHC16} to reduce flow-channel crossings. Control logic synthesis is investigated in \cite{MinhassPMH13} to reduce the number of control ports, in \cite{WangZYHLSC17} to optimize valve switching considering the relation between control patterns, and in \cite{YaoHC15} to match lengths of control channels. The method in \cite{Huang2019DAC} proposes to solve the control-port minimization problem in both high-level synthesis and physical design stages.  In \cite{YaoWRCH15}, flow layer and control layer codesign is proposed to achieve valid routing on both layers iteratively, and in \cite{TsengLLHS16} interactions on both flow and control layers are modeled by an integer linear programming (ILP) formulation to achieve a better codesign efficiency. All the aforementioned design methods are, however, still based on the traditional dedicated storage architecture. The vast flexibility of flow channels in both fluid transportation and caching has so far been ignored.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/pcr.pdf_tex}
+\caption{Sequencing graph and different schemes of scheduling with
+one mixer.
+(a) Sequencing
+graph of PCR. (b) Scheduling with four store operations.
+Required storage capacity is three.
+%The numbers in the parentheses are the numbers of fetch operations.
+(c) Scheduling with three store operations. Required storage capacity is two.
+The execution time of the assay with the second schedule is shorter.}
+\label{fig:pcr}
+}
+%\vspace{-0.5cm}
+\end{figure}
+In this paper, we propose the first synthesis framework that models distributed channel storage and time multiplexing at intersections of flow channels to execute bioassays efficiently. Our contributions are summarized as follows:
+
+\begin{itemize}%[topsep = -0.5cm]
+\item Instead of using a dedicated storage unit, we cache intermediate fluid samples in flow channels with time multiplexing at the intersections of channels, so that not only the access bandwidth limit at the ports of the dedicated storage unit is overcome, but also the efficiency of channels and valves is improved.
+
+\item This is the first work to consider storage minimization from scheduling to architectural synthesis, so that the execution time of the assay can be reduced effectively.
+
+\item The problem of flow-path planning on a certain biochip architecture with distributed channel storage is addressed for the first time. With the proposed method, the manipulation of actual fluid transportation/caching can be realized without any conflict. Meanwhile, extra resources introduced to the biochip can also be minimized.
+
+\item Two transportation-conflict elimination techniques, including a scheduling adjustment technique and an architecture adjustment technique, are proposed to fundamentally address the resource contention problem in flow-path planning. Moreover, a deadlock-removal strategy is proposed to effectively coordinate the execution of both fluid transportation and caching.
+
+\item Simulation results on multiple benchmarks confirm that the proposed framework leads to shorter execution time of bioassays, lower total cost of biochips, and higher efficiency of resource utilization.
+
+
+%We also propose the first flow-path planning method to realize the manipulation of actual fluid transportation/caching on a certain biochip architecture.
+
+\end{itemize}
+
+
+The rest of this paper is organized as follows. In
+Section~\ref{sec:motivation}, we explain the motivation of storage synthesis and analyze the design challenges involved in flow-path planning, thereby formulating the problem we address in this paper. In Section~\ref{sec:storage_synthesis}, we
+describe the techniques to reduce storage usage and to model
+distributed channel storage in scheduling and architectural synthesis. In Section~\ref{sec:flow_paths},
+the proposed method for solving the flow-path planning problem is described in detail. Section~\ref{sec:results} presents the simulation results.
+Finally, the conclusions are drawn in Section~\ref{sec:conclusion}.
+%\vspace{1.7cm}

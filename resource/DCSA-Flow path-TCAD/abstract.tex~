@@ -1,0 +1,21 @@
+\begin{abstract}
+
+Flow-based microfluidic biochips have attracted much attention in the EDA
+community. %due to its miniaturized size and high execution efficiency. 
+Previous research, however, still focuses on 
+%assay mapping, washing and test of 
+biochips with given architectures, which, unfortunately,
+may not be optimal in executing biochemical assays. In this paper, we
+propose the first architectural synthesis framework considering distributed storage,
+which are constructed temporarily in transportation channels to cache fluid samples.
+Since %fluid samples in 
+distributed storage can be accessed more efficiently 
+than traditional dedicated storage units, biochips synthesized by the proposed 
+method achieve a high execution efficiency with fewer resources.
+Experimental results confirm that all test cases with very compact schedules 
+can be executed successfully 
+%within the scheduled time 
+and resource usage is also reduced significantly compared 
+with conventional design.
+
+\end{abstract}

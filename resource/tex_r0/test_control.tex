@@ -1,0 +1,61 @@
+
+\subsection{Testing control layer leakage}
+
+If there is a leakage from a control channel to another control channel,
+an air pressure to close a valve also closes another valve simultaneously. 
+As explained in \cite{HuYHC14}, such a fault normally happens to adjacent valves.
+In the proposed method, we test potential leakage faults between the valves
+surrounding a cell. This formulation can be extended easily to test leakage
+problems in the control layer within a large area, though inevitably the
+computational complexity will also increase.
+
+To test whether two neighboring valves are closed at the same time, we 
+need to close one valve and open the other and test whether the second can be
+opened correctly by a flow path. If there is no water pressure detected at the sink, 
+a control layer leakage problem is found.
+
+In the flow path test described in Section~\ref{sec:flow_paths}, 
+we have also tested whether a valve can be opened while two of other valves surrounding 
+the same cell are closed. For example
+the flow path in \figname~\ref{fig:cutset_model}b has tested some leakage
+faults along the path. 
+On this path, the valves forming the boundary of the path are closed while the
+valves along the path are opened. If there is a leakage fault, no water
+pressure can be detected at the sink. 
+
+%because the opened and closed valves form leakage test pattern naturally. For
+%example, in \figname, the valves pairs \{\}...\{\} surrounding the cell has
+%met the pattern in which one of the valves in such a pair is open and the
+%other is closed while testing whether the openned valve can be opened actually
+%by the flow-path tests. 
+
+Besides these pairs, the valves along the flow path, however, are not tested
+for leakage fault, as shown in \figname~\ref{fig:cutset_model}b.
+%however, do not form such a pattern in thes path tests.
+To deal with these untested valve pairs, we generate further paths going through
+one of the valves in an untested pair while the other valve is kept closed, 
+functioning as the boundary of the new path. Similar to creating 
+flow-paths in Section~\ref{sec:flow_paths}, 
+%such a new path should cover as many untested pairs as possible. 
+a minimal set of paths should be found to test these valve pairs.
+
+In implementation, we first scan the flow paths generated as described in 
+Section~\ref{sec:flow_paths}
+to identify untested valve pairs. For each of such
+valve pairs, we need to keep one valve open and the other closed. Since the
+state of the opened valves are tested by flow paths, 
+we revise the flow path problem in Section~\ref{sec:flow_paths} with an
+additional constraint describing the states of a valve pair during the test.
+Assume that the valves at $(i_1,j_1)$ and $(i_2,j_2)$ should be tested for
+control channel leakage. We force one valve to open and the other to close
+when constructing the new flow paths. The constraint can be written as
+\begin{equation}
+v^m_{i_1,j_1}+v^m_{i_2,j_2}=1. 
+\end{equation}
+
+The control layer leakage problem is solved in each subblock in the
+hierarchy. Thereafter, there are still a few valve pairs at the boundary
+between two subblocks that cannot be included in the control leakage test
+because the flow path problem is formed for each subblock individually. These
+remaining valve pairs are connected using a variant of breadth-first search to form the
+test paths.

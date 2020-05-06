@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\begin{document}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\section{State of the art: Microfluidic platforms}
+  \subsection{Technology platform and key application areas}
+  \subsection{Digital microfluidic biochips}
+  \subsection{Technology platform and key application areas}
+  % \subsubsection{Synthesis for continuous-flow microfluidic biochips}
+  % \subsubsection{Testing and diagnosis for continuous-flow microfluidic biochips}
+  \subsection{Fully programmable valve-array microfluidics}
+
+\section{Design and test for continuous-flow microfluidic biochips}
+
+  \subsection{Storage of continuous-flow microfluidic biochip}
+    \subsubsection{Dedicated storage of continuous-flow microfluidic biochip}
+    \subsubsection{Concept of distributed storage with channel segments as caching units}
+
+  \subsection{Architectural synthesis of continuous-flow microfluidic biochips with distributed storage} 
+    \subsubsection{Storage awareness scheduling and binding}
+    \subsubsection{Synthesizing microfluidic biochips with distributed channel storage}
+    \subsubsection{Physical design with distributed channel storage}
+    \subsubsection{Flow paths construction}
+
+  \subsection{Test of continuous-flow microfluidic biochips}
+    \subsubsection{Design for testability of continuous-flow microfluidic biochips}
+    \subsubsection{Controll singnal sharing between testing and assay execution}
+
+  \subsection{Experimental results}
+
+\section{Testing of fully programmable valve-array microfluidics}
+
+  \subsection{Fully programmable valve-array microfluidics}
+ 
+
+
+  \subsection{Testing of fully programmable valve-array microfluidics}
+    \subsubsection{Manufacturing faults  of continuous-flow microfluidic and testing enviroments}  
+    \subsubsection{Challange in testing fully programmable valve-array microfluidics}
+    \subsubsection{Test pattern generation for stuck-at-0 faults and stuck-at-1 faults}
+    \subsubsection{Test pattern generation acceleration, a hierarchical approach}
+    \subsubsection{Multiple port test}
+
+  \subsection{Experimental results}
+
+\section{Conclusion}
+
+
+
+
+\end{document}

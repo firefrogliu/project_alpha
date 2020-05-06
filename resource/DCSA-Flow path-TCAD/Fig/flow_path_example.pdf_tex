@@ -1,0 +1,110 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'flow_path_example.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{229.2978164bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.99013363)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{flow_path_example.pdf}}%
+    \put(0.61188264,0.76424593){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{flow_path_example.pdf}}%
+    \put(0.66569238,0.6975515){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{flow_path_example.pdf}}%
+    \put(0.80613055,0.90698328){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(-0.1170967,0.07071314){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.04270279\unitlength}\centering \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{flow_path_example.pdf}}%
+    \put(0.51581892,0.83710789){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{flow_path_example.pdf}}%
+    \put(0.65582993,0.61236775){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.55224057,0.86948743){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$o_2\to o_4$}}}}%
+    \put(0.64664706,0.55135103){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(b)}}}%
+    \put(0.44080032,0.90688599){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_1$}}}%
+    \put(0.44080032,0.83710778){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_2$}}}%
+    \put(0.44056227,0.76514934){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_3$}}}%
+    \put(0.44056227,0.69537121){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{flow_path_example.pdf}}%
+    \put(0.07079296,0.88016224){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{flow_path_example.pdf}}%
+    \put(0.22724342,0.87907844){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{flow_path_example.pdf}}%
+    \put(0.07079299,0.75645078){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{flow_path_example.pdf}}%
+    \put(0.12656794,0.54388417){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(a)}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{flow_path_example.pdf}}%
+    \put(0.1471011,0.63748591){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{flow_path_example.pdf}}%
+    \put(0.02639172,0.96557121){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_1$}}}%
+    \put(0.09978036,0.96557121){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{flow_path_example.pdf}}%
+    \put(0.19014152,0.96623098){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_3$}}}%
+    \put(0.2620043,0.96623098){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{flow_path_example.pdf}}%
+    \put(0.22577413,0.75651339){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{flow_path_example.pdf}}%
+    \put(0.49111986,0.90710592){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{flow_path_example.pdf}}%
+    \put(0.5049166,0.94050994){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$o_1\to o_3$}}}}%
+    \put(0.68085309,0.72999404){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$o_4\to o_5$}}}}%
+    \put(0.62541118,0.79742186){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$o_3\to o_5$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{flow_path_example.pdf}}%
+    \put(0.30412455,0.32982994){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{flow_path_example.pdf}}%
+    \put(0.48025653,0.41736271){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{flow_path_example.pdf}}%
+    \put(0.41903452,0.00665684){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(c)}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{flow_path_example.pdf}}%
+    \put(0.3929754,0.15373566){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{flow_path_example.pdf}}%
+    \put(0.56819484,0.24282684){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{flow_path_example.pdf}}%
+    \put(0.1380773,0.33079075){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$Pump$}}}%
+    \put(0.47917334,0.53356597){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$Pump$}}}%
+    \put(0.39022962,0.03842641){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$Waste$}}}%
+    \put(0.73534811,0.24521831){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$Waste$}}}%
+    \put(0.2974501,0.19932508){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$Flow path \, o_1\to o_3$}}}}%
+  \end{picture}%
+\endgroup%

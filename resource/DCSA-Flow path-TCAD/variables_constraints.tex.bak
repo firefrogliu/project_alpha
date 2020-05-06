@@ -1,0 +1,45 @@
+
+
+\renewcommand{\tabcolsep}{3pt}
+%\renewcommand{\arraystretch}{1.1}
+\begin{table}[t]
+\caption{Variables and Constraints for Scheduling and Binding}
+\label{tb:vc_scheduling_binding}
+\centering
+\begin{tabular}{|rp{7.42cm}|} \hlinewd{0.3pt}
+\multicolumn{2}{|l|}{\textbf{Variables:}}\\\hlinewd{0.3pt}
+$O$:&  set of nodes (operations) in the sequencing graph;\\
+%$N$:&  number of operations; \\
+$o_i$:& operation indexed by $i$;\\
+$t^s_i$:&  starting time of operation $o_i$;\\
+$t^e_i$:&  ending time of operation $o_i$;\\
+$u_i$:&  duration of operation $o_i$;\\
+
+$E$:&  set of edges in the sequencing graph;\\
+$(o_i,o_j)$:& edge from $o_i$ to $o_j$ where $o_i$ is the parent of $o_j$;\\
+$u_{i,j}$:& transportation/storage time from $o_i$ to $o_j$.\\
+
+$D$:&  set of devices in the biochip; \\
+%$N_d$:&  maximum number of devices allowed in the chip;\\
+$d_i$:& device indexed by $i$; \\
+
+$s_{i,k}$:& a 0-1 variable representing whether
+$o_i$ is assigned to $d_k$.\\\hlinewd{0.3pt}
+
+\multicolumn{2}{|l|}{\textbf{Constraints:}}\\\hlinewd{0.3pt}
+\multicolumn{2}{|l|}{\textit{Uniqueness}:}\\
+& $\sum_{k=1}^{|D|} s_{i,k}=1,  \quad \forall o_i\in O$
+\hfill \refstepcounter{equation} (\theequation) \label{eq:uniqueness}\\
+\multicolumn{2}{|l|}{\textit{Duration}:}\\
+ &$t^s_i+u_i\le t^e_i,  \quad \forall o_i\in O $
+\hfill \refstepcounter{equation} (\theequation) \label{eq:duration}\\
+\multicolumn{2}{|l|}{\textit{Precedence}:}\\
+& $ t^e_i+u_{i,j}\le t^s_j,  \quad \forall (o_i,o_j)\in E$
+\hfill \refstepcounter{equation} (\theequation) \label{eq:precedence}\\
+\multicolumn{2}{|l|}{\textit{Non-overlapping}:}\\
+& $s_{i,k} + s_{j,k}\le 1  \text{\hskip 3pt} \text{\texttt{if\phantom{i} }}\hskip -7pt  t^s_i < t^e_j
+\bigwedge t^e_i > t^s_j,$ $\text{\hskip 5pt}\forall o_i, o_j\in O, \; d_k\in D$
+\hfill \refstepcounter{equation} (\theequation) \label{eq:non_overlapping}
+\hlinewd{0.3pt}
+\end{tabular}
+\end{table}

@@ -1,0 +1,94 @@
+%% Creator: Inkscape inkscape 0.92.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'multiport_single_port.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{209.45230704bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.26986871)%
+    \put(-2.45672722,1.84457998){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{4.46252198\unitlength}\raggedright \end{minipage}}}%
+    \put(0.41676411,0.62523727){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(a)}}}%
+    \put(0.0784223,0.93080737){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{pressure }}}%
+    \put(0.08012188,0.89579397){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{source}}}%
+    \put(0.56649348,1.24620763){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{pressure }}}%
+    \put(0.56641633,1.20835253){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{meter}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{multiport_single_port.pdf}}%
+    \put(0.37172387,0.71600471){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{P1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{multiport_single_port.pdf}}%
+    \put(0.63342109,0.6311629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C4}}}%
+    \put(0.5648347,0.63296634){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C3}}}%
+    \put(0.49267245,0.65839748){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C2}}}%
+    \put(0.25759402,0.79762872){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{multiport_single_port.pdf}}%
+    \put(0.91813912,0.79699856){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{pressure }}}%
+    \put(0.91806199,0.75914386){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{meter}}}%
+    \put(0.41643826,0.00446317){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(b)}}}%
+    \put(0.07842227,0.31494222){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{pressure }}}%
+    \put(0.08012178,0.27992757){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{source}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{multiport_single_port.pdf}}%
+    \put(0.40144518,0.07472168){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{P1}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{multiport_single_port.pdf}}%
+    \put(0.63342109,0.00911437){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C5}}}%
+    \put(0.56000288,0.0192762){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C4}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{multiport_single_port.pdf}}%
+    \put(0.91813912,0.1762247){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{pressure }}}%
+    \put(0.91806199,0.13836842){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{meter}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{multiport_single_port.pdf}}%
+    \put(0.69626536,0.00911437){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C6}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{multiport_single_port.pdf}}%
+    \put(0.41755397,1.02336253){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{P2}}}%
+    \put(0.22205747,0.18073337){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C1}}}%
+    \put(0.26131117,0.13874048){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C2}}}%
+    \put(0.27048308,0.90713932){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_0$}}}%
+    \put(0.57044142,1.05711881){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_1$}}}%
+    \put(0.72042072,0.75716056){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_2$}}}%
+    \put(0.57044142,0.4398408){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_1$}}}%
+    \put(0.27048308,0.2898618){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_0$}}}%
+    \put(0.72042072,0.13988231){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_2$}}}%
+    \put(0.26597712,0.60351779){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{P2}}}%
+    \put(0.32995105,0.11008175){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{C3}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,128 @@
+\section{Simulation Results}\label{sec:results}
+
+The proposed method was implemented in C++ and tested
+using a \SI[mode=text]{3.20}{\GHz} CPU with 
+\SI{8}{GB} memory.  We demonstrate the results using 
+three applications executed by three biochips. 
+The information of these test cases are shown in 
+Table~\ref{tb_test}, where IVD (In-Vitro Diagnostics) 
+and PID (Protein Interpolation Dilution) and 
+CPA (Colorimetric Protein Assay).
+are real-world assays. The biochips used in the experiments were
+the IVD chip and RA30 chip from \cite{Liu2017} and 
+the mRNA chip from \cite{MAQuake06}. 
+%In the experiments, we used Gurobi \cite{gurobi} to solve the optimization problems.
+
+In Table~\ref{tb_test}, the results of DFT design of the chips above running
+the three applications are reported, where all chips have been modified 
+to single-source single-meter architectures successfully.
+For each chip-application combination, the results are
+split into two rows, each of which contain three columns. In the first row,
+the number of added DFT valves, the number of the valves sharing control
+channels with existing valves and the runtime of the proposed method are
+shown. For all the combinations, the DFT valves have found a valid sharing
+mechanism. Compared with the number of original valves in the chips, the
+number of DFT valves is still in the acceptable range. The second row for a
+experiment combination reports the execution time of the corresponding
+application without DFT, with DFT but without PSO optimization for valve 
+sharing and the final results of the whole framework. Form this comparison,
+it can be seen that the introduction DFT valves into a chip can initially
+prolong the execution time of application significantly. With the introduce
+POS optimization iterations, the execution time has been recovered back to
+nearly the same level of the original design, while in the case PID running on
+the RA30 chip the execution time actually has been reduced.
+
+%The column $t_b$ shows at the beginning
+%of PSO, the best running time of assays executed on DFT architecures. The
+%execution time after is presented in column $t_a$. As we can see, relative to
+%execution time before optimization, assays acheive less running time after
+%PSO. But they are still longer than the execution time when applications
+%running on the original chips. This is due to valve sharing interference with
+%flow paths during the execution, leading more waiting time among the fluid
+%traffics.  The execution time for the whole program is record in column $t_p$.
+
+
+\input{tb_test}
+
+\begin{figure}[t]
+{
+\figurefontsize
+\centering
+%\vskip 5pt
+\input{exetime_cmp.tex}
+%\input{Fig/edge_valve_percentage.pdf_tex}
+\caption{Comparison of execution time of applications 
+in the original chip and the DFT chip without valve sharing.}
+\label{fig:exetime_cmp}
+}
+\end{figure}
+
+
+\begin{figure}[t]
+{
+\figurefontsize
+\centering
+%\vskip 5pt
+\input{testvector_cmp.tex}
+%\input{Fig/edge_valve_percentage.pdf_tex}
+\caption{Comparison of numbers of test vectors 
+  in original chips and DFT architectures.} 
+  \label{fig:testvector_cmp}
+}
+\end{figure}
+
+As shown in Table~\ref{tb_test}, the execution time of application is slightly
+longer in many cases with DFT architectures than with the original chip.  The
+main reason is that valve sharing blocks some transportation tasks so that
+reaction must wait for the input fluid samples. In the case that the DFT
+valves can own their own control channels, the execution time should be no
+larger than that in the original chip, because new resources added for DFT can
+also be used by applications.  The results of this comparison is shown in
+\figname~\ref{fig:exetime_cmp}, where the execution performance are better in
+several cases.
+
+In the DFT architectures, the number of pressure sources and meters have been
+reduced. Accordingly, the number of test vectors should increase because 
+some more efficient test vectors become unavailable with this simplified test
+platform.  Figure~\ref{fig:testvector_cmp} compares the 
+numbers of test vectors in the original chips and the DFT architectures,
+leading to a longer test test, which still not a problem in today's
+biochemical laboratories. 
+
+\begin{figure}[t]
+{
+  \figurefontsize
+\centering
+%\vskip 5pt
+\input{iteration_time.tex}
+%\input{Fig/edge_valve_percentage.pdf_tex}
+\caption{Best execution time during each iteration of PSO}
+\label{fig:PSO_iteration}
+}
+\end{figure}
+
+In the process of PSO optimization, we used 5 particles for DFT valves and
+channels and 5 particles for valve sharing. The total number of iterations was
+set to 100. To show the converging trend of the PSO method, the execution time
+of applications with respect to the number iterations are shown in 
+\figname~\ref{fig:PSO_iteration} with three chip-application combinations,
+where we can see that the results of PSO become stable at about 80 iterations,
+earlier than the number of iterations we used in the experiments.
+
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+%\includegraphics[width=2in,height=3in]{Fig/RA30_DFS.eps}
+\input{Fig/RA30_DFS.pdf_tex}
+\caption{DFT architecture and valve sharing. (a) The original RA30 chip. (b) The DIS architecture. Valves connected by red arrows share a same control channel.}
+\label{PSO_iteration}
+}
+\end{figure}
+
+Finally, the DOS architecture with valve sharing of RA30 chip is shown in
+\figname~\ref{fig:RA30_DFS}. The red valve and channels are those inserted for
+DFT for single-source single-meter test.
+The valves connected by thin lines share the same control channels. As can be
+seen, it is even possible that more than two valves share a control channel in
+this case.

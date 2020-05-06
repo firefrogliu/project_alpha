@@ -1,0 +1,99 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'RA30_exe_flow_ver3.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{137.67170835bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.69801816)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.54545054,1.44091028){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_3$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.39411982,1.05040212){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.26442474,1.33024843){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.71633018,1.33024843){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_4$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.71632955,1.17955359){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_5$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.49684086,0.87492859){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}(a)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.20013043,1.02760651){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$pump$\end{tabular}}}}%
+    \put(0.20242688,0.95548738){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$waste$\end{tabular}}}}%
+    \put(0.42546115,1.14840403){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}A\end{tabular}}}}%
+    \put(0.57718384,1.14840484){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}B\end{tabular}}}}%
+    \put(0.57870655,1.29272098){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0.42733057,1.29223097){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}D\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{RA30_exe_flow_ver3.pdf}}%
+    \put(-0.38169185,0.44674453){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{1.95418746\unitlength}\raggedright \end{minipage}}}%
+    \put(-0.40066454,0.46248878){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{2.10280689\unitlength}\raggedright \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.54545164,0.57380678){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_3$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.39412092,0.18329866){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_2$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.26442584,0.46314489){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.71633129,0.46314489){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_4$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.71633061,0.31245067){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$d_5$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.49684184,0.00782455){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}(b)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{RA30_exe_flow_ver3.pdf}}%
+    \put(0.20013151,0.16050338){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$pump$\end{tabular}}}}%
+    \put(0.20242795,0.08838433){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$waste$\end{tabular}}}}%
+    \put(0.42546226,0.28130039){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}A\end{tabular}}}}%
+    \put(0.57718495,0.28129852){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}B\end{tabular}}}}%
+    \put(0.57870765,0.42501143){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}C\end{tabular}}}}%
+    \put(0.42733167,0.42512731){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}D\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{RA30_exe_flow_ver3.pdf}}%
+  \end{picture}%
+\endgroup%

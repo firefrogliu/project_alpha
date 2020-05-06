@@ -1,0 +1,74 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'valve_mixer_storage_own_mixer.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{206.33378948bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.92701271)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{valve_mixer_storage_own_mixer.pdf}}%
+    \put(0.50184519,0.0088474){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}(c) \end{tabular}}}}%
+    \put(0.21834563,0.55772891){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}(a) \end{tabular}}}}%
+    \put(0.81478559,0.55606846){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}(b) \end{tabular}}}}%
+    \put(0.82769538,0.6186672){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}valve\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{valve_mixer_storage_own_mixer.pdf}}%
+    \put(0.8352133,0.75364771){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}mixer\end{tabular}}}}%
+    \put(0.83800497,0.90136719){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}peristalsis valves\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{valve_mixer_storage_own_mixer.pdf}}%
+    \put(0.09749112,0.78640528){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}control layer\end{tabular}}}}%
+    \put(0.56595478,0.69987763){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}flow layer\end{tabular}}}}%
+    \put(0.16380156,0.63300966){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}flow\end{tabular}}}}%
+    \put(0.08243246,0.64072703){\color[rgb]{0,0,0}\makebox(0,0)[rt]{\lineheight{0}\smash{\begin{tabular}[t]{r}substrate\end{tabular}}}}%
+    \put(0.16134671,0.59549907){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}channel\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{valve_mixer_storage_own_mixer.pdf}}%
+    \put(0.51286637,0.82103479){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}control\end{tabular}}}}%
+    \put(0.51286637,0.78168834){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}channel\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

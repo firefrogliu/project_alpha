@@ -1,0 +1,83 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'cutset_model.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{386.82426453bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.29539305)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{cutset_model.pdf}}%
+    \put(0.03545624,0.16166316){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $v^m_{i,j-1}$\end{tabular}}}}%
+    \put(0.09432523,0.21845602){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $v^m_{i+1,j}$\end{tabular}}}}%
+    \put(0.85398918,0.31111291){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29201976\unitlength}\centering  \end{minipage}}}%
+    \put(0.09925198,0.00428233){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(a)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{cutset_model.pdf}}%
+    \put(0.15156589,0.1615821){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $v^m_{i,j+1}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{cutset_model.pdf}}%
+    \put(0.09432523,0.1615821){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $c_{i,j}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{cutset_model.pdf}}%
+    \put(0.09432523,0.10362975){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $v^m_{i-1,j}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{cutset_model.pdf}}%
+    \put(0.09432523,0.04550466){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $c_{i-2,j}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{cutset_model.pdf}}%
+    \put(0.56173949,0.23060552){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}pressure\end{tabular}}}}%
+    \put(0.56109608,0.21331976){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}sensor\end{tabular}}}}%
+    \put(0.22417049,0.06741875){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}pressure\end{tabular}}}}%
+    \put(0.22706547,0.04974602){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}source\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{cutset_model.pdf}}%
+    \put(0.56160979,0.19608417){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(sink)\end{tabular}}}}%
+    \put(0.405694,0.0041466){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(b)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{cutset_model.pdf}}%
+    \put(0.25235574,0.18940417){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}leakage\end{tabular}}}}%
+    \put(0.25203824,0.17125642){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}tested\end{tabular}}}}%
+    \put(0.44108775,0.26868533){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}control leakage not tested\end{tabular}}}}%
+    \put(0.25121584,0.20768138){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}control\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

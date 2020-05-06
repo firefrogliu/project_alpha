@@ -1,0 +1,9 @@
+#!/bin/bash
+
+PAGES=$(pdfinfo $1.pdf | grep Pages | cut -d" " -f11) 
+for j in $(egrep "includegraphics.*page=" $1.pdf_tex); do
+    CHECKPAGE=$(echo $j | sed 's/^.*page=\([0-9]*\).*/\1/g');
+       if [ $CHECKPAGE -gt $PAGES ]; then
+           sed -i "s/^.*includegraphics.*page=$CHECKPAGE.*//g" $1.pdf_tex
+       fi
+done

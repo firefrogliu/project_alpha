@@ -1,0 +1,151 @@
+
+
+
+
+
+
+
+
+
+
+@article{EVNR03,
+    author = {Elisabeth Verpoorte and Nico F. De Rooij},
+    title = {Microfluidics meets {MEMS}},
+    journal = IEEE_J_PROC,
+    year = {2003},
+    volume = {91},
+    number = {6},
+    pages = {930--953}
+}
+
+@inproceedings{MinhassPMB12,
+  author    = {Wajid Hassan Minhass and Paul Pop and Jan Madsen and Felician Stefan Blaga},
+  title     = {Architectural synthesis of flow-based microfluidic large-scale integration
+               biochips},
+  booktitle = {Proc. Int. Conf. on Compilers, Architecture, and Synthesis for
+Embed. Sys.},
+  pages     = {181--190},
+  year      = {2012},
+}
+
+
+@article{matrix11,
+        author    = {L. M. Fidalgo and S. J. Maerkl},
+        title     = {A software-programmable microfluidic device for automated biology},
+        journal   = "Lab on a Chip",
+        year      = {2011},
+        volume    = {11},
+        pages     = {1612--1619},
+}
+
+@article{HuYHC14,
+  author    = {Kai Hu and Feiqiao Yu and Tsung{-}Yi Ho and Krishnendu Chakrabarty},
+  title     = {Testing of Flow-Based Microfluidic Biochips: Fault Modeling, Test
+               Generation, and Experimental Demonstration},
+  journal   = IEEE_J_CAD,
+  volume    = {33},
+  number    = {10},
+  pages     = {1463--1475},
+  year      = {2014},
+}
+@article{JMSQ07,
+    author    = {J. Melin and S. Quake},
+    title     = {Microfluidic large-scale integration: the evolution of
+	design rules for biological automation},
+    journal   = "Annu. Rev. Biophys. Biomol. Struct.",
+    year      = {2007},
+    volume    = {36},
+    pages     = {213-231},
+}
+@article{JEMP08,
+    author = {Jeffrey M. Perkel},
+    title = {Microfluidics: Bringing New Things to Life Science},
+    journal = {Science},
+    year = {2008},
+    volume = {322},
+    number = {5903},
+    pages = {975--977}
+}
+@article{KrCh10,
+  author    = {Krishnendu Chakrabarty},
+  title     = {Design Automation and Test Solutions for Digital Microfluidic
+Biochips},
+  journal   = IEEE_J_CAS,
+  volume    = {57},
+  number    = {1},
+  year      = {2010},
+  pages     = {4--17},
+}
+@inproceedings{AminTA09,
+  author    = {Nada Amin and William Thies and Saman P. Amarasinghe},
+  title     = {Computer-aided design for microfluidic chips based on
+multilayer soft lithography},
+  booktitle = C_ICCD,
+  year      = {2009},
+  pages     = {2--9},
+}
+
+@inproceedings{TsengLHS15,
+  author    = {Tsun{-}Ming Tseng and Bing Li and Tsung{-}Yi Ho and Ulf Schlichtmann},
+  title     = {Reliability-aware synthesis for flow-based microfluidic biochips by
+               dynamic-device mapping},
+  booktitle = C_DAC,
+  pages     = {141:1--141:6},
+  year      = {2015},
+}
+
+@misc{stanfordmanualtest,
+        url = "http://web.stanford.edu/group/foundry/"
+}
+@misc{illumina,
+        url = "http://www.illumina.com/"
+}
+
+@misc{gurobi,
+        author = "{Gurobi Optimization, Inc.}",
+        title = "Gurobi Optimizer Reference Manual",
+        year = 2013,
+        url = "http://www.gurobi.com"
+}
+@article{PopAC15,
+  author    = {Paul Pop and Ismail Emre Araci and Krishnendu Chakrabarty}, 
+title     = {Continuous-Flow Biochips: Technology, Physical-Design Methods, and
+               Testing},
+  journal   = {{IEEE} Design {\&} Test},
+  volume    = {32},
+  number    = {6},
+  pages     = {8--19},
+  year      = {2015},
+}
+@inproceedings{DinhYHC15,
+  author    = {Trung Anh Dinh and Shigeru Yamashita and Tsung{-}Yi Ho and Krishnendu Chakrabarty},
+  title     = {A general testing method for digital microfluidic biochips under physical
+               constraints},
+  booktitle = C_ITC,
+  pages     = {1--8},
+  year      = {2015},
+}
+@inproceedings{HuHC14,
+  author    = {Kai Hu and Tsung{-}Yi Ho and Krishnendu Chakrabarty},
+  title     = {Test generation and design-for-testability for flow-based mVLSI microfluidic
+               biochips},
+  booktitle = C_VTS,
+  pages     = {1--6},
+  year      = {2014},
+}
+@inproceedings{ZhaoXC08,
+  author    = {Yang Zhao and Tao Xu and
+               Krishnendu Chakrabarty},
+  title     = {Built-in Self-Test and Fault Diagnosis for Lab-on-Chip Using Digital
+               Microfluidic Logic Gates},
+  booktitle = C_ITC,
+  pages     = {1--10},
+  year      = {2008},
+}
+
+@book{chen2011applied,
+        title={Applied Integer Programming: Modeling and Solution},
+        author={Chen, D.S. and Batson, R.G. and Dang, Y.},
+        year={2011},
+        publisher={Wiley}
+}

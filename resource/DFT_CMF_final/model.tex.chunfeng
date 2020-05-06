@@ -1,0 +1,229 @@
+
+
+
+
+\section{DFT}
+\begin{figure}
+{\figurefontsize
+\centering
+\includegraphics[width=3.50in,height=1.2in]{Fig/multiport_single_port1.eps}
+%\vskip 5pt
+\caption{Comparison of the multi-source multi-meter biochip test and single-source single-meter test. (a) A test pattern for test enviroment with one air source and two air meters. (b) Test pattern for single-source single-meter test enviroment. }
+\label{fig::multiPortSingPort}
+}
+\end{figure}
+
+
+In this section we explain the strategy and the implemantation to generate a design-for-test biochip architecture based on a chip with multiple in-out ports. Test vectors for the new achitecture are constructed in the same time. We also demonstrate that applications running on new architecture will benifit from new flow channels and microvalves which are added to chips in order to obtain single-source single-meter testibilty. 
+
+The procedure of testing flow-based biochips usually consists these steps: (1) Connect biochip ports to pressure sources and meters respectively. (2) Apply a test pattern to the chip. Close and open microvalves accordingly. (3) Air is pushed into a chip from pressure sources, travels throughs flow channels and reaches certain areas which are confined by closed/open valves. Wether each meter should pick up air pressure is predetermined by given test patterns. An unexpected reading on any air meter indicates that one or valves cannot be closed or open properly. This also means, given a malfunction valve that a test vector is dedicated to examine, its impact on this test run should be observed by at least one air meter. 
+
+
+\figname~\ref{fig:multiPortSingPort}(a) demonstrates how a test vector is applied to test a multiple ports biochip. One air source and two air meters are needed to fulfill the test task. If air $meter 1$ is removed from this test enviroment, a fault on $valve 1$ will not be observed by any other air meter. Because we cannot build a flow channel linking between the air source and meter 0, which also pass through valve 1. In order to make the behavior of $valve 1$ observable on $meter 0$, additional flow channels and valves are needed to built into the original biochip, to construct a air path from air source to air meter. 
+
+After building in more channels and valves into the original biochip, as \figname~\ref{fig:multiPortSingPort}(b) shows, for any valve and channel, there exists at least one path connecting the single air source and air meter. \figname~\ref{fig:multiPortSingPort}(b) also illustrates that a test pattern has been applied to this new architecture. This test pattern forms a path that lets air from ${air source}$ pass through $valve 1$ and reach $meter 0$. If $valve 1$ has stuck-at-0 fault, $meter 0$ will not pick up air pressure, raising up a alert that some error has occured in this chip. 
+
+To sum up, if a flow based biochip has single-source single-meter testibility, its architecture must meet the following requirement: For each flow channel and microvalve, there exists at least air path, leading from the air source, running through this very channel/microvalve and reaching the single air meter in the end. 
+On the other hand. test vectors to examine stuck-at-0/stuck-at-1 fault can always be found for a biochip architecture that meets this requirment.
+To test stuck-at-0 faults, we can open all the valves along this path and close all the others. After air is pushed If no air pressure could be sensed at the air meter, we know there is at least one stuck-at-0 fault among the valves/channels on this path. In the same manner, if we want to test stuck-at-1 fault, we keep the other vavles closed and valves on this path open, then close one valve along the path at a time and see if air pressure reaches the meter. If air pressure can be sensed at the meter, we know this valve cannot be closed properly.
+
+\subsection{Constructing design-for-test architecure}
+\begin{figure}
+{\figurefontsize
+\centering
+\includegraphics[width=3.50in,height=2.2in]{Fig/fitintogrid2.eps}
+%\vskip 5pt
+\caption{Mapping one biochip into a connection grid. (a) Origin chip. (b) Connection grid after mapping. The red edges indicates they have been assgined into channels from the original chip. (c) Design-for-test architecture}
+\label{fig::fitintogrid}
+}
+\end{figure}
+
+
+A multiple ports biochip could gain single-source single-meter testiblity by building in additional channels and valves. Where these valves and channels are built and how they are connected is generated using a general connection grid, as shown in \figname~\ref{fig:fitintogrid}. By mapping devices and ports from the original chip into nodes in a connection grid, and channels into edges of the grid, a chip could been mapped into this grid while keeping topology of the chip itself. \figname~\ref{fig:fitintogrid}(b) illustrates how a chip is mapped into one connection grid. 
+After this mapping procedure, several nodes and edges in the connection grid have been assigned to devices or channels from the original chip. The rest of the nodes and channels contain all the possilbilities of where additional channels and valves locate and how they connected. 
+Each edge $e_j$ represents a possible additional channel sigment. Each node $n_i$ represents a possible joint where additional channels meet one anther.
+Note that Single-source single-meter testiblity requeirs that for each valve or channel, there is a path from air source to meter that runs through it. In another word, on the connection grid, if paths those run through all the valves and channels have been found, we can construct a new chip architecture with single port testiblity using these paths. 
+These paths are are constructed by both channels from the original chip and additional channels. By keeping original channels and additional channels used in these paths, removing the rest channels in the connection grid, a new design-for-test architecture is found.
+
+
+In the proposed method, we generate paths which run through every valve and channel using an Integer Linear Programming (ILP) model.  
+Assume there is a path $p_n$ between 
+port node $pn_1$ and port node $pn_2$,  where $r$ is the index of the path.
+We use a 0-1 variable $e_{j,n}$ to represent whether the edge 
+$e_j$ is on the path $p_n$.
+We use a 0-1 variable $n_{i,n}$ to represent whether the node 
+$n_i$ is on the path $p_n$.
+To construct a path between $pn_1$ and $pn_2$, we need to
+guarantee that the path starts from the node for $pn_1$ 
+and ends at the node for $pn_2$. 
+Consequently, at one of these two nodes, only one of the four edges incident
+to the node can be covered in the path.
+At each other node on the path, exactly two edges are covered by the path.
+
+Accordingly, we can
+construct the path with the following constraints
+\begin{equation}\label{eq:path_construct} 
+\sum_{e_j\in E_i}{e_{j,n} = 2n_{j,n} }\quad \forall n_i\in N, n_i = pn_1,pn_1 \qquad 
+\sum_{e_j\in E_i}{e_{j,n} = 1 }\quad  n_i \neq pn_1,pn_1 \qquad
+\end{equation}
+where $E_i$ is the set of edges incident to node $n_i$.
+
+Each channel or valve from the rigin chip has been concluded in at least one path, we constrain this requirement as,
+\begin{equation}\label{eq:edge_cover}
+\sum_{p_n\in P} e_{j,n}\ge 1,\quad \forall e_j\in E_{ori} \qquad
+\end{equation}
+where $P$ is the set of paths; $E_{ori}$ is the set of edges which have been mapped channels from original chip.
+
+When generating the design-for-test architecture of the chip, we minimize the number of additional channels. If an edge representing a additional channel segment is used one path once by any transportation path, it should appear in the DFT chip. We use a 0-1 variable $s_j$ to represent whether a channel segment should be kept in the chip, and constrain it as
+\begin{equation}\label {eq:edge_used} 
+s_j\ge e_{j,n}, \quad \forall p_n\in P \quad \forall e_j \in E_{add}
+\end{equation} 
+where $P$ is the set of paths; $E_{add}$ is the set of edges represeting original channels.
+
+Finally, the architecture of the DFT chip can be determined by solving the
+following optimization problem
+\begin{align} \label{eq:DFT_opt}
+\text{minimize} & \quad \sum_{e_j\in E_{add}}s_j\\
+\text{subject to} & \quad
+\text{(\ref{eq:path_construct})--(\ref{eq:edge_used})}\label{eq:edge_opt_cond}
+\end{align}
+
+\figname~\ref{fig:fitintogrid}(c) shows the DFT architeture.
+
+Where to add the port?
+
+\subsection{Constructing test vectors}
+
+After a DFT architecture is generated, we can find test vectors both for stuck-at-0 faults and stuck-at-1 faults by employing single air source and air sensor.
+
+
+\subsubsection{Constructing stuck-at-0 test vectors}
+
+
+As mentioned before, given a path linking the air source and the air sensor on a biochip, a test vector for stuck-at-0 could be generated by openning valves along the path and closing all the other valves. These paths have been found from the DFT architecture constructing procedure listed above. Since these paths already run through all the channels and valves in this biochip, the test vectors generated according to these paths should cover all the stuck-at-0 faults.
+
+\subsubsection{Constructing stuck-at-1 test vectors}
+
+When applying stuck-at-1 test vectors, valves are kept closed or open. One air source is connected to one port and one air pressre is connected to one another port. If all valves are working properly, after air is pushed from the source, closed valves should block it from the air meter. No air pressure would be picked up at the meter. If any valve which is meant to be closed does not close properly, air should travel through it, reaching the air meter, alerting us the existence of the a stuck-at-1 fault. 
+This means air from the input port could reach one side of the closed valves but cannnot reach the other side. 
+Due to the symmetric property of the chip. If air is pushed from the output port and air meter is connected to the input port, there should not be air pressure at the meter given all valves are working properly. This means air from the output port will reach one side of the closed valves and not the other side. These are the constraints which will help us locate the valves to close in a stuck-at-1 test vector.
+
+\begin{figure}
+{\figurefontsize
+\centering
+\includegraphics[width=3.00in,height=1.50in]{Fig/gencut.eps}
+%\vskip 5pt
+\caption{Cell and valve defination in stuck-at-1 test vector modeling.  }
+\label{fig::cut}
+}
+\end{figure}
+
+A cell is defined as the channel area surrounded by two or more valves, as shown in \figname~\ref{fig:cut}(a). A valve is also surrounded by two cells. 
+A air flow is defined as the amount of air pass through a valve from one cell on one side to cell on the other side. 
+For a stuck-at-1 test vector $t_n$, where $n$ is the index of the test vector, we use a 0-1 variable $v_{k,n}$ to represent whether the valve 
+$v_k$ is on the test vector $t_n$. Assume $v_k$ is surrounded by $c_i$ and $c_j$, when the air source is connected to input port, we use a integer variable ${f^{in}_{i,j,n}}$ indicates the amount of air which is traveling through $v_k$ from $c_i$ to $c_j$. A 0-1 varialbe $r^{in}_{i,n}$ is also introduced to indicate if air from input port could reach cell $c_i$.
+
+For a cell $c_i$ that could be reached by the air coming from the input port, the amount of air traveling into this cell should be more than air traveling out of it, which can be constrained as
+
+\begin{equation}\label{eq:flow_in}
+\sum_{c_j\in C_n}  f^{in}_{j,i,n} - f^{in}_{i,j,n} - r^{in}_{i,n} = 0 \quad \forall c_i\in C \qquad
+\end{equation}
+
+where $C_n$ is the set of neighbor valves cells those share a same valve with cell $c_i$. $C$ is the set of all cells.
+
+If a valve is supposed to be closed during the test, no air flow should pass this valve.
+
+ \begin{equation}\label{eq:no_flow_in}
+  f^{in}_{j,i,n} - (1 -v_{k,n})M \le 0  \quad \qquad
+  f^{in}_{j,i,n} + (1 -v_{k,n})M \ge  0  \quad \qquad
+  f^{in}_{i,j,n} - (1 -v_{k,n})M \le 0  \quad \qquad
+  f^{in}_{i,j,n} + (1 -v_{k,n})M \ge  0  
+  \quad \forall v_k\in V \qquad
+\end{equation}
+
+where $f^{in}_{i,j,n}$ is the air flow running through valve $v_k$, from cell $c_i$  to cell $c_j$ on $n$th test. $M$ is a large positive constant ensuring when $v_{k,n}$ equals to 1,  $f^{in}_{i,j,n}$ is forced to set to 0. 
+
+The constraints listed above also apply when air source is connected to output port. Here we introduce 0-1 varialbes $f^{in}_{j,i,n}$ and $r^{out}_{i,n}$ to represent the air flow from cell $c_i$ to cell $c_j$ and wether cell $c_i$ is reachable by the air pushed in from the output port on $n$th test vector. The corresponding constraints are as follow:
+
+
+\begin{equation}\label{eq:flow_out}
+\sum_{c_j\in C_n}  f^{out}_{j,i,n} - f^{out}_{i,j,n} - r^{out}_{i,n} = 0 \quad \forall c_i\in C \qquad
+\end{equation}
+\begin{equation}\label{eq:no_flow_out}
+  f^{out}_{j,i,n} - (1 -v_{k,n})M \le 0  \quad \qquad
+  f^{out}_{j,i,n} + (1 -v_{k,n})M \ge  0  \quad \qquad
+  f^{out}_{i,j,n} - (1 -v_{k,n})M \le 0  \quad \qquad
+  f^{out}_{i,j,n} + (1 -v_{k,n})M \ge  0  
+  \quad \forall v_k\in V \qquad
+\end{equation}
+
+As for air from input port could reach one side of a valve $v_k$ when air from output port, vice versa, ILP constraints could be written as
+
+\begin{equation}\label{eq:valve_reach}
+r^{in}_{i,n} + r^{out}_{i,n} - (1 - v_{k,n})M \le 1\\
+r^{in}_{i,n} + r^{out}_{i,n} + (1 - v_{k,n})M \ge 1\\
+r^{in}_{j,n} + r^{out}_{j,n} - (1 - v_{k,n})M \le 1\\
+r^{in}_{j,n} + r^{out}_{j,n} - (1 - v_{k,n})M \le 1
+\end{equation}
+
+Since all valves on the chip should be tested for stuck-at-1 fault, any valve need to be included by at least one test vector, which is constrained as
+
+\begin{equation}\label{eq:valves_include}
+\sum_{t_n\in T}  v_{k,n} = 1 \quad \forall v_k\in V \qquad
+\end{equation}
+
+where T is the set of all test vectors, V is the set of all valves.
+
+Combining ${(\ref{eq:flow_in})--(\ref{eq:valves_include})}$ gives us a complete ILP model. Optimamizing this model will provide a set of test vectors to test all possbile stuck-at-1 faults in a biochip.
+
+\subsubsection{Running application on DFT architecture}
+
+We adopted a List Processing Algorithm[reference] to map and schedule an application into the chip. After the mapping the scheduling phase, temperory flow paths are built to transport intermediate fluids. At one moment, Flow paths may conflict with each other, if all paths happens at the same time and there are not enough channels available. If this happens, we re-run the list processing algorithm, to put those paths in different time windows.
+
+Design-for-test architecture introduces new channel and valves into the original chip. Applications running on the new architecture could benifit from more resources at hand. In a scenario when manipulating fluid around the original chip, fluid paths conflict with each other, resulting more waiting time on transportation, additional channels could give tranportation more path choice, redering conflicts happen less frequently. In a schedual algorithm using dynamic storage, which store intermediate results into channels, addition channels provide more storage space, which application could also benifit take advantage of. Test results will show some applications running on DFT achitecture would get less running time than those running on the original chip.
+
+\section{Valve sharing}
+
+As a multi-port biochip is transformed into an architecture with single-source single-meter testibiliy, new channels and valves are built into the original chip. If all these new valves are controlled by individual controll channels and air pumps, the cost for manufactoring and running the chip will increase simultaneously. In this section, we propose a valve-sharing technic which will eliminate the controlling overhead while keeping performance of applications on the chip still maintained.
+
+\subsection{Valve sharing and its validification}
+
+
+
+ \begin{figure}
+{\figurefontsize
+\centering
+\includegraphics[width=3.00in,height=1.50in]{Fig/gencut.eps}
+%\vskip 5pt
+\caption{Cell and valve defination in stuck-at-1 test vector modeling.  }
+\label{fig::valveSharing}
+}
+\end{figure}
+
+\figname~\ref{fig:valveSharing} (a) demonstrates how valves share controlling channels in a DFT architecture. Each new valve is connected to control channel which already controlls a valve in the original chip. $valve0$ is sharing controlling channel with $valve1$ and so do $valve2$ and $valve3$. This results in that $valve0$ and $valve1$ always close and open at the same time. This may interference the excution of application running and testing. So we need to validify a valve sharing plan it can be put into practice. 
+
+\subsubsection{Validification: valve sharing and application execution}
+
+Fluids on a biochip are transported through temporary flow paths formed by closed and open valves. More specifically, any valve along the paths are meant be open, in the meanwhile, any valve which keeps paths diverge should be kept closed. If there are two valves sharing a same control channel, however, one of them is meant to be open and the other should be kept closed, either a leakage or a blokage will occur during this tranportation. \figname~\ref{fig:valveSharing}(b) gives an example of an anviable sharing plan. This very transporting path needs $v1$ to be open, which will open $v0$ at the same time. Fluid in $d0$ will pass through both $v0$ and $v1$, leaking to $channel0$. 
+
+In this validification phase, we gather application scheduling information and apply the sharing plan we want examine. The sharing plan will pass this part of validification if no leakage or blockage occurs. If asharing plan do conflict with the application execution, we either give up this share plan or re-run the list processing algorithm to generate new flow paths to avoid the conflict.
+
+\subsubsection{Validification: valve sharing and testing}
+Similaly to application execution, during testing, sharing valves may mask potentially faults. \figname~\ref{fig:valveSharing}(c) shows how valve-sharing may interference testing result. During this test, $v1$ and $v2$ are kept closed. If $v1$ cannot be closed properly, the air meter should pick up air pressure. But since $v1$ and $v0$ are sharing one controll channel, $v0$ is also kept closed during this test run, stopping air from reaching $v1$. As long as $v2$ and $v0$ are well functioning, thus are closed properly, no matter if $v1$ could be closed, air meter will not sense any air pressure. 
+
+In this validification phase, each test pattern is applied to the chip. Valves sharing controlling channels are all closed or open accordingly. Then we simulate faults for each valve which this test run is aiming for, to see if the air meter gives a false true reading, which means faults have been masked by this valve sharing plan. 
+
+\subsection{Finding the best DFT architecture and valve-sharing plan using Partical Swam Optimization(PSO)}
+
+As dicussed above, a DFT architecture will bring new channels and valves into the chip, which also generates a set of test vectors and valve sharing plan. Both the location of valves and the new valves controll channels sharing plan have impact on the application excution time and testing. Based on Partical Swam Optimization (PSO) algorithm, we propose a strategy aiming to find a DFT architecture and valve-sharing plan which are beneficial for both application execution and testing. 
+
+Particle swarm optimization (PSO) is a stochastic population-based optimization algorithm. Members of the population (= swarm) are called particles. Each particle moves around in the search space, taking advantage of the particle’s own experience and the experience of the particle’s neighbours or of the whole swarm to guide the search.
+
+At the beginning of the algorithm, particles are randomly scatterd into the whole search space. a particle $p_i$ possess a position $x_i$. A random velocity $v_i$ is assigned to particle $p_i$. A cost function is applied for each particle to make assessment of a particle's currunt location. For each particle $p_i$, a local best position $pBest_i$ in its seaching history is kept record. For the whole swarm, a global best position $gBest$ with the best assessment is also noted down. For each iteratioin,
+
+
+\begin{equation}\label{eq:valves_include}
+v_{k,n} = 1 \quad \forall v_k\in V \qquad
+\end{equation}
+
+

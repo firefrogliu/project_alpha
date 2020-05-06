@@ -1,0 +1,2669 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.9.20)  19 OCT 2019 10:17
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**j_fpva_test_final.tex
+(./j_fpva_test_final.tex
+LaTeX2e <2018-12-01>
+(./IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count80
+\@IEEEtrantmpcountB=\count81
+\@IEEEtrantmpcountC=\count82
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@IEEEsubequation=\count87
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count88
+\c@table=\count89
+\@IEEEeqnnumcols=\count90
+\@IEEEeqncolcnt=\count91
+\@IEEEsubeqnnumrollback=\count92
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count93
+\@IEEEquantizeboxA=\box27
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count94
+\@IEEEtranrubishbin=\box28
+) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks15
+\thm@bodyfont=\toks16
+\thm@headfont=\toks17
+\thm@notefont=\toks18
+\thm@headpunct=\toks19
+\thm@preskip=\skip44
+\thm@postskip=\skip45
+\thm@headsep=\skip46
+\dth@everypar=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2019-02-15 L3 programming layer (loader) 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2019-02-15 L3 programming layer (code)
+\c_max_int=\count95
+\l_tmpa_int=\count96
+\l_tmpb_int=\count97
+\g_tmpa_int=\count98
+\g_tmpb_int=\count99
+\g__kernel_prg_map_int=\count100
+\c_log_iow=\count101
+\l_iow_line_count_int=\count102
+\l__iow_line_target_int=\count103
+\l__iow_one_indent_int=\count104
+\l__iow_indent_int=\count105
+\c_zero_dim=\dimen126
+\c_max_dim=\dimen127
+\l_tmpa_dim=\dimen128
+\l_tmpb_dim=\dimen129
+\g_tmpa_dim=\dimen130
+\g_tmpb_dim=\dimen131
+\c_zero_skip=\skip47
+\c_max_skip=\skip48
+\l_tmpa_skip=\skip49
+\l_tmpb_skip=\skip50
+\g_tmpa_skip=\skip51
+\g_tmpb_skip=\skip52
+\c_zero_muskip=\muskip10
+\c_max_muskip=\muskip11
+\l_tmpa_muskip=\muskip12
+\l_tmpb_muskip=\muskip13
+\g_tmpa_muskip=\muskip14
+\g_tmpb_muskip=\muskip15
+\l_keys_choice_int=\count106
+\l__intarray_loop_int=\count107
+\c__intarray_sp_dim=\dimen132
+\g__intarray_font_int=\count108
+\c__fp_leading_shift_int=\count109
+\c__fp_middle_shift_int=\count110
+\c__fp_trailing_shift_int=\count111
+\c__fp_big_leading_shift_int=\count112
+\c__fp_big_middle_shift_int=\count113
+\c__fp_big_trailing_shift_int=\count114
+\c__fp_Bigg_leading_shift_int=\count115
+\c__fp_Bigg_middle_shift_int=\count116
+\c__fp_Bigg_trailing_shift_int=\count117
+\c__kernel_randint_max_int=\count118
+\g__fp_array_int=\count119
+\l__fp_array_loop_int=\count120
+\l__sort_length_int=\count121
+\l__sort_min_int=\count122
+\l__sort_top_int=\count123
+\l__sort_max_int=\count124
+\l__sort_true_max_int=\count125
+\l__sort_block_int=\count126
+\l__sort_begin_int=\count127
+\l__sort_end_int=\count128
+\l__sort_A_int=\count129
+\l__sort_B_int=\count130
+\l__sort_C_int=\count131
+\l__tl_analysis_normal_int=\count132
+\l__tl_analysis_index_int=\count133
+\l__tl_analysis_nesting_int=\count134
+\l__tl_analysis_type_int=\count135
+\l__regex_internal_a_int=\count136
+\l__regex_internal_b_int=\count137
+\l__regex_internal_c_int=\count138
+\l__regex_balance_int=\count139
+\l__regex_group_level_int=\count140
+\l__regex_mode_int=\count141
+\c__regex_cs_in_class_mode_int=\count142
+\c__regex_cs_mode_int=\count143
+\l__regex_catcodes_int=\count144
+\l__regex_default_catcodes_int=\count145
+\c__regex_catcode_D_int=\count146
+\c__regex_catcode_S_int=\count147
+\c__regex_catcode_L_int=\count148
+\c__regex_catcode_O_int=\count149
+\c__regex_catcode_A_int=\count150
+\c__regex_all_catcodes_int=\count151
+\l__regex_show_lines_int=\count152
+\l__regex_min_state_int=\count153
+\l__regex_max_state_int=\count154
+\l__regex_left_state_int=\count155
+\l__regex_right_state_int=\count156
+\l__regex_capturing_group_int=\count157
+\l__regex_min_pos_int=\count158
+\l__regex_max_pos_int=\count159
+\l__regex_curr_pos_int=\count160
+\l__regex_start_pos_int=\count161
+\l__regex_success_pos_int=\count162
+\l__regex_curr_char_int=\count163
+\l__regex_curr_catcode_int=\count164
+\l__regex_last_char_int=\count165
+\l__regex_case_changed_char_int=\count166
+\l__regex_curr_state_int=\count167
+\l__regex_step_int=\count168
+\l__regex_min_active_int=\count169
+\l__regex_max_active_int=\count170
+\l__regex_replacement_csnames_int=\count171
+\l__regex_match_count_int=\count172
+\l__regex_min_submatch_int=\count173
+\l__regex_submatch_int=\count174
+\l__regex_zeroth_submatch_int=\count175
+\g__regex_trace_regex_int=\count176
+\c_empty_box=\box29
+\l_tmpa_box=\box30
+\l_tmpb_box=\box31
+\g_tmpa_box=\box32
+\g_tmpb_box=\box33
+\l__box_top_dim=\dimen133
+\l__box_bottom_dim=\dimen134
+\l__box_left_dim=\dimen135
+\l__box_right_dim=\dimen136
+\l__box_top_new_dim=\dimen137
+\l__box_bottom_new_dim=\dimen138
+\l__box_left_new_dim=\dimen139
+\l__box_right_new_dim=\dimen140
+\l__box_internal_box=\box34
+\l__coffin_internal_box=\box35
+\l__coffin_internal_dim=\dimen141
+\l__coffin_offset_x_dim=\dimen142
+\l__coffin_offset_y_dim=\dimen143
+\l__coffin_x_dim=\dimen144
+\l__coffin_y_dim=\dimen145
+\l__coffin_x_prime_dim=\dimen146
+\l__coffin_y_prime_dim=\dimen147
+\c_empty_coffin=\box36
+\l__coffin_aligned_coffin=\box37
+\l__coffin_aligned_internal_coffin=\box38
+\l_tmpa_coffin=\box39
+\l_tmpb_coffin=\box40
+\g_tmpa_coffin=\box41
+\g_tmpb_coffin=\box42
+\c__coffin_empty_coffin=\box43
+\l__coffin_display_coffin=\box44
+\l__coffin_display_coord_coffin=\box45
+\l__coffin_display_pole_coffin=\box46
+\l__coffin_display_offset_dim=\dimen148
+\l__coffin_display_x_dim=\dimen149
+\l__coffin_display_y_dim=\dimen150
+\g__file_internal_ior=\read1
+\l__coffin_bounding_shift_dim=\dimen151
+\l__coffin_left_corner_dim=\dimen152
+\l__coffin_right_corner_dim=\dimen153
+\l__coffin_bottom_corner_dim=\dimen154
+\l__coffin_top_corner_dim=\dimen155
+\l__coffin_scaled_total_height_dim=\dimen156
+\l__coffin_scaled_width_dim=\dimen157
+\l__seq_internal_a_int=\count177
+\l__seq_internal_b_int=\count178
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2019-02-15 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count179
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2018-10-17 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count180
+\g__xparse_grabber_int=\count181
+\l__xparse_m_args_int=\count182
+\l__xparse_mandatory_args_int=\count183
+\l__xparse_v_nesting_int=\count184
+)
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+))
+\c@theorem=\count185
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+(/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen158
+\captionmargin@=\dimen159
+\captionwidth=\dimen160
+\caption@tempdima=\dimen161
+\caption@indent=\dimen162
+\caption@parindent=\dimen163
+\caption@hangindent=\dimen164
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+\c@KVtest=\count186
+\sf@farskip=\skip53
+\sf@captopadj=\dimen165
+\sf@capskip=\skip54
+\sf@nearskip=\skip55
+\c@subfigure=\count187
+\c@subfigure@save=\count188
+\c@lofdepth=\count189
+\c@subtable=\count190
+\c@subtable@save=\count191
+\c@lotdepth=\count192
+\sf@top=\skip56
+\sf@bottom=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks22
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen166
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen167
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count193
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count194
+\leftroot@=\count195
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count196
+\DOTSCASE@=\count197
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen168
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count198
+\c@MaxMatrixCols=\count199
+\dotsspace@=\muskip16
+\c@parentequation=\count266
+\dspbrk@lvl=\count267
+\tag@help=\toks24
+\row@=\count268
+\column@=\count269
+\maxfields@=\count270
+\andhelp@=\toks25
+\eqnshift@=\dimen169
+\alignsep@=\dimen170
+\tagshift@=\dimen171
+\tagwidth@=\dimen172
+\totwidth@=\dimen173
+\lineht@=\dimen174
+\@envbody=\toks26
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2018/05/17 v2.7s A comprehensive (SI) units package
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen175
+\ar@mcellbox=\box49
+\extrarowheight=\dimen176
+\NC@list=\toks28
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box50
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2018-10-17 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box51
+\l__siunitx_tmp_dim=\dimen177
+\l__siunitx_tmp_int=\count271
+\l__siunitx_number_mantissa_length_int=\count272
+\l__siunitx_number_uncert_length_int=\count273
+\l__siunitx_round_int=\count274
+\l__siunitx_process_decimal_int=\count275
+\l__siunitx_process_uncertainty_int=\count276
+\l__siunitx_process_fixed_int=\count277
+\l__siunitx_process_integer_min_int=\count278
+\l__siunitx_process_precision_int=\count279
+\l__siunitx_group_min_int=\count280
+\l__siunitx_angle_marker_box=\box52
+\l__siunitx_angle_unit_box=\box53
+\l__siunitx_angle_marker_dim=\dimen178
+\l__siunitx_angle_unit_dim=\dimen179
+\l__siunitx_unit_int=\count281
+\l__siunitx_unit_denominator_int=\count282
+\l__siunitx_unit_numerator_int=\count283
+\l__siunitx_unit_prefix_int=\count284
+\l__siunitx_unit_prefix_base_int=\count285
+\l__siunitx_unit_prefix_gram_int=\count286
+\l__siunitx_number_product_int=\count287
+\c__siunitx_one_fill_skip=\skip63
+\l__siunitx_table_unit_align_skip=\skip64
+\l__siunitx_table_exponent_dim=\dimen180
+\l__siunitx_table_integer_dim=\dimen181
+\l__siunitx_table_mantissa_dim=\dimen182
+\l__siunitx_table_marker_dim=\dimen183
+\l__siunitx_table_result_dim=\dimen184
+\l__siunitx_table_uncert_dim=\dimen185
+\l__siunitx_table_fill_pre_dim=\dimen186
+\l__siunitx_table_fill_post_dim=\dimen187
+\l__siunitx_table_fill_mid_dim=\dimen188
+\l__siunitx_table_pre_box=\box54
+\l__siunitx_table_post_box=\box55
+\l__siunitx_table_mantissa_box=\box56
+\l__siunitx_table_result_box=\box57
+\l__siunitx_table_number_align_skip=\skip65
+\l__siunitx_table_text_align_skip=\skip66
+
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
+))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count288
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip67
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count289
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip68
+\skiplinenumber=\skip69
+\skiprule=\skip70
+\skiphlne=\skip71
+\skiptext=\skip72
+\skiplength=\skip73
+\algomargin=\skip74
+\skipalgocfslide=\skip75
+\algowidth=\dimen189
+\inoutsize=\dimen190
+\inoutindent=\dimen191
+\interspacetitleruled=\dimen192
+\interspacealgoruled=\dimen193
+\interspacetitleboxruled=\dimen194
+\algocf@ruledwidth=\skip76
+\algocf@inoutbox=\box58
+\algocf@inputbox=\box59
+\AlCapSkip=\skip77
+\AlCapHSkip=\skip78
+\algoskipindent=\skip79
+\algocf@nlbox=\box60
+\algocf@hangingbox=\box61
+\algocf@untilbox=\box62
+\algocf@skipuntil=\skip80
+\algocf@capbox=\box63
+\algocf@lcaptionbox=\skip81
+\algoheightruledefault=\skip82
+\algoheightrule=\skip83
+\algotitleheightruledefault=\skip84
+\algotitleheightrule=\skip85
+\c@algocfline=\count290
+\c@algocfproc=\count291
+\c@algocf=\count292
+\algocf@algoframe=\box64
+\algocf@algobox=\box65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen195
+\Gin@req@width=\dimen196
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen197
+\pgfutil@tempdimb=\dimen198
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box66
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
+))
+Package: pgf 2019/02/02 v3.1.1 (3.1.1)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen199
+\pgf@y=\dimen256
+\pgf@xa=\dimen257
+\pgf@ya=\dimen258
+\pgf@xb=\dimen259
+\pgf@yb=\dimen260
+\pgf@xc=\dimen261
+\pgf@yc=\dimen262
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count293
+\c@pgf@countb=\count294
+\c@pgf@countc=\count295
+\c@pgf@countd=\count296
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count297
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2019/02/02 v3.1.1 (3.1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfsyssoftpath@smallbuffer@items=\count298
+\pgfsyssoftpath@bigbuffer@items=\count299
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen263
+\pgfmath@count=\count300
+\pgfmath@box=\box67
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count301
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@picminx=\dimen264
+\pgf@picmaxx=\dimen265
+\pgf@picminy=\dimen266
+\pgf@picmaxy=\dimen267
+\pgf@pathminx=\dimen268
+\pgf@pathmaxx=\dimen269
+\pgf@pathminy=\dimen270
+\pgf@pathmaxy=\dimen271
+\pgf@xx=\dimen272
+\pgf@xy=\dimen273
+\pgf@yx=\dimen274
+\pgf@yy=\dimen275
+\pgf@zx=\dimen276
+\pgf@zy=\dimen277
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@path@lastx=\dimen278
+\pgf@path@lasty=\dimen279
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@shorten@end@additional=\dimen280
+\pgf@shorten@start@additional=\dimen281
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfpic=\box68
+\pgf@hbox=\box69
+\pgf@layerbox@main=\box70
+\pgf@picture@serial@count=\count302
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgflinewidth=\dimen282
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@pt@x=\dimen283
+\pgf@pt@y=\dimen284
+\pgf@pt@temp=\dimen285
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfarrowsep=\dimen286
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@max=\dimen287
+\pgf@sys@shading@range@num=\count303
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfexternal@startupbox=\box71
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfnodeparttextbox=\box72
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
+\pgf@nodesepstart=\dimen288
+\pgf@nodesepend=\dimen289
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen290
+\pgffor@skip=\dimen291
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2019/02/02 v3.1.1 (3.1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@plot@mark@count=\count304
+\pgfplotmarksize=\dimen292
+)
+\tikz@lastx=\dimen293
+\tikz@lasty=\dimen294
+\tikz@lastxsaved=\dimen295
+\tikz@lastysaved=\dimen296
+\tikzleveldistance=\dimen297
+\tikzsiblingdistance=\dimen298
+\tikz@figbox=\box73
+\tikz@figbox@bg=\box74
+\tikz@tempbox=\box75
+\tikz@tempbox@bg=\box76
+\tikztreelevel=\count305
+\tikznumberofchildren=\count306
+\tikznumberofcurrentchild=\count307
+\tikz@fig@count=\count308
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfmatrixcurrentrow=\count309
+\pgfmatrixcurrentcolumn=\count310
+\pgf@matrix@numberofcolumns=\count311
+)
+\tikz@expandcount=\count312
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks41
+\t@pgfplots@tokb=\toks42
+\t@pgfplots@tokc=\toks43
+\pgfplots@tmpa=\dimen299
+\c@pgfplots@coordindex=\count313
+\c@pgfplots@scanlineindex=\count314
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgflibraryfpu.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count315
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex
+\c@pgfplotsarray@tmp=\count316
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex
+\c@pgfplotstable@counta=\count317
+\t@pgfplotstable@a=\toks44
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+\c@pgfplotslibrarysurf@no=\count318
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
+\pgfdecoratedcompleteddistance=\dimen300
+\pgfdecoratedremainingdistance=\dimen301
+\pgfdecoratedinputsegmentcompleteddistance=\dimen302
+\pgfdecoratedinputsegmentremainingdistance=\dimen303
+\pgf@decorate@distancetomove=\dimen304
+\pgf@decorate@repeatstate=\count319
+\pgfdecorationsegmentamplitude=\dimen305
+\pgfdecorationsegmentlength=\dimen306
+)
+\tikz@lib@dec@box=\box77
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count320
+\pgfplots@xmin@reg=\dimen307
+\pgfplots@xmax@reg=\dimen308
+\pgfplots@ymin@reg=\dimen309
+\pgfplots@ymax@reg=\dimen310
+\pgfplots@zmin@reg=\dimen311
+\pgfplots@zmax@reg=\dimen312
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2019/02/02 v3.1.1 (3.1.1)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex
+File: pgflibraryplotmarks.code.tex 2019/02/02 v3.1.1 (3.1.1)
+))) (./j_fpva_test_final.aux)
+\openout1 = `j_fpva_test_final.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+
+-- Lines per column: 58 (exact).
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count321
+\scratchdimen=\dimen313
+\scratchbox=\box78
+\nofMPsegments=\count322
+\nofMParguments=\count323
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count324
+\MPscratchDim=\dimen314
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
+\everyMPtoPDFconversion=\toks46
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
+-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
+)
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-binary.cfg
+File: siunitx-binary.cfg 2017/11/26 v2.7k siunitx: Binary units
+)
+ABD: EveryShipout initializing macros
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
+your preamble.
+ on input line 38.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 5345) in paragraph at lines 76--76
+\OT1/ptm/m/n/8 Mu-nich 80333, Ger-many (e-mail: chun-feng.liu@tum.de; b.li@tum.
+de;
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+<Fig/valve_mixer_storage_own_mixer.pdf, id=13, page=1, 207.10754pt x 191.99133p
+t>
+File: Fig/valve_mixer_storage_own_mixer.pdf Graphic file (type pdf)
+<use Fig/valve_mixer_storage_own_mixer.pdf, page 1>
+Package pdftex.def Info: Fig/valve_mixer_storage_own_mixer.pdf , page1 used on 
+input line 236.
+(pdftex.def)             Requested size: 207.10753pt x 192.00256pt.
+<Fig/valve_mixer_storage_own_mixer.pdf, id=14, page=2, 207.10754pt x 191.99133p
+t>
+File: Fig/valve_mixer_storage_own_mixer.pdf Graphic file (type pdf)
+<use Fig/valve_mixer_storage_own_mixer.pdf, page 2>
+Package pdftex.def Info: Fig/valve_mixer_storage_own_mixer.pdf , page2 used on 
+input line 241.
+(pdftex.def)             Requested size: 207.10753pt x 192.00256pt.
+<Fig/valve_mixer_storage_own_mixer.pdf, id=15, page=3, 207.10754pt x 191.99133p
+t>
+File: Fig/valve_mixer_storage_own_mixer.pdf Graphic file (type pdf)
+<use Fig/valve_mixer_storage_own_mixer.pdf, page 3>
+Package pdftex.def Info: Fig/valve_mixer_storage_own_mixer.pdf , page3 used on 
+input line 244.
+(pdftex.def)             Requested size: 207.10753pt x 192.00256pt.
+<Fig/valve_mixer_storage_own_mixer.pdf, id=16, page=4, 207.10754pt x 191.99133p
+t>
+File: Fig/valve_mixer_storage_own_mixer.pdf Graphic file (type pdf)
+<use Fig/valve_mixer_storage_own_mixer.pdf, page 4>
+Package pdftex.def Info: Fig/valve_mixer_storage_own_mixer.pdf , page4 used on 
+input line 250.
+(pdftex.def)             Requested size: 207.10753pt x 192.00256pt.
+<Fig/archi.pdf, id=17, page=1, 254.00621pt x 113.30554pt>
+File: Fig/archi.pdf Graphic file (type pdf)
+<use Fig/archi.pdf, page 1>
+Package pdftex.def Info: Fig/archi.pdf , page1 used on input line 296.
+(pdftex.def)             Requested size: 254.00621pt x 113.30698pt.
+<Fig/archi.pdf, id=18, page=2, 254.00621pt x 113.30554pt>
+File: Fig/archi.pdf Graphic file (type pdf)
+<use Fig/archi.pdf, page 2>
+Package pdftex.def Info: Fig/archi.pdf , page2 used on input line 298.
+(pdftex.def)             Requested size: 254.00621pt x 113.30698pt.
+<Fig/archi.pdf, id=19, page=3, 254.00621pt x 113.30554pt>
+File: Fig/archi.pdf Graphic file (type pdf)
+<use Fig/archi.pdf, page 3>
+Package pdftex.def Info: Fig/archi.pdf , page3 used on input line 300.
+(pdftex.def)             Requested size: 254.00621pt x 113.30698pt.
+<Fig/archi.pdf, id=20, page=4, 254.00621pt x 113.30554pt>
+File: Fig/archi.pdf Graphic file (type pdf)
+<use Fig/archi.pdf, page 4>
+Package pdftex.def Info: Fig/archi.pdf , page4 used on input line 303.
+(pdftex.def)             Requested size: 254.00621pt x 113.30698pt.
+
+Overfull \hbox (2.00621pt too wide) in paragraph at lines 308--310
+ [][] 
+ []
+
+<Fig/dynamic_devices.pdf, id=21, page=1, 224.25606pt x 239.19246pt>
+File: Fig/dynamic_devices.pdf Graphic file (type pdf)
+<use Fig/dynamic_devices.pdf, page 1>
+Package pdftex.def Info: Fig/dynamic_devices.pdf , page1 used on input line 350
+.
+(pdftex.def)             Requested size: 224.25606pt x 239.19551pt.
+<Fig/dynamic_devices.pdf, id=22, page=2, 224.25606pt x 239.19246pt>
+File: Fig/dynamic_devices.pdf Graphic file (type pdf)
+<use Fig/dynamic_devices.pdf, page 2>
+Package pdftex.def Info: Fig/dynamic_devices.pdf , page2 used on input line 353
+.
+(pdftex.def)             Requested size: 224.25606pt x 239.19551pt.
+<Fig/dynamic_devices.pdf, id=23, page=3, 224.25606pt x 239.19246pt>
+File: Fig/dynamic_devices.pdf Graphic file (type pdf)
+<use Fig/dynamic_devices.pdf, page 3>
+Package pdftex.def Info: Fig/dynamic_devices.pdf , page3 used on input line 355
+.
+(pdftex.def)             Requested size: 224.25606pt x 239.19551pt.
+<Fig/dynamic_devices.pdf, id=24, page=4, 224.25606pt x 239.19246pt>
+File: Fig/dynamic_devices.pdf Graphic file (type pdf)
+<use Fig/dynamic_devices.pdf, page 4>
+Package pdftex.def Info: Fig/dynamic_devices.pdf , page4 used on input line 357
+.
+(pdftex.def)             Requested size: 224.25606pt x 239.19551pt.
+<Fig/dynamic_devices.pdf, id=25, page=5, 224.25606pt x 239.19246pt>
+File: Fig/dynamic_devices.pdf Graphic file (type pdf)
+<use Fig/dynamic_devices.pdf, page 5>
+Package pdftex.def Info: Fig/dynamic_devices.pdf , page5 used on input line 361
+.
+(pdftex.def)             Requested size: 224.25606pt x 239.19551pt.
+<Fig/dynamic_devices.pdf, id=26, page=6, 224.25606pt x 239.19246pt>
+File: Fig/dynamic_devices.pdf Graphic file (type pdf)
+<use Fig/dynamic_devices.pdf, page 6>
+Package pdftex.def Info: Fig/dynamic_devices.pdf , page6 used on input line 364
+.
+(pdftex.def)             Requested size: 224.25606pt x 239.19551pt.
+
+Underfull \vbox (badness 1596) has occurred while \output is active []
+
+ [2 <./Fig/valve_mixer_storage_own_mixer.pdf> <./Fig/valve_mixer_storage_own_mi
+xer.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/valve_mixer_storage_own_mixer.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./Fig/valve_mixer_storage_own_mixer.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/valve_mixer_storage_own_mixer.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./Fig/valve_mixer_storage_own_mixer.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/valve_mixer_storage_own_mixer.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./Fig/archi.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/archi.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+> <./Fig/archi.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/archi.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+> <./Fig/archi.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/archi.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+> <./Fig/archi.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/archi.pdf): PDF inclusion: multiple pdfs w
+ith page group included in a single page
+> <./Fig/dynamic_devices.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/dynamic_devices.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/dynamic_devices.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/dynamic_devices.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/dynamic_devices.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/dynamic_devices.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/dynamic_devices.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/dynamic_devices.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/dynamic_devices.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/dynamic_devices.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/dynamic_devices.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/dynamic_devices.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>]
+<Fig/defects.pdf, id=48, page=1, 226.45697pt x 206.99132pt>
+File: Fig/defects.pdf Graphic file (type pdf)
+<use Fig/defects.pdf, page 1>
+Package pdftex.def Info: Fig/defects.pdf , page1 used on input line 555.
+(pdftex.def)             Requested size: 226.45697pt x 206.99396pt.
+<Fig/defects.pdf, id=49, page=2, 226.45697pt x 206.99132pt>
+File: Fig/defects.pdf Graphic file (type pdf)
+<use Fig/defects.pdf, page 2>
+Package pdftex.def Info: Fig/defects.pdf , page2 used on input line 557.
+(pdftex.def)             Requested size: 226.45697pt x 206.99396pt.
+<Fig/defects.pdf, id=50, page=3, 226.45697pt x 206.99132pt>
+File: Fig/defects.pdf Graphic file (type pdf)
+<use Fig/defects.pdf, page 3>
+Package pdftex.def Info: Fig/defects.pdf , page3 used on input line 559.
+(pdftex.def)             Requested size: 226.45697pt x 206.99396pt.
+<Fig/defects.pdf, id=51, page=4, 226.45697pt x 206.99132pt>
+File: Fig/defects.pdf Graphic file (type pdf)
+<use Fig/defects.pdf, page 4>
+Package pdftex.def Info: Fig/defects.pdf , page4 used on input line 561.
+(pdftex.def)             Requested size: 226.45697pt x 206.99396pt.
+ [3 <./Fig/defects.pdf> <./Fig/defects.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/defects.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./Fig/defects.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/defects.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./Fig/defects.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/defects.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+>]
+<Fig/ref_test_biochip.pdf, id=79, page=1, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 1>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page1 used on input line 66
+3.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=80, page=2, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 2>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page2 used on input line 66
+5.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=81, page=3, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 3>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page3 used on input line 66
+7.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=82, page=4, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 4>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page4 used on input line 66
+9.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=83, page=5, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 5>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page5 used on input line 67
+1.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=84, page=6, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 6>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page6 used on input line 67
+3.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=85, page=7, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 7>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page7 used on input line 67
+5.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=86, page=8, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 8>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page8 used on input line 67
+7.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=87, page=9, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 9>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page9 used on input line 67
+9.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=88, page=10, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 10>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page10 used on input line 6
+81.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=89, page=11, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 11>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page11 used on input line 6
+83.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=90, page=12, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 12>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page12 used on input line 6
+85.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=91, page=13, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 13>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page13 used on input line 6
+88.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=92, page=14, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 14>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page14 used on input line 6
+91.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/ref_test_biochip.pdf, id=93, page=15, 184.60056pt x 136.06pt>
+File: Fig/ref_test_biochip.pdf Graphic file (type pdf)
+<use Fig/ref_test_biochip.pdf, page 15>
+Package pdftex.def Info: Fig/ref_test_biochip.pdf , page15 used on input line 6
+95.
+(pdftex.def)             Requested size: 184.60054pt x 136.06381pt.
+<Fig/path_cutset.pdf, id=94, page=1, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 1>
+Package pdftex.def Info: Fig/path_cutset.pdf , page1 used on input line 771.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=95, page=2, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 2>
+Package pdftex.def Info: Fig/path_cutset.pdf , page2 used on input line 776.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=96, page=3, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 3>
+Package pdftex.def Info: Fig/path_cutset.pdf , page3 used on input line 778.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=97, page=4, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 4>
+Package pdftex.def Info: Fig/path_cutset.pdf , page4 used on input line 781.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=98, page=5, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 5>
+Package pdftex.def Info: Fig/path_cutset.pdf , page5 used on input line 783.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=99, page=6, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 6>
+Package pdftex.def Info: Fig/path_cutset.pdf , page6 used on input line 786.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=100, page=7, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 7>
+Package pdftex.def Info: Fig/path_cutset.pdf , page7 used on input line 788.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=101, page=8, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 8>
+Package pdftex.def Info: Fig/path_cutset.pdf , page8 used on input line 790.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=102, page=9, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 9>
+Package pdftex.def Info: Fig/path_cutset.pdf , page9 used on input line 797.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=103, page=10, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 10>
+Package pdftex.def Info: Fig/path_cutset.pdf , page10 used on input line 799.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=104, page=11, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 11>
+Package pdftex.def Info: Fig/path_cutset.pdf , page11 used on input line 801.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=105, page=12, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 12>
+Package pdftex.def Info: Fig/path_cutset.pdf , page12 used on input line 803.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+<Fig/path_cutset.pdf, id=106, page=13, 258.41536pt x 260.42406pt>
+File: Fig/path_cutset.pdf Graphic file (type pdf)
+<use Fig/path_cutset.pdf, page 13>
+Package pdftex.def Info: Fig/path_cutset.pdf , page13 used on input line 808.
+(pdftex.def)             Requested size: 258.41533pt x 260.43135pt.
+
+Overfull \hbox (6.41533pt too wide) in paragraph at lines 811--813
+ [][] 
+ []
+
+<Fig/flow_path_model.pdf, id=107, page=1, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 1>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page1 used on input line 893
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=108, page=2, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 2>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page2 used on input line 903
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=109, page=3, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 3>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page3 used on input line 908
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=110, page=4, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 4>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page4 used on input line 910
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=111, page=5, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 5>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page5 used on input line 912
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=112, page=6, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 6>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page6 used on input line 914
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=113, page=7, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 7>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page7 used on input line 916
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=114, page=8, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 8>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page8 used on input line 921
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=115, page=9, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 9>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page9 used on input line 923
+.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=116, page=10, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 10>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page10 used on input line 92
+5.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=117, page=11, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 11>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page11 used on input line 92
+7.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=118, page=12, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 12>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page12 used on input line 93
+0.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=119, page=13, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 13>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page13 used on input line 93
+2.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=120, page=14, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 14>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page14 used on input line 93
+6.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+<Fig/flow_path_model.pdf, id=121, page=15, 503.87059pt x 124.56847pt>
+File: Fig/flow_path_model.pdf Graphic file (type pdf)
+<use Fig/flow_path_model.pdf, page 15>
+Package pdftex.def Info: Fig/flow_path_model.pdf , page15 used on input line 94
+3.
+(pdftex.def)             Requested size: 503.87056pt x 124.57384pt.
+[4 <./Fig/ref_test_biochip.pdf> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/ref_test_biochip.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/ref_test_biochip.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/path_cutset.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/path_cutset.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>] [5 <./Fig/flow_path_model.pdf> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+> <./Fig/flow_path_model.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/flow_path_model.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>]
+<Fig/minimum_loops.pdf, id=143, page=1, 352.0536pt x 121.75888pt>
+File: Fig/minimum_loops.pdf Graphic file (type pdf)
+<use Fig/minimum_loops.pdf, page 1>
+Package pdftex.def Info: Fig/minimum_loops.pdf , page1 used on input line 1208.
+
+(pdftex.def)             Requested size: 352.0536pt x 121.766pt.
+<Fig/minimum_loops.pdf, id=144, page=2, 352.0536pt x 121.75888pt>
+File: Fig/minimum_loops.pdf Graphic file (type pdf)
+<use Fig/minimum_loops.pdf, page 2>
+Package pdftex.def Info: Fig/minimum_loops.pdf , page2 used on input line 1210.
+
+(pdftex.def)             Requested size: 352.0536pt x 121.766pt.
+<Fig/minimum_loops.pdf, id=145, page=3, 352.0536pt x 121.75888pt>
+File: Fig/minimum_loops.pdf Graphic file (type pdf)
+<use Fig/minimum_loops.pdf, page 3>
+Package pdftex.def Info: Fig/minimum_loops.pdf , page3 used on input line 1212.
+
+(pdftex.def)             Requested size: 352.0536pt x 121.766pt.
+<Fig/minimum_loops.pdf, id=146, page=4, 352.0536pt x 121.75888pt>
+File: Fig/minimum_loops.pdf Graphic file (type pdf)
+<use Fig/minimum_loops.pdf, page 4>
+Package pdftex.def Info: Fig/minimum_loops.pdf , page4 used on input line 1214.
+
+(pdftex.def)             Requested size: 352.0536pt x 121.766pt.
+<Fig/minimum_loops.pdf, id=147, page=5, 352.0536pt x 121.75888pt>
+File: Fig/minimum_loops.pdf Graphic file (type pdf)
+<use Fig/minimum_loops.pdf, page 5>
+Package pdftex.def Info: Fig/minimum_loops.pdf , page5 used on input line 1216.
+
+(pdftex.def)             Requested size: 352.0536pt x 121.766pt.
+<Fig/minimum_loops.pdf, id=148, page=6, 352.0536pt x 121.75888pt>
+File: Fig/minimum_loops.pdf Graphic file (type pdf)
+<use Fig/minimum_loops.pdf, page 6>
+Package pdftex.def Info: Fig/minimum_loops.pdf , page6 used on input line 1218.
+
+(pdftex.def)             Requested size: 352.0536pt x 121.766pt.
+<Fig/minimum_loops.pdf, id=149, page=7, 352.0536pt x 121.75888pt>
+File: Fig/minimum_loops.pdf Graphic file (type pdf)
+<use Fig/minimum_loops.pdf, page 7>
+Package pdftex.def Info: Fig/minimum_loops.pdf , page7 used on input line 1220.
+
+(pdftex.def)             Requested size: 352.0536pt x 121.766pt.
+<Fig/minimum_loops.pdf, id=150, page=8, 352.0536pt x 121.75888pt>
+File: Fig/minimum_loops.pdf Graphic file (type pdf)
+<use Fig/minimum_loops.pdf, page 8>
+Package pdftex.def Info: Fig/minimum_loops.pdf , page8 used on input line 1222.
+
+(pdftex.def)             Requested size: 352.0536pt x 121.766pt.
+<Fig/cut_var.pdf, id=151, page=1, 388.27487pt x 103.87584pt>
+File: Fig/cut_var.pdf Graphic file (type pdf)
+<use Fig/cut_var.pdf, page 1>
+Package pdftex.def Info: Fig/cut_var.pdf , page1 used on input line 1261.
+(pdftex.def)             Requested size: 388.27484pt x 103.88191pt.
+<Fig/cut_var.pdf, id=152, page=2, 388.27487pt x 103.87584pt>
+File: Fig/cut_var.pdf Graphic file (type pdf)
+<use Fig/cut_var.pdf, page 2>
+Package pdftex.def Info: Fig/cut_var.pdf , page2 used on input line 1265.
+(pdftex.def)             Requested size: 388.27484pt x 103.88191pt.
+<Fig/cut_var.pdf, id=153, page=3, 388.27487pt x 103.87584pt>
+File: Fig/cut_var.pdf Graphic file (type pdf)
+<use Fig/cut_var.pdf, page 3>
+Package pdftex.def Info: Fig/cut_var.pdf , page3 used on input line 1267.
+(pdftex.def)             Requested size: 388.27484pt x 103.88191pt.
+<Fig/cut_var.pdf, id=154, page=4, 388.27487pt x 103.87584pt>
+File: Fig/cut_var.pdf Graphic file (type pdf)
+<use Fig/cut_var.pdf, page 4>
+Package pdftex.def Info: Fig/cut_var.pdf , page4 used on input line 1269.
+(pdftex.def)             Requested size: 388.27484pt x 103.88191pt.
+<Fig/cut_var.pdf, id=155, page=5, 388.27487pt x 103.87584pt>
+File: Fig/cut_var.pdf Graphic file (type pdf)
+<use Fig/cut_var.pdf, page 5>
+Package pdftex.def Info: Fig/cut_var.pdf , page5 used on input line 1271.
+(pdftex.def)             Requested size: 388.27484pt x 103.88191pt.
+<Fig/cut_var.pdf, id=156, page=6, 388.27487pt x 103.87584pt>
+File: Fig/cut_var.pdf Graphic file (type pdf)
+<use Fig/cut_var.pdf, page 6>
+Package pdftex.def Info: Fig/cut_var.pdf , page6 used on input line 1275.
+(pdftex.def)             Requested size: 388.27484pt x 103.88191pt.
+
+Overfull \hbox (273.79547pt too wide) in paragraph at lines 1231--1279
+[] [] 
+ []
+
+
+Overfull \hbox (3.35773pt too wide) in paragraph at lines 1177--1285
+[][]   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1177--1285
+
+ []
+
+[6]
+** WARNING: \and is valid only when in conference or peerreviewca
+modes (line 1371).
+[7 <./Fig/minimum_loops.pdf> <./Fig/minimum_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/minimum_loops.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./Fig/minimum_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/minimum_loops.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./Fig/minimum_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/minimum_loops.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./Fig/minimum_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/minimum_loops.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./Fig/minimum_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/minimum_loops.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./Fig/minimum_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/minimum_loops.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./Fig/minimum_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/minimum_loops.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+> <./Fig/cut_var.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/cut_var.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./Fig/cut_var.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/cut_var.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./Fig/cut_var.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/cut_var.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./Fig/cut_var.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/cut_var.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./Fig/cut_var.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/cut_var.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+> <./Fig/cut_var.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/cut_var.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+>]
+<Fig/control_test.pdf, id=171, page=1, 277.36145pt x 115.32874pt>
+File: Fig/control_test.pdf Graphic file (type pdf)
+<use Fig/control_test.pdf, page 1>
+Package pdftex.def Info: Fig/control_test.pdf , page1 used on input line 1516.
+(pdftex.def)             Requested size: 277.36143pt x 115.33548pt.
+
+Overfull \hbox (174.16301pt too wide) in paragraph at lines 1519--1521
+ [][] 
+ []
+
+<Fig/long_channel.pdf, id=172, page=1, 129.4736pt x 113.94183pt>
+File: Fig/long_channel.pdf Graphic file (type pdf)
+<use Fig/long_channel.pdf, page 1>
+Package pdftex.def Info: Fig/long_channel.pdf , page1 used on input line 1557.
+(pdftex.def)             Requested size: 129.47359pt x 113.945pt.
+<Fig/long_channel.pdf, id=173, page=2, 129.4736pt x 113.94183pt>
+File: Fig/long_channel.pdf Graphic file (type pdf)
+<use Fig/long_channel.pdf, page 2>
+Package pdftex.def Info: Fig/long_channel.pdf , page2 used on input line 1559.
+(pdftex.def)             Requested size: 129.47359pt x 113.945pt.
+<Fig/long_channel.pdf, id=174, page=3, 129.4736pt x 113.94183pt>
+File: Fig/long_channel.pdf Graphic file (type pdf)
+<use Fig/long_channel.pdf, page 3>
+Package pdftex.def Info: Fig/long_channel.pdf , page3 used on input line 1564.
+(pdftex.def)             Requested size: 129.47359pt x 113.945pt.
+<Fig/long_channel.pdf, id=175, page=4, 129.4736pt x 113.94183pt>
+File: Fig/long_channel.pdf Graphic file (type pdf)
+<use Fig/long_channel.pdf, page 4>
+Package pdftex.def Info: Fig/long_channel.pdf , page4 used on input line 1567.
+(pdftex.def)             Requested size: 129.47359pt x 113.945pt.
+<Fig/supper_cell.pdf, id=176, page=1, 212.61778pt x 228.80736pt>
+File: Fig/supper_cell.pdf Graphic file (type pdf)
+<use Fig/supper_cell.pdf, page 1>
+Package pdftex.def Info: Fig/supper_cell.pdf , page1 used on input line 1644.
+(pdftex.def)             Requested size: 212.61777pt x 228.81377pt.
+<Fig/supper_cell.pdf, id=177, page=2, 212.61778pt x 228.80736pt>
+File: Fig/supper_cell.pdf Graphic file (type pdf)
+<use Fig/supper_cell.pdf, page 2>
+Package pdftex.def Info: Fig/supper_cell.pdf , page2 used on input line 1646.
+(pdftex.def)             Requested size: 212.61777pt x 228.81377pt.
+<Fig/supper_cell.pdf, id=178, page=3, 212.61778pt x 228.80736pt>
+File: Fig/supper_cell.pdf Graphic file (type pdf)
+<use Fig/supper_cell.pdf, page 3>
+Package pdftex.def Info: Fig/supper_cell.pdf , page3 used on input line 1648.
+(pdftex.def)             Requested size: 212.61777pt x 228.81377pt.
+<Fig/supper_cell.pdf, id=179, page=4, 212.61778pt x 228.80736pt>
+File: Fig/supper_cell.pdf Graphic file (type pdf)
+<use Fig/supper_cell.pdf, page 4>
+Package pdftex.def Info: Fig/supper_cell.pdf , page4 used on input line 1650.
+(pdftex.def)             Requested size: 212.61777pt x 228.81377pt.
+<Fig/supper_cell.pdf, id=180, page=5, 212.61778pt x 228.80736pt>
+File: Fig/supper_cell.pdf Graphic file (type pdf)
+<use Fig/supper_cell.pdf, page 5>
+Package pdftex.def Info: Fig/supper_cell.pdf , page5 used on input line 1653.
+(pdftex.def)             Requested size: 212.61777pt x 228.81377pt.
+<Fig/supper_cell.pdf, id=181, page=6, 212.61778pt x 228.80736pt>
+File: Fig/supper_cell.pdf Graphic file (type pdf)
+<use Fig/supper_cell.pdf, page 6>
+Package pdftex.def Info: Fig/supper_cell.pdf , page6 used on input line 1656.
+(pdftex.def)             Requested size: 212.61777pt x 228.81377pt.
+[8 <./Fig/control_test.pdf> <./Fig/long_channel.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/long_channel.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./Fig/long_channel.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/long_channel.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./Fig/long_channel.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/long_channel.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./Fig/long_channel.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/long_channel.pdf): PDF inclusion: multiple
+ pdfs with page group included in a single page
+> <./Fig/supper_cell.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/supper_cell.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/supper_cell.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/supper_cell.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/supper_cell.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/supper_cell.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/supper_cell.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/supper_cell.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/supper_cell.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/supper_cell.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/supper_cell.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/supper_cell.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>]
+<Fig/multi_port_test_example.pdf, id=189, page=1, 252.86047pt x 123.70721pt>
+File: Fig/multi_port_test_example.pdf Graphic file (type pdf)
+<use Fig/multi_port_test_example.pdf, page 1>
+Package pdftex.def Info: Fig/multi_port_test_example.pdf , page1 used on input 
+line 1737.
+(pdftex.def)             Requested size: 252.86046pt x 123.7069pt.
+<Fig/multi_port_test_example.pdf, id=190, page=2, 252.86047pt x 123.70721pt>
+File: Fig/multi_port_test_example.pdf Graphic file (type pdf)
+<use Fig/multi_port_test_example.pdf, page 2>
+Package pdftex.def Info: Fig/multi_port_test_example.pdf , page2 used on input 
+line 1742.
+(pdftex.def)             Requested size: 252.86046pt x 123.7069pt.
+<Fig/multi_port_test_example.pdf, id=191, page=3, 252.86047pt x 123.70721pt>
+File: Fig/multi_port_test_example.pdf Graphic file (type pdf)
+<use Fig/multi_port_test_example.pdf, page 3>
+Package pdftex.def Info: Fig/multi_port_test_example.pdf , page3 used on input 
+line 1744.
+(pdftex.def)             Requested size: 252.86046pt x 123.7069pt.
+<Fig/multi_port_test_example.pdf, id=192, page=4, 252.86047pt x 123.70721pt>
+File: Fig/multi_port_test_example.pdf Graphic file (type pdf)
+<use Fig/multi_port_test_example.pdf, page 4>
+Package pdftex.def Info: Fig/multi_port_test_example.pdf , page4 used on input 
+line 1747.
+(pdftex.def)             Requested size: 252.86046pt x 123.7069pt.
+<Fig/multi_port_test_example.pdf, id=193, page=5, 252.86047pt x 123.70721pt>
+File: Fig/multi_port_test_example.pdf Graphic file (type pdf)
+<use Fig/multi_port_test_example.pdf, page 5>
+Package pdftex.def Info: Fig/multi_port_test_example.pdf , page5 used on input 
+line 1750.
+(pdftex.def)             Requested size: 252.86046pt x 123.7069pt.
+<Fig/multi_port_test_example.pdf, id=194, page=6, 252.86047pt x 123.70721pt>
+File: Fig/multi_port_test_example.pdf Graphic file (type pdf)
+<use Fig/multi_port_test_example.pdf, page 6>
+Package pdftex.def Info: Fig/multi_port_test_example.pdf , page6 used on input 
+line 1752.
+(pdftex.def)             Requested size: 252.86046pt x 123.7069pt.
+<Fig/multi_port_test_example.pdf, id=195, page=7, 252.86047pt x 123.70721pt>
+File: Fig/multi_port_test_example.pdf Graphic file (type pdf)
+<use Fig/multi_port_test_example.pdf, page 7>
+Package pdftex.def Info: Fig/multi_port_test_example.pdf , page7 used on input 
+line 1754.
+(pdftex.def)             Requested size: 252.86046pt x 123.7069pt.
+
+Overfull \hbox (0.86046pt too wide) in paragraph at lines 1755--1757
+ [][] 
+ []
+
+<Fig/joint_loops.pdf, id=196, page=1, 150.24507pt x 100.06334pt>
+File: Fig/joint_loops.pdf Graphic file (type pdf)
+<use Fig/joint_loops.pdf, page 1>
+Package pdftex.def Info: Fig/joint_loops.pdf , page1 used on input line 1857.
+(pdftex.def)             Requested size: 150.24507pt x 100.06918pt.
+<Fig/joint_loops.pdf, id=197, page=2, 150.24507pt x 100.06334pt>
+File: Fig/joint_loops.pdf Graphic file (type pdf)
+<use Fig/joint_loops.pdf, page 2>
+Package pdftex.def Info: Fig/joint_loops.pdf , page2 used on input line 1862.
+(pdftex.def)             Requested size: 150.24507pt x 100.06918pt.
+<Fig/joint_loops.pdf, id=198, page=3, 150.24507pt x 100.06334pt>
+File: Fig/joint_loops.pdf Graphic file (type pdf)
+<use Fig/joint_loops.pdf, page 3>
+Package pdftex.def Info: Fig/joint_loops.pdf , page3 used on input line 1865.
+(pdftex.def)             Requested size: 150.24507pt x 100.06918pt.
+<Fig/joint_loops.pdf, id=199, page=4, 150.24507pt x 100.06334pt>
+File: Fig/joint_loops.pdf Graphic file (type pdf)
+<use Fig/joint_loops.pdf, page 4>
+Package pdftex.def Info: Fig/joint_loops.pdf , page4 used on input line 1868.
+(pdftex.def)             Requested size: 150.24507pt x 100.06918pt.
+<Fig/joint_loops.pdf, id=200, page=5, 150.24507pt x 100.06334pt>
+File: Fig/joint_loops.pdf Graphic file (type pdf)
+<use Fig/joint_loops.pdf, page 5>
+Package pdftex.def Info: Fig/joint_loops.pdf , page5 used on input line 1870.
+(pdftex.def)             Requested size: 150.24507pt x 100.06918pt.
+<Fig/joint_loops.pdf, id=201, page=6, 150.24507pt x 100.06334pt>
+File: Fig/joint_loops.pdf Graphic file (type pdf)
+<use Fig/joint_loops.pdf, page 6>
+Package pdftex.def Info: Fig/joint_loops.pdf , page6 used on input line 1872.
+(pdftex.def)             Requested size: 150.24507pt x 100.06918pt.
+<Fig/multi_port_cut_theorem.pdf, id=202, page=1, 164.97855pt x 110.30925pt>
+File: Fig/multi_port_cut_theorem.pdf Graphic file (type pdf)
+<use Fig/multi_port_cut_theorem.pdf, page 1>
+Package pdftex.def Info: Fig/multi_port_cut_theorem.pdf , page1 used on input l
+ine 1953.
+(pdftex.def)             Requested size: 164.97853pt x 110.31401pt.
+<Fig/multi_port_cut_theorem.pdf, id=203, page=2, 164.97855pt x 110.30925pt>
+File: Fig/multi_port_cut_theorem.pdf Graphic file (type pdf)
+<use Fig/multi_port_cut_theorem.pdf, page 2>
+Package pdftex.def Info: Fig/multi_port_cut_theorem.pdf , page2 used on input l
+ine 1956.
+(pdftex.def)             Requested size: 164.97853pt x 110.31401pt.
+<Fig/multi_port_cut_theorem.pdf, id=204, page=3, 164.97855pt x 110.30925pt>
+File: Fig/multi_port_cut_theorem.pdf Graphic file (type pdf)
+<use Fig/multi_port_cut_theorem.pdf, page 3>
+Package pdftex.def Info: Fig/multi_port_cut_theorem.pdf , page3 used on input l
+ine 1959.
+(pdftex.def)             Requested size: 164.97853pt x 110.31401pt.
+<Fig/multi_port_cut_theorem.pdf, id=205, page=4, 164.97855pt x 110.30925pt>
+File: Fig/multi_port_cut_theorem.pdf Graphic file (type pdf)
+<use Fig/multi_port_cut_theorem.pdf, page 4>
+Package pdftex.def Info: Fig/multi_port_cut_theorem.pdf , page4 used on input l
+ine 1963.
+(pdftex.def)             Requested size: 164.97853pt x 110.31401pt.
+<Fig/multi_port_cut_theorem.pdf, id=206, page=5, 164.97855pt x 110.30925pt>
+File: Fig/multi_port_cut_theorem.pdf Graphic file (type pdf)
+<use Fig/multi_port_cut_theorem.pdf, page 5>
+Package pdftex.def Info: Fig/multi_port_cut_theorem.pdf , page5 used on input l
+ine 1965.
+(pdftex.def)             Requested size: 164.97853pt x 110.31401pt.
+<Fig/multi_port_cut_theorem.pdf, id=207, page=6, 164.97855pt x 110.30925pt>
+File: Fig/multi_port_cut_theorem.pdf Graphic file (type pdf)
+<use Fig/multi_port_cut_theorem.pdf, page 6>
+Package pdftex.def Info: Fig/multi_port_cut_theorem.pdf , page6 used on input l
+ine 1968.
+(pdftex.def)             Requested size: 164.97853pt x 110.31401pt.
+[9 <./Fig/multi_port_test_example.pdf> <./Fig/multi_port_test_example.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_test_example.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_test_example.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_test_example.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_test_example.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_test_example.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_test_example.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_test_example.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_test_example.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_test_example.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_test_example.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_test_example.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./Fig/joint_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/joint_loops.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/joint_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/joint_loops.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/joint_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/joint_loops.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/joint_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/joint_loops.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/joint_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/joint_loops.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./Fig/joint_loops.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/joint_loops.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+>]
+<Fig/trees_cuts_traditional.pdf, id=214, page=1, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 1>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page1 used on input l
+ine 2126.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=215, page=2, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 2>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page2 used on input l
+ine 2128.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=216, page=3, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 3>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page3 used on input l
+ine 2130.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=217, page=4, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 4>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page4 used on input l
+ine 2132.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=218, page=5, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 5>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page5 used on input l
+ine 2134.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=219, page=6, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 6>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page6 used on input l
+ine 2136.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=220, page=7, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 7>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page7 used on input l
+ine 2138.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=221, page=8, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 8>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page8 used on input l
+ine 2140.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=222, page=9, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 9>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page9 used on input l
+ine 2142.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=223, page=10, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 10>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page10 used on input 
+line 2144.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=224, page=11, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 11>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page11 used on input 
+line 2146.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=225, page=12, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 12>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page12 used on input 
+line 2148.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=226, page=13, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 13>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page13 used on input 
+line 2151.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=227, page=14, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 14>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page14 used on input 
+line 2153.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=228, page=15, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 15>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page15 used on input 
+line 2158.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=229, page=16, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 16>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page16 used on input 
+line 2160.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=230, page=17, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 17>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page17 used on input 
+line 2162.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=231, page=18, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 18>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page18 used on input 
+line 2164.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=232, page=19, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 19>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page19 used on input 
+line 2166.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=233, page=20, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 20>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page20 used on input 
+line 2168.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=234, page=21, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 21>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page21 used on input 
+line 2170.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=235, page=22, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 22>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page22 used on input 
+line 2172.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=236, page=23, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 23>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page23 used on input 
+line 2174.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=237, page=24, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 24>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page24 used on input 
+line 2176.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=238, page=25, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 25>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page25 used on input 
+line 2178.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=239, page=26, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 26>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page26 used on input 
+line 2180.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=240, page=27, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 27>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page27 used on input 
+line 2183.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=241, page=28, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 28>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page28 used on input 
+line 2185.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=242, page=29, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 29>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page29 used on input 
+line 2190.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=243, page=30, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 30>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page30 used on input 
+line 2192.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+<Fig/trees_cuts_traditional.pdf, id=244, page=31, 211.84802pt x 138.62514pt>
+File: Fig/trees_cuts_traditional.pdf Graphic file (type pdf)
+<use Fig/trees_cuts_traditional.pdf, page 31>
+Package pdftex.def Info: Fig/trees_cuts_traditional.pdf , page31 used on input 
+line 2194.
+(pdftex.def)             Requested size: 211.84802pt x 138.62689pt.
+ [10 <./Fig/multi_port_cut_theorem.pdf> <./Fig/multi_port_cut_theorem.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_cut_theorem.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_cut_theorem.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_cut_theorem.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_cut_theorem.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_cut_theorem.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_cut_theorem.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_cut_theorem.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/multi_port_cut_theorem.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/multi_port_cut_theorem.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./Fig/trees_cuts_traditional.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/trees_cuts_traditional.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>]
+PGFPlots: reading {port_testvector_number.dat}
+PGFPlots: reading {port_testvector_number.dat}
+PGFPlots: reading {port_testvector_number.dat}
+PGFPlots: reading {port_testvector_number.dat}
+PGFPlots: reading {hole_wall_path.dat}
+PGFPlots: reading {hole_wall_path.dat}
+PGFPlots: reading {hole_wall_path.dat}
+PGFPlots: reading {hole_wall_path.dat}
+PGFPlots: reading {hole_wall_cut.dat}
+PGFPlots: reading {hole_wall_cut.dat}
+PGFPlots: reading {hole_wall_cut.dat}
+PGFPlots: reading {hole_wall_cut.dat}
+
+Underfull \vbox (badness 1412) has occurred while \output is active []
+
+ [11]
+<Fig/test_traditional.pdf, id=254, page=1, 233.33235pt x 152.1042pt>
+File: Fig/test_traditional.pdf Graphic file (type pdf)
+<use Fig/test_traditional.pdf, page 1>
+Package pdftex.def Info: Fig/test_traditional.pdf , page1 used on input line 26
+09.
+(pdftex.def)             Requested size: 233.33234pt x 152.10614pt.
+<Fig/kill_loops_example.pdf, id=255, page=1, 451.49008pt x 408.596pt>
+File: Fig/kill_loops_example.pdf Graphic file (type pdf)
+<use Fig/kill_loops_example.pdf, page 1>
+Package pdftex.def Info: Fig/kill_loops_example.pdf , page1 used on input line 
+2650.
+(pdftex.def)             Requested size: 451.49005pt x 408.61368pt.
+<Fig/kill_loops_example.pdf, id=256, page=2, 451.49008pt x 408.596pt>
+File: Fig/kill_loops_example.pdf Graphic file (type pdf)
+<use Fig/kill_loops_example.pdf, page 2>
+Package pdftex.def Info: Fig/kill_loops_example.pdf , page2 used on input line 
+2659.
+(pdftex.def)             Requested size: 451.49005pt x 408.61368pt.
+<Fig/kill_loops_example.pdf, id=257, page=3, 451.49008pt x 408.596pt>
+File: Fig/kill_loops_example.pdf Graphic file (type pdf)
+<use Fig/kill_loops_example.pdf, page 3>
+Package pdftex.def Info: Fig/kill_loops_example.pdf , page3 used on input line 
+2661.
+(pdftex.def)             Requested size: 451.49005pt x 408.61368pt.
+
+Underfull \vbox (badness 2521) has occurred while \output is active []
+
+ [12 <./Fig/test_traditional.pdf>] [13 <./Fig/kill_loops_example.pdf> <./Fig/ki
+ll_loops_example.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/kill_loops_example.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+> <./Fig/kill_loops_example.pdf
+
+pdfTeX warning: pdflatex (file ./Fig/kill_loops_example.pdf): PDF inclusion: mu
+ltiple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 2882--2884
+[]\OT1/ptm/m/n/8 ------, ``Mix-ing op-er-a-tion in PMD,''
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2886--2888
+[]\OT1/ptm/m/n/8 ------, ``Fluid trans-porta-tion in PMD,''
+ []
+
+<./photos/Chunfeng_Liu.jpg, id=271, 99.4917pt x 124.3044pt>
+File: ./photos/Chunfeng_Liu.jpg Graphic file (type jpg)
+<use ./photos/Chunfeng_Liu.jpg>
+Package pdftex.def Info: ./photos/Chunfeng_Liu.jpg  used on input line 2929.
+(pdftex.def)             Requested size: 72.2746pt x 90.2995pt.
+File: ./photos/Chunfeng_Liu.jpg Graphic file (type jpg)
+<use ./photos/Chunfeng_Liu.jpg>
+Package pdftex.def Info: ./photos/Chunfeng_Liu.jpg  used on input line 2929.
+(pdftex.def)             Requested size: 72.2746pt x 90.2995pt.
+<./photos/Bing_Li.pdf, id=274, 302.12875pt x 377.41pt>
+File: ./photos/Bing_Li.pdf Graphic file (type pdf)
+<use ./photos/Bing_Li.pdf>
+Package pdftex.def Info: ./photos/Bing_Li.pdf  used on input line 2939.
+(pdftex.def)             Requested size: 72.26804pt x 90.27502pt.
+File: ./photos/Bing_Li.pdf Graphic file (type pdf)
+<use ./photos/Bing_Li.pdf>
+Package pdftex.def Info: ./photos/Bing_Li.pdf  used on input line 2939.
+(pdftex.def)             Requested size: 72.26804pt x 90.27502pt.
+<./photos/Tsungyi.pdf, id=277, 133.6995pt x 167.6664pt>
+File: ./photos/Tsungyi.pdf Graphic file (type pdf)
+<use ./photos/Tsungyi.pdf>
+Package pdftex.def Info: ./photos/Tsungyi.pdf  used on input line 2953.
+(pdftex.def)             Requested size: 72.03548pt x 90.33638pt.
+File: ./photos/Tsungyi.pdf Graphic file (type pdf)
+<use ./photos/Tsungyi.pdf>
+Package pdftex.def Info: ./photos/Tsungyi.pdf  used on input line 2953.
+(pdftex.def)             Requested size: 72.03548pt x 90.33638pt.
+<./photos/BBB_TCAD_Photo.jpg, id=280, 167.4255pt x 208.3785pt>
+File: ./photos/BBB_TCAD_Photo.jpg Graphic file (type jpg)
+<use ./photos/BBB_TCAD_Photo.jpg>
+Package pdftex.def Info: ./photos/BBB_TCAD_Photo.jpg  used on input line 2967.
+(pdftex.def)             Requested size: 72.27002pt x 89.94757pt.
+File: ./photos/BBB_TCAD_Photo.jpg Graphic file (type jpg)
+<use ./photos/BBB_TCAD_Photo.jpg>
+Package pdftex.def Info: ./photos/BBB_TCAD_Photo.jpg  used on input line 2967.
+(pdftex.def)             Requested size: 72.27002pt x 89.94757pt.
+<./photos/Chakrabarty_Krishnendu.jpg, id=283, 129.8451pt x 162.1257pt>
+File: ./photos/Chakrabarty_Krishnendu.jpg Graphic file (type jpg)
+<use ./photos/Chakrabarty_Krishnendu.jpg>
+Package pdftex.def Info: ./photos/Chakrabarty_Krishnendu.jpg  used on input lin
+e 2980.
+(pdftex.def)             Requested size: 72.26894pt x 90.23563pt.
+File: ./photos/Chakrabarty_Krishnendu.jpg Graphic file (type jpg)
+<use ./photos/Chakrabarty_Krishnendu.jpg>
+Package pdftex.def Info: ./photos/Chakrabarty_Krishnendu.jpg  used on input lin
+e 2980.
+(pdftex.def)             Requested size: 72.26894pt x 90.23563pt.
+
+Underfull \hbox (badness 2503) in paragraph at lines 2980--2981
+[]\OT1/ptm/b/n/8 Krishnendu Chakrabarty \OT1/ptm/m/n/8 (F'08) re-ceived the
+ []
+
+Package epstopdf Info: Source file: <./photos/Ulf_Schlichtmann.eps>
+(epstopdf)                    date: 2019-10-18 16:37:27
+(epstopdf)                    size: 689398 bytes
+(epstopdf)             Output file: <./photos/Ulf_Schlichtmann-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2019-10-18 16:37:27
+(epstopdf)                    size: 35741 bytes
+(epstopdf)             Command: <repstopdf --outfile=./photos/Ulf_Schlichtmann-
+eps-converted-to.pdf ./photos/Ulf_Schlichtmann.eps>
+(epstopdf)             \includegraphics on input line 2985.
+Package epstopdf Info: Output file is already uptodate.
+<./photos/Ulf_Schlichtmann-eps-converted-to.pdf, id=286, 72.27pt x 90.3375pt>
+File: ./photos/Ulf_Schlichtmann-eps-converted-to.pdf Graphic file (type pdf)
+<use ./photos/Ulf_Schlichtmann-eps-converted-to.pdf>
+Package pdftex.def Info: ./photos/Ulf_Schlichtmann-eps-converted-to.pdf  used o
+n input line 2985.
+(pdftex.def)             Requested size: 72.2709pt x 90.33864pt.
+Package epstopdf Info: Source file: <./photos/Ulf_Schlichtmann.eps>
+(epstopdf)                    date: 2019-10-18 16:37:27
+(epstopdf)                    size: 689398 bytes
+(epstopdf)             Output file: <./photos/Ulf_Schlichtmann-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2019-10-18 16:37:27
+(epstopdf)                    size: 35741 bytes
+(epstopdf)             Command: <repstopdf --outfile=./photos/Ulf_Schlichtmann-
+eps-converted-to.pdf ./photos/Ulf_Schlichtmann.eps>
+(epstopdf)             \includegraphics on input line 2985.
+Package epstopdf Info: Output file is already uptodate.
+File: ./photos/Ulf_Schlichtmann-eps-converted-to.pdf Graphic file (type pdf)
+<use ./photos/Ulf_Schlichtmann-eps-converted-to.pdf>
+Package pdftex.def Info: ./photos/Ulf_Schlichtmann-eps-converted-to.pdf  used o
+n input line 2985.
+(pdftex.def)             Requested size: 72.2709pt x 90.33864pt.
+[14 <./photos/Chunfeng_Liu.jpg> <./photos/Bing_Li.pdf> <./photos/Tsungyi.pdf> <
+./photos/BBB_TCAD_Photo.jpg> <./photos/Chakrabarty_Krishnendu.jpg> <./photos/Ul
+f_Schlichtmann-eps-converted-to.pdf>] (./j_fpva_test_final.aux) ) 
+Here is how much of TeX's memory you used:
+ 38207 strings out of 494485
+ 920980 string characters out of 6175792
+ 1158914 words of memory out of 5000000
+ 41342 multiletter control sequences out of 15000+600000
+ 577714 words of font info for 114 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 62i,19n,100p,713b,2407s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/te
+xlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on j_fpva_test_final.pdf (14 pages, 4354011 bytes).
+PDF statistics:
+ 385 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 815 words of extra memory for PDF output out of 10000 (max. 10000000)
+

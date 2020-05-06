@@ -1,0 +1,6 @@
+PWD C:/Users/Bing/work/papers/j_FPVA_test/tex_final
+INPUT c:/texlive/2019/texmf.cnf
+INPUT c:/texlive/2019/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT biographies.tex
+OUTPUT biographies.log

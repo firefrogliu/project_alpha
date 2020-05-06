@@ -1,0 +1,82 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'macro_syn.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{204.03588181bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.35988161)%
+    \put(0,0){\includegraphics[width=\unitlength]{macro_syn.pdf}}%
+    \put(0.34725334,1.12785106){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_5$}}}%
+    \put(0.63492134,0.89121411){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_9$}}}%
+    \put(0.7079811,1.00217804){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_8$}}}%
+    \put(0.46171966,1.00217839){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_7$}}}%
+    \put(0.75605924,1.12785119){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_6$}}}%
+    \put(0.83782046,1.24218547){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_4$}}}%
+    \put(0.6742981,1.24218547){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_3$}}}%
+    \put(0.34725331,1.24218547){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_1$}}}%
+    \put(0.51077562,1.24218547){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_2$}}}%
+    \put(0.5691089,0.7560778){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_{10}$}}}%
+    \put(0.5691089,0.6243153){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_{11}$}}}%
+    \put(0.29739395,1.2425329){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mix}}}%
+    \put(0.46539897,1.2425329){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mix}}}%
+    \put(0.62983789,1.2425329){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mix}}}%
+    \put(0.79393316,1.2425329){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mix}}}%
+    \put(0.70881277,1.12442743){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mix}}}%
+    \put(0.41606024,0.98220559){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mix}}}%
+    \put(0.68619406,0.88457226){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Filter}}}%
+    \put(0.51847789,0.61837894){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Detect}}}%
+    \put(0.29722212,1.12513292){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Heat}}}%
+    \put(0.75730223,0.98291108){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Heat}}}%
+    \put(0.51686601,0.75014144){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mix}}}%
+    \put(0.21490486,1.06457366){\color[rgb]{0.16862745,0.36470588,0.03921569}\makebox(0,0)[b]{\smash{\textit{group 1}}}}%
+    \put(0.87896124,1.07442659){\color[rgb]{0.16862745,0.36470588,0.03921569}\makebox(0,0)[b]{\smash{\textit{group 2}}}}%
+    \put(0.70947751,0.70464348){\color[rgb]{0.16862745,0.36470588,0.03921569}\makebox(0,0)[b]{\smash{\textit{group 3}}}}%
+    \put(0.438268,0.31234563){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textit{group 1}}}}%
+    \put(0.73177175,0.31234563){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textit{group 2}}}}%
+    \put(0.40897933,0.11131644){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textit{group 3}}}}%
+  \end{picture}%
+\endgroup%

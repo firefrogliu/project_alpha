@@ -1,0 +1,111 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'storage_deadlock.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{278.86782101bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.80813738)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{storage_deadlock.pdf}}%
+    \put(0.05451835,0.4827044){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.03511218\unitlength}\centering \end{minipage}}}%
+    \put(0.24269029,0.00547356){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(b)}}}%
+    \put(0.12603896,0.54600229){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09474266\unitlength}\raggedright \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{storage_deadlock.pdf}}%
+    \put(0.29654788,0.7230881){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{storage_deadlock.pdf}}%
+    \put(0.42518857,0.72219693){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0.41699591,0.4408475){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(a)}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{storage_deadlock.pdf}}%
+    \put(0.43286493,0.50903085){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{storage_deadlock.pdf}}%
+    \put(0.2600391,0.79331527){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_1$}}}%
+    \put(0.32038272,0.79331527){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{storage_deadlock.pdf}}%
+    \put(0.39468169,0.79385773){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_3$}}}%
+    \put(0.45377054,0.79385773){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{storage_deadlock.pdf}}%
+    \put(0.35950591,0.62141838){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{storage_deadlock.pdf}}%
+    \put(0.40576981,0.29262117){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{storage_deadlock.pdf}}%
+    \put(0.25071601,0.03603122){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.13900412,0.23095149){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_2,o_2\to o_4,stored$}}}}%
+    \put(0.64909258,0.00594167){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(c)}}}%
+    \put(0.06817149,0.28967251){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_1$}}}%
+    \put(0.06817149,0.20361032){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_2$}}}%
+    \put(0.06797576,0.12723039){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{storage_deadlock.pdf}}%
+    \put(0.10954677,0.29135285){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0.13308292,0.31947117){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_1,o_1\to o_4, stored$}}}}%
+    \put(0.32381427,0.15759558){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_4,o_4\to o_5$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{storage_deadlock.pdf}}%
+    \put(0.7056965,0.34821192){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{storage_deadlock.pdf}}%
+    \put(0.63393007,0.13144576){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{storage_deadlock.pdf}}%
+    \put(0.53622199,0.27846305){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Pump}}}%
+    \put(0.70480588,0.44375966){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Pump}}}%
+    \put(0.80141205,0.20810147){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Waste}}}%
+    \put(0.5778731,0.26060725){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_1,stored \> in \> e_1$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{storage_deadlock.pdf}}%
+    \put(0.58961597,0.72338747){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{storage_deadlock.pdf}}%
+    \put(0.56044806,0.79505995){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_5$}}}%
+    \put(0.61953691,0.79505995){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_6$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{storage_deadlock.pdf}}%
+    \put(0.10919476,0.20457145){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0.11165931,0.13079596){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{storage_deadlock.pdf}}%
+    \put(0.30323379,0.12967182){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{storage_deadlock.pdf}}%
+    \put(0.12559625,0.15774523){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_3,o_3\to o_5$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{storage_deadlock.pdf}}%
+    \put(0.63393015,0.34821097){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$d_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{storage_deadlock.pdf}}%
+    \put(0.66752279,0.22154491){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_2,stored \> in \> e_2$}}}}%
+    \put(0.59006676,0.17421064){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_3,blocked$}}}}%
+  \end{picture}%
+\endgroup%

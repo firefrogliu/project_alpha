@@ -1,0 +1,125 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'postpone_model.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{304.33143049bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.7100901)%
+    \put(0.36393716,0.01979515){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.03217432\unitlength}\centering \end{minipage}}}%
+    \put(0.4294736,0.07779687){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.08681548\unitlength}\raggedright \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{postpone_model.pdf}}%
+    \put(0.09909225,0.17593559){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{postpone_model.pdf}}%
+    \put(0.337347,0.28518003){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_6$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{postpone_model.pdf}}%
+    \put(0.11326824,0.23083328){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{postpone_model.pdf}}%
+    \put(0.22973841,0.04883817){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.21756213,0.00501558){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(b)}}}%
+    \put(0.06246755,0.28340748){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_1$}}}%
+    \put(0.06246755,0.23083326){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_2$}}}%
+    \put(0.06228818,0.17661629){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_3$}}}%
+    \put(0.06228818,0.12404208){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{postpone_model.pdf}}%
+    \put(0.10038093,0.28496719){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{postpone_model.pdf}}%
+    \put(0.27126397,0.12649957){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{postpone_model.pdf}}%
+    \put(0.33707301,0.17634025){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{postpone_model.pdf}}%
+    \put(0.44209481,0.23012876){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_7$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{postpone_model.pdf}}%
+    \put(0.5706942,0.1759356){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{postpone_model.pdf}}%
+    \put(0.71771396,0.28518003){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_6$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{postpone_model.pdf}}%
+    \put(0.5848702,0.2308333){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{postpone_model.pdf}}%
+    \put(0.7013404,0.04883817){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.68916412,0.00501559){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(c)}}}%
+    \put(0.53406941,0.2834075){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_1$}}}%
+    \put(0.53406941,0.23083326){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_2$}}}%
+    \put(0.53389005,0.17661628){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_3$}}}%
+    \put(0.53389005,0.12404208){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{postpone_model.pdf}}%
+    \put(0.57198287,0.28496721){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{postpone_model.pdf}}%
+    \put(0.78295374,0.12649957){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{postpone_model.pdf}}%
+    \put(0.75791273,0.17634025){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{postpone_model.pdf}}%
+    \put(0.90364657,0.23012876){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_7$}}}%
+    \put(0.67821366,0.25694128){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_2,o_2\to o_4, postponed$}}}}%
+    \put(0.2106826,0.31214422){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_1,o_1\to o_5, postponed$}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{postpone_model.pdf}}%
+    \put(0.32142302,0.53989546){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{postpone_model.pdf}}%
+    \put(0.46767282,0.64913989){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_6$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{postpone_model.pdf}}%
+    \put(0.33559902,0.59479315){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{postpone_model.pdf}}%
+    \put(0.45206918,0.41279794){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.43989288,0.36897543){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(a)}}}%
+    \put(0.2847983,0.64736737){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_1$}}}%
+    \put(0.2847983,0.59479312){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_2$}}}%
+    \put(0.28461894,0.54057615){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_3$}}}%
+    \put(0.28461894,0.48800196){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{postpone_model.pdf}}%
+    \put(0.32271171,0.64892706){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{postpone_model.pdf}}%
+    \put(0.49359474,0.49045944){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{postpone_model.pdf}}%
+    \put(0.46855373,0.54030012){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{postpone_model.pdf}}%
+    \put(0.61710876,0.59408864){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_7$}}}%
+    \put(0.34432444,0.62106839){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_2,o_2\to o_5$}}}}%
+    \put(0.34021302,0.67458013){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_1,o_1\to o_5$}}}}%
+    \put(0.53783259,0.51596741){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_5,o_5\to o_7$}}}}%
+    \put(0.44923416,0.67469969){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_4,o_6\to o_7$}}}}%
+    \put(0.34978939,0.56503165){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$f_3,o_2\to o_5$}}}}%
+  \end{picture}%
+\endgroup%

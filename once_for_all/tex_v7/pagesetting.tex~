@@ -1,0 +1,92 @@
+
+%\usepackage[a4paper,margin=2.54cm,top=2.2cm]{geometry}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+%\usepackage[a4paper]{geometry}
+%\usepackage{titlesec}
+
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.20em}
+\normalfont
+%BTE Font umsetzen
+\renewcommand{\encodingdefault}{T1}
+\renewcommand{\rmdefault}{lhv}
+\renewcommand{\sfdefault}{lhv}
+\renewcommand{\normalsize}{\fontsize{10.4}{12}\linespread{1.07} \selectfont}
+
+%\usepackage{helvet}
+%\usepackage[scaled=.92]{helvet}
+%\usepackage[scaled]{helvet}
+%\renewcommand{\rmdefault}{phv} % Arial
+%\renewcommand{\sfdefault}{phv} % Arial
+%\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand{\rmdefault}{ptm}
+%\renewcommand{\sfdefault}{ptm}
+
+%\usepackage[scaled=0.7]{helvet}
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\usepackage{xcolor}
+%\definecolor{tumblue}{RGB}{46,116,181}
+\definecolor{tumgray}{RGB}{90,90,90}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+%\lhead{\leftmark|\rightmark}
+\rhead{\color{tumgray}\small page \thepage\ of \pageref{LastPage}}
+
+\newcommand{\subsectitle}[1]{\vskip 8pt \textit{\underline{#1}}}
+
+\setcounter{secnumdepth}{5}
+\makeatletter 
+\renewcommand\large{\@setfontsize\large{11pt}{11}}
+\renewcommand\footnotesize{\@setfontsize\large{5.5pt}{5.5}}
+
+\renewcommand{\thesection}{\arabic{section}\hspace{-0.3ex}}
+\renewcommand\section{\@startsection{section}{1}{.0in}
+                                   {3.5ex \@plus 1ex \@minus .2ex}%
+                                   {0.5ex \@plus.2ex}%
+                                   {\normalfont\bfseries\fontsize{11}{11}\selectfont}}
+
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}\hspace{-0.3ex}}
+\renewcommand\subsection{\@startsection{subsection}{2}{.0in}
+                                   {3.5ex \@plus 1ex \@minus .2ex}%
+                                   {0.5ex \@plus.2ex}%
+                                   {\normalfont\bfseries\fontsize{11}{11}\selectfont}}
+
+
+\renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\hspace{-0.3ex}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{.0in}%
+                                   {3.5ex \@plus 1ex \@minus .2ex}%
+                                   {0.5ex \@plus.2ex}%
+                                   {\normalfont\bfseries\fontsize{11}{11}\selectfont}}
+
+\renewcommand{\theparagraph}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}\hspace{-0.3ex}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{.0in}%
+                {3.5ex \@plus1ex \@minus.2ex}%
+                {1em}%
+                                   %{-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   %{0.5ex \@plus.2ex}%
+                                   {\normalfont\bfseries\fontsize{11}{11}\selectfont}}
+%\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+                %{3.25ex \@plus1ex \@minus.2ex}%
+                %{1em}%
+                %{\normalfont\normalsize\bfseries}}
+
+%\titleclass{\subsubsubsection}{straight}[\subsection]
+%\newcounter{subsubsubsection}[subsubsection]
+%\renewcommand{\thesubsubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{subsubsubsection}\hspace{-0.3ex}}
+%\newcommand\subsubsubsection{\@startsection{subsubsubsection}{3}{.0in}%
+                                   %{-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   %{0.5ex \@plus.2ex}%
+                                   %{\normalfont\bfseries\fontsize{11}{11}\selectfont}}
+\makeatother
+
+%add section number before References 
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*}{\section}{}{}

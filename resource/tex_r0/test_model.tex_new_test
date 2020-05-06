@@ -1,0 +1,435 @@
+
+\subsection{Generating flow-path test vectors} \label{sec:flow_paths}
+
+%The objective of flow path generation is to minimize the number of paths 
+%to reduce test cost.  In a valve array, the valves do not have a specific
+%direction. 
+%%so that a flow path can pass through a valve from any of the four directions.  
+%Therefore, this task is similar to finding a minimum set of paths covering all
+%nodes in a graph, an NP-hard problem. 
+In the proposed method, we generate the flow paths
+using an Integer Linear Programming (ILP) model. The scalability of this model
+is improved using a hierarchical approach. 
+%leading to a small set of flow paths within a reasonable runtime. 
+
+\subsubsection{Constructing flow paths}
+
+A fluid cell is defined as the channel area surrounded by four valves, as shown in
+\figname~\ref{fig:flow_path_model}(a). 
+%This is the general case showing the
+%relation between a fluid cell and the surrounding valves. 
+%For special cells
+%such as those connected with the pressure source or pressure sink and those
+%at the external boundary of the array,
+%the number of valves surrounding such a cell might be smaller than four. In these cases, the
+%unshown valves can be considered as virtual and considered always open or
+%closed.
+%In the valve array, 
+Air pressure through a cell must pass through
+two of the valves surrounding this cell. Since the air pressure can 
+reach
+%enter and leave
+the cell in any direction, in total there are 12 possible directions for a path
+passing through this cell as shown in \figname~\ref{fig:flow_path_model}(a).
+Instead of modeling theses directions directly, 
+we model how the path passes through the surrounding valves. 
+Suppose all valves can be covered by 
+no more than $n_p$ flow paths in the test set,
+where $n_p$ is a given constant. For the cell at the location of the $i$th row
+and the $j$th column of the valve array, we assign
+a 0-1 variable $c^m_{i,j}$ to represent whether the $m$th path passes through
+the cell. If the $m$th path passes through the cell,
+$c^m_{i,j}=1$; otherwise $c^m_{i,j}=0$ .
+For the valves at the left, right, upper and lower sides of the cell at the
+location $(i,j)$, we assign 0-1 variables 
+$v_{i, j-1}^m$, $v_{i, j+1}^m$, $v_{i+1, j}^m$ and, $v_{i-1, j}^m$, respectively. If 
+the $m$th path passes through a valve, the corresponding variable is set to 1;
+otherwise, it is set to 0.  
+
+If the $m$th path passes through
+the cell at the location $(i,j)$, this path should pass through exactly 
+two valves that surround the cell;
+otherwise, no valve surrounding the cell should be passed. 
+Consequently, the relation between the cell and the valves surrounding it can be
+established as
+\begin{align}
+\label{eq:valve_cell}
+v_{i, j-1}^m + v_{i, j+1}^m + v_{i+1, j}^m + v_{i-1, j}^m=2c^m_{i,j}, 
+ \  \forall\ i&=1, 2,\dots, n_r,\nonumber\\
+ j=1, 2,\dots, n_c,\ \ m&=1, 2,\dots, n_p
+\end{align}
+where $n_r$ and $n_c$ are numbers of rows and columns of the valve array,
+respectively.
+%and $n_p$ is the number of given paths.
+Constraint (\ref{eq:valve_cell}) 
+constructs the $m$th path by the chaining effect of the variables $v_{i, j}^m$
+as demonstrated in \figname~\ref{fig:flow_path_model}(b).
+
+%Furthermore,  
+To guarantee that a valve is covered at least once by the flow paths, 
+%at least 
+one of the constraint variables $v^m_{i,j}$ for the valve indexed by
+$(i,j)$ on the $m$ paths must be one, leading to
+\begin{equation}
+\label{eq:valve_cov}
+\sum_{m=1}^{n_p}v^m_{i,j}\ge 1, \  \forall\ i=1, 2,\dots, n_r, \ \ j=1,
+2,\dots, n_c.
+\end{equation}
+
+%In establishing the relation between valves and the cells, there are several
+%special cases. First, the cell connecting the pressure source or the pressure
+%sensor must be on all the paths, so that all the constraint variables
+%$c^m_{i,j}$ for these cells should be set to 1.  Accordingly, the 0-1
+%variables for the virtual valves through which the pressure source and the
+%pressure sensor are connected should also be 1.  
+%Another special case is that
+%on the valve array at some locations long channels instead of valves are built and at some 
+%other locations there are obstacles without valves. 
+%These areas are considered as super cells surrounded by virtual valves that
+%are always open or close, so that they can be incorporated into the 
+%proposed general model directly.
+%%For some other locations where valves are not built, these valves
+%%are considered virtual and their constraint variables are always set to 0, 
+%%respectively.  
+%In all these special
+%cases, the basic relation between valves and cells (\ref{eq:valve_cell}) and
+%the coverage condition (\ref{eq:valve_cov}) still hold.
+
+%The constraint (\ref{eq:valve_cell}) already defines a path from the source to
+%the sink. For example, in the case in \figname~\ref{fig:flow_path_model}b, 
+%%for the first flow path 
+%the constraint variable for the virtual cell connected to
+%the source is set to 1.  According to (\ref{eq:valve_cell}), only one of the
+%other three valves surrounding this cell belongs to the flow path.  Since
+%this valve also surrounds the next cell, 
+%the path must pass through that cell.
+%%and a new valve is also passed.  
+%This chained relation goes further
+%and finally reaches the sink.  Similar to the cell connected to the source,
+%the constraint variables of the cell and the valve connected to the sensor are
+%set to 1, stipulating that only one other valve surrounding the last cell must
+%be included in the path.
+%The overall effect of the chained constraint
+%is that a continuous path is established from the pressure source to the
+%sensor. For example, all the valves on the path shown in
+%\figname~\ref{fig:flow_path_model}b have their constraint variables equal to
+%1.
+%%and all the cells covered by the paths also have their
+%%constraint variables set to 1. 
+%For each cell, it can be seen that
+%two of the four surrounding valves are open on the flow path. 
+%
+\subsubsection{Excluding disjoint flow loops}
+
+With the constraints (\ref{eq:valve_cell}) and (\ref{eq:valve_cov}),
+%guarantees that there is a path between
+%the source and the sink 
+%constructs the $m$th path by the chaining effect of the variables $v_{i, j}^m$, 
+%but it might produce a pattern %including a path from the source to the sink and 
+disjoint loops may appear on the flow paths. 
+For example, the constraint does not prevent the disjoint loop at the lower right side of the
+valve array in \figname~\ref{fig:flow_path_model}(c) from happening. All the valves and cells on
+the loop meet the constraints (\ref{eq:valve_cell}) and (\ref{eq:valve_cov}),
+but this loop gives a false counting of valve coverage in testing,
+because pressure from the source cannot reach a valve on this loop so that it is not
+possible to test whether the valves on the loop can be opened.
+%According to (\ref{eq:valve_cov}), all the valves covered by this loop should be 
+%counted as tested, but this path does not allow a flow from the source to the sink,
+%leading to an insufficient test vector set.
+
+%The problem of this disjoint path can be solved by checking the fluid volume
+%on the path.  Assume that inside a cell one unit fluid can be saved. 
+%Since the loop is not connected to the pressure source, it is not possible to
+%fill the cells on the loop. If we add all the fluid volumes on the path
+%together, we can find that the total fluid volume is smaller than the number
+%of cells on the path. To prevent this case from happening, we require that
+%fluid volume on the path must be equal to the number of cells on the path by
+%adding additional constraints discussed as follows.
+
+%The number of cells on the $m$th path $n_{v,m}$ can be calculated easily as
+%\begin{equation} 
+%n_{v,m}=\sum_{\substack{i=1,\dots, n_r\\j=1,\dots,n_c}} c^m_{i,j}.  
+%\end{equation} 
+%where $n_r$ and $n_c$ are the number of rows and
+%columns of the array.  
+
+\begin{figure*}
+{\figurefontsize
+\centering
+\input{Fig/hierarchical.pdf_tex}
+\caption{Hierarchical path construction and valve search for cut-sets. 
+(a) Paths at the top level indicate
+flow direction. (b)/(c) Subpaths in subblocks forming final flow paths. (d)
+Searching beginning and ending valves of cut-sets. Vales along the two
+search directions form the starting and ending valve sets.}
+\label{fig:hierarchical}
+}
+\end{figure*}
+
+
+To solve the disjoint loop problem, we force %positive 
+%fluid %volume
+%flowed
+the air pressure 
+from the source to reach any segment of the path. 
+%Consider the case that we apply water pressure at
+%the source port and the flow propagates along a path. 
+To represent the pressure volume (pressure flow)
+passing through a valve at the location $(i,j)$, 
+%when the pressure is applied at the source, 
+we define an integer variable $f^m_{i,j}$.  This
+variable is positive when viewed from a cell which the pressure flow enters; it is
+negative when viewed from a cell which the pressure flow leaves.
+In addition, a pressure can pass through a valve only if the valve is on
+the test path, under the condition $v^m_{i,j}=1$. Otherwise $f^m_{i,j}$ should
+be set to 0. This condition constrains 
+$f^m_{i,j}$ as
+\begin{equation}
+\label{eq:flow_var}
+f^m_{i,j}\le v^m_{i,j}\cdot\mathcal{M} \quad \text{and}\quad f^m_{i,j}\ge
+-v^m_{i,j}\cdot\mathcal{M} 
+\end{equation}
+where $\mathcal{M}$ is a large positive constant %for any flow value
+\cite{chen2011applied}.
+%
+%If the flow direction on the valve at $(i,j)$ is going into the cell, the
+%flow variable with repsect to the $k$th cell is positive; otherwise, the flow
+%variable is negative since the fluid is going out of the cell.  
+%When water passes through a cell on the path for the first time, one unit water is
+%saved in the cell. When water flows through the cell further, the input fluid
+%volume is always equal to the output fluid volume.  In the general case, there
+%are four valves surrounding a cell as shown in
+%\figname~\ref{fig:flow_path_model}a. Therefore, 
+Consequently, the pressure volume in the
+cell at $(i,j)$ when testing the $m$th flow path is equal to the sum of the
+volumes of the four surrounding valves. 
+%If this cell in on the test path, there must be a unit of fluid saved, so that 
+%we can derive the relation
+This relation can be written as
+\begin{equation}
+\label{eq:flow_sum}
+f^m_{i,j-1}+ f^m_{i,j+1}+ f^m_{i+1,j}+ f^m_{i-1,j} = c^m_{i,j}
+\end{equation} 
+where the cells on the left of, on the right of, above and below the cell at the location
+$(i,j)$ are indexed by $(i,j-1)$, $(i,j+1)$, $(i+1,j)$ and $(i-1,j)$,
+respectively. 
+%To guarantee that the water from the source can reach all cells
+%on the path, the saved water volume on the path should be equal to the number
+%of cells on the paths, written as
+%\begin{equation} 
+%\label{eq:flow_path_volume} 
+%\sum_{(i,j)\in I} (f^m_{i,j-1}+ f^m_{i,j+1}+ f^m_{i+1,j}+ f^m_{i-1,j})=
+%\sum_{(i,j)\in I} c^m_{i,j}
+%\end{equation} 
+%where $I$ is the index set $\{(i_1,j_1)\dots (i_n,j_n)\}$ for the all cells 
+%in the array. In some cells are not selected to be a part of the $m$th path,
+%the corresponding constraint variables $c^m_{i,j}$ are set to 0, which
+%further constrain all flows to 0 by (\ref{eq:flow_var}).
+
+%For a cell that is not selected to be a part of the path, its constraint 
+%variable $(c^m_{i,j})$ is equal to 0, so that 
+%constrianed by
+%(\ref{eq:valve_cell}), $c_k$ is zero and all the flow variables related to
+%this cell can take any value to meet (\ref{eq:valve_cell}). 
+%When the $k$th
+%cell is on the $m$th path, $c_k=1$. 
+%(\ref{eq:valve_cell}) can thus 
+%shown in \figname~\ref{fig:flow_path_model}. 
+
+Constraint (\ref{eq:flow_sum}) prevents disjoint loops from appearing
+effectively.
+%Consider that we have 
+Assume there is a disjoint loop on the $m$th path and the cells
+on the disjoint loop are indexed by  $(i_1,j_1)$ to $(i_l,j_l)$, 
+where the valves at $(i_l,j_l)$ and $(i_1,j_1)$ are neighbors.
+For each cell on the loop we can write a constraint similar to
+(\ref{eq:flow_sum}). Adding the left and right sides of these constraints
+together, we have
+\begin{equation} 
+\label{eq:flow_sum_loop} 
+\sum_{(i,j)\in I_l} (f^m_{i,j-1}+ f^m_{i,j+1}+ f^m_{i+1,j}+ f^m_{i-1,j}) = 
+\sum_{(i,j)\in I_l} c^m_{i,j}
+\end{equation} 
+where $I_l$ is the index set  $\{(i_1,j_1)\dots (i_l,j_l)\}$ for the cells on
+the loop.
+%
+%For a cell on the disjoint loop, only two of the flow variables cannot be
+%zero as specified by the constraints (\ref{eq:valve_cell}) and (\ref{eq:flow_var}). 
+%Assume for the cell at $(i_1,j_1)$ and the cell next to it on the right is
+%also on the path and its location is $(i_2,j_2)$. Also assume that
+%the valve on right side of the cell at $(i_1,j_1)$ 
+%has a flow value equal to $f^m_{i_1,j_1+1}$. This valve is the valve on the
+%left side of the cell at $(i_2,j_2)$. Viewed from the second cell, the flow value 
+%$f^m_{i_2,j_2-1}$ is equal to $-f^m_{i_1,j_1+1}$ because this is actually the
+%same flow value viewed from two neighboring cells.
+%reversed directions.
+%In the sum on the left side of (\ref{eq:flow_sum_loop}), a flow on a valve along
+%the path appears twice with reversed valves. Therefore, 
+On a disjoint loop, the sum on the left
+side of (\ref{eq:flow_sum_loop}) is always equal to 0, because no pressure
+flow enters the loop. This contradicts 
+the fact that $\sum_{(i,j)\in I_l} c^m_{i,j}$ should be larger than 0, 
+%the constraint (\ref{eq:flow_path_volume}) because  
+%$\sum_{(i,j)\in I_l} c^m_{i,j}$ is a part of $\sum_{(i,j)\in I} c^m_{i,j}$ and
+%must be larger than zero.
+%Assume that the $f_{i_1, l,m}> 0$, so the the flow enters the $i_1$the cell
+%from the left side. For the $i_n$th cell, the flow variable for the vavle on
+%its right is eqaul to $0-f_{i_1, l,m}$, because it is the same flow viewed
+%from another direction. This relation is valid for all valves on the disjoint
+%loop, so that the sum on the left of (\ref{eq:flow_sum_looop}), so that no
+%varialbes on the right of (\ref{eq:flow_sum_looop}) can be 1 because all
+%$c_k$s are 0-1 variables. This contradicts 
+%with the fact that the disjoint loop is a part of the test path so that the
+%right side of (\ref{eq:flow_sum_loop}) is larger than 0. 
+because the cells are on the flow path.
+%because at least one $c^m_{i,j}$ should be 1 to allow the flow path to pass at
+%least one of the valves surrounding this cell. Consequently, disjoint loops can
+%be excluded by (\ref{eq:flow_sum_loop}) in the
+%optimization problem. 
+The concept of 
+%flow variables and the sum
+%of the flow around the loop are 
+this model is illustrated in
+\figname~\ref{fig:flow_path_model}(d).
+
+\subsubsection{Finding the minimum set of flow paths} 
+
+The path constraints defined above rely on a known number $n_p$ paths that
+can guarantee the coverage of all valves. 
+In our formulation, we first assign $n_p$ a constant and then
+try to find a set of paths whose number is no larger than $n_p$ that can cover all
+valves. For each path, we
+assign a 0-1 variable $p_m, 1 \le m \le n_p$ to indicate whether this path is used. Because any
+valve on the $m$th path marks the path to be used, $p_m$ can be
+constrained as
+\begin{equation}   
+\label{eq:valve_on_path}
+p_m\cdot\mathcal{M} \ge \sum_{(i,j)\in I}v^m_{i,j}
+\end{equation}   
+where $\mathcal{M}$ is a positive constant larger than the number of valves on
+the array, and $I$ is the index set of all valves.
+If a valve is on the $m$th path, the right side of
+(\ref{eq:valve_on_path}) is larger than 0, so that $p_m$ must be set to 1 to
+meet the constraint. 
+
+With the constraints above, the ILP problem to find a minimum set of paths 
+that cover all valves can be formulated as follows,
+\begin{align} 
+\text{minimize} &\quad \sum_{m=1}^{n_p}p_m
+\label{eq:ilp_1}\\
+\text{subject to} & \quad (\ref{eq:valve_cell})-(\ref{eq:flow_sum})
+\  \text{and}\  (\ref{eq:valve_on_path}).
+\label{eq:ilp_2}
+\end{align} 
+Since we specify the number of paths $n_p$ as a constant,
+it is possible that the ILP problem above has no solution, meaning that not
+all the valves can be covered by $n_p$ flow paths. If this
+happens, we increase $n_p$ and solve the optimization problem
+again. 
+%This process is repeated until we find the first minimum set of feasible
+%paths. 
+
+\input{loop_relax}
+
+
+
+\subsection{Generating cut-set test vectors}
+
+Besides flow paths, we also need to create cut-sets to test
+whether all valves can be closed. 
+%In this test, if all valves in a cut-set are
+%closed correctly, there should be no fluid going from the pressure source to the
+%sink, so that no pressure should be detected at the sink.
+%
+Because a cut-set separates the source and the sink, an end of a cut-set must
+touch an edge of the chip, as shown in \figname~\ref{fig:path_cutset}(b) and
+\ref{fig:path_cutset}(d). 
+%Otherwise, there is always an opening left to form a path from the source to
+%the sink.
+Observing this phenomenon, we search the valves along the
+boundary of the chip in two directions starting from the source until the sink
+port is reached from both directions, as shown in
+\figname~\ref{fig:hierarchical}(d). Consequently, we find two sets of
+valves, and a cut-set must include a valve from each of these sets.
+%Correspondingly,
+%%With valve sets above, 
+%the problem to find cut-sets can be reformulated as follows:
+
+%\textit{Cut-sets generation}: 
+%Find a minimum number of simple paths without loops to form
+%cut-sets that cover each valve in the chip at least once. 
+%A cut-set must have a valve in each of the two valve sets
+%identified by searching along the external boundary of the array from
+%the source to the sink, as shown in \figname~\ref{fig:hierarchical}d.
+
+%The problem above 
+The cut-set generation problem is a complementary problem of finding a set of
+flow paths covering all valves described in Section~\ref{sec:flow_paths} and
+can be solved by adapting the optimization problem
+%To solve this problem, we can still use the formulation
+(\ref{eq:ilp_1})--(\ref{eq:ilp_2}) to include the additional constraint that a cut-set must
+%have a valve in each of the two sets found by searching along boundaries of the array. 
+start and end at the boundary of the chip.
+%The other difference is that we do not assign
+%the cell the constraint variable. Instead, a constraint variable is assigned to
+%the obstacle space between valves, in order to generate
+%cut-sets that block all flow paths. 
+%The variable assignment is illustrated in
+%\figname~{\ref{fig:cutset_model}a.
+
+%\begin{figure}
+%{\figurefontsize
+%\centering
+%\input{Fig/cutset_model.pdf_tex}
+%\caption{Cut-set constraint variables and control leakage fault test. (a) Constraint
+%variables for cut-set modeling. (b) Control leakage test scenarios.}
+%\label{fig:cutset_model}
+%}
+%\end{figure}
+
+%An example of the cutset is shown in \figname . 
+%In this problem, the obstable space surrounded by four valves 
+%corresponds to a cell in the flow paths. The valves in a cut-set are chained
+%in different direction than the valves in a flow paths. If we assign the
+%obstacle space the variable $v_{i,m}$ as used in () and consider valves are
+%considered in a different direction through the obstacle space, we can model
+%the cut-set finding problem similar to ()--(). The only difference is that the
+%starting valve and ending valve of a cut-set must be in a set of the valve
+%along the boundary of the chip, respectively.
+
+As discussed in Section~\ref{sec:test_stratergy}, we must prevent the
+pattern shown in \figname~\ref{fig:path_cutset}(c) and
+\ref{fig:path_cutset}(d)
+from appearing in the
+cut-set to guarantee the detection of two faults masking each other.  
+%Otherwise, two faulty valves might mask each other and thus the
+%combined fault cannot be captured.  
+This illegal pattern can be described as a new
+cut-set can be formed by only one new valve with some valves from the old
+cut-set.  Assume there is a valve at the location $(i,j)$ and the two
+obstacle areas at the two ends of the valve are indexed by $(i_1,j_1)$ and
+$(i_2,j_2)$.  To prevent this pattern 
+%in \figname~\ref{fig:path_cutset}c and \ref{fig:path_cutset}d
+from being formed, we add an additional constraint to the optimization problem
+as 
+\begin{equation}
+c^m_{i_1,j_1}+c^m_{i_2,j_2}-1\le v^m_{i,j}
+\end{equation}
+%\text{where $c_i$ and $c_j$ are the two obstacle space at the two ends of the $k$th vavle.}
+which  specifies that if the two ends of a valve are in the
+current cut-set, this valve must be included in the cut-set
+to prevent the illegal pattern in \figname~\ref{fig:path_cutset}(c) and
+\ref{fig:path_cutset}(d).
+
+
+%For example, the valve at the location $(i-1, j)$ in
+%\figname~\ref{fig:cutset_model}a must be included in the cut-set if the two
+%ends of the valve are a part of the cut-set. 
+%Consequently,
+%it is not possible that there is a single valve that can form a new cut-set
+%with some valves in the current cut-set. 
+
+%\input{control_leakage}
+
+\input{test_control}
+\input{long_path_obstacles}

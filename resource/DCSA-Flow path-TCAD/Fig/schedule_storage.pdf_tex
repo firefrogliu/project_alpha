@@ -1,0 +1,95 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'schedule_storage.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{293.41073619bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.33278699)%
+    \put(0,0){\includegraphics[width=\unitlength]{schedule_storage.pdf}}%
+    \put(0.05532385,0.20344234){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0.14676947,0.20344235){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0.05532385,0.10676296){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0.3975063,0.2557843){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0.47930289,0.25578433){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0.49293567,0.20125326){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0.08445194,0.00520226){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(a)}}}%
+    \put(0.69948007,0.00520226){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(c)}}}%
+    \put(0.14676947,0.10676296){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0.02062488,0.27018797){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_1$}}}%
+    \put(0.07797744,0.27018797){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_2$}}}%
+    \put(0.11777467,0.27018797){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_3$}}}%
+    \put(0.17393478,0.27018797){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_4$}}}%
+    \put(0.23832397,0.20337054){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0.37024077,0.20125327){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0.4384046,0.20125327){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0.68106782,0.25578431){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_1$}}}%
+    \put(0.76286444,0.25578432){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_4$}}}%
+    \put(0.7764972,0.20125327){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_5$}}}%
+    \put(0.65380227,0.20125325){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_3$}}}%
+    \put(0.70833338,0.20125325){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$o_2$}}}%
+    \put(0.8068439,0.04198005){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.20982008,0.27018797){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_5$}}}%
+    \put(0.26598019,0.27018797){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$i_6$}}}%
+    \put(0.52328239,0.04198005){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.45339532,0.14425657){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$o_2\to o_4$}}}}%
+    \put(0.46702808,0.08972552){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$o_2\to o_5$}}}}%
+    \put(0.39477445,0.31602944){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{store}}}%
+    \put(0.46686267,0.31482446){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{fetch}}}%
+    \put(0.67552419,0.31602944){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{store}}}%
+    \put(0.74581814,0.31482446){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{fetch}}}%
+    \put(0.75058963,0.14425657){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\setlength \thickmuskip{0mu}$o_3\to o_5$}}}}%
+    \put(0.41795012,0.00520226){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(b)}}}%
+    \put(0.39919329,0.01883515){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$u_c$}}}%
+    \put(0.43093547,0.04561868){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$u_{2,4}$}}}%
+    \put(0.33888005,0.2557843){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_1$}}}%
+    \put(0.33888005,0.20125326){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_2$}}}%
+    \put(0.36341906,0.08120504){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[rb]{\smash{storage}}}}%
+    \put(0.62516815,0.2557843){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_1$}}}%
+    \put(0.62516815,0.20125326){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{$d_2$}}}%
+    \put(0.64970716,0.08120504){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[rb]{\smash{storage}}}}%
+  \end{picture}%
+\endgroup%

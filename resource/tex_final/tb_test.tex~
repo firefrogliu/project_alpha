@@ -1,0 +1,59 @@
+\begin{table*}[t] 
+\footnotesize
+\centering
+\renewcommand{\tabcolsep}{7.35pt}
+\renewcommand{\arraystretch}{1}
+\caption{Results of Test Pattern Generation with Single Pressure Source and
+Single Pressure Sensor}
+\label{tb_test}
+\begin{tabular}{cr r ccccccc r ccccccc} \hlinewd{0.7pt}
+\multicolumn{2}{c}{FPVA} &
+\multicolumn{1}{c}{} &
+\multicolumn{7}{c}{Direct Approach} &
+\multicolumn{1}{c}{} &
+\multicolumn{7}{c}{Loop Acceleration} \\
+\cline {1-2}\cline {4-10}\cline {12-18} 
+\multicolumn{1}{c}{Dimension} &
+\multicolumn{1}{c}{$n_v$} &
+\multicolumn{1}{c}{} &
+\multicolumn{1}{c}{$n^d_p$} &
+\multicolumn{1}{c}{$t^d_p(s)$} &
+\multicolumn{1}{c}{$n^d_c$} &
+\multicolumn{1}{c}{$t^d_c(s)$} &
+\multicolumn{1}{c}{$n^d_l$} &
+\multicolumn{1}{c}{$t^d_l(s)$} &
+\multicolumn{1}{c}{$N^d$} &
+% \multicolumn{1}{c}{$T^d(s)$} &
+\multicolumn{1}{c}{} &
+\multicolumn{1}{c}{$n^a_p$} &
+\multicolumn{1}{c}{$t^a_p(s)$} &
+\multicolumn{1}{c}{$n^a_c$} &
+\multicolumn{1}{c}{$t^a_c(s)$} &
+\multicolumn{1}{c}{$n^a_l$} &
+\multicolumn{1}{c}{$t^a_l(s)$} &
+\multicolumn{1}{c}{$N^a$} \\
+% \multicolumn{1}{c}{$T^a(s)$} \\
+
+
+\hlinewd{0.6pt}
+
+5 $\times$5 &40&&2	&0.02	&8	&0.67	&3	&0.01	&13	&&2	&0.02	&8	&0.16	&3	&0.02	&13	\\
+10$\times$10&380&&2	&0.72	&18	&46	&3	&0.04	&23	&&2	&2.61	&18	&12	&3	&0.03	&23	\\
+15$\times$15&420&&2	&48	&28	&984	&4	&0.12	&34	&&2
+	    &78	&28	&40	&3      &73	&33	   	\\
+20$\times$20&760&&2	&758	&*	&*	&*	&*	&*	&&2	&363	&38	&146	&3	&163	&43	\\
+25$\times$25&1200&&*	&*	&*	&*	&*	&*	&*	&&3	&1200	&48	&472	&3	&966	&54	\\
+30$\times$30&1740&&*	&*	&*	&*	&*	&*	&*	&&3	&1201	&58	&1648	&4	&1243	&65	\\
+
+% 5  $\times$ 5   &39  &&1 $\times$  1&5 $\times$ 5  &&5  & 0.3  &&8  &0.2 & &  4  &  2   &&17 & 2.5 \\ 
+% 10 $\times$ 10  &176 &&2 $\times$  2&5 $\times$ 5  &&4  & 4    &&18 &5   & &  4  &  10  &&26 & 19  \\
+% 15 $\times$ 15  &411 &&3 $\times$  3&5 $\times$ 5  &&8  & 17   &&28 &26  & &  8  &  127 &&44 & 170 \\
+% 20 $\times$ 20  &744 &&4 $\times$  4&5 $\times$ 5  &&16 & 35   &&38 &41  & & 16  & 742  &&70 & 818 \\
+% 30 $\times$ 30  &1704&&6 $\times$  6&5 $\times$ 5  &&20 & 255  &&58 &171 & & 20  & 1492 &&98 & 1918\\
+\hlinewd{0.7pt}
+\multicolumn{18}{l}{* -- No valid result}\\
+\end{tabular}
+\end{table*}
+
+
+

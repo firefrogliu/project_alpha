@@ -1,0 +1,80 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'wp_relation.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{214.31035393bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.12246996)%
+    \put(0,0){\includegraphics[width=\unitlength]{wp_relation.pdf}}%
+    \put(0.54824801,0.27103821){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Storage Minimization }}}%
+    \put(0.52735992,0.22624336){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{in Scheduling}}}%
+    \put(0.37679232,0.02806657){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Efficient Flow-layer Design (P1)}}}%
+    \put(0.4658106,0.14038668){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Architectural}}}%
+    \put(0.45020153,0.09559183){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Synthesis}}}%
+    \put(0.23279952,0.11953537){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP2}}}%
+    \put(0.295235,0.2501869){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP1}}}%
+    \put(0.54804586,0.66299309){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Volume and Washing }}}%
+    \put(0.52715777,0.61819824){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Management}}}%
+    \put(0.37659019,0.4200215){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Full-System Design (P2)}}}%
+    \put(0.47307421,0.53234144){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Flow-/Control-layer}}}%
+    \put(0.45218612,0.48754659){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Codesign}}}%
+    \put(0.23259737,0.51149024){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP4}}}%
+    \put(0.29503268,0.64214189){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP3}}}%
+    \put(0.54816705,1.05494803){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Hierarchical }}}%
+    \put(0.53554699,1.01015318){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Design}}}%
+    \put(0.38463014,0.81197646){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Design for Large Integration (P3)}}}%
+    \put(0.47319562,0.92429637){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Reliability}}}%
+    \put(0.45476249,0.87950152){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{ Optimization}}}%
+    \put(0.23271878,0.90344517){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP6}}}%
+    \put(0.29515409,1.03409683){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{WP5}}}%
+    \put(0.96137114,0.59196618){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[b]{\smash{WP7\ \ \ Cyber-physical Integration (P4)}}}}%
+    \put(0.08475462,0.22916288){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Micro-}}}%
+    \put(0.08394625,0.19022314){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Synthesis}}}%
+    \put(0.08475462,1.00608134){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Macro-}}}%
+    \put(0.08394625,0.96714164){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Synthesis}}}%
+  \end{picture}%
+\endgroup%

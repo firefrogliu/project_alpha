@@ -1,0 +1,242 @@
+
+\documentclass[9pt,sigconf]{acmart}
+
+\usepackage{color}
+\usepackage{graphicx}
+%\usepackage[justification=centering]{caption}
+%\usepackage{subcaption}
+%\usepackage{cite}
+
+
+\usepackage{amssymb,amsmath}
+%\renewcommand{\baselinestretch}{1.0}
+%\setlength\floatsep{1pt plus 0.5pt minus 0.5pt}
+%\setlength\textfloatsep{0pt plus 1pt minus 1pt}
+
+\makeatletter
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+\makeatother
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\usepackage[binary-units=true]{siunitx}
+
+%\usepackage[algoruled,noline,longend,linesnumbered]{algorithm2e}
+%\setlength{\algomargin}{2.5em}
+%\SetNlSkip{1.2em}
+%\SetNlSty{textbf}{L}{}
+
+\makeatletter
+\def\hlinewd#1{%
+  \noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+\makeatother
+\usepackage[tworuled,noline,linesnumbered]{algorithm2e}
+\setlength{\algomargin}{2.0em}
+\SetNlSkip{0.9em}
+\SetNlSty{textbf}{L}{}
+\SetAlFnt{\footnotesize}
+\SetAlCapFnt{\footnotesize}
+\SetAlCapNameFnt{\footnotesize} 
+
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{siunitx}
+%\usepackage{tikz}
+
+
+%\setlength\thinmuskip{0mu}
+\setlength\medmuskip{3mu}
+%\setlength\thickmuskip{0mu} 
+
+%subparagraph not defined in IEEEtran but needed by titlesec
+%\usepackage[compact]{titlesec}
+%\titlespacing{\section}{0pt}{8pt}{2pt}
+%\titlespacing{\subsection}{0pt}{6pt}{2pt}
+%\titlespacing{\section}{0pt}{2pt}{1pt}
+%\titlespacing{\subsection}{0pt}{2pt}{1pt}
+
+
+
+%\setlength{\abovedisplayskip}{2pt plus 1pt minus 1pt}
+%\setlength{\abovedisplayshortskip}{1pt plus 1pt minus 0.5pt}
+%\setlength{\belowdisplayskip}{2pt plus 1pt minus 1pt}
+%\setlength{\belowdisplayshortskip}{1pt plus 1pt minus 0.5pt}
+\setlength\floatsep{10pt plus 0.5pt minus 0.5pt}
+%\setlength\dblfloatsep{10pt plus 0.5pt minus 0.5pt}
+%\setlength\intextsep{1pt plus 0.5pt minus 0.5pt}
+\setlength\textfloatsep{3pt plus 1pt minus 1pt}
+%\setlength\dbltextfloatsep{1.5pt plus 1pt minus 1pt}
+\setlength\abovecaptionskip{3pt plus 0.5pt minus 0.5pt}
+\setlength\belowcaptionskip{1pt plus 0.5pt minus 0.5pt}
+
+%\makeatletter
+%%change spaces around equations in amsmath
+%\g@addto@macro\normalsize{%
+  %\setlength\abovedisplayskip{2.8pt}
+  %\setlength\belowdisplayskip{2.8pt}
+  %\setlength\abovedisplayshortskip{-7.5pt}
+  %\setlength\belowdisplayshortskip{0.8pt}
+%}
+%\makeatother
+
+\setlength\evensidemargin{-2.3pc}
+\setlength\oddsidemargin{-2.3pc}
+\setlength\topmargin{-3.7pc}                % Nominal distance from top of
+%%page to top of
+%\textheight 666pt   %%original    % 9 1/4 column height
+\setlength\textheight{689pt}
+%\textwidth 42pc     %%original    % Width of text line.
+\setlength\textwidth{43.8pc}         % Width of text line.
+%\setlength\topmargin{-5.5pc}
+%\setlength\columnsep{1pc}         %    Space between columns
+\setlength\columnsep{1pc}         %    Space between columns
+
+%
+%%\makeatletter % access to internal commands
+%%\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname\ }
+%%%\makeatother
+
+%\setcounter{page}{1}
+%\pagestyle{fancy}
+%\renewcommand{\headrulewidth}{0pt}
+%\fancyhf{}
+%\rfoot{\small \thepage/\pageref{LastPage}}
+%\rhead{\small \thepage}
+%\setcopyright{acmcopyright}
+
+%\setcopyright{rightsretained}
+\settopmatter{printacmref=false} % Removes citation information below abstract
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
+
+
+\copyrightyear{2018}
+\acmYear{2018}
+\setcopyright{acmcopyright}
+\acmConference[DAC '18]{DAC '18: The 55th Annual Design Automation Conference 2018}{June 24--29, 2018}{San Francisco, CA, USA}
+\acmBooktitle{DAC '18: DAC '18: The 55th Annual Design Automation Conference 2018, June 24--29, 2018, San Francisco, CA, USA}
+\acmPrice{15.00}
+\acmDOI{10.1145/3195970.3196025}
+\acmISBN{978-1-4503-5700-5/18/06}
+
+\begin{document}
+
+%\frontmatter
+%\pagestyle{headings}
+%\pagestyle{plain}
+
+
+\graphicspath{{Fig/}}
+\def\figname{Figure}
+\def\algname{Algorithm}
+%\def\algname{Procedure}
+%\newcommand{\figurefontsize}{\fontsize{7.0pt}{1}\selectfont}
+\newcommand{\figurefontsize}{\small}
+
+\pagestyle{empty}
+
+\input{abstract}
+
+\newcommand{\papertitle}{Design-for-Testability for Continuous-Flow Microfluidic Biochips}
+
+
+\title{\papertitle}
+%\author{
+%  \vskip 10pt
+ %Chunfeng Liu$^1$, Bing Li$^1$, Bhargab B. Bhattacharya$^2$, Tsung-Yi
+%Ho$^{34}$, Ulf Schlichtmann$^1$\\
+%$^1$Institute for Electronic Design Automation, Technical University of Munich (TUM), Munich, Germany\hfill\\
+%$^2$Indian Statistical Institute, Kolkata, India\hspace{18pt}
+%$^3$National Tsing Hua University, Hsinchu, Taiwan \hfill\\
+%$^4$Institute for Advanced Study, Technical University of Munich (TUM), Garching, Germany\hfill
+%}
+%\author{}
+%\institute{}
+%\vskip 50em
+
+\author{
+Chunfeng Liu$^{1,4}$, Bing Li$^1$, 
+Tsung-Yi Ho$^{2,4}$, 
+Krishnendu Chakrabarty$^{3,4}$, 
+Ulf Schlichtmann$^1$\\
+\normalsize 
+$^1$Chair of Electronic Design Automation, Technical University of
+Munich, Germany\hskip 10pt $^2$National Tsing Hua University, Hsinchu, Taiwan \\
+$^3$Department of ECE, Duke University, Durham, NC, USA \hskip 10pt 
+$^4$Institute for Advanced Study, Technical University of Munich, 
+Germany\\
+\{chunfeng.liu, b.li, ulf.schlichtmann\}@tum.de, tyho@cs.nthu.edu.tw, krish@ee.duke.edu
+}
+
+
+
+\maketitle
+
+
+
+\input{introduction}
+\input{formulation}
+\input{dft_arch}
+\input{valve_sharing}
+\input{results}
+\input{conclusion}
+\input{acknowledgment}
+
+
+
+%\let\oldthebibliography=\thebibliography
+%\let\endoldthebibliography=\endthebibliography
+%\renewenvironment{thebibliography}[1]{%
+%\begin{oldthebibliography}{#1}%
+%%\setlength{\itemsep}{0ex}%
+%%\def\baselinestretch{1}
+%\fontsize{8.0pt}{1}\selectfont
+%\vskip 1pt
+%\scriptsize
+%\small
+%\footnotesize
+%\reffontsize
+%\newlength{\mylength}
+%\setlength{\mylength}{7.5pt}
+%\setlength{\baselineskip}{\baselinestretch\mylength}
+%\setlength{\baselineskip}{30pt}
+%}%
+%{%
+%\end{oldthebibliography}%
+%}
+
+
+%%\renewcommand{\baselinestretch}{2} 
+\let\oldthebibliography=\thebibliography
+\let\endoldthebibliography=\endthebibliography
+\renewenvironment{thebibliography}[1]{%
+\begin{oldthebibliography}{#1}%
+\vspace{3pt}
+%%\setlength{\parskip}{0ex}%
+%\setlength{\itemsep}{0ex}%
+%%%%%%bil
+\fontsize{7.0pt}{1}\selectfont
+%%\vskip 1pt
+%\scriptsize
+%%\small
+%\reffontsize
+}%
+{%
+\end{oldthebibliography}%
+}
+
+%\bibliographystyle{abbrv}
+%\bibliographystyle{unsrt}
+
+
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ACM-Reference-Format}
+\bibliography{IEEEabrv,CONFabrv,bibfile}
+
+\end{document}
+
+

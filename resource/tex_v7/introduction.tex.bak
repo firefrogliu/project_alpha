@@ -1,0 +1,681 @@
+\section{State of the art and preliminary work}
+
+Microfluidic biochips are revolutionizing the traditional biochemical experiment 
+flow with their high execution efficiency and 
+miniaturized fluid manipulation \cite{JEMP08, EVNR03,JMSQ07}. 
+Devices are built 
+%from microchannels and valves 
+in such a chip to execute specific operations, such as mixing and detection.
+Fluid samples are transported through microchannels between devices to carry
+out the protocol of a bioassay. 
+All these functions are performed at the nanoliter level and
+controlled by a microcontroller without human intervention. 
+The efficiency and reliability of such miniaturized and automated chips 
+endow them with a great potential to improve human life significantly, 
+and the research to bridge them with real-world applications
+%bring them from prototypes in laboratories to industry production 
+is key to their success.   
+
+\begin{wrapfigure}[33]{R}{0.335\textwidth}
+{
+\vskip -15pt
+\figurefontsize
+\centering
+\input{Fig/valve_mixer_chip.pdf_tex}
+%\includegraphics{Fig/valve_mixer_chip.png}
+\caption{Components and structure of flow-based biochips. 
+(a) Valves constructed at intersections of flow/control channels \cite{JMSQ07}. 
+(b) Mixer \cite{JMSQ07}. (c) A part of a biochip
+containing a mixer surrounded by a transportation channel network 
+\cite{ESWD13}.}
+\label{fig:valve_mixer_chip}
+}
+\end{wrapfigure}
+
+A flow-based microfluidic biochip is constructed from basic components such as
+%basic components, namely, 
+microchannels and microvalves, henceforth named as channels and valves for
+simplicity.
+Flow channels are used to transport reaction samples and reagents
+between different locations. Above flow channels, control channels are built to 
+conduct air pressure to intersections of flow channels and control channels to
+form valves, as illustrated in \figname~\ref{fig:valve_mixer_chip}(a),
+where three valves are constructed at the intersections.
+These channels are built from elastic materials, so that
+air pressure in a control channel can block the movement of fluid sample
+by squeezing the flow channel downwards.
+Conversely, if the pressure in the control channel is
+released, the fluid sample can resume its movement. 
+%Functionally, valves are thus formed at intersections of
+%flow channels and control channels, and the open/close states
+%of valves are controlled by the air pressure fed into the 
+%control channels. 
+Since the channel width has been miniaturized
+down to 50 um \cite{Studer04} thanks to the advance of manufacturing
+technology, a huge number of channels and valves can
+already be integrated
+into a single biochip to perform large-scale experiments and diagnoses.
+
+With valves as basic controlling components, complex devices 
+can be constructed. For example, mixers can be built using
+channels and valves to execute mixing operations, which are very
+common in biochemical applications. The structure of a mixer is shown
+in \figname~\ref{fig:valve_mixer_chip}(b),
+where the three valves at the bottom are actuated alternately by 
+applying and releasing air pressure in the control
+channels 
+%to form a circular flow around the device 
+to mix fluid samples and reagents by peristalsis.
+The execution of a mixing operation in a biochip is demonstrated
+in a video \cite{mixing_store}. 
+After the mixing operation is completed, the resulting fluid sample 
+can be stored in a dedicated storage unit temoparily. %in the biochip.
+
+In a biochip, devices executing specific operations, e.g., mixing and heating,
+are connected by channels so that intermediate reaction results %fluid samples 
+can be
+transported between devices for processing. All these operations and
+transportation are controlled
+%by valves, whose open/close states are regulated
+by a microcontroller, which 
+%. To execute a biochemical assay, the microcontroller 
+issues instructions in a given order to actuate valves 
+to move fluid samples 
+%between devices 
+and execute operations.
+%of valve actuation to move fluid samples
+%to different devices to process them. 
+%The photograph of a complete biochip is
+%shown 
+\figname~\ref{fig:valve_mixer_chip}(c) shows a mixer (reaction loop) surrounded
+by flow channels (green), control channels (yellow and red) and valves
+(yellow and red blocks).
+%formed 
+%at their
+%At the 
+%intersections.
+%of flow and control channels, 
+%used to direct fluid transportation. 
+These channels and valves together form a network similar to the
+road transportation system. If fluid channels should cross, %four
+valves are built %at the crossing point 
+to form a switch, as shown 
+in \figname~\ref{fig:valve_mixer_chip}(c).
+At any moment, only two out of the four valves should be opened to 
+direct fluid transportation; 
+%form a flow path; 
+the other two valves must be closed to avoid fluid
+contamination. Consequently, the role of the valves at the intersection
+of %two 
+flow channels is similar to that of the traffic lights in the road
+transportation system, while the open/closed states of the valves are
+controlled by a microcontroller according to the protocol of the application.
+%and many valves are used to coordinate fluid
+%transportation and assay execution. 
+The mixer and the channel network
+%The size of the chip in 
+in \figname~\ref{fig:valve_mixer_chip}(c)
+are implemented into a biochip of the size comparable to that of a coin 
+as shown %in the photo 
+at the upper left
+corner, %of \figname~\ref{fig:valve_mixer_chip}(c), 
+demonstrating the miniaturized integration of 
+microfluidic biochips. 
+
+
+\begin{wrapfigure}[14]{R}{0.385\textwidth}
+{
+\vskip -12pt
+\figurefontsize
+\centering
+\input{Fig/sequencing_graph.pdf_tex}
+\caption{Sequencing graph of a bioassay.}
+\label{fig:sequencing_graph}
+}
+\end{wrapfigure}
+
+In a biochip, the open/closed states of valves and the transportation of
+fluid samples are determined according to the biochemical application executed by the
+biochip. A biochemical application, or \textit{bioassay} henceforth,  
+%A biochemical application, or a bioassay, 
+is usually described with
+%describes the operations 
+%executed by a biochip and their dependency with 
+a \textit{sequencing graph} $\mathcal{G}=(\mathcal{O},\mathcal{E})$, such as in
+\figname~\ref{fig:sequencing_graph}, where $\mathcal{O}$ is
+the set of nodes %representing operations,
+and $\mathcal{E}$ is the set of edges. %in the graph specifying the dependency
+%relation between operations. 
+A node $O_i \in \mathcal{O}$ in the sequencing graph
+represents an operation, whose type $\tau_i$ and duration $u_i$ are specified by the user.
+An edge $e_{ij}\in \mathcal{E}$ from $O_i$ to $O_j$
+in the sequencing graph specifies that $O_i$ must be executed before $O_j$ and the 
+result of $O_i$ is the input of $O_j$. If $O_i$ and $O_j$ are executed by
+different devices, the required fluid transportation must be performed by the channel
+network between devices. 
+
+Biochips have a huge advantage over the traditional manual experiment
+flow, where operations performed by humans are error-prone 
+and inaccurate.  Any inadvertent mistake in this manual process 
+might ruin a complex experiment that may
+last for several days. In a biochip, the volumes of fluid samples and reagents are
+controlled accurately and fluid samples are moved to target devices reliably,
+%because the whole experiment is controlled 
+%all of which are managed
+all of which are managed
+by a microcontroller exactly following a
+given protocol.
+In addition, the miniaturized size of biochips makes them
+extremely portable, so that a complex lab can be integrated into a single chip
+and carried conveniently to perform on-the-spot tests to counter acute 
+disease outbreaks, such as the
+devastating Ebola virus disease a few years ago.
+Furthermore, reactions with fluid samples and reagents of tiny volumes
+take less time to complete than those with large volumes in tubes and
+droppers in the traditional experiment flow, so that biochips are also more
+responsive in dealing with urgent situations.
+Moreover, %Economically, 
+biochips save precious reagents by performing operations at
+nanoliter level. %The required 
+Such reagents may be exorbitantly expensive. 
+For example, RNase inhibitor, a polyclonal antibody
+commonly used in reverse transcription polymerase chain reaction
+(RT-PCR), cost 600 euros per milliliter in December 2014 
+\cite{RNasePrice}. 
+
+The miniaturization of microfluidic biochips also has the potential of large
+system integration. Already in 2008, a biochip array with 25K valves was
+accomplished \cite{JMPK08}, and recent advances in manufacturing technologies have 
+led to
+%enabled
+a valve density of 1 million per cm$^2$ %\si{\square\centi\metre} 
+\cite{C2LC40258K}. 
+A system integration of this scale
+enables long-aspired exhaustive diagnoses in identifying the illness 
+of a patient by testing pathological samples with thousands of reagents 
+simultaneously. This breakthrough will not only reduce
+the inaccuracy in medical diagnoses, where individual expertise and experience
+of doctors play an important role, but also change the current 
+guess-then-test model of medical treatment. 
+In addition, such exhaustive diagnoses can be performed in
+small health-care centers routinely, 
+due to the
+tremendously miniaturized chip size and lowered cost. 
+With this exhaustive diagnosis model, illnesses can be detected at a very early stage and 
+treatment cost can be reduced significantly as well.
+
+\begin{wrapfigure}[22]{R}{0.42\textwidth}
+{
+\vskip -12.5pt
+\figurefontsize
+\centering
+\input{Fig/biochip_synthesis.pdf_tex}
+\caption{Synthesis of microfluidic biochips.
+(a) Scheduling. (b) Physical design.}
+\label{fig:biochip_synthesis}
+}
+\end{wrapfigure}
+
+Owing to their efficiency and cost-effectiveness, microfluidic biochips are
+reshaping many fields such as pharmacy, biotechnology and health care.
+%in academic research as well as in applications.
+In recent years, genomic bioassay protocols, such as nucleic-acid
+isolation, DNA purification and DNA sequencing, have been successfully
+demonstrated with microfluidic biochips. In addition, this technology has 
+attracted a lot of commercial attention, e.g., from Illumina \cite{illum}, 
+a market leader in DNA sequencing. 
+%Furthermore, 
+Accordingly, 
+%%Recently,
+%Frost \& Sullivan has estimated that the European lab-on-chip and microfluidics market 
+%reaches about 1.62 billion USD even at the early growth phase of this
+%technology. Correspondingly, 
+the International Technology Roadmap
+for Semiconductors (ITRS) 2015 \cite{itrs}
+has  
+%listed medical applications as one of application drivers and 
+recognized the importance of microfluidic devices as 
+having a rapid growth in the next several years. 
+
+%Due to the importance of microfluidic biochips to human life and the huge
+%potential market, research on microfluidic biochips has been growing
+%continuously recently. Scientific papers have been published, e.g.,
+%%in IEEE Trans. on CAD and in ACM J. on Emerg.  Tech.
+%in IEEE Transactions on Computer-Aided Design of Integrated Circuits and
+%Systems and ACM Journal on Emerging Technologies in Computing.
+%Several renowned universities, for instance, CMU and Duke, have initiated research
+%projects on design automation for microfluidic biochips. 
+%Accordingly,
+%at the Technical University of Munich,  with the support of the Institute for
+%Advanced Study, funded by the German Excellence Initiative and
+%the European Union Seventh Framework Programme, we have also established a
+%research group focusing on design automation and optimization of microfluidic
+%biochips. %at micro and macro level.
+
+
+\vskip 8pt
+\textit{\underline{Synthesis of microfluidic biochips with applications}}
+
+In a biochip, 
+%it is very rare to assign each operation to a dedicated device 
+%for cost reasons.
+%Instead, 
+operations are executed by a given number of devices with time
+multiplexing. Consequently, the execution of operations is described as
+a schedule. For example, an execution %of the operations 
+of the bioassay
+illustrated in \figname~\ref{fig:sequencing_graph} is shown 
+in \figname~\ref{fig:biochip_synthesis}(a), 
+where two mixers, one heater, one filter, and one detector are available.
+%This schedule, however, can still be improved by executing 
+%$O_3$, $O_4$ and $O_6$ before $O_1$ and $O_2$ to produce fluid samples
+%processed by $O_8$ and $O_9$ earlier. 
+%Since the latter two operations use heater and filter instead of mixers, an
+%early result from $O_6$ increases the parallelism of operation execution
+%and thus shortens the overall execution time of the bioassay. 
+%In the last step of synthesis, 
+According to the schedule, 
+the layout of a biochip, 
+including the locations of devices and the transportation channels between them,
+can be determined to generate a physical design, 
+as shown in \figname~\ref{fig:biochip_synthesis}(b), where the devices
+are connected by a channel network controlled by valves.
+
+The synthesis process above demonstrates that the schedule of operations of a
+bioassay determines the overall execution time. 
+%In addition, the communication
+%between devices also affects the channel network for fluid transportation.
+In addition, the fluid transportation between devices 
+affects the structure of the channel network.
+Consequently, a holistic design automation flow is required to bridge the
+low-level components introduced by the microfluidics community with high-level
+real-world applications. In each step of this design automation flow, various design
+objectives should be optimized to achieve an efficient architecture for the
+biochip.
+
+The synthesis flow of biochips
+%shown in \figname~\ref{fig:biochip_synthesis} 
+is similar
+to the synthesis flow for integrated circuits \cite{Micheli94}. Therefore,
+researchers in the electronic design automation community have started to expand
+into this area in recent years \cite{ChakrabartyFZ10,PopAC15}. 
+However, these research efforts 
+%on flow-based biochips is 
+are still in an early stage and many unique characteristics of microfluidic
+biochips have still not been considered. %to date. 
+%problems need to be solved soon to pave the way for industry production
+%of biochips. 
+%are open. %still unsolved.
+
+\vskip 8pt
+\textit{\underline{Flow-based microfluidic biochips: the electronic view}}
+
+In the microfluidics community, researchers are focusing on developing new
+technologies and new structures to build fundamental components and devices,
+such as valves and pumps
+\cite{Unger113,mathies2010multiplexed}.
+Prototype microfluidic biochips are also built very often %, but usually 
+%for the purpose of 
+to demonstrate the function and performance of new
+components and new devices.
+%Besides new devices, 
+Another major focus of the microfluidics community is to
+increase the integration density of basic components. With the advance in MEMS
+technology, a large number of components such as valves can now be built in a
+single biochip \cite{C2LC40258K}. 
+Unfortunately, the abundant available resources 
+%from the advance in the microfluidc community
+have mostly been left unexplored, because end users cannot use them 
+without a system layer that presents an interface for user applications,
+similar to the scenario that an operating system is missing 
+for computer users. On the other hand, 
+%the lack
+%of applications has disheartened the microfluidics research community and
+%consequently their effort 
+the effort of the microfluidics research community
+has been spread out in exploring even 
+more technologies for microfluidic biochips, 
+%all of small size, 
+%while ignoring the potential of large system integration which 
+%they already have in hand.
+leading to a flourishing but fragmented panorama in the research on
+microfluidics. 
+
+\begin{wrapfigure}[15]{R}{0.41\textwidth}
+{
+\vskip -20pt
+\figurefontsize
+\centering
+\input{Fig/biochip_arch.pdf_tex}
+\caption{Computing-based biochip architecture containing a mixer and a dedicated
+storage unit with eight cells \cite{AminTA09}.}
+\label{fig:biochip_arch}
+}
+\end{wrapfigure}
+
+The %state of the art in 
+status quo of
+the microfluidics community is similar to the early
+period of the semiconductor industry. At that time, researchers
+were exploring different materials and device structures to build smaller but
+faster transistors. Thereafter, CMOS-based technology became dominant
+in this industry, while other technologies are 
+employed only for specific applications. 
+CMOS technology obtained its dominance because of, first of all, its
+performance. However, a very important factor which assisted this dominance is that
+the semiconductor industry 
+and the electronic design automation community  
+have found a way to carry out mass production of these devices and shrink the
+feature size continuously. 
+%with smaller devices, 
+In the meantime,
+%Moreover, 
+the computer community has developed a successful computing model
+to present the available resources to end users 
+and facilitate the development of high-level applications.
+ 
+Observing the state of the art of microfluidic biochips, 
+researchers from computer science and electrical engineering have
+started to bring their own computing models into microfluidic biochips. For
+example, the architecture of a microfluidic biochip from
+\cite{AminTA09} is shown in \figname~\ref{fig:biochip_arch}.
+In this architecture, the mixer functions as
+the computing unit and intermediate results from the mixer are stored in the
+dedicated storage unit. The cells in the storage unit are built from
+normal channels. At the ports of this storage unit, valves form
+multiplexers to direct fluid samples to enter into or leave from specific
+cells. This architecture emulates the classical von Neumann computer architecture 
+to build a biochemical computing system from basic components. %and devcies.
+However, this simple emulation forsakes many unique characteristics of
+flow-based biochips, 
+% and the efficiency 
+%%of this architure in 
+%of executing bioassays with this architecture 
+%is affected tremendously.
+leading to inefficient execution of bioassays.
+
+Similar to the semiconductor industry, design automation tool chains are also needed to 
+support the 
+%design and manufacturing 
+development
+of microfluidic biochips. In recent years,
+the electronic design automation community has tried to migrate the existing
+design methodologies for integrated circuits to 
+microfluidic biochip design, covering the phases from 
+high-level synthesis down to physical design. 
+%similar to the steps shown in \figname~\ref{fig:biochip_synthesis}.
+Although this top-down flow has served the semiconductor industry in the past 50 years
+very successfully, fundamental changes should still be made to deal with 
+specific requirements of biochips and take advantage of their unique
+features.
+ 
+%comes from the EDA community, which has
+%successfully supported the rapid evolvement of semiconductor industry with
+%mature design flows in the past 50 years. 
+
+\vskip 8pt
+\textit{\underline{Flow-based microfluidic biochips: the unique
+characteristics}}
+
+In microfluidic biochips, the inputs to an operation are fluid samples. 
+Unlike electrical signals in integrated circuits, these fluid samples 
+have a physical mass.  
+%and their transportation between devices should be confined in tiny tubes, called channels. 
+In executing operations of a bioassay, 
+fluid samples are processed with various operations, 
+such as mixing, heating and detecting in different devices. 
+The results of these operations are often fluid samples of different
+properties, so that inadvertent contamination between them should be avoided. 
+The intermediate
+results of these operations should be stored in the chip temporarily in case
+they are not used immediately.
+%Therefore, 
+%fluid samples need to be moved between devices very often. 
+%Since a device can only process fluid samples with a specific volume, 
+%leading to many new samples produced in the chip.
+Consequently, the physical mass and the variety of fluid samples 
+become the major differences between biochips and 
+integrated circuits, leading to several unique
+characteristics in biochip design.
+
+\textit{Volume Management}: In executing a bioassay, 
+the volumes of fluid samples should be managed.
+Assume all the devices executing the bioassay in
+\figname~\ref{fig:sequencing_graph}
+have a capacity $\nu$. Each of the resulting samples of $O_1$ and $O_2$ thus has a
+volume $\nu$. When these two fluid samples reach the device executing
+$O_7$, half of their volumes should be disposed of because the device only 
+accepts a volume $\nu$.
+%sample with a volume  namely, a half of the resulting samples
+%from $O_1$ and $O_2$. 
+%Consequently, the other half of the results should be
+%discarded through some channels to a waste.
+%%during the exution of the assay. 
+%This volume management problem can 
+%also be viewed at the assay level. For example, the operations 
+%$O_1$--$O_4$ in \figname~\ref{fig:sequencing_graph}
+%produce in total a volume $4\nu$, but the last operation $O_{11}$
+%only produces a volume $\nu$, so that some volumes must be disposed of through 
+%channels to the waste during the
+%execution of the bioassay.
+This volume management is not stated explicitly in the sequencing graph, but 
+must be dealt with implicitly according to the volumes of intermediate fluid 
+samples and the capacities of devices.    
+
+\textit{Storage management}: In the schedule in
+\figname~\ref{fig:biochip_synthesis}(a), $O_2$ completes before $O_5$ does. The
+intermediate result of $O_2$ should be moved out of Mixer2 and stored
+somewhere temporarily so that the mixer
+can execute $O_3$. 
+In the biochip shown in \figname~\ref{fig:biochip_arch}, 
+this storage function is fulfilled by moving the result of $O_2$
+%the intermediate fluid sample from $O_2$, 
+%should be moved to a 
+to the dedicated storage unit through a channel. 
+%This not only
+%disturbs the transportation of fluid samples between devices, but also
+%increases the size of the chip due to the area taken by the storage unit and
+%the valves at its ports. %as in \figname~\ref{fig:biochip_arch}.
+In synthesizing biochips, if operations are not
+scheduled properly, many storage requirements may appear, leading to
+many transportation channels and a large storage unit. 
+%In biochips, however, 
+In contrast to a dedicated storage unit as shown in \figname~\ref{fig:biochip_arch},
+the storage function can actually be implemented using
+distributed transportation channels. %instead of a dedicated storage unit. 
+In fact, a fluid sample can stay anywhere in a channel in the biochip until it is
+used by the next operation. 
+%Furthermore, transportaton channels in flow-based biochips can also be used as
+%temporary storage to cache fluid samples. 
+This is a significant difference between biochips and electronic systems, 
+where intermediate data can only be stored in special memory units, either
+flip-flops or RAM components. This observation can be confirmed by
+the storage cells in the dedicated storage unit in
+\figname~\ref{fig:biochip_arch}. These cells are built of normal channels
+but with valves at each end of a channel to control the store/fetch
+operations.  Instead of forming a monolithic storage unit, 
+these channels and valves %in the chip 
+can actually be distributed in the chip so that
+they can be used for storage when required, and for transportation otherwise. 
+Consequently, the efficiency of channels and valves can be improved
+significantly.
+
+\textit{Washing}: Unlike electrical signals, fluid samples leave residue in
+channels after they travel through them. Before such a
+channel is reused by another fluid sample, it should be washed by neutral fluids
+such as silicon oil. Washing contaminated channels can be very flexible
+because several channel segments can be washed simultaneously if they 
+form a connected graph while being isolated from the rest of the biochip
+that is executing other operations.
+
+\textit{Flow-layer and control-layer codesign}: In a flow-based biochip,
+valves are controlled by air pressure through control channels, e.g., the red
+channels in \figname~\ref{fig:biochip_arch}. If all the valves are controlled
+independently, the routing of control channels in a complex design 
+%will inevitably intersect.
+becomes very complicated.
+To solve this problem, control channels of some valves can be shared if
+operations can still be executed correctly. This sharing requires a codesign
+of the flow layer and the control layer to match the actuation patterns of 
+valves.
+%In addition, the routing
+%of flow valves and control valves should be determined together. Otherwise,
+%intersections of these channels can for further valves unintentionally.
+
+\vskip 8pt
+\textit{\underline{State-of-the-art research on design automation for flow-based biochips}}
+
+Several methods have been proposed to synthesize 
+flow-based biochips. The method in \cite{MinhassPMB12} proposes a top-down
+flow to generate a biochip architecture while minimizing the execution time of
+a bioassay. The flow channel routing problem considering obstacles 
+is solved  with an algorithm based on rectilinear Steiner minimum tree
+in \cite{LinLCLH14}.
+These methods
+still assume that intermediate fluid results can be stored automatically in a dedicated storage
+unit as in the electronic-emulated biochip architecture shown 
+in \figname~\ref{fig:biochip_arch}. The real storage
+process and its efficiency, however, have not been investigated.
+
+To avoid contamination, a method based on path searching 
+is introduced in  \cite{HuHC16} to wash devices and channel segments. This method 
+still traces path sets and block-based partial washing has not been
+explored. The latter requires a co-optimization between operation scheduling
+and washing activities.
+
+Control logic synthesis is investigated in \cite{MinhassPMH13}
+to reduce the number of control pins. The method 
+%is improved further 
+in \cite{HuDHC17} minimizes
+pressure-propagation delay in the control layer to reduce the response
+time of valves and synchronize their actuations.
+%The control layer design of biochips has been investigated in 
+Furthermore, flow layer and control layer codesign is investigated in
+\cite{YaoWRCH15} to achieve valid routing results on both layers iteratively, and
+length-matching in routing control channels is considered in \cite{YaoHC15} as
+well. Since these methods 
+do not consider operation scheduling, %during synthesis, 
+the number of control
+channels may still be large and consequently they might not be routed successfully.   
+
+%Furthermore,
+%fault models of manufacturing defects 
+%and an ATPG-based test strategy for flow-based biochips are proposed
+%in \cite{HuYHC14}.
+Though the volume management problem in biochips has been explored as early as in
+2008 \cite{AminTVWJ08}, and later in \cite{MitraRBCB14}
+for the specific bioassay sample preparation, the optimization of volume management for general
+bioassays and the interaction of this task with fluid transportation 
+for normal operations have not been taken into account. 
+
+When the unique characteristics of biochips are considered, the tasks of
+synthesizing flow-based biochips are entangled with each other. Consequently,
+a systematic design flow covering architectural synthesis,
+control layer design, washing and volume management should be explored, which is the
+major objective of this project. 
+
+\vskip 8pt
+%\textit{\underline{Preliminary work of the EDA institute at TUM}}
+\textit{\underline{Preliminary work}}
+
+Observing the great potential of microfluidic biochips and the design
+automation challenges at the eve of their large integration, we have 
+initiated research on biochips in the Institute for Electronic Design Automation at TUM in
+2014. Applying our knowledge on design automation methods for IC design to 
+microfluidic biochips, we have 
+%expanded our research onto this
+%interdisciplinary topic successfully and preliminary ideas from our group have
+%been verified by this preliminary work.
+verified several preliminary ideas from our research group 
+on synthesis of microfluidic biochips in the past years.
+
+In the research community, we have pioneered the idea %of biochip architectures 
+%with 
+of distributed channel storage in flow-based biochips \cite{TsengLSH15}. 
+%where, instead of 
+%using a dedicated storage unit, intermediate
+%fluid samples are cached in channel segments temporarily. 
+%With this uniform
+%transportation and storage model, the efficiency of biochips can be improved
+%significantly even with a reduced resource usage. 
+We have also proposed to improve
+the reliability of biochips with a large-scale integration \cite{TBMTtcad}, 
+where a fully reconfigurable valve array is used to execute operations 
+and fulfill the functions of transportation and storage. 
+%Additionally, we have explored the idea of flow-layer and control-layer codesign
+%to simplify valve actuations as in \cite{TsengLLHS16,WZYH17}. 
+Furthermore,  
+we have introduced a path-based vector generation method for test of  
+microfluidic biochips \cite{CBBK17}. This method guarantees the detection of any two
+faults in a flow-based biochip. 
+%From the application view, we have investigated the %modeling of sieve valves and
+%single-cell analysis bioassay executed on a hybrid microfluidic platform
+%\cite{MICS17} (Best Paper Award at DATE 2017). %\cite{LiTLHS16,MICS17}. 
+%(\cite{MICS17} has also been nominated for the best paper award?) 
+To explore the variety of %low-level 
+biochip
+technologies, we also investigated design automation challenges in
+biochips printed on paper \cite{WangLCKYHSLSC16}. 
+%Our work on microfluidic biochips has contributed to a tutorial paper summarizing
+%the state of the art and design challenges of emerging systems \cite{WilleLSD16}.
+
+%Due to the promising perspective of biochips, we have successfully obtained
+%the support of the project FLUIDA by the International Graduate School of Science and
+%Engineering (IGSSE) at TUM. This project focuses on the exporation of the
+%variaty in biochip components and devices and the development a system layer
+%to provide uses a stable application interface. In addition, together 
+%with our visiting professor Tsung-Yi Ho from National Tsing Hua university,
+%we have also received the grant from the Institute for Advanced Studay (IAS) to
+%support our research on cyber-physical integration of microfludic biochips.
+%In August, 2015, Prof. Tsung-Yi Ho also organized a dagstguhl seminar on
+%biochips \cite{}
+%to connect the design automation community with the microfluidic community.
+%%Furthermore, the institute of advance studay also awarded Prof. Krishnendu
+%%Chakrabarty from Duke University and Prof. Tsung-Yi Ho the Hans Fischer
+%%Fellow so that they will 
+%The project in this proposal will form an integral part with the two projects
+%above and a foreseeable sc
+
+To bridge microfluidic biochips with their applications, 
+techniques are required to map bioassays to specific
+architectures. More importantly, the structures of bioassays may influence
+biochip architectures because different sequencing graphs lead to different
+execution, transportation and storage requirements.
+%as well as their dependency. 
+Therefore, efficient algorithms are also needed to optimize biochip
+architecture and assay execution. 
+In the past, our research group and the EDA institute 
+had a broad research activity in design automation for integrated circuits with
+well-recognized results. The developed algorithms and tools may also
+potentially benefit the research on microfluidic biochips, e.g., those for
+physical design \cite{Spindler2008}, circuit test and tuning \cite{ZhangLS16} 
+(Nomination for Best Paper Award at DAC 2016),
+reliability \cite{Barke2015}, as well as hierarchical modeling and analysis
+\cite{Li2013}. 
+
+
+%\clearpage
+\vskip 20pt
+\subsection{Project-related publications}
+
+\subsubsection{Articles published by outlets with scientific quality
+assurance, book publications, and works accepted for publication but not yet published.}
+
+\input{prj_pub}
+
+\vskip 10pt
+\subsubsection{Other publications}
+None
+\vskip 10pt
+\subsubsection{Patents}
+\vskip 1pt
+\paragraph{Pending}
+None
+\vskip 10pt
+\paragraph{Issued}
+None
+
+
+
+
+

@@ -1,0 +1,34 @@
+storage number before and after optimize				
+opsNum	storage before optimize	storage after optimize		
+100	68	50		
+70	34	32		
+55	39	33		
+30	16	3		
+12	1	0		
+7	3	2		
+				
+				
+chip size after architectural synthesize (before applying the genetic algorithm)				
+opsNum	Chip size	Channel length		
+100	16	32		
+70	9	20		
+55	9	18		
+30	6	8		
+12	2	5		
+7	2	5		
+				
+				
+				
+opsNum	Number of concurrent channel sets(1)	Number of concurrent sets that can be solved(2)	Number of concurrent sets that can be solved by postponing certain flow paths(3)	deadlock (can be solved by moving storage away) (4)
+100	65	5	56	4
+70	32	6	25	1
+55	28	2	24	2
+30	4	1	3	0
+12	3	0	3	0
+7	1	0	1	0
+				
+	(1)The number of the concurrent channel sets. Each set has more than 2 concurrent channels in it.			
+	(2)Number of concurrent sets that can be solved directly. Flow paths these concurrent sets can be built without either having certain flows postponed, or having some storage deadlock resolved.			
+	(3)Number of concurrent sets that can be solved by postpone certain flow paths			
+	(4)Number of concurrent sets that have deadlock in it. These can be solved by moving certain storage away.			
+

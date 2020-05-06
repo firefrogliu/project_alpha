@@ -1,0 +1,85 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'task_relation.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{220.07258859bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.12357487)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{task_relation.pdf}}%
+    \put(0.48140591,0.27126522){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Storage Minimization \end{tabular}}}}%
+    \put(0.46049376,0.22641956){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(WP1)\end{tabular}}}}%
+    \put(0.3763069,0.02801795){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Efficient Flow-layer Design\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{task_relation.pdf}}%
+    \put(0.41292726,0.14046548){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Architectural\end{tabular}}}}%
+    \put(0.41055332,0.09561981){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Synthesis (WP2)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{task_relation.pdf}}%
+    \put(0.48194353,0.66366475){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Volume and Washing \end{tabular}}}}%
+    \put(0.4658507,0.61881908){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Management (WP3)\end{tabular}}}}%
+    \put(0.37610455,0.42041753){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Full-system Design\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{task_relation.pdf}}%
+    \put(0.42034911,0.53286489){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Flow-/Control-layer\end{tabular}}}}%
+    \put(0.39943697,0.48801922){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Codesign (WP4)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{task_relation.pdf}}%
+    \put(0.38159789,0.81281714){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Design for Large-scale Integration\end{tabular}}}}%
+    \put(0.47454887,1.03791986){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Hierarchical Design \end{tabular}}}}%
+    \put(0.44295141,0.99649698){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} and \end{tabular}}}}%
+    \put(0.44686746,0.95298964){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Reliability  Optimization\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{task_relation.pdf}}%
+    \put(0.96155899,0.5560012){\color[rgb]{0,0,0}\rotatebox{-90}{\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Cyber-physical Integration (WP6)\end{tabular}}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{task_relation.pdf}}%
+    \put(0.08393288,0.22934239){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Micro-\end{tabular}}}}%
+    \put(0.08312358,0.19035847){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Synthesis\end{tabular}}}}%
+    \put(0.08393288,1.00714221){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Macro-\end{tabular}}}}%
+    \put(0.08312358,0.96815834){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}Synthesis\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{task_relation.pdf}}%
+    \put(0.42952586,0.90446349){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(WP5)\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

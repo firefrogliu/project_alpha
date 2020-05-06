@@ -1,0 +1,196 @@
+\relax 
+\citation{CBBK17}
+\citation{JMSQ07,JEMP08,KrCh10}
+\citation{illumina}
+\citation{agilent}
+\citation{AminTA09}
+\citation{MinhassPMB12}
+\citation{TsengLSH15,Liu2017}
+\citation{LinLCLH14}
+\citation{HuHC16}
+\citation{MinhassPMH13,WZYH17,Zhu2018iccad}
+\citation{HuDHC17}
+\citation{YaoWRCH15}
+\citation{YaoHC15}
+\citation{HuYHC14,HuHC14}
+\citation{Liu2018dac,aledate19}
+\citation{JMSQ07,matrix11}
+\citation{matrix11}
+\providecommand \oddpage@label [2]{}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}\protected@file@percent }
+\citation{AminTA09}
+\citation{AminTA09}
+\citation{matrix11}
+\citation{matrix11}
+\citation{PMD_mixing,PMD_transportation}
+\citation{TsengLHS15,TBMTtcad}
+\citation{pump}
+\citation{grimmer2017close}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Components and structure of flow-based biochips. (a) Microvalve structure. (b) Mixer. (c) Biochip with eight storage cells \cite  {AminTA09}.}}{2}\protected@file@percent }
+\newlabel{fig:valve_mixer_storage}{{1}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Fully programmable valve array (FPVA) \cite  {matrix11}. (a) Architecture. (b) Valve and cell. (c) Flow path construction. }}{2}\protected@file@percent }
+\newlabel{fig:archi}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces FPVA with dynamic devices. (a) A 4$\times $2 dynamic mixer. (b) A 2$\times $4 dynamic mixer. (c) Dynamic mixers of different orientations sharing the same area. (d) FPVA with a long channel and always-closed valves (obstacles). The x-axis and y-axis show the coordinates of the valves and cells.}}{2}\protected@file@percent }
+\newlabel{fig:dynamic_devices}{{3}{2}}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Fault Model and Problem Formulation}{3}\protected@file@percent }
+\newlabel{sec:formulation}{{II}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Defects in flow-based biochips \cite  {HuYHC14}. (a) Broken flow channel. (b) Leaking flow channel. (c) Broken control channel. (d) Leaking control channel.}}{3}\protected@file@percent }
+\newlabel{fig:defects}{{4}{3}}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\citation{walk1996}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Test of traditional flow-based biochips \cite  {HuYHC14}. (a) Schematic of the chip under test. (b) Circuit representation of the test model for test pattern generation.}}{4}\protected@file@percent }
+\newlabel{fig:classic_test}{{5}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Flow paths and cuts for FPVA test}{4}\protected@file@percent }
+\newlabel{sec:test_strategy}{{III}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Flow paths and cuts. Valves at the external boundary of the chip are always closed. (a) Test paths and stuck-at-0 fault masking. (b) Cut. (c) Test path with two-fault masking. (d) Cut with two-fault masking and variables to prevent fault masking.}}{4}\protected@file@percent }
+\newlabel{fig:path_cutset}{{6}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Flow path model. (a) Constraint variables for valves and cells. (b) Path construction using constraints. (c) Disjoint loop. (d) Flow constraints along a disjoint loop.}}{5}\protected@file@percent }
+\newlabel{fig:flow_path_model}{{7}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Generating test-path and test-cut patterns}{5}\protected@file@percent }
+\newlabel{sec:path_cut}{{IV}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Constructing path test patterns}{5}\protected@file@percent }
+\newlabel{sec:flow_paths}{{\unhbox \voidb@x \hbox {IV-A}}{5}}
+\newlabel{sec:flow_path_cons}{{\unhbox \voidb@x \hbox {IV-A}1}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}1}Path pattern formulation}{5}\protected@file@percent }
+\newlabel{eq:valve_cell}{{1}{5}}
+\citation{chen2011applied}
+\newlabel{eq:valve_cov}{{2}{6}}
+\newlabel{sec:disjoint_loop}{{\unhbox \voidb@x \hbox {IV-A}2}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}2}Excluding disjoint loops from test paths}{6}\protected@file@percent }
+\newlabel{eq:flow_var}{{3}{6}}
+\newlabel{eq:flow_sum}{{4}{6}}
+\newlabel{eq:flow_sum_loop}{{5}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}3}Finding the minimum set of test paths}{6}\protected@file@percent }
+\newlabel{eq:valve_on_path}{{6}{6}}
+\newlabel{eq:ilp_1}{{7}{6}}
+\newlabel{eq:ilp_2}{{8}{6}}
+\newlabel{sec:loop_relax}{{\unhbox \voidb@x \hbox {IV-A}4}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}4}Relaxing constraints for excluding disjoint loops and heuristic path reconstruction}{6}\protected@file@percent }
+\newlabel{eq:disjoint_loop_violation}{{9}{6}}
+\citation{HuYHC14}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Eliminating a disjoint loop. (a) A test path containing a disjoint loop. (b) Altered test path partially covering valves on the loop. (c) An additional test path created to cover the rest valves on the loop.}}{7}\protected@file@percent }
+\newlabel{fig:minimum_loops}{{8}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Constraint variables for cut-set modeling.}}{7}\protected@file@percent }
+\newlabel{fig:cut_var}{{9}{7}}
+\newlabel{eq:diff_flow}{{10}{7}}
+\newlabel{eq:ilp_1_ll}{{11}{7}}
+\newlabel{eq:ilp_2_ll}{{12}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Constructing cut test patterns}{7}\protected@file@percent }
+\newlabel{sec:cut}{{\unhbox \voidb@x \hbox {IV-B}}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Testing control layer leakage}{7}\protected@file@percent }
+\newlabel{sec:control_layer_test}{{\unhbox \voidb@x \hbox {IV-C}}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Partial control leakage test with paths.}}{8}\protected@file@percent }
+\newlabel{fig:control_test}{{10}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Test path through a long channel twice. The missing valve causes bypassing of valves on the path. }}{8}\protected@file@percent }
+\newlabel{fig:long_channel}{{11}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Dealing with long channels and obstacles}{8}\protected@file@percent }
+\newlabel{sec:walls_holes}{{\unhbox \voidb@x \hbox {IV-D}}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Generating test paths on an FPVA with a long channel. (a) The original FPVA. (b) Converting the FPVA into a connection graph. (c) Cells in a long channel are collapsed into a super cell. Flow paths are constructed on the new connection graph. (d) A corresponding flow path on the original FPVA.}}{8}\protected@file@percent }
+\newlabel{fig:super_cell}{{12}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Test of FPVAs with Multiple Sensors}{8}\protected@file@percent }
+\newlabel{sec:multi_port}{{V}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Multiple-port test. (a) Test pattern for stuck-at-0 faults. (b) Test pattern for stuck-at-1 faults.}}{9}\protected@file@percent }
+\newlabel{fig:multi_port_test_example}{{13}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Multiple-port test of stuck-at-0 faults}{9}\protected@file@percent }
+\newlabel{sec:multiple_port_tree}{{\unhbox \voidb@x \hbox {V-A}}{9}}
+\newlabel{eq:tree_cell_valve_1}{{15}{9}}
+\newlabel{eq:tree_cell_valve_0}{{16}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Loop on test tree. A defected valve on the loop cannot be detected.}}{9}\protected@file@percent }
+\newlabel{fig:joint_loops}{{14}{9}}
+\newlabel{eq:tree_cell_valve_jointloop}{{17}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Multiple-port test of stuck-at-1 faults}{9}\protected@file@percent }
+\newlabel{sec:multiple_port_cut}{{\unhbox \voidb@x \hbox {V-B}}{9}}
+\citation{HuYHC14}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Test stuck-at-1 faults with cut and multiple pressure sensors.}}{10}\protected@file@percent }
+\newlabel{fig:multi_port_cut_theorem}{{15}{10}}
+\newlabel{eq:valve_on_cut_set}{{18}{10}}
+\newlabel{eq:valve_on_cut_set_2}{{20}{10}}
+\newlabel{eq:same_side_1}{{22}{10}}
+\newlabel{eq:same_side_2}{{23}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces A test tree and a cut on a traditional microfluidic biochip.}}{10}\protected@file@percent }
+\newlabel{fig:trees_cuts_traditional}{{16}{10}}
+\newlabel{eq:flow_on_cell_s}{{24}{10}}
+\newlabel{eq:must_reach}{{25}{10}}
+\newlabel{eq:must_reach_2}{{26}{10}}
+\newlabel{eq:must_reach_3}{{27}{10}}
+\newlabel{eq:must_reach_4}{{28}{10}}
+\newlabel{eq:no_flow_cut}{{29}{10}}
+\newlabel{eq:no_flow_cut_2}{{30}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Applying multiple-port test onto traditional biochips}{10}\protected@file@percent }
+\newlabel{sec:adapt_traditional}{{\unhbox \voidb@x \hbox {V-C}}{10}}
+\citation{HuYHC14}
+\citation{gurobi}
+\citation{CBBK17}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Results of Test Pattern Generation with Single Pressure Source and Single Pressure Sensor}}{11}\protected@file@percent }
+\newlabel{tb_test}{{I}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Simulation Results}{11}\protected@file@percent }
+\newlabel{sec:results}{{VI}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Comparison of numbers of test patterns for FPVAs with different numbers of ports.}}{11}\protected@file@percent }
+\newlabel{fig:port_test}{{17}{11}}
+\citation{HuYHC14}
+\citation{HuYHC14}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Comparison between test patterns generated by the proposed method and the ATPG-based method}}{12}\protected@file@percent }
+\newlabel{tb_tradition}{{II}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Comparison of numbers of test patterns for FPVAs with different numbers of long channels and obstacles.}}{12}\protected@file@percent }
+\newlabel{fig:wall_hole_test}{{18}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces A traditional multiple-port continuous-flow biochip from \cite  {HuYHC14}. P1-P15 are ports. a-z, A and B are valves.}}{12}\protected@file@percent }
+\newlabel{fig:test_traditional}{{19}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{12}\protected@file@percent }
+\newlabel{sec:conclusion}{{VII}{12}}
+\bibstyle{IEEEtran}
+\bibdata{IEEEabrv,CONFabrv,bibfile}
+\bibcite{CBBK17}{1}
+\bibcite{JMSQ07}{2}
+\bibcite{JEMP08}{3}
+\bibcite{KrCh10}{4}
+\bibcite{illumina}{5}
+\bibcite{agilent}{6}
+\bibcite{AminTA09}{7}
+\bibcite{MinhassPMB12}{8}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Constructing test trees on a \text  {20$\times $20} FPVA with long channels and obstacles. (a) The original FPVA represented by a graph. (b) Long channels and obstacles are compressed into super cells. (c), (d) and (e) Three test trees with a loop in (e). (f) The previously constructed test tree in (e) is altered to partially cover the valves on the loop. (g) The remaining valves to cover. (h) One additional test tree to cover the remaining valves.}}{13}\protected@file@percent }
+\newlabel{fig:kill_loops_example}{{20}{13}}
+\@writefile{toc}{\contentsline {section}{Acknowledgment}{13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{13}\protected@file@percent }
+\bibcite{TsengLSH15}{9}
+\bibcite{Liu2017}{10}
+\bibcite{LinLCLH14}{11}
+\bibcite{HuHC16}{12}
+\bibcite{MinhassPMH13}{13}
+\bibcite{WZYH17}{14}
+\bibcite{Zhu2018iccad}{15}
+\bibcite{HuDHC17}{16}
+\bibcite{YaoWRCH15}{17}
+\bibcite{YaoHC15}{18}
+\bibcite{HuYHC14}{19}
+\bibcite{HuHC14}{20}
+\bibcite{Liu2018dac}{21}
+\bibcite{aledate19}{22}
+\bibcite{matrix11}{23}
+\bibcite{PMD_mixing}{24}
+\bibcite{PMD_transportation}{25}
+\bibcite{TsengLHS15}{26}
+\bibcite{TBMTtcad}{27}
+\bibcite{pump}{28}
+\bibcite{grimmer2017close}{29}
+\bibcite{walk1996}{30}
+\bibcite{chen2011applied}{31}
+\bibcite{gurobi}{32}
+\@writefile{toc}{\contentsline {section}{Biographies}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Chunfeng Liu}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Bing Li}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Tsung-Yi Ho}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Bhargab B. Bhattacharya}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Krishnendu Chakrabarty}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Ulf Schlichtmann}{14}\protected@file@percent }

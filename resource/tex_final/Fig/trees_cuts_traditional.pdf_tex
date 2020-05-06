@@ -1,0 +1,129 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'trees_cuts_traditional.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{211.05656027bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.65436127)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0.75997541,0.02547154){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.64296628\unitlength}\raggedright  \end{minipage}}}%
+    \put(0.43135303,0.36053208){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(a)\end{tabular}}}}%
+    \put(0.43135303,0.02036213){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(b)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{trees_cuts_traditional.pdf}}%
+    \put(0.33859554,0.61002112){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}c\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{trees_cuts_traditional.pdf}}%
+    \put(0.39502189,0.62528997){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}d\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{trees_cuts_traditional.pdf}}%
+    \put(0.45144824,0.61002112){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}e\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{trees_cuts_traditional.pdf}}%
+    \put(0.29398492,0.54820873){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}b\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{trees_cuts_traditional.pdf}}%
+    \put(0.29398492,0.480717){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}g\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{trees_cuts_traditional.pdf}}%
+    \put(0.50273409,0.54814853){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}f\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{trees_cuts_traditional.pdf}}%
+    \put(0.50273409,0.47753461){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}h\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{trees_cuts_traditional.pdf}}%
+    \put(0.21416078,0.51467423){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}a\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{trees_cuts_traditional.pdf}}%
+    \put(0.58420569,0.51467423){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}i\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{trees_cuts_traditional.pdf}}%
+    \put(0.6578201,0.55083915){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}j\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{trees_cuts_traditional.pdf}}%
+    \put(0.6578201,0.47753461){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}k\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{trees_cuts_traditional.pdf}}%
+    \put(0.04790939,0.61191036){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}pressure \end{tabular}}}}%
+    \put(0.04911409,0.57507057){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}source\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{trees_cuts_traditional.pdf}}%
+    \put(0.77447189,0.58328518){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$O_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{trees_cuts_traditional.pdf}}%
+    \put(0.77447189,0.44714196){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$O_2$\end{tabular}}}}%
+    \put(0.3505303,0.51219196){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}mixer\end{tabular}}}}%
+    \put(0.85704204,0.53094243){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}pressure \end{tabular}}}}%
+    \put(0.85824681,0.49410267){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}sensors\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{trees_cuts_traditional.pdf}}%
+    \put(0.33859491,0.26867675){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}c\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{trees_cuts_traditional.pdf}}%
+    \put(0.39502129,0.2839456){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}d\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{trees_cuts_traditional.pdf}}%
+    \put(0.45144764,0.26867675){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}e\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{trees_cuts_traditional.pdf}}%
+    \put(0.2939843,0.20686436){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}b\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{trees_cuts_traditional.pdf}}%
+    \put(0.2939843,0.13937264){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}g\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{trees_cuts_traditional.pdf}}%
+    \put(0.50273346,0.20680416){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}f\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{trees_cuts_traditional.pdf}}%
+    \put(0.50273346,0.13619024){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}h\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{trees_cuts_traditional.pdf}}%
+    \put(0.21416015,0.17332987){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}a\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{trees_cuts_traditional.pdf}}%
+    \put(0.58420509,0.17332987){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}i\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{trees_cuts_traditional.pdf}}%
+    \put(0.6578195,0.20949479){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}j\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{trees_cuts_traditional.pdf}}%
+    \put(0.6578195,0.13619024){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}k\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{trees_cuts_traditional.pdf}}%
+    \put(0.04790876,0.27056596){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}pressure \end{tabular}}}}%
+    \put(0.04911348,0.23372617){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}source\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{trees_cuts_traditional.pdf}}%
+    \put(0.77447129,0.24194081){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$O_1$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{trees_cuts_traditional.pdf}}%
+    \put(0.77447129,0.10579759){\color[rgb]{1,1,1}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$O_2$\end{tabular}}}}%
+    \put(0.3505297,0.17084754){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}mixer\end{tabular}}}}%
+    \put(0.85704147,0.18959803){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}pressure \end{tabular}}}}%
+    \put(0.85824624,0.15275825){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}sensors\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{trees_cuts_traditional.pdf}}%
+    \put(0.77088248,0.30079883){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}cut\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{trees_cuts_traditional.pdf}}%
+    \put(0.59762946,0.63271754){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}tree\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{trees_cuts_traditional.pdf}}%
+  \end{picture}%
+\endgroup%

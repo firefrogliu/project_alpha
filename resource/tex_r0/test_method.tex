@@ -1,0 +1,174 @@
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/path_cutset.pdf_tex}
+\caption{Flow paths and cuts. Valves at the external boundary of the chip
+are always closed. (a) Test paths and stuck-at-0 fault masking. (b) Cut.
+(c) Test path with two-fault masking. (d) Cut with two-fault masking and
+variables to prevent fault masking.}
+\label{fig:path_cutset}
+}
+\end{figure}
+
+
+\section{Flow paths and cuts for FPVA test} %\label{sec:test_method}
+\label{sec:test_strategy}
+
+%In generating test patterns to detect faults in FPVAs, the ATPG-based method
+%faces the challenge that the circuit representation is not determinant. The
+%concept of test pattern itself is, however, still valid. 
+In the test process, the open/closed states of valves in an FPVA are set
+according to test patterns,
+%are set to given states specified by a test pattern, 
+and the pressure values at the output ports are measured by 
+pressure sensors. Faults can thus be detected by comparing the readout
+with expected values.
+%a concept very similar to test of digital circuits. 
+%For an efficient fault test, 
+%%test patterns should be able to
+%%make faults inside the chip observable at the output ports as much as
+%%possible, so that 
+%the number of test patterns can be reduced as much as possible.
+
+%\subsection{Test strategy for FPVAs}\label{sec:test_stratergy}
+
+To identify whether faults exist in a chip, a test pattern should ensure
+that faults are observable by the pressure sensors at the output ports.
+For example, faults caused by valves that cannot be opened, stuck-at-0 faults, 
+can be detected by creating paths from the pressure source to the pressure
+sensors. If, however, no pressure sensors can read a valid pressure value at
+the outputs, some valves on the path should have defects, and cannot
+be opened by the test pattern to allow the test pressure to pass. 
+Similarly, if a test pattern 
+cuts off all the paths 
+%closes all valves in an FPVA, no path exist 
+from the pressure source to the pressure sensors but 
+the sensors still detect pressure valves, 
+stuck-at-1 faults allowing pressure leakage at valves must exist in the chip.
+%the only fault that can be
+%observed at this valve is the leakage fault where the valve always open
+%(stuck-at-1 fault). 
+\figname~\ref{fig:path_cutset}(a) and \ref{fig:path_cutset}(b) 
+illustrate the concepts of test patterns to
+test stuck-at-0 and stuck-at-1 faults.
+
+When test patterns are applied, some faults might mask each other. For
+example, two test paths are created in the FPVA illustrated in
+\figname~\ref{fig:path_cutset}(a) simultaneously. If a valve on one of the paths is defected, the
+air pressure can still reach the pressure sensor through the other path.
+Therefore, this stuck-at-0 fault cannot be observed at the output port.
+To avoid this path interference problem, only simple paths without loops should
+be constructed. These paths are called \textit{test paths} henceforth.
+%
+Similar to test paths,
+%to detect stuck-at-0 faults, 
+test cuts can be constructed to detect stuck-at-1 faults. 
+%caused by valves that cannot be closed correctly. 
+A \textit{test cut}
+is formed by a set of valves that separate the pressure source and the pressure
+sensors completely when they are closed, so that no test pressure can reach
+the sensors, as illustrated in \figname~\ref{fig:path_cutset}(b).
+%With such a test pattern, if
+%test pressure can still be detected at an output port, a stuck-at-1 fault must exist in
+%the chip. An example of such a cut is illustrated in
+%\figname~\ref{fig:path_cutset}(b), which disconnects any path between the
+%pressure source and the pressure sensor. 
+
+%\begin{figure*}[t]
+%{\figurefontsize
+%\centering
+%\input{Fig/flow_path_model.pdf_tex}
+%\caption{Flow path model. (a) Constraint variables for valves and cells. (b)
+%Path construction using constraints. (c) Disjoint loop. (d) Flow constraints
+%along a disjoint loop.}
+%\label{fig:flow_path_model}
+%}
+%\end{figure*}
+
+\begin{figure*}[t]
+{\figurefontsize
+\centering
+\input{Fig/flow_path_model.pdf_tex}
+\caption{Flow path model. (a) Constraint variables for valves and cells. (b)
+Path construction using constraints. (c) Disjoint loop. (d) Flow constraints
+along a disjoint loop.}
+\label{fig:flow_path_model}
+}
+\end{figure*}
+
+Based on the analysis above, the test patterns that need to be constructed for
+testing an FPVA can be defined as follows:
+
+\begin{itemize} 
+ 
+  \item\textit{Test-path patterns}: A set of paths between the pressure source
+    and the pressure sensors. These paths should cover each valve at least once. 
+    %A
+    %test path should be a simple path without a loop, so that
+    %no bypassing path segment masking stuck-at-0 faults can happen.  
+    A test path should be a simple
+path without a loop, so that no parallel path segment
+that can mask stuck-at-0 faults is present. A test path is thus
+similar to a ``self-avoiding walk'' on a lattice, which is well studied
+elsewhere in the context of grid graphs \cite{walk1996}.
+    In the test
+    process, test paths are applied one after another, in each of which only
+    the valves on the path are opened and all the other valves are closed.
+    If no test pressure is detected, 
+    %by a pressure sensor, 
+    %a valve should have 
+    stuck-at-0 fault should exist.
+%The number of such paths is denoted by $n_f$.
+ 
+\item\textit{Test-cut patterns}:  A set of cuts, each of which is formed from a
+  series of valves 
+  %that are closed and 
+  separating the pressure source and the pressure sensors 
+  completely when they are closed. The generated cuts should cover each valve at least once to test
+  whether it can be closed. When a cut is applied but air pressure is still
+  detected by a sensor, at least a valve in the cut should have stuck-at-1 fault. 
+\end{itemize}
+
+The path and cut test patterns can detect any single fault in the chip. 
+If multiple faults exist, fault masking might still happen.
+%the flow-path and cut-set vectors
+%discussed above still cannot guarantee that a fault can always be detected.
+Assume that there are two faulty valves, one of which cannot be opened (valve
+1, stuck-at-0) and the other cannot be closed (valve 2, stuck-at-1).  Also
+assume that the test path used to test valve 1 is constructed as shown in  
+\figname~\ref{fig:path_cutset}(c), and  the cut used to test valve 2 is
+constructed as shown  in \figname~\ref{fig:path_cutset}(d). In 
+\figname~\ref{fig:path_cutset}(c), the test pressure can still bypass the
+broken valve 1 and reach the pressure sensor though valve 2. In other words,
+the pressure leakage through valve 2 masks the stuck-at-0 fault at valve 1. 
+In \figname~\ref{fig:path_cutset}(d), the
+pressure leakage through valve 2 is blocked by valve 1, 
+so that no test pressure can reach the sensor,
+%The pressure sensor in this case detects no pressure, 
+leading to mutual masking of faulty valves.
+%so that the faulty valves also mask each other.
+%In both cases, the results at the pressure meter are still correct.  
+Consequently, none of these faulty valves can be detected by the test patterns. 
+To solve this problem, such mutual masking
+cases should be excluded from the generated test patterns. 
+
+%The mutual masking problem shown in \figname~\ref{fig:path_cutset}c-d comes
+%from an extreme test vector combination. In practice, flow paths and cut-sets
+%can be scanned to check how many faults can be identified reliably, by
+%verifying whether extreme patterns really occur in the test vectors.  In
+%addition, these paths and cut-sets can be revised in a ripup and reroute style
+%to improve the observation of multiple faults. This extension has not been
+%implemented in this framework and will be the future expansion of the
+%proposed method.
+
+%The discussion above defines the test vectors as flow paths and cut-sets. The
+%flow paths together should cover each valve at least once. Similarly, the
+%cut-sets should also cover each valve at least once. In addition, the cut-sets
+%should not form a shape that only one additional valve outside of the cut-set
+%can be used to form a new cut-set, as in \figname~\ref{fig:path_cutset}d. The
+%optimization objective is that the numbers of flow paths and cut-sets should
+%be as small as possible
+%%because these test vectors are applied one after
+%%another in the test process, so that a smaller set of test vectors 
+%to reduces test cost. 
+

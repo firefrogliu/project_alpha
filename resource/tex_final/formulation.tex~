@@ -1,0 +1,172 @@
+
+\section{Fault Model and Problem Formulation}\label{sec:formulation}
+
+During manufacturing of flow-based biochips, various defects may occur. For
+example,  the flow channel under a valve may be broken
+and does not allow any fluid to pass, leading to a fault equivalent to the
+case that the valve cannot be opened. In addition,  leakage may appear between
+neighboring flow channels, so that fluids in them may be directed to incorrect
+devices or mixed unexpectedly. Furthermore, if the control channel to a valve
+becomes broken, air pressure  may not reach the valve. Consequently, this valve
+cannot be closed and thus causes a constant leakage.  Furthermore, a leakage may
+also appear between two control channels, so that  the valves they drive are
+always opened and closed together. 
+%another fault scenario leading to malfunction of the chip potentially. 
+These cases of manufacturing defects are illustrated 
+in \figname~\ref{fig:defects} from \cite{HuYHC14}.
+
+
+%The defects in a manufactured flow-based biochip have been analyzed in detail
+%and the corresponding fault models have been defined in \cite{HuYHC14}.
+
+%Defects in manufactured biochips may cause malfunction in executing bioassays.
+According to how the defects affect the behavior of a valve or a channel,
+typical faults 
+%at component level 
+can be defined as follows:
+
+\begin{itemize}
+
+\item \textit{Broken flow channel}: Fluid cannot pass through a channel. This is
+equivalent to the fault that the valve at the entrance of the channel cannot be
+opened.  
+
+\item \textit{Leaking flow channel}: Fluid in a channel leaks to its
+  neighboring channel. In FPVAs, this fault is similar to the case 
+  that a valve separating two cells cannot be closed. 
+
+  %If a valve does not exist between the two channels with
+  %leakage, such as in traditional biochips,  a virtual valve can be assumed
+  %%between them and its state should be always closed. The leakage defect can
+  %thus be covered if a test pattern identifies that this virtual valve needs to
+  %be opened to realize the observed results. 
+
+\item \textit{Broken control channel}: Valve cannot be closed.
+
+\item \textit{Leaking control channel}: Two valves open or close simultaneously
+  due to the shared air pressure in the control channels.
+
+\end{itemize}
+Since the faults that valves are stuck at the always-closed or always-open
+states are similar to the stuck-at-0 faults and stuck-at-1 faults in digital
+circuits, these faults are henceforth called \textit{stuck-at-0 faults}
+and \textit{stuck-at-1 faults} for convenience.
+
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/defects.pdf_tex}
+\caption{Defects in flow-based biochips \cite{HuYHC14}. (a) Broken flow channel. (b) Leaking flow channel. (c) Broken control channel. (d) Leaking control channel.}
+\label{fig:defects}
+}
+\end{figure}
+
+With these fault models, test of traditional flow-based biochips has been
+examined in \cite{HuYHC14}. The concept of this method can be explained
+using the example illustrated in \figname~\ref{fig:classic_test}(a) from
+\cite{HuYHC14}. In this test concept, a pressure source is connected to the
+input port of the chip to create air pressure along the channels in the flow
+layer. Pressure sensors are attached to the output ports of the chip to detect air
+pressure. By switching the valves open or closed according to test patterns,
+the air pressure read by the pressure sensors 
+at the output ports can be used to determine whether
+there is a fault in the chip. In this test process, an air pressure is applied
+to the flow channels to detect faults, so that the chip is not
+contaminated after test. This air pressure for the purpose of test 
+is completely unrelated to the pressure applied in the control channels to 
+switch valves when the chip executes bioassays.
+
+In \figname~\ref{fig:classic_test}(a), an air pressure can only be detected at
+an output port if there is a path from the pressure source to the output port. For example,
+if only the valves $a, g, h, i, k$ are open,  a pressure can be detected
+at $o_2$. However, during this test if a valve on this path cannot be opened due to
+defects, no pressure can be detected at $o_2$, indicating the
+existence of a stuck-at-0 fault. On the other hand, if a valve on this path is also
+closed intentionally during the test, all paths from the source to the output
+ports should be blocked,
+so that no air pressure should be detected at any output port. If, on the
+contrary, the test results show that a pressure can still be observed by a
+sensor, a stuck-at-1 fault should exist in the chip to allow a path from the
+source to an output port to be formed. In this test process,   
+the states of the valves during a pressure actuation-measurement cycle is
+called a \textit{test pattern}. It is the task of test generation to generate
+as few test patterns as possible to detect the faults in a chip efficiently.
+
+To generate test patterns, the method in \cite{HuYHC14} converts the
+biochip under test into a circuit as shown in
+\figname~\ref{fig:classic_test}(b), where the inputs of the circuit
+represent valves and the outputs of the circuit represent the output ports
+of the chip. In this circuit representation, valves along the same
+channel segment are inputs of AND gates, e.g., $b, c, d, e, f$ and $g,
+h$. If two channels converge at a point, 
+%e.g., the two channels through $f$ and $h$, 
+%e.g., the converging point between the valves $f, h, i$, 
+an OR gate is created in the circuit representation, since a pressure through
+any of these channels can reach the converging point. Consequently, 
+the circuit represents the relation between valves and the paths from the source to
+the output ports in the chip.
+%defines the relation between valves in activating pressure at the output ports. 
+%Therefore, 
+To generate test patterns for the biochip, it is
+equivalent to generate test patterns for the circuit representation, which can
+be achieved by a standard ATPG tool as shown in \cite{HuYHC14}.
+
+%In addition to valve faults,  the ATPG-based method can also efficiently deal
+%with channel leakage faults. A flow channel leakage fault leads to two channel
+%segments being filled with fluid at the same time if one of them is filled. 
+%This is equivalent to the case that if a node in the test circuit is `1',
+%another node is also `1', an OR-bridge fault in the circuit representation.  If
+%there is a leakage in the control channel, two valves close simultaneously if
+%one of them is closed. This is an AND-bridge fault in the circuit.  By using
+%the equivalent circuit test structure, both bridge faults can be tested with
+%ATPG vectors efficiently.
+
+The ATPG-based method has the advantage that the biochip under test needs only
+to be converted into a circuit representation. The real test generation is
+performed using test generation methods for integrated circuits.
+However, it is challenging to apply this method directly to test FPVAs
+shown in \figname~\ref{fig:archi}(a).  
+In converting a biochip into a circuit representation, the structure of the chip
+should be known.
+%the relation between valves should be known. This relation is defined by 
+%path information from the pressure source to the output ports. 
+On an FPVA, the shapes and locations of devices and transportation
+channels are dynamically determined according to the operations to be executed.
+%there is no such a path structure, because all devices are created dynamically
+%according to the operations to be executed. 
+If the ATPG-based method is still applied, it then needs to cover 
+a huge number of dynamic chip architectures, which is 
+a challenging task in view of the flexibility of FPVAs.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/ref_test_biochip.pdf_tex}
+\caption{Test of traditional flow-based biochips \cite{HuYHC14}. (a)
+Schematic of the chip under test. (b) Circuit representation of the test 
+model for test pattern generation.}
+\label{fig:classic_test}
+}
+\end{figure}
+
+In this paper, we propose a new test framework for detecting faults in an FPVA
+%a manufactured chip reliably 
+with only a small set of test patterns. This problem can be formulated as follows:
+\begin{itemize}
+
+  \item{Input:} An FPVA architecture; the locations of long channels (no valve
+    built, conceptually always open) and obstacles (conceptually always
+    closed); the locations of the air pressure source and the pressure sensors.
+
+\item{Output:} A set of test patterns, each of which defines the
+open/closed states of all valves when test pressure is applied
+at the source and checked at the output ports by the pressure sensors.
+
+\item{Objective:} The number of test patterns should be 
+  as small as possible to reduce test cost; faults should be detected reliably by
+  covering all valves.
+  %the number of undetected faults should be as small as possible.
+
+\end{itemize}
+

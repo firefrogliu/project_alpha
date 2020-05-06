@@ -1,0 +1,206 @@
+\section{Simulation Results}\label{sec:results}
+
+The proposed framework was implemented in C++ and tested
+using a \SI[mode=text]{3.20}{\GHz} CPU with 
+\SI{8}{GB} memory.
+We demonstrate
+the results using FPVAs with valves in different rows and columns. The
+tested arrays are shown in Table I, where the first column shows
+the dimensions of the arrays and the second column shows
+the number of valves. 
+We used Gurobi \cite{gurobi} to solve the optimization problems in the
+proposed method.
+
+The results of testing FPVAs with a single pressure source and a single pressure sensor
+are shown in Table~\ref{tb_test}.
+% These arrays contain long channels for transportation and obstacle areas without
+% valves. 
+%The numbers of valves in the arrays are shown in the column $n_v$.  
+%These numbers are calculated by multiplying
+%the row number and column number and subtracting
+%the number of valves not built due to channels and obstacles.
+The direct approach is the method published in \cite{CBBK17}, which
+does not use loop relaxation introduced in Section~\ref{sec:loop_relax} for
+acceleration. In Table~\ref{tb_test}, the
+numbers of test paths are shown in the column $n^d_p$. The CPU time to
+generate these patterns is shown in the column $t^d_p$. The columns $n^d_c$ and
+$t^d_c$ show the number of cut patterns and the CPU time to generate them.
+The columns $n^d_l$ and $t_l^d$ show the number of patterns for testing leakage in the
+control layer and the CPU time to generate these patterns. The
+total number of test patterns is shown in the column $N^d$. 
+``*'' means that no valid results are available 
+%from the corresponding approach 
+due to runtime.
+According to these results, the direct approach suffers from the scalability problem
+due to its pure ILP formulation.
+%Though the flow path test patterns can still be found with the valve array of
+%the size $20\times20$, the cut patterns cannot be generated.
+In these results, the number of cuts is much larger than the number of test
+paths. This is because a path can travel through many valves in a zigzag shape and 
+only a few orthogonal paths can already cover all the valves.
+However, the cuts required to cover all the valves in an
+FPVA is proportional to the size of the array, leading a much larger number of
+such test patterns.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{port_testvector_number.tex}
+%\input{port_cut_number.tex}
+%%\input{Fig/exe_time_valve_cmp.pdf_tex}
+\caption{Comparison of numbers of test patterns for FPVAs with different numbers of ports.}
+\label{fig:port_test}
+}
+\end{figure}
+
+\input{tb_traditional}
+
+%finding
+%cuts without any acceleration method is thus infeasible due to the nature of
+%ILP formulation.
+
+The columns of loop acceleration show the results of generating test patterns using
+loop relaxation. The columns $n^a_p$, $n^a_c$ and $n^a_l$ show the
+numbers of test paths, cuts and leakage test patterns,
+respectively.
+The columns $t^a_p$, $t^a_c$ and $t^a_l$
+show the CPU time needed to generate these patterns, respectively. The total number
+of the test patterns is
+shown in the column $N^a$. These results show that with loop acceleration 
+valid test patterns can be generated for all these valve arrays, though the CPU
+time increases quickly as the size of the FPVA grows.
+%\textbf{For the test case $15\times15$, one extra flow path is required in the
+  %loop acceleration method, due to the heuristic nature of this acceleration
+  %technique. BUT IN THE RESULTS THE NUMBERS OF THE PATH TEST PATTERNS ARE THE
+%SAME?} 
+%. When generating cut-set test vectors,
+%because the number of cuts increases with the size of the FPVA , additionally
+%to Lagrangian relaxation, we generate one cut at a time to cover as many valves
+%as possible. This is reason why the execution time for generating cuts is
+%significantly shorter than that of the direct approach. 
+For the case 30$\times$30, 
+the numbers of variables and constraints 
+in the ILP formulation
+for generating the test patterns to detect stuck-at-0 faults, 
+stuck-at-1 faults and control-layer leakage are already (17702,36910), 
+(100920,1016247) and (20511,88552), respectively. 
+Therefore, a long CPU time
+was required to solve the corresponding optimization problems.
+
+The results of the proposed method for multiple-port test is shown in
+\figname~\ref{fig:port_test}, where 
+%.  In \figname~\ref{fig:port_test}(a), 
+the numbers of total test patterns for FPVAs with different numbers of test ports
+are compared. 
+With this comparison, it can be seen that the number of test
+patterns decreases quickly as the number of test ports increases. 
+This is also valid when the number of test patterns with three ports is compared
+with that with two ports shown in Table~\ref{tb_test}.
+Since the majority of the test patterns are cuts,
+more test ports enable a better coverage of valves by cuts composed of multiple
+segments,
+%as shown in Fig~\ref{fig:port_test}(b).
+leading to a significant reduction of test patterns.
+
+We also 
+demonstrate the effectiveness of our method in dealing with long channels
+and obstacles in FPVAs. The results are shown in
+\figname~\ref{fig:wall_hole_test}. In these cases, we randomly
+created FPVA layouts with 5\%, 10\%, 15\% and 20\% missing valves and
+obstacles. For each of these cases, one pressure source and two pressure sensors are 
+assumed.
+As shown in this comparison, long channels and obstacles 
+have only slight influence on the number of test patterns for FPVA test.
+%makes little
+%difference on the number of trees and cuts needed to test all vavles, as shown
+%in Fig~\ref{fig:wall_hole_test}.
+However, it is worth noting that the real form of the test trees and cuts are
+completely different from those without long channels and obstacles. 
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{hole_wall_path.tex}\vskip 10pt\input{hole_wall_cut.tex}
+%\input{Fig/exe_time_valve_cmp.pdf_tex}
+\caption{Comparison of numbers of test patterns for FPVAs with different numbers of long channels and obstacles.}
+\label{fig:wall_hole_test}
+}
+\end{figure}
+
+We have applied the proposed method onto the traditional multiple-port
+continuous-flow biochip shown 
+in \figname~\ref{fig:test_traditional} from \cite{HuYHC14}. The port $P3$
+is connected to a pressure source. The ports $P1-P2$ and $P4-P15$ are connected
+to pressure sensors. 
+Table~\ref{tb_tradition} shows the comparison between the test patterns generated by our
+method and the test patterns generated by the ATPG method in \cite{HuYHC14} in
+detecting stuck-at-0 and stuck-at-1 faults.
+The test patterns define the open/closed states
+of valves in the order (a--z, A, B), and the numbers of
+individual faults that can be detected by the corresponding test patterns are
+also shown in the corresponding rows in Table~\ref{tb_tradition}.
+The proposed method covers all stuck-at-0 and stuck-at-1 faults with 9 test patterns. 
+With the method of converting the same biochip architecture into a circuit 
+and then applying ATPG to generate test patterns as proposed in \cite{HuYHC14}, 
+16 test patterns are needed. Therefore, the method proposed in this paper has a
+better efficiency in fault coverage. 
+%a 78\% increase compared to our method. 
+
+
+ \begin{figure}[t]
+ {\figurefontsize
+ \centering
+ \input{Fig/test_traditional.pdf_tex}
+ \caption{A traditional multiple-port continuous-flow biochip from \cite{HuYHC14}. P1-P15 are ports. a-z, A and B are valves.}
+ \label{fig:test_traditional}
+ }
+ \end{figure}
+
+\begin{figure*}
+{\figurefontsize
+\centering
+\input{Fig/kill_loops_example.pdf_tex}
+\caption{Constructing test trees on a \text{20$\times$20} FPVA with long
+channels and obstacles. (a) The original FPVA represented by a graph. (b) Long
+channels and obstacles are compressed into super cells. (c), (d) and (e) Three test trees
+with a loop in (e).
+(f) The previously constructed test tree in (e) is altered to partially
+cover the valves on the loop. (g) The remaining valves to cover. (h) One
+additional test tree to cover the remaining valves.}
+\label{fig:kill_loops_example}
+}
+\end{figure*}
+ 
+To demonstrate the process of
+ tree construction, the intermediate results of the \text{20$\times$20} FPVA
+with long channels and obstacles are shown in \figname~\ref{fig:kill_loops_example}. 
+The FPVA has been abstracted into a graph, where nodes represent the
+cells and edges represent the valves. Randomly generated long channels and obstacles are
+created in the array. 
+\figname~\ref{fig:kill_loops_example}(a) shows the structure of the original
+FPVA, where the red edges represent always-closed valves or 
+obstacles. The blue edges represent normal valves that are expected to be
+closed and opened during assay execution.
+\figname~\ref{fig:kill_loops_example}(b) is the FPVA with its long channels and
+obstacles merged 
+%into regular cells with the method introduced in
+as described in Section~\ref{sec:walls_holes}. \figname~\ref{fig:kill_loops_example}(c), \figname~\ref{fig:kill_loops_example}(d) and \figname~\ref{fig:kill_loops_example}(e) are
+the test trees constructed using the ILP model 
+%\text{(\ref{eq:ilp_tree_1})-(\ref{eq:ilp_tree_2})} 
+with loop relaxation. There is a disjoint loop in \figname~\ref{fig:kill_loops_example}(e) and it is altered  
+in \figname~\ref{fig:kill_loops_example}(f).
+\figname~\ref{fig:kill_loops_example}(g) shows the remaining valves that need
+to be covered by additional trees
+after the loop is altered. In \figname~\ref{fig:kill_loops_example}(h), one
+additional test tree is constructed to cover these valves.
+
+To verify whether the test paths, cuts and the patterns for testing control
+layer leakage can detect faults reliably, for each FPVA in
+Table~\ref{tb_test} we generated one, two, three, four and five faults
+separately and tested whether the test patterns can detect these faults. We
+repeated this process for \num[mode=text]{10000} times.  In these test cases,
+the test patterns detected all the faults, 
+%meaning that these test patterns are very effective in detecting faults.
+%compared with the in-theory guaranteed two-fault detection. 
+demonstrating a very high reliability in fault detection.
+

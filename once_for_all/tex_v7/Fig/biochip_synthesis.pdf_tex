@@ -1,0 +1,78 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'biochip_synthesis.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{192.7771643bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.22356206)%
+    \put(0,0){\includegraphics[width=\unitlength]{biochip_synthesis.pdf}}%
+    \put(0.26763084,0.3193752){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Filter}}}%
+    \put(0.45279405,0.13421212){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Detector}}}%
+    \put(0.69967745,0.50453829){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Heater}}}%
+    \put(0.88484054,0.3193752){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Mixer1}}}%
+    \put(0.88484054,0.13421212){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Mixer2}}}%
+    \put(0.5702548,0.00734527){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{(b)}}}%
+    \put(0.57025667,0.65561846){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{(a)}}}%
+    \put(0.91974178,0.65289146){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Time}}}%
+    \put(0.28283158,1.0905132){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_1$}}}%
+    \put(0.43214286,1.09051354){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_4$}}}%
+    \put(0.55657105,1.09051391){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_6$}}}%
+    \put(0.17178191,1.0833359){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mixer1}}}%
+    \put(0.40725983,0.92190823){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_5$}}}%
+    \put(0.65611661,0.92190854){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_8$}}}%
+    \put(0.17048709,0.91532458){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Heater}}}%
+    \put(0.73077365,0.8376058){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_9$}}}%
+    \put(0.17048709,0.83042849){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Filter}}}%
+    \put(0.89278378,0.75330406){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_{11}$}}}%
+    \put(0.17048707,0.74671958){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Detector}}}%
+    \put(0.25794309,1.00621066){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_2$}}}%
+    \put(0.38237151,1.00621097){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_3$}}}%
+    \put(0.50679978,1.00621129){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_7$}}}%
+    \put(0.17581342,0.99903338){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Mixer2}}}%
+    \put(0.81216577,1.00621069){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$O_{10}$}}}%
+  \end{picture}%
+\endgroup%

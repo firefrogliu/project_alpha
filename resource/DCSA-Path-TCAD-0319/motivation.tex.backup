@@ -1,0 +1,139 @@
+ \section{Motivation and Problem Formulation}\label{sec:motivation}
+
+The sequencing graph of an assay defines the dependency of operations. These
+operations are scheduled to devices in a given order for execution. Different
+schedules, however, yield different storage usage and transportation
+requirements. 
+%
+In \figname~\ref{fig:pcr}(b) and \ref{fig:pcr}(c), two schedules
+for the PCR assay are shown, where one mixer is used to execute the
+operations. The first schedule executes the operations in the order
+$o_1\to o_2\to o_3 \to o_4 \to o_6 \to o_5\to o_7$. After executing $o_1$, the
+intermediate result should be transported to the storage unit, so that the device
+can be reused to execute $o_2$. When $o_6$ is executed, it takes the result of
+$o_4$ from the mixer directly as one input and fetches the result of $o_3$
+from the storage unit. In this schedule, in total four storage operations
+and four fetch operations are needed. In addition, the results of $o_1$,
+$o_2$ and $o_3$ stay in the storage unit at the same time, so that the
+capacity requirement of the storage unit is three. 
+In the schedule in \figname~\ref{fig:pcr}(c) with the execution order
+$o_1\to o_2\to o_5 \to o_3 \to o_4 \to o_6\to o_7$,
+however, there are only three store and three fetch operations,
+leading to a storage capacity of only two units. 
+In addition, the execution
+time of the assay in the second schedule is even shorter. 
+
+The comparison of the two schedules in \figname~\ref{fig:pcr}(b) and
+\ref{fig:pcr}(c) demonstrates that the schedule scheme affects the 
+transportation of fluid samples as well as the required capacity of the storage unit, 
+and the execution time of the assay may be unnecessarily prolonged if storage
+and transportation are not considered.
+This important problem, however, has not been dealt with by previous
+methods.
+%which only focus on reducing the execution time of the assay.
+%Note in \figname\ref{fig:pcr}(b) the operation $o_6$ is scheduled before
+%$o_5$. If $o_5$ were scheduled before $o_6$, even more storage usage is
+%required because the result of $o_4$ should also be stored.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/device_storage.pdf_tex}
+\caption{Storage mechanisms. (a) Storage with dedicated unit. (b) Channel
+storage. (c) Port of dedicated storage unit.}
+\label{fig:device_storage}
+}
+\end{figure}
+
+When a fluid sample is stored, it is transported to the storage unit through a
+channel. The diagram of a simple chip with one mixer and one storage unit is
+shown in \figname~\ref{fig:device_storage}(a). When this chip is used to execute
+the operation $o_1\to o_2\to o_5$ in the schedule in
+\figname~\ref{fig:pcr}(c), the mixer first stores the result of $o_1$ in the
+storage unit. After $o_2$ is finished, the result of $o_1$ is fetched back to
+the mixer to execute the operation $o_5$. 
+%
+%In this process, the result of $o_1$
+%needs only to be moved out of the mixer and stored somewhere temporarily, not
+%necessarily in the storage unit. If we remove the storage unit 
+In this case, %only 
+%the result of $o_1$ can be cached in 
+the channel itself is sufficient to store the intermediate result from $o_1$,
+instead of a dedicated
+storage unit, as shown in \figname~\ref{fig:device_storage}(b).
+%Note here the channels from the inputs $i_1 \dots i_7$ are not shown. 
+%Similarly, 
+This example demonstrates that
+fluid samples can in fact be cached %in the chip 
+within temporary
+storage constructed from channel segments. This distributed storage can also  
+%Using channels to cache intermediate fluid samples can 
+overcome the bandwidth limit problem at the ports of the dedicated storage unit
+illustrated in \figname~\ref{fig:valve_mixer_storage}(c) 
+and \figname~\ref{fig:device_storage}(c), 
+%a port of the dedicated storage unit is
+%designed in the style of a multiplex. When the storage unit is accessed, the valves
+%to one cell is opened to allow the fluid sample to flow in. The other valves are closed to
+where multiple fluid samples must be queued when they access the storage unit
+simultaneously.
+
+\begin{figure}
+\figurefontsize
+\centering
+%\includegraphics[width=3.00in,height=1.50in]{Fig/valveSharing.eps}
+\input{Fig/flow_path_example.pdf_tex}
+\caption{Constructing flow paths.(a) Sequencing graph. (b) Scheduling and binding information. (c) A flow paths built on a given architecture.}
+\label{fig:motivation}
+\end{figure}
+
+%how liquids are mopved in reality. Introduce ports and waste
+
+To execute assays on microfluic biochips, fluids need to be moved according to the architectures of the biochips as well as the scheduling and binding information. To be more specific, fluids are moved through the exact routes and at the exact time as they need to be. Continuous-flow microfluic biochips manipulate continuous fluid flows through etched channel segments. External pressure sources or mechanical pumps generate pressure to drive liquids through certain pre-defined routes of channels and connected by vavles. At the end of such a route, a waste port is connected to dipense the fluids that are not needed any more. At the same time, the pressure from the pump through the channel segments is also released to avoid channel breakage. These pre-defined routes to move certain liquids to their desinations are called flow paths, which need to be calculated before assays are executed on biochips. 
+%To calculate flow paths, biochip architectures and scheduling and binding information need to be given before hand.  
+
+An actual flow path needs to join a pump port, the liquid's orginal location, the liquid's destination and a waste port together. Fig.\ref{fig:motivation} demonstrates how to build a flow path on a given biochip architecture. The liquid generated by the operation $o_1$ and stored in the device $d_1$ needs to be moved to the device $d_3$. A flow path connecting a pump port, $d_1$, $d_3$ and a waste port is constructed accordingly. Note that the flow path needs to bypass the devices that other operations are running on and channel segments caching  intermediate liquids. 
+
+\begin{figure}
+\figurefontsize
+\centering
+%\includegraphics[width=3.00in,height=1.50in]{Fig/valveSharing.eps}
+\input{Fig/space_conflict.pdf_tex}
+\caption{Flow paths concurrency. (a) Scheduling and binding information. (b) Flow paths space conflicts.}
+\label{fig:demo_1}
+\end{figure}
+
+
+\begin{figure}
+\figurefontsize
+\centering
+%\includegraphics[width=3.00in,height=1.50in]{Fig/valveSharing.eps}
+\input{Fig/postpone_example.pdf_tex}
+\caption{Resolve flow paths concurrency. (a) Postpone certain flow paths. (b) Construct flow paths without dealing with space conflicts. (c) The original scheduling and binding information. (d) Construct flow paths with newly added resources}
+\label{fig:demo_2}
+\end{figure}
+
+Flow paths could occur concurrently. From the schedule showed in Fig.\ref{fig:demo_1} (a) we can see that the flow path $f_1$ and the flow path $f_2$ both begin their transportation at the $t_1$ moment and end at the $t_2$ moment. The flow path $f_1$ carries the liquid from $d_1$ to $d_3$, while the flow path $f_2$ carries the liquid from $d_2$ to $d_4$. Since these two flow paths run simultaneously, they cannot have space conflicts. In other words, they cannot share the same pump ports, waste ports, switches or channel segments, otherwise, contamination may occur. 
+
+In this case, it is impossible to construct such two flow paths because the switches and channel segments are sparse in this biochip architecture. There are two approaches to deal with this situation. The first one is to alter the schedule to eliminate the concurrency between $f_1$ and $f_2$, as Fig.\ref{fig:demo_2} (a) shows. The altered schedule put $f_1$ and $f_2$ in different time periods, so the flow paths could be constructed without considering the space conflicts. Another approach to deal with concurrency is to add new channels and switches to the original biochip architecture. Fig.\ref{fig:demo_2} (d) gives an example to add channel segments $e_1$ to the original biochip. With the help of the newly added channel segment, $f_1$ and $f_2$ could be bulit without any space conflicts. 
+
+
+
+Considering storage minimization during scheduling, channels as distributed
+storage and flow path construction,
+% we design a biochip with high execution and fewer resource usage. The 
+we can describe the synthesis problem as follows:
+
+\begin{easylist}
+&\textit{Inputs}: The sequencing graph of a biochemical assay;
+the execution times of all operations; the maximum numbers of devices allowed
+in the chip.
+
+&\textit{Outputs}: A schedule minimizing intermediate fluid storage; a channel
+caching schedule including the locations and the time slots 
+of fluid samples stored temporarily in channels; a biochip architecture with the exact flow paths to manipulate the fluid samples.
+
+&\textit{Objectives}: Minimizing overall resource usage; maximizing the
+performance/execution efficiency of the biochip.
+\end{easylist}
+
+

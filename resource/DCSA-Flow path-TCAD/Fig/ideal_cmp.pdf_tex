@@ -1,0 +1,76 @@
+%% Creator: Inkscape inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ideal_cmp.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{249.99288772bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.46387208)%
+    \put(0,0){\includegraphics[width=\unitlength]{ideal_cmp.pdf}}%
+    \put(0.05285676,0.0473651){\rotatebox{-41.44913997}{\makebox(0,0)[lb]{\smash{RA30}}}}%
+    \put(0.14194345,0.0473651){\rotatebox{-41.44913997}{\makebox(0,0)[lb]{\smash{IVD}}}}%
+    \put(0.23103276,0.0473651){\rotatebox{-41.44913997}{\makebox(0,0)[lb]{\smash{PCR}}}}%
+    \put(0.02682022,0.16981579){\makebox(0,0)[lb]{\smash{5}}}%
+    \put(0.01475168,0.32313856){\makebox(0,0)[lb]{\smash{10}}}%
+    \put(0.00995546,0.03918077){\rotatebox{90}{\makebox(0,0)[lb]{\smash{Execution Time $\times (10^2$)}}}}%
+    \put(0.40164432,0.04805278){\rotatebox{-40.30979331}{\makebox(0,0)[lb]{\smash{RA30}}}}%
+    \put(0.49073363,0.04805278){\rotatebox{-40.30979331}{\makebox(0,0)[lb]{\smash{IVD}}}}%
+    \put(0.57982033,0.04805278){\rotatebox{-40.30979331}{\makebox(0,0)[lb]{\smash{PCR}}}}%
+    \put(0.36354187,0.1762862){\makebox(0,0)[lb]{\smash{10}}}%
+    \put(0.36354187,0.32356549){\makebox(0,0)[lb]{\smash{20}}}%
+    \put(0.35207981,0.08985054){\rotatebox{90}{\makebox(0,0)[lb]{\smash{Number of Edges}}}}%
+    \put(0.74886012,0.04832233){\rotatebox{-37.3129768}{\makebox(0,0)[lb]{\smash{RA30}}}}%
+    \put(0.83794681,0.04832233){\rotatebox{-37.3129768}{\makebox(0,0)[lb]{\smash{IVD}}}}%
+    \put(0.92703612,0.04832233){\rotatebox{-37.3129768}{\makebox(0,0)[lb]{\smash{PCR}}}}%
+    \put(0.71075504,0.19210467){\makebox(0,0)[lb]{\smash{25}}}%
+    \put(0.71075504,0.32441884){\makebox(0,0)[lb]{\smash{50}}}%
+    \put(0.7007208,0.08391336){\rotatebox{90}{\makebox(0,0)[lb]{\smash{Number of Valves}}}}%
+    \put(0.1740227,0.44159308){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Optimize execution }}}%
+    \put(0.54203317,0.44253067){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Optimize execution }}}%
+    \put(0.1740227,0.40912332){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{time only}}}%
+    \put(0.54203317,0.41006097){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{time and storage}}}%
+  \end{picture}%
+\endgroup%

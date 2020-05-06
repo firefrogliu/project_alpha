@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\begin{axis}[
+% x=1.1cm, y=0.25cm, ymax=12, line width=0.75pt,
+x=1.1cm, y=0.5cm, ymax=3, line width=0.75pt,
+ylabel={Assay Execution Time}, ylabel shift=-6pt, 
+xtick={1,...,6},xticklabels={RA100, RA70, CPA, RA30, IVD, PCR},
+x tick label style={rotate=330, xshift=-15pt,yshift=-5pt,anchor=west}, 
+xticklabel pos=left, xtick align=outside, xtick pos=left,
+ytickmin=0,ytickmax=3,
+% ymin = 0,
+% ymax = 1,
+ytick={0,0.5,1.0,1.5,2.5}, yticklabels={0,500,1000,1500,2500},
+legend columns=2, legend style={at={(0.5,0.9)}, anchor=center, nodes={inner xsep=2pt},
+draw=none, column sep=1pt},
+ybar=0pt, bar width=7
+]
+
+   \addplot[line width=0.5pt, black, fill=orange!70!white] table[x=cir,y=edge] 
+{port_valve_number.dat};
+   \addplot[line width=0.5pt, black, fill=blue!65!orange] table[x=cir,y=valve] 
+{port_valve_number.dat};
+   \addplot[line width=0.5pt, black, fill=blue!40!orange] table[x=cir,y=valve2] 
+{port_valve_number.dat};
+   \legend{Edge\hspace*{9pt}, Valve\hspace*{8pt}}
+\end{axis}
+\end{tikzpicture}

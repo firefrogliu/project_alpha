@@ -1,0 +1,30 @@
+\renewcommand{\tabcolsep}{2.4pt}
+\begin{table}[t] 
+\centering
+{\small
+\renewcommand{\arraystretch}{1.2}
+\caption{Results of DFT Augmentation} \label{tb_test}
+\begin{tabular}{|l|r|r|r|r|r|r|r|r|r|} \hlinewd{0.7pt}
+\multicolumn{1}{|c|}{Assay} &
+\multicolumn{3}{c|}{IVD (12 op.)} &
+\multicolumn{3}{c|}{PID (38 op.)} &
+\multicolumn{3}{c|}{CPA (55 op.)} \\
+
+%\cline {1-2} 
+%\cline{4-7} \cline {9-10}  \cline {12-15} \cline {17-17}
+\hlinewd{0.6pt}
+%\hlinewd{0.2pt} 
+\multirow{2}{2.5cm}{IVD\_chip (3 mixers, 2 detectors, 12 valves)} 
+                           &6  & 6  &247 & 7  &7    &497 & 7   &   7&292 \\\cline {2-10} 
+                           &270& 580&310 & 840& 1030&890 & 1220&1320&1320\\\cline {1-10} 
+\multirow{2}{3cm}{RA30\_chip (2 mixers, 3 detectors, 16 valves)}
+                           &6  &   6& 231& 6  & 6   &661 & 6   &6   &373 \\\cline {2-10}
+                           &270& 440&280 & 950&1100 &940 & 1140&1190&1190\\\cline {1-10}
+\multirow{2}{3cm}{mRNA\_chip (3 mixers, 1 detectors, 28 valves)}
+                           &4  &4   &612 &4   & 4   & 733&4    & 4  &892\\\cline {2-10}
+                           &580&580 &580 &860 & 920 & 880&1640 &1640&1640\\
+\hlinewd{0.7pt}
+\end{tabular}
+}
+\end{table}
+%

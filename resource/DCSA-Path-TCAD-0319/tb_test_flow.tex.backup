@@ -1,0 +1,60 @@
+\renewcommand{\tabcolsep}{1.29pt}
+\begin{table}[t] 
+\centering
+{\small
+\renewcommand{\arraystretch}{1.1}
+\caption{Results of Scheduling and Synthesis}
+\label{tb_test}
+\begin{tabular}{lr r rr r rrrrrr r rrrr} \hlinewd{0.7pt}
+
+\multicolumn{2}{c}{} &
+
+\multicolumn{1}{c}{} &
+
+\multicolumn{2}{c}{Scheduling} &
+
+\multicolumn{1}{c}{} &
+
+\multicolumn{4}{c}{Arch. Syn.} & 
+\multicolumn{1}{c}{} &
+\multicolumn{4}{c}{Phys. Des.}  \\
+
+%\cline {1-2} 
+\cline{4-5} \cline {7-10}  \cline {12-15} 
+
+\multicolumn{1}{c}{Assay}&
+\multicolumn{1}{c}{|O|} &
+
+\multicolumn{1}{c}{} &
+
+\multicolumn{1}{c}{$t^E$} &
+\multicolumn{1}{c}{$t_s(s)$} & 
+
+\multicolumn{1}{c}{} & 
+
+\multicolumn{1}{c}{G} &
+\multicolumn{1}{c}{$n_e$} & 
+\multicolumn{1}{c}{$n_v$} &
+\multicolumn{1}{c}{$t_r(s)$} &
+
+\multicolumn{1}{c}{} &
+
+\multicolumn{1}{c}{$d_r$} &
+\multicolumn{1}{c}{$d_e$} &
+\multicolumn{1}{c}{$d_p$} &
+\multicolumn{1}{c}{$t_p(s)$} \\
+
+\hlinewd{0.6pt}
+%\hlinewd{0.2pt} 
+
+RA100 &100&  &1820 &1800  & &5$\times$5    &32 &58 &1867 & & 20$\times$20 &26$\times$26 &16$\times$16&68.88 \\ 
+RA70  &70 &  &1180 &1800  & &4$\times$4    &20 &38 &1819 & & 15$\times$15 &21$\times$21 &11$\times$12&25.37 \\
+CPA   &55 &  &1070 &1800  & &4$\times$4    &20 &40 &1817 & & 15$\times$15 &21$\times$21 &11$\times$13&18.45 \\
+RA30  &30 &  &670  &300   & &4$\times$4    &8  &16 &1800 & & 15$\times$10 &21$\times$16 &13$\times$9 &0.13 \\
+IVD   &12 &  &280  &<1    & &4$\times$4    &5  &10 &25   & & 10$\times$5 &16$\times$9  &12$\times$5 &0.03 \\
+PCR   &7  &  &290  &<1    & &4$\times$4    &5  &8  &20   & & 5$\times$10 &7$\times$14  &4$\times$8  & 0.01\\
+\hlinewd{0.7pt}
+\end{tabular}
+}
+\end{table}
+%

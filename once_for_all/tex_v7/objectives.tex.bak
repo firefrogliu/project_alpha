@@ -1,0 +1,1196 @@
+%\clearpage
+\section{Objectives and work programme}
+\subsection{Anticipated total duration of the project}
+%36 months
+Three years
+
+\vskip 10pt
+\subsection{Objectives}
+
+\revadd{The major objective of this project is to 
+develop computer algorithms for design automation of microfludic biochips. Based
+on fundamental components such as valves and devices and design constraints, 
+efficient microfluidic architectures 
+will be synthesized automatically. The resulting design framework will be capable of offloading
+design tasks from chip designers by computer algorithms
+and assisting them to explore new chip designs efficiently. }
+
+
+From the perspective of computer-aided design,
+synthesis of microfluidic biochips can be partitioned 
+into three levels. At
+the lowest level, valve activities and flow transportation are investigated. 
+%to generate an efficient chip architecture. 
+The task of this step % micro-synthesis aims
+is to generate an efficient chip architecture for a given bioassay or
+multiple bioassays automatically. 
+The second level of synthesis deals with special requirements of washing and
+flow-/control-layer codesign. The result of this synthesis is overlaid upon
+the biochip architecture generated in the previous step to form a complete
+architecture-schedule solution. Since the first two steps focus on concrete
+behavior of basic components such as valves and channels, they are called
+\textit{microsynthesis} henceforth.
+Biochips considered in microsynthesis are 
+\begin{wrapfigure}[22]{r}{0.53\textwidth}
+{
+\vskip 2pt
+\figurefontsize
+\centering
+\input{Fig/task_relation.pdf_tex}
+\caption{Synthesis levels for biochips.} 
+\label{fig:task_relation}
+}
+\end{wrapfigure}
+relatively small-scale due to
+the scalability challenges in optimizing exact switching activities of all
+valves and flow transportation tasks. 
+These biochips %of this scale 
+are very useful in small biochemical labs or in the scenarios such
+as point-of-care test. 
+
+With the advance of manufacturing technology, 
+the integration density of biochips has increased tremendously.
+%For example, recent manufacturing technologies have enabled a
+%valve density reaching 1 million per cm$^2$ %\si{\square\centi\metre}
+%\cite{C2LC40258K}. 
+Correspondingly, a bioassay executed by a biochip of this scale also
+contains a very large number of operations for resource-intensive
+applications, e.g., exhaustive diagnoses for illness detection.
+Therefore, synthesis of biochips at the highest level, or macrolevel, 
+thus called \textit{macrosynthesis} henceforth,
+deals with the challenges considering a large-scale system integration.
+%are investigated. 
+
+The synthesis techniques of the three levels form a comprehensive tool chain
+for flow-based biochips. %At the last stage of synthesis, 
+%Afterwards, the
+%A generated biochip and its execution schedule are integrated into
+%a cyber-physical system. Sensors and/or cameras in such a system
+%are used to assist the execution of bioassays, specially those 
+%with non-deterministic execution duration, and
+%In addition, this
+%cyber-physical integration also 
+%to enable innovative test methods to detect 
+%manufacturing 
+%faults.  
+The relation of these tasks from architectural synthesis to cyber-physical
+integration is illustrated in
+\figname~\ref{fig:task_relation}.
+\revadd{Since it is challenging to deal with these tasks by designers manually for
+complex microfluidic systems, the goal of this project is thus to develop design 
+automation algorithms to assist designers to deal with them. 
+This scenario is similar to the case that EDA companies contribute in 
+the general scope of semiconductor industry, where
+%. Although the 
+%EDA companies do not build ICs directly, 
+they assist designers by developing software tools to manage the exploding design details of complex
+ICs.}
+
+In this project, we will focus on micro- and macrosynthesis of biochips to
+generate efficient biochip 
+%architectures 
+designs
+automatically. 
+The unique characteristics of biochips discussed in the previous section 
+will be incorporated into this synthesis process. Furthermore, the interaction
+of the automatically generated biochip 
+%architectures 
+designs
+with sensors and cameras in
+cyber-physical systems will be investigated.
+%together with our
+%collaboration institutes.
+This %interdisciplinary 
+project will demonstrate the effectiveness of 
+design automation algorithms in improving the performance and reliability of
+biochips. More importantly, it will bridge microfluidic technologies 
+with real-world applications using the developed tool chain to realize the great potential of
+microfluidic biochips. 
+%will be unleashed to benefit the everyday life of human beings.
+ 
+\subsubsection{Microsynthesis of microfluidic biochips}
+
+
+
+%Synthesizing a biochip aims to generate a chip architecture that
+%can execute a bioassay efficiently. 
+%The major steps of this synthesis process are
+%shown in \figname~\ref{fig:biochip_synthesis}. 
+Since microsynthesis deals with compact 
+biochips that only contain a small number of devices,
+%During micro-synthesis, 
+%the number of devices in a biochip
+%executing the operations in an assay 
+%is usually not large due to cost,
+%much smaller than the number of operations, 
+operations need to be arranged along the timeline to reuse devices.
+Consequently, operations are assigned in queues at devices, such as the schedule in
+\figname~\ref{fig:biochip_synthesis}(a). 
+%To determine device assignment and
+%time slots for operations, or operation scheduling, 
+%%This operation scheduling 
+%is very similar to task scheduling in high-level synthesis 
+%for integrated circuits \cite{Micheli94}. 
+%From the scheduled tasks known, 
+With this schedule,
+a biochip architecture is generated automatically that
+carries out the operations and the transportation tasks 
+between devices.
+%efficiently. 
+To reduce the execution time of the bioassay, 
+operations should
+not wait 
+\begin{wrapfigure}[33]{r}{0.4\textwidth}
+{
+%\vskip -2pt
+\figurefontsize
+\centering
+\input{Fig/schedule_storage_p.pdf_tex}
+\caption{Storage reduction. (a) Sequencing graph. 
+(b) Schedule with two storage requirements. (c) Schedule
+with one storage requirement. The execution 
+times of the bioassay with these two schedules are equal.}
+\label{fig:schedule_storage_p}
+}
+\end{wrapfigure}
+at devices unnecessarily longer than required. In addition,
+transportation tasks should affect the execution of operations as little as
+possible by moving fluid samples to target devices on time. 
+%that can execute the
+%schedule and fulfill the transporation tasks between devices is
+%derived. 
+%For the architecture, 
+%%In the last step, 
+%a physical design containing the locations of
+%devices and the connection of transportation channels 
+%can be produced as the input data for manufacturing.
+
+
+%\clearpage
+\subsectitle{Storage minimization during scheduling}
+
+%Synthesizing biochips, however, requires a storage model different from the one in
+%high-level synthesis for integrated circutis. 
+When devices in a biochip execute operations according to a schedule, the resulting
+fluid samples of some operations may not be used immediately. 
+Consequently, these fluid samples need to be stored in the chip temporarily. 
+%Since fulid samples have a physical volume, 
+%intemediate results of operations should moved to 
+%be allocated some space
+%on the chips 
+%should be stored temporarily on the chip before they are
+%used as inputs of further operations. 
+The durations of these storage requirements affect %the size of 
+the overall execution time of the bioassay, because improper storage may block the
+transportation of other fluid samples. In addition, a large number of
+simultaneously stored fluid samples consume many resources and 
+require a large area
+due to their physical volume.
+
+Assume that the pure transportation time from a device to another device 
+%or the storage channel 
+in a biochip is a constant $u_c$. 
+If an intermediate fluid sample needs to wait for a time larger than $u_c$ before
+it is used, it must 
+%schedule 
+%produces a transportation time larger
+%than $u_c$, the corresponding fluid sample 
+be stored somewhere in the chip temporarily. %before it is  used. 
+Figure~\ref{fig:schedule_storage_p}(b)--(c) illustrates
+two schedules of executing the bioassay in \figname~\ref{fig:schedule_storage_p}(a)
+%with five operations 
+using two mixers.
+In \figname~\ref{fig:schedule_storage_p}(b),
+operation $O_2$ is scheduled before $O_3$. 
+Since the result of $O_2$ must be stored until it is used by $O_4$ and $O_5$, 
+half of the mixing result of $O_2$ 
+needs to be transported to a location for storage $O_2\to O_4$, which starts $u_c$
+time after $O_2$ finishes.
+Thereafter, the other half of the mixing result is %similarly  
+moved out 
+%of Mixer2 
+to initiate storage $O_2\to O_5$.
+Consequently, two storage requirements are generated from this schedule. %lasting six time units in total. 
+Since the lifespans of 
+these storage requirements 
+overlap, the storage capacity
+of the biochip should be at least two units.
+To reduce the storage requirement, $O_3$ can actually be scheduled before $O_2$ as
+shown in \figname~\ref{fig:schedule_storage_p}(c). In this schedule, half of 
+the result of $O_2$ is 
+transported to Mixer1 and $O_5$ starts after the storage $O_3\to O_5$ is
+fetched into Mixer2. This improved schedule generates
+only a single storage requirement, %lasting a shorter time.  
+while the overall execution time of the bioassay is not changed. 
+%four time units. 
+%Although these two schedules lead to the same execution time for the assay, 
+%the additional storage requirements in \figname~\ref{fig:schedule_storage}(b) 
+
+In this example, we can observe that
+%should be met by more resource built in the chip. 
+the lifespan of a stored fluid sample is determined by the difference between
+the ending time of the parent operation $O_i$ and the starting time of the child
+operation $O_j$, denoted by $u_{i,j}$,  e.g., $u_{2,4}$ in \figname~\ref{fig:schedule_storage_p}(b).
+%
+To reduce storage requirements, we introduce a \textit{storage
+minimization objective} and minimize the intermediate storage requirements
+when scheduling operations to devices by solving
+%
+%the total time of all storage requirement together with the minimum execution
+%time of the assay by solving the ILP problem below.
+\begin{align} 
+\text{\textit{Minimize}} & \quad \alpha t^E+\beta\sum_{e_{ij}\in
+\mathcal{E}\bigwedge d_i\ne
+d_j }u_{i,j} 
+ \label{eq:min_storage_obj}
+%\text{subject to} & \quad
+%\text{(\ref{eq:uniqueness})--(\ref{eq:latest_finishing}})\label{eq:op_cond}
+\end{align}
+%where $\sum_{\substack{(o_i,o_j)\in O\\d_i\ne d_j  }}(u_{i,j}-u_c)$ is the
+%total storage
+%time in the schedule. 
+where $t^E$ is the total execution time of the bioassay similar to the
+definition in
+\cite{Micheli94}, %execution time and storage requirement minimization,
+$\mathcal{E}$ is the set of the edges in the sequencing graph, and 
+$e_{ij}\in \mathcal{E}$ limits storage minimization to operation pairs with a direct
+edge in the sequencing graph.
+$d_i$ and $d_j$ represent to which devices operations $O_i$ and $O_j$ are
+assigned, respectively. Therefore, $d_i \ne d_j $ excludes the operation pairs assigned to the same device
+where no transportation is needed.
+The two constants $\alpha$ and $\beta$ 
+control the priority of the optimization objectives. The other
+constraints of this optimization problem are the same as those defined 
+for high-level synthesis of digital circuits \cite{Micheli94}. 
+After solving (\ref{eq:min_storage_obj}), 
+a schedule
+like \figname~\ref{fig:schedule_storage_p}(c) instead of 
+\ref{fig:schedule_storage_p}(b) is generated as the input to architectural
+synthesis in the next step.
+%The challenge of this task is that solving (\ref{eq:min_storage_obj})
+%directly might be very time-consuming and efficient heuristic techniques
+%need to be developed accordingly.
+
+\revadd{During scheduling, if no device reuse is allowed in the biochip, 
+a device can only execute one
+operation. The technique above, however, can still be applied 
+to determine the relative execution relation of operations more efficiently
+than manual design.}
+
+\subsectitle{Architectural synthesis with distributed channel storage}
+\label{sec:arch_syn}
+
+The schedule of a biochip specifies when and by which devices operations are executed. 
+In addition, it states
+when and where transportation requirements between devices appear.
+%after operations are executed. 
+To carry out operations and fulfill transportation tasks efficiently, 
+the relative locations of devices as well as the
+channels connecting them should be determined. 
+%to conduct these transportation tasks.
+\revadd{The types of the devices, e.g., mixers, heaters and filters, correspond to the
+types of the operations to be executed. These types are specified by the
+designer of the bioassay and have no influence in 
+determining the placement of the devices, because only the relation of flow transportation 
+affects the relative locations of the devices.}
+
+When fluid samples are moved along channels, they can stop the movement 
+and stay in a channel segment temporarily to avoid transportation conflict,
+as cars stop before a red traffic light to let cars of the other direction 
+pass. Namely, they can be cached in any channels in the biochip, 
+provided that the channel is not used for other transportation tasks. 
+After the conflict is resolved, they can resume the movement  
+toward target devices. This \textit{distributed channel storage} mechanism,
+or \textit{caching}, is a unique characteristic of biochips
+%significant difference 
+compared with %the storage units RAM in 
+electronic systems, where data must be stored in memory units such as RAM instead
+of on interconnect wires.  
+
+This distributed caching mechanism allows a high efficiency of storing and fetching of
+fluid samples by avoiding the bandwidth limit at the ports of a dedicated storage
+unit. In addition, accessing on-the-spot distributed channel storage 
+is more convenient because fluid samples can be cached close to the devices. 
+Furthermore, this feature enables a chip architecture with
+a unified representation of transportation and storage channels to
+%with which channel efficiency can also be improved significantly since 
+improve channel efficiency. 
+%we can move fluid samples along transportation channels and stop them when there is a
+%transportation conflict, just as in a road transportation system.
+
+
+%When a large assay is executed by several devices, 
+%transportation channels need to be built between nearly
+%any pair of devices to move fluid samples between devices efficiently.
+Since the flow layer in a biochip is only two-dimensional, 
+intersections between flow channels in a complex system
+usually cannot be avoided. At each intersection, a switch needs to be built 
+to direct the transportation flow to the target device. 
+A switch is constructed by four valves at an intersection, 
+as shown in \figname~\ref{fig:switch_grid}(a). At any
+given moment, two out of the four valves in a switch are opened to 
+connect two channel segments.  Consequently, 
+a fluid sample needs to travel through several channel segments connected by
+switches to reach the target device. 
+Correspondingly, these channel segments form a  
+%a transportation channel between two devices becomes a path,
+%formed by several channel segments connected by switches. 
+%Such a path is 
+\textit{transportation path} between two devices.
+
+%Besides channels, the locations of devices should also be determined.
+%These locations should be assigned together with the construction of 
+%transportation channels because the distance and relative locations of devices
+%affect how channels are constructed and how they intersect with each other.
+
+Considering devices and channels together, the architecture of a biochip can
+be described as devices connected by a network of channel segments. %in the form of a grid. 
+%This is different from normal IC design because crossing is allowed in this
+%architeture, but the channels crossing the same node should not be used at
+%the
+%same time to avoid contamination. 
+For example, the architecture of a biochip 
+with five devices is 
+shown in \ref{fig:switch_grid}(b), where solid nodes
+represent switches and circles represent devices. 
+Transportation paths between devices are
+formed from channel segments and connected by switches. %such as path 1 and path 2.
+%in \figname~\ref{fig:switch_grid}(b).
+Since transportation paths are used only when there is a fluid sample
+traveling through them, channel segments can be reused by
+different paths to increase efficiency. %of channel segments can be increased.
+For example,  path 
+1 and path 2 in \figname~\ref{fig:switch_grid}(b) 
+share a common channel segment which they use at different times.
+
+
+
+%With transportation paths formed from channel segments, 
+On the network of channel segments,
+distributed channel storage can be formed to replace
+%In addition, the fluid storage need also be implemented in the
+%chip. 
+the dedicated storage unit in \figname~\ref{fig:biochip_arch}, which
+suffers a bandwidth problem at its ports. 
+%
+%Observing that the storage cells 
+%inside a dedicated storage unit
+%%that store fluid samples 
+%are in fact channel segments, we distribute the fluid storage
+%directly in channel segments. 
+For example, in
+\figname~\ref{fig:switch_grid}(c), along path 3 a fluid sample is moved to the
+channel segment between A and B. However, 
+the next operation using this 
+fluid sample is scheduled later, so that the fluid sample must stay in the
+channel segment. During the lifespan of this storage, the channel segment
+between A and B cannot be used by other paths 
+and the valves at the two ends of this channel segment must be closed.
+Consequently, other transportation tasks between devices 
+need to be fulfilled by paths that 
+do not include this channel segment, 
+such as path 4 and 5 in \figname~\ref{fig:switch_grid}(d).
+When the cached fluid 
+%
+\begin{wrapfigure}[35]{r}{0.40\textwidth}
+{
+%\vskip 8pt
+\figurefontsize
+\centering
+\input{Fig/switch_grid.pdf_tex}
+\caption{Switch and channel storage. Circles represent devices and solid
+nodes represent switches.  (a) Switch structure. (b) Two transportation paths
+sharing one channel segment with time multiplexing. (c) Fluid sample to
+channel storage. (d) Storage in channel segment. (e) Fluid sample from channel
+storage to device. (f) Connection grid for architectural synthesis.}
+\label{fig:switch_grid}
+}
+\end{wrapfigure}
+%
+sample is finally needed, it is moved to the target
+device again by a newly 
+constructed transportation
+path, which is shown as path 6 
+in \figname~\ref{fig:switch_grid}(e).
+
+%Unlike the dedicated storage unit shown in
+%\figname~\ref{fig:valve_mixer_storage}(c), the distributed storage in a
+%channel segment has a higher access efficiency. 
+%When a fluid sample stays in a channel segment,
+%that segment is turned into a \textit{storage segment}. When the
+%fluid sample moves again, the segment becomes a part of 
+%the transportation path. 
+The concept of 
+%channel role switching %between transportation and storage
+distributed channel storage
+unifies transportation and storage.
+%so that a dedicated storage unit is not required anymore. Consequently, the
+%efficiency
+%increases channel usage significantly. 
+%because 
+%the low-efficiency channels forming storage cells 
+%are therefore excluded completely from the
+%biochip. 
+%to exclude the channel segments and valves 
+%in the dedicated storage unit as shown in \figname~\ref{fig:biochip_arch}.
+%In addition, this on-the-spot caching is closer to the target
+%device than a dedicated storage unit, so that the execution efficiency of
+%the bioassay can also be improved.
+Therefore, we can
+synthesize the architecture of a biochip from its schedule using
+% requires to
+%determine the relative locations of devices 
+%as well as channel segments and the switches connecting them as the examples
+%in  \figname~\ref{fig:switch}(b)--(e).  
+%The exact locations of devices and switches are, however, not important 
+%at this stage. 
+%The devices, switches and their connections together are called 
+%\textit{connection graph}. %nodes edges} 
+%A valid connection graph should be capable of
+%constructing all transportation paths specified in the schedule and caching
+%intermediate fluid samples in channel segments. 
+%To reduce resource usage, the synthesized connection graph 
+%should contain as few edges as possible. 
+%The connection graph is generated using 
+a virtual \textit{connection grid} as shown in \figname~\ref{fig:switch_grid}(f). 
+At each node on the grid, 
+either a device or a switch can be assigned. An edge on the grid represents
+a channel segment capable of caching a fluid sample.
+%The transportation channels are contructed by the
+%channel segments. 
+%
+%At each channel segment, we can cache one fluid sample. To
+%determine on which nodes the devices are assigned and to construct the
+%transportation channels, we establish a ILP formulation. In solving the
+%optimization problem, we minimize the number of edges in the grid used by
+%transportation channels, so that only the minimum connections are kept in the
+%final result of architectural systhesis.
+%
+%In the connection grid, a node is denoted by $n_i$ and an edge is denoted 
+%by $e_j$, where $i$ and $j$ are the node and edge indexes, respectively.
+The task of architectural synthesis thus becomes to determine locations of
+devices and build time-multiplexing transportation channels on the grid.
+After architectural synthesis, all unused channel segments and switches in the virtual
+connection grid will be removed to reduce chip area.
+
+In architectural synthesis, we need to reduce resource usage 
+while guaranteeing that the schedule can be executed correctly. Therefore, we 
+describe the architectural synthesis task as an optimization problem, as
+\begin{align} \label{eq:min_channel_obj}
+&\text{\textit{Minimize}}  \quad \text{Number\_of\_channel\_segments}\\ 
+&\text{s.t.}  \quad \text{Each device is assigned once on the grid;} \\
+& \qquad\;\,  \text{Simultaneous transportation paths should } \nonumber\\
+&\qquad\;\, \text{not intersect;} \label{non_intersetion_cons}\\
+&\qquad\;\,\text{Channel storage should be isolated from}\nonumber\\
+&\qquad \;\,\text{other paths;} \\
+&\qquad\;\,\text{Scheduled operations are executed on time.}
+\end{align}
+%where $\sum_{\substack{(o_i,o_j)\in O\\d_i\ne d_j  }}(u_{i,j}-u_c)$ is the
+%total storage
+
+The non-intersecting constraint (\ref{non_intersetion_cons}) for a simple path, e.g., $p_r$ in
+\figname~\ref{fig:switch_grid}, can be expressed as that the number of edges incident  
+to a node on the path should not exceed two.
+%specified by the number of edge incident to the nodes on a path.   
+However, it becomes more complex when a storage is involved.
+For example, the sub-paths $p_{r,1}$, $p_{r,2}$ and $p_{r,3}$
+in \figname~\ref{fig:switch_grid}(f) represent the three phases of a channel
+storage. While $p_{r,1}$ and $p_{r,3}$ can be considered as normal
+transportation paths, $p_{r,2}$ should be processed specially because the two
+ending nodes of the channel segment can be used by paths conducting other
+transportation tasks, such as $p_r'$ in \figname~\ref{fig:switch_grid}(f). 
+
+\revadd{In solving the optimization problem, the minimization of the number 
+of channel segments built in the biochip also generates a compact architecture, because devices
+and edges used to construct transportation paths tend to be close to each
+other due to the optimization objective, no matter whether devices can be
+reused in executing operations or not. Afterwards,
+the locations of devices
+are determined as indicated by the variables associated to the nodes. }
+
+Since determining an optimal chip architecture on a connection grid is an
+NP-hard problem due to the complex combinations of device locations and their
+connections, heuristic strategies need to be deployed. For example, the
+relative locations between devices can be preconfigured according to the
+transportation requirements between samples produced by them. In addition,
+nonregular connection grid structures may be explored to reduce the
+computational effort. 
+ 
+\subsectitle{Volume management and washing}
+\label{sec:volume_washing}
+
+\begin{wrapfigure}[15]{R}{0.32\textwidth}
+{
+\vskip -13pt
+\figurefontsize
+\centering
+\input{Fig/volume_washing.pdf_tex}
+\caption{Volume management and washing.}
+\label{fig:volume_washing}
+}
+\end{wrapfigure}
+
+A special characteristic of biochips is that volumes of fluid samples
+should be managed during execution of a bioassay. For example, in
+\figname~\ref{fig:sequencing_graph}, the mixer executing $O_{10}$ can
+accept only half of the volumes from $O_7$ and $O_9$, and the other half needs to
+be disposed of to the waste.
+%Specially, 
+This volume management should be dealt with very often in
+diagnosis-purposed bioassays, where usually only the result of the
+final detection operation is important. 
+In practice, 
+%However,
+there is still flexibility in managing fluid volumes. For example, 
+a half of the result from $O_8$ can be disposed of before $O_9$ or after $O_9$.
+In synthesizing a biochip, these implicit volume management requirements 
+as well as the optimal time to deal with them
+should be identified by the synthesis tool automatically.
+Thereafter, additional flow paths should be constructed to move 
+superfluous volumes to the waste port, such as the waste path shown in the
+upper left corner in
+\figname~\ref{fig:volume_washing}.
+
+Another implicit requirement in biochip synthesis is washing.
+During the execution of a bioassay, after some channel segments are 
+used either by normal transportation paths or
+waste paths, they should be washed before they can be used for normal fluid
+transportation again. 
+However, washing operations can be postponed if there are still enough 
+clean channel segments to construct new transportation paths. 
+%In performing washing operations, washing paths can be 
+%constructed from clean and used channel segments together.
+Consequently,
+channel segments can be combined into as few washing tasks as possible 
+to improve washing efficiency.
+
+%The postponed washing mechanism can improve the washing efficientcy
+%significantly. 
+Unlike flow paths that transport fluid samples and reagents,
+washing can be performed blockwise instead of pathwise. For example, at
+a given moment, the valves on some switches can be closed 
+simultaneously to form a wall, as shown by the red dashed line in \figname~\ref{fig:volume_washing}.
+Afterwards, the left half of the biochip can be flushed at the same time. 
+Combined 
+with postponed washing operations,
+this technique can increase washing efficiency significantly by 
+collecting used paths together and washing them as a whole, instead of performing
+traditional pathwise washing operations. 
+Furthermore, fluid disposal can be combined with 
+washing
+operations, 
+%as in \figname~\ref{fig:volume_washing}, 
+because superfluous fluid to be disposed of and washing fluid all go 
+to the waste finally. Consequently, a global 
+strategy should be developed to schedule the waste 
+paths together
+with the introduced block-based washing, or flushing, 
+%technique 
+to reduce
+interference between these auxiliary functions and the normal 
+bioassay operations.
+
+
+\subsectitle{Flow-layer and control-layer codesign}
+
+
+Valves in a biochip are controlled by air pressure through 
+control channels. By switching between a high air pressure and 
+a low air pressure in a control channel, a valve can be
+closed or opened. In a large design, there may be many valves. If for each
+valve an independent control channel is constructed, the routing complexity
+becomes very demanding. In addition, for each independent control channel, an
+air pressure source 
+has to be provided, leading to an
+%tremendous 
+increase of
+cost. %of biochips.
+
+To reduce the number of independent valves, the patterns of valve switching
+can be synchronized. If two valves always share the same switching pattern, they can
+be connected to the same control channel. In real designs, 
+%this
+%synchronization may happen, but not very often, because 
+this synchronization is very often not possible, because 
+%%strictly if there is only one mismatch in the switching patterns of two valves, 
+even with a single mismatch in the switching patterns of two valves, 
+their control channels
+cannot be merged. To alleviate this problem, the switching patterns can be
+aligned by examining each 
+mismatching switching of two valves.
+If the state of a valve can be set to the state of the other valve
+without affecting the execution of the bioassay, this mismatching can then be
+resolved. 
+
+Since valve switching patterns are determined by the operations and
+transportation tasks, a codesign between flow layer and control
+layer should be performed. For example,  
+there are three valves inside a mixer to mix the fluid samples by peristalsis,
+as shown in \figname~\ref{fig:valve_mixer_chip}(b). 
+These valves are also shown in \figname~\ref{fig:control_layer}(a), 
+which is a
+part of the biochip in %the two mixers.
+\figname~\ref{fig:biochip_synthesis}(b). 
+If the three valves in each of these two mixers always switch with the same 
+pattern, they can share the same set of control channels. 
+In reality, this is a rare case since the operations executed by these
+mixers are usually not aligned in the schedule as shown in
+\figname~\ref{fig:schedule_storage_p}(c), where the valves in Mixer1 continue
+to switch after Mixer2 finishes 
+the execution of the operation $O_3$.
+
+%
+\begin{wrapfigure}[20]{r}{0.38\textwidth}
+{
+  \revspace{\vskip -13pt}
+\figurefontsize
+\centering
+\input{Fig/control_layer.pdf_tex}
+\caption{Flow- and control-layer cosynthesis.}
+\label{fig:control_layer}
+}
+\end{wrapfigure}
+%
+To improve the alignment of the valve switching activities, 
+operations can either be paused or their durations can be  
+extended provided that this extension does not affect the results. 
+%of the operation.
+For example, the 
+schedule in
+\figname~\ref{fig:schedule_storage_p}(c) can be revised to create 
+a new schedule shown in \figname~\ref{fig:control_layer}(b). In this
+case, $O_1$ is paused when 
+the result of $O_3$ is moved out of Mixer2. 
+When $O_2$ starts, $O_1$ resumes its execution.
+The execution of $O_2$ is also extended so that 
+its ending time is aligned with the ending time of $O_1$.
+Afterwards, $O_4$ is delayed 
+to align its starting time with the starting time
+of $O_5$. With these changes, the switching patterns of valves in the two mixers are
+completely aligned so that they
+can share the same set of control channels.
+
+In flow- and control-layer codesign, the overall execution time of the bioassay
+may be prolonged as illustrated in \figname~\ref{fig:control_layer}(b).
+Consequently, in revising the schedule of a bioassay, an objective 
+of optimization is to
+reduce the extension of the overall execution time as much as possible, by
+carefully scheduling the operations to devices and arranging their execution
+sequences.
+
+\subsubsection{Macrosynthesis of microfluidic biochips}
+
+
+%\input{FPVA}
+
+%\subsectitle{Hierarchical synthesis of large-scale biochemical assays}
+\label{sec:hier_syn}
+
+%During macrosynthesis of biochips, a single valve is not as important as in
+%microsynthesis any longer, because of the huge number of valves 
+%available. 
+
+
+%Due to the large number of operations in the bioassay and the
+%plentiful resources in the biochip, 
+%%To determine the schedule of operations in macrosynthesis, 
+%the allocation of devices such as mixers, storage, and transportation channels thus needs to
+%be performed at module level instead of being
+%processed as a whole % sequencing graph
+%%of an application 
+%directly. 
+Macrosynthesis processes a bioassay with
+a large number of operations for resource-intensive
+applications. %e.g., exhaustive diagnoses for illness detection.
+The biochip executing such a bioassay also contains
+plentiful devices such as mixers.
+Due to 
+%
+\begin{wrapfigure}[25]{r}{0.46\textwidth}
+{
+%  \revspace{\vskip -10pt}
+\vskip -3pt
+\figurefontsize
+\centering
+\input{Fig/macro_syn.pdf_tex}
+%\caption{Scheduling and synthesis at the macrolevel.} 
+\caption{Synthesis at the macrolevel.} 
+\label{fig:macro_syn}
+}
+\end{wrapfigure}
+%
+%Due to the large number of operations %in the bioassay 
+%and the plentiful resources in the biochip, 
+the scalability challenges,
+it is very difficult to perform microsynthesis 
+on an entire bioassay 
+of this scale and complexity. Instead, the bioassay is
+partitioned into functional subgroups 
+%Therefore,
+%we partition the bioassay %the sequencing graph 
+%into subgroups 
+according to the 
+relation
+between operations. For example, operations between which much fluid transportation
+%is required 
+exists should be grouped together. %as much as possible. 
+Thereafter, the function subgroups are considered as basic modules and mapped
+to the biochip as a floorplan. 
+After this mapping, microsynthesis as introduced above is performed inside each
+subgroup to
+improve the execution efficiency of the operations. 
+The basic concept of this hierarchical partitioning and synthesis is illustrated in
+\figname~\ref{fig:macro_syn}.
+
+
+The objectives of synthesis at this level include: 1) operations in the
+sequencing graph should be partitioned in a way to reduce the communication between
+function subgroups; 2) the size of each subgroup should be balanced to reduce the
+complexity of microsynthesis inside each subgroup; 3) the floorplan %for the functions 
+of the biochip should determine locations of the subgroups, and subgroups requiring
+fluid transportation should 
+%not be blocked by other subgroups completely; 
+be located in close proximity;
+4) the floorplan
+should consider special devices such as sensors and heaters.
+%built in the
+%chip for each subgroup. 
+
+During macrosynthesis, the reliability of the biochip should also be
+considered. As demonstrated in the video \cite{mixing_store}, 
+the three valves in the mixer switch %nearly ten times more often 
+much more often
+to drive the circular flow inside the mixer than the other valves 
+that only control fluid transportation.
+Consequently, these valves wear out more quickly than the others.  
+To maintain a reliable function of the biochip, operations should be
+distributed evenly among devices of the same type to lower the 
+worst-case wearout. This reliability issue should be taken into account as
+early as during hierarchical partitioning to balance the mixing operations in the
+subgroups so that the overall reliability of the biochip can be improved.
+
+%requiring a systematic design flow with a good tradeoff between   
+%optimization efficiency and quality.
+
+%\clearpage
+\subsubsection{Cyber-physical integration of microfluidic biochips}
+
+In the final phase of this project, the algorithms 
+developed in the previous
+phases will be
+evaluated in the context of a test platform as illustrated in
+\figname~\ref{fig:cyber}. 
+\revadd{On this platform, sensors provide information about
+real-time status of fluid samples, e.g., locations and reaction stages,
+so that even 
+operations with nondeterministic duration %execution period 
+can be executed efficiently, such as that in \cite{sensor_paper} from the
+collaborators of this project.} The movement of
+fluid samples can also be monitored by a camera and 
+%
+\begin{wrapfigure}[17]{r}{0.53\textwidth}
+{
+%\vskip 3pt
+\figurefontsize
+\centering
+\input{Fig/cyber.pdf_tex}
+\caption{Integration of a synthesized biochip in a cyber-physical system.} 
+\label{fig:cyber}
+}
+\end{wrapfigure}
+%
+coarse-grained 
+pattern
+recognition can be performed by the microcontroller to capture 
+%regular
+snapshots of the on-going execution. In addition, this cyber-physical
+integration provides information about the health of the system, such as
+leakage in channels due to manufacturing defects and aging. 
+Once known, these defects can be 
+circumvented 
+by adjusting the schedule of the operations and the mapping of function
+subgroups, so that the chip can still work properly. 
+%The microcontroller 
+%according to the information captured by
+%the sensors and the camera, so that faults due to aging can also be
+%circumvented during the execution of bioassays. 
+%In brief, this final 
+\revadd{In this phase, assays such as PCR (Polymerase Chain Reaction), IVD (In-Vitro Diagnos-
+tics) and CPA (Colorimetric Protein Assay) will be used to 
+verify the integration of 
+the overall framework from microsynthesis to macrosynthesis 
+developed in this project. %and explores new challenges 
+%in design and synthesis of microfluidic biochips. 
+}
+
+
+%Due to the promising perspective of biochips, we have successfully obtained
+%the support of the project FLUIDA by the International Graduate School of Science and
+%Engineering (IGSSE) at TUM. This project focuses on the exporation of the
+%variaty in biochip components and devices and the development a system layer
+%to provide uses a stable application interface. 
+%In addition, together with our visiting professor Tsung-Yi Ho from National Tsing Hua university,
+%we have also received the grant from the Institute for Advanced Studay (IAS) to
+%support our research on cyber-physical integration of microfludic biochips. 
+%The project decribed in this proposal and these two projects
+%together form a complete solution for design automation of microfluidic
+%biochips.
+
+\vskip 20pt
+\subsection{Work programme incl. proposed research methods}
+
+The work plan of this project is divided into six packages (WP1--WP6),
+where WP1--WP4 belong to the microsynthesis phase, WP5 belongs to the
+macrosynthesis phase, and WP6 belongs to the cyber-physical integration phase.
+The work plan is shown in \figname~\ref{fig:work_plan}, where "Stud." means student research
+assistant and "BA/MA" means bachelor/master thesis.
+
+
+\begin{figure*}[h]
+%\begin{wrapfigure}{R}{\textwidth}
+{
+\figurefontsize
+\centering
+\input{Fig/work_plan.pdf_tex}
+\caption{Work plan and work packages.} 
+\label{fig:work_plan}
+}
+%\end{wrapfigure}
+\end{figure*}
+
+The relation of these work packages is also shown in
+\figname~\ref{fig:task_relation} already. At the lowest level, storage minimization and
+architectural synthesis generate a complete biochip architecture with
+distributed channel storage. 
+%We expect the publish the results in the first conference paper. 
+Afterwards, the results of volume management, 
+washing, and flow-/control-layer codesign at the second level 
+will be overlaid on the generated chip architecture %generated previously 
+to form a systematic solution for microsynthesis of biochips. 
+%and we expect to publish the result in the second conference paper. 
+The tasks of hierarchical design and reliability
+optimization deal with large-scale biochip systems, where the
+tools from microsynthesis are used to synthesize submodules in
+macrosynthesis. Finally, the integration of all the methods is tested in the
+cyber-physical integration phase.
+%together with the systems developed in our
+%partner institutes. Another important task in this integration phase is 
+%to explore further challenges in biochip design
+%and strengthen the collaboration 
+%between the EDA community and the microfluidics community in 
+%in this interdisciplinary field.
+
+
+\subsubsection{WP1: Storage minimization during scheduling}
+In the first work package, storage requirements should be reduced during
+scheduling. Since the lifespan of a storage is determined by the
+ending time of a parent operation and the starting time of a child operation,
+as illustrated in \figname~\ref{fig:schedule_storage_p}, storage minimization
+can be achieved by solving the optimization problem
+(\ref{eq:min_storage_obj}). The challenge of this task is that the minimization
+of the overall storage requirements does not guarantee that simultaneously
+existing storage requirements are the minimum, which in fact 
+determines the required storage capacity that should be maintained in the
+chip. In this work package, the optimization problem 
+(\ref{eq:min_storage_obj}) will be extended to take this objective into 
+account. In addition, heuristic techniques such as extending the list-based
+scheduling algorithm in \cite{Micheli94} will be explored to improve the
+execution efficiency. 
+
+This work package also includes literature exploration and the development of
+a basic framework for the project.
+
+\subsubsection{WP2: Architectural synthesis with distributed channel storage}
+
+With the result of scheduling, a biochip architecture can be generated 
+automatically. In the second work package, a new
+architecture with distributed channel storage will be explored. This
+architecture unifies storage and transportation into a network of channel
+segments. Since each channel segment can switch its role between temporary storage 
+and transportation, the efficiency of both storage and transportation can be
+improved.
+
+This architecture is completely different from the classical von Neumann
+architecture as in \figname~\ref{fig:biochip_arch}, 
+so that a new model describing the new system behavior needs to
+be developed in this work package. To create this model, the constraints for, 1)
+device allocation on the connection grid shown in \figname~\ref{fig:switch_grid}, 2) construction of flow
+transportation paths, and 3) construction of temporary distributed channel 
+storage without contamination, should be established. 
+%In addition, all transportation paths and channel storage should 
+%not intersect at any moment to avoid
+%contamination.
+
+With the constraints above, a framework for automatic architectural synthesis
+will be developed. In the first step, we 
+%plan to 
+formulate this
+synthesis task into an Integer Linear Programming (ILP) problem and 
+find an optimal chip architecture using an ILP solver. 
+This formulation will be improved with heuristic techniques
+such as preconfigured device locations and nonregular connection grid
+structures
+as well as hierarchical modeling to increase the scalability 
+in the second step of this work package. 
+
+At the end of this work package, the first milestone of this
+project will be achieved, resulting in an efficient biochip architecture 
+with distributed channel storage. 
+We expect to publish the first paper from this project after finishing this work
+package.
+
+\subsubsection{WP3: Volume management and washing}
+
+In the third work package, the challenges of volume management and washing will be
+investigated. These challenges are unique for biochips as described in 
+Section~\ref{sec:volume_washing}. Both challenges can be formulated as
+to construct additional flow paths at given moments.
+%, for the purpose of 
+%either disposing of superfluous volumes to the waste or conducting 
+%cleaning fluid residue in the channels that have been used. 
+%Consequently, 
+In this work package, we will develop a unified model to deal with these challenges
+simultaneously. As illustrated in 
+\figname~\ref{fig:volume_washing}, the efficiency of volume management and 
+washing can be improved by flushing an area of the chip instead of
+individual paths. We will investigate how the valve wall can be constructed 
+and how the subtasks of volume management and washing can be grouped together 
+for flushing in this work package.
+
+\subsubsection{WP4: Flow-layer and control-layer codesign}
+
+When the control layer in a biochip is considered, switching activities of
+valves in devices and in the transportation network should be aligned as much
+as possible to reduce the number of independent control channels. This
+alignment needs to be considered during both scheduling and architectural
+synthesis, as well as in volume management and washing. 
+In the scheduling, operations can actually be arranged to align
+their starting times and they can also be paused or extended
+%operations with long durations can be paused 
+so that
+the switching activities of valves can be aligned.
+During architectural synthesis, flow samples are transported and 
+stored in channel segments, so that 
+%the open/close states of valves in the transportation network should also be
+%considered to reduce mismatch in valve activities. 
+they should also be considered to reduce mismatch in valve activities inside
+the transportation network.
+Furthermore, both volume management and 
+washing need to open and close valves. These valve activities, however, have much
+flexibility because volume management and washing can be postponed if the ongoing
+operations are not affected.
+
+The flow-layer and control-layer codesign can be considered as a fine-tuning
+step of the methods developed in WP1--WP3. The challenge is that the
+overall execution time of the bioassay should still meet the given specification
+after this fine tuning. 
+
+At the end of this work package, a complete work flow for microsynthesis
+of flow-based biochips will be implemented. The result will be summarized and
+published as the second paper from this project.
+
+
+\subsubsection{WP5: Hierarchical synthesis of large-scale biochemical assays} 
+
+While the increasing integration of biochips provides the computing power for
+large-scale biochemical analysis, such as future exhaustive tests and
+diagnoses in medical care, macrosynthesis of bioassays with a very large number 
+of operations needs to be investigated closely.   
+Due to their large number, operations in these bioassays cannot be considered
+individually during the synthesis process.
+
+In the fifth work package, we will explore methods to partition large bioassays
+into function subgroups to reduce the synthesis complexity.
+%each subgroup can be and map them to dynamic devices in 
+%the FPVA architecture discussed in Section~\ref{sec:hier_syn}. 
+This partitioning
+and mapping should minimize the transportation requirements between 
+function subgroups. In mapping these
+function subgroups to a biochip, the floorplan should guarantee that the 
+subgroups with much transportation are allocated not
+far away from each other to avoid unnecessarily long transportation 
+channels. %and potential storage.
+
+For each subgroup, the microsynthesis flow developed in the first phase of this
+project will be used to optimize the internal structure 
+%of each functional group on the FPVA 
+to improve execution efficiency.  
+We plan to publish the result of this work package as the third paper from
+this project.
+
+%\input{old_WP_6}
+
+\subsubsection{WP6: Cyber-physical integration of microfluidic biochips}
+
+In practice, a biochip system may contain sensors and cameras to monitor the
+movement of fluid samples. In addition, applications may include
+operations with flexible durations. For example, some operations need to be stopped
+when the reaction reaches a given threshold. These information can be
+collected by sensors and cameras and sent to the microcontroller to adapt the
+valve switching patterns. 
+
+\revadd{In the last work package, the algorithms developed in the previous work packages
+will be integrated and tested together with the collaborators. 
+%with our partner institutes, from which cyber-physical biochip systems with adaptive resynthesis and
+%reconfiguration are available. 
+The data from sensors in the platform of collaborators
+%and cameras from the work 
+\cite{sensor_paper}
+will be analyzed and used to improve the introduced synthesis flow in this
+project.}
+In addition, the chance to expand this work flow to incorporate further
+features and deal with challenges emerging from this system integration will
+be explored.
+
+%the locations of sensors on a biochip will be
+%investigated monitor the status of bioassay execution efficienty with only a few
+%%sensors. The images captured by the camera will be used assist this dynamic
+%controlling mechnism. During the execution of an bioassay, once the the progress
+%deviated from an assumed aaa, the following execution of the bioassay will be
+%resynthesis online from a set given template to maintain the quality of the
+%results.
+
+The last work package integrates the methods developed in WP1--WP5 to form a
+systematic solution for synthesis of flow-based biochips. The results of this
+project will be summarized and published as a journal article. 
+%at the end of this work package.
+%such as at
+% {{IEEE} Trans. Comput.-Aided Design Integr.  Circuits Syst. (TCAD)}.
+
+\vskip 10pt
+\subsection{Data handling}
+
+The results of this project will be published at leading conferences and
+journals in the field of design automation for integrated systems. 
+%These
+%papers will be uploaded to the publication portals such as the IEEE Xplore Digital
+%Library and the ACM Digital Library to maintain its exposure to researchers.
+
+To facilitate the access to these papers, they will also be published with the IEEE open
+access publication option, so that researchers around the world 
+have a free access to them.
+This option will enhance the reuse of the
+methods developed in this project and improve the interdisciplinary research
+on design automation for emerging systems.
+
+
+\subsection{Other information}
+
+None
+
+
+\subsection{Explanations on the proposed investigations}
+
+This project does not involve humans and human materials as well as animals in
+the experiments.
+
+\vskip 10pt
+\subsection{Information on scientific and financial involvement of
+international cooperation partners}
+
+%In this project, the Institute for Electronic Design Automation (EDA) at TUM
+%will collaborate with the research group of Prof. Krishnendu Chakrabarty from
+%Duke University, USA, and the research group of Prof. Tsung-Yi Ho 
+%in National Tsing Hua University, Taiwan. 
+%Prof. Chakrabarty is  a leader in the field of microfluidic biochips and 
+%microbiology applications. His research ranges from application 
+%mapping to manufacturing testing.
+%His expertise on design, test and microfabrication will provide us an
+%extensive support during this project.
+%Prof. Tsung-Yi Ho is a leading scientist in microfluidic integration.
+%His research focuses on cyber-physical integration of biochips, which
+%will be a very important input to this project.
+%In addition, we will work actively with several other 
+%international researchers on modeling and analysis of reliability effects,
+%e.g., research groups at CMU, USA, and NTU, Singapore. 
+
+
+In this project, %the Institute for Electronic Design Automation (EDA) at TUM
+we will collaborate with the research group of Prof. Krishnendu Chakrabarty from
+Duke University, US, and the research group of Prof. Tsung-Yi Ho from
+National Tsing Hua University, Taiwan. 
+
+\revadd{Prof. Chakrabarty is one of the pioneers to apply computer
+  algorithms to microfludic design. 
+His research ranges from application 
+mapping to manufacturing testing, which has resulted in more 
+than 550 papers published at top conferences and journals, in which 
+  more than 250 papers are on design automation for microfluidics
+  (\url{http://people.ee.duke.edu/~krish/pubs.html}).
+ He has received many highly recognized best paper awards on this topic, e.g.,
+the IEEE Transactions on
+Computer-Aided Design of Integrated Circuits and Systems
+Donald O. Pederson Best Paper Award in 2015.
+%He has served as the Editor-in-Chief of 
+%ACM Journal on Emerging Technologies in Computing Systems,
+%2010--2012 and IEEE Design \& Test of Computers, 2010-2012, and 
+%He is serving as
+%the Editor-in-Chief of the IEEE Transactions on Very Large 
+%Scale Integration (VLSI) Systems. 
+He is a Fellow of IEEE and a Fellow of ACM.
+%His expertise on design, test and microfabrication will provide us an
+%extensive support during this project.
+}
+
+\revadd{Prof. Tsung-Yi Ho is a leading scientist in microfluidic integration and has
+published more than 150 papers on this topic 
+(\url{http://www.cs.nthu.edu.tw/~tyho/publications.html}). 
+He has been the recipient of the Humboldt Research
+Fellowship (2012--2013), which he spent in TUM. He has
+also received the Hans Fischer Fellowship from TUM-IAS.
+%His research on cyber-physical integration of biochips 
+%received the Best Paper Award at the VLSI Test Symposium (VTS)
+%in 2013. 
+%Currently he is serving as an ACM Distinguished Speaker, 
+%Associate Editor of the ACM Journal on Emerging Technologies in Computing
+%Systems and the IEEE Transactions on Computer-Aided Design of Integrated
+%Circuits and Systems.
+%His experience in system integration of microfluidic biochips will be a very
+%important input to this project.
+}
+
+\revadd{%In this collaboration, 
+  %the project of this proposal focuses on architectural synthesis of microfludic
+  %biochips from the function perspective. Prof. Chakrabarty will analyze new
+  %architectures from the test view to evaluate the reliability and testability
+  %of the new architectures. Prof. Ho will provide support for design rules we
+  %use in generating new biochip architectures. Both researchers have been
+  %working on joint projects to manufacture biochips to test the design
+  %automation algorithms, for example, in their current MEDA project in Taiwan,
+  %which provides precious support to the proposed project to clarify design
+  %rules for the design flow of micrfludic biochips.
+In the collaboration, I will focus on architectural synthesis of microfluidic
+  biochips from the functional perspective. Prof. Chakrabarty will analyze new
+  architectures from the test view to evaluate their reliability and
+  testability.
+  Prof. Ho will provide support for design rules for the
+  automated design flow.
+  %Both researchers have been
+  %working on joint projects to manufacture biochips to test the design
+  %automation algorithms, for example, in their current MEDA project in Taiwan.
+  %Meanwhile, 
+  Both professors have visited TUM with funding support from 
+  the Alexander-von-Humboldt-Stiftung and from the 
+  Institute for Advanced Study at TUM. They will continue to 
+visit us in the coming years to strengthen our collaboration.
+}
+
+  %Both Prof. Chakrabarty and Prof. Tsung-Yi Ho
+  %professors have visited TUM with with funding support from the Alexander-von-Humboldt-Stiftung 
+  %and from the Institute for Advanced Study at TUM. They will continue to 
+  %visit us in the coming years to strengthen our collaboration. Therefore, 
+%they will not be financially involved into the proposed project.
+%Technical meetings will be arranged regularly at conferences 
+%and their potential visits to TUM will be funded by other sources.
+
+\revadd{During the period of this project, knowledge exchange with researchers in the
+microfluidics community, e.g., Prof. Dr. Oliver Hayden in the Department of
+Electrical and Computer Engineering, TUM, and Prof. Dr. Christoph Kutter from
+Fraunhofer EMFT in Munich, will be conducted often to help the advance of this
+project.
+}
+
+
+
+
+

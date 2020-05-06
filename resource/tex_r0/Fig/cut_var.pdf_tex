@@ -1,0 +1,73 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'cut_var.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{386.82426453bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.26753172)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{cut_var.pdf}}%
+    \put(0.03545624,0.13380183){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $v^m_{i,j-1}$\end{tabular}}}}%
+    \put(0.09432523,0.19059469){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $v^m_{i+1,j}$\end{tabular}}}}%
+    \put(0.85398918,0.28325158){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.29201976\unitlength}\centering  \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{cut_var.pdf}}%
+    \put(0.15156589,0.13372077){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $v^m_{i,j+1}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{cut_var.pdf}}%
+    \put(0.09432523,0.13372077){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $c_{i,j}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{cut_var.pdf}}%
+    \put(0.09432523,0.07576842){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $v^m_{i-1,j}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{cut_var.pdf}}%
+    \put(0.09432523,0.0176433){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c} $c_{i-2,j}$\end{tabular}}}}%
+    \put(0.1892453,0.0607137){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}obstacle \end{tabular}}}}%
+    \put(0.2898603,-0.1008234){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.24914414\unitlength}\raggedright \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{cut_var.pdf}}%
+    \put(0.18965712,0.04042579){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}blocks\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

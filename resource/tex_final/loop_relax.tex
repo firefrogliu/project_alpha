@@ -1,0 +1,39 @@
+
+\subsubsection{Excluding disjoint loops accelaration using Lagrangian relaxation}
+To exclude disjoint loops in flow paths, the constraints (\ref{eq:flow_sum}) are added into the ILP model. These constraints demand every pressure flow for every channel segment of to be calculated, which bring huge computation overhead. To address this issue, we introduce a Lagrangian relaxation method to accelarte the computing process for excluding disjoint loops.
+
+Lagrangian relaxation approximates a difficult problem of constrained optimization by a simpler problem. In a Lagrangian relaxation approach, it is allowed that the most computational expensive constraints are violated. In the meantime, punishment is put on the occurrences of the violations. The objective of the Lagrangian relaxation optimization consists of two parts: the objective of the original optimization problem and minimizing the punishment for constraints being violated. The solutions to the Lagrangian relaxation problem approximates the solutions of the original problem. With additional efforts, this solution can be modified to meet the constraints of the original problem.
+
+In our case, we allow the constraints (\ref{eq:flow_sum}) to be violated. Here we use a 0-1 variable $r^m_{i,j}$ to denote the total flow running through the cell $c_{i,j}$ in the $m$th flow path. The constraints (\ref{eq:flow_sum}) are altered to
+\begin{align}
+\label{eq:flow_reserver}
+&f^m_{i,j-1}+ f^m_{i,j+1}+ f^m_{i+1,j}+ f^m_{i-1,j} = r^m_{i,j}
+\end{align}
+The occurrence of a disjoint loop means a cell $c_{i,j}$ is covered by a flow path $p^m$. But the total flow $r^m_{i,j}$ running through this flow path is 0. A 0-1 variable $l^m_{i,j}$ is used here to denote the occurrence of disjoint loop, which can be formulated as
+\begin{align}
+\label{eq:disjoint_loop_violation}
+&1 - (c^m_{i,} - r^m_{i,j}) \le l^m_{i,j}
+\end{align}
+where $l_m$ must be set to 1 if the total flow $r^m_{i,j}$ is 0 when the cell $c_{i,j}$ is on the $m$th flow path.
+
+This means disjoint loops can appear in the optimization results of the model. We can put punishment on the violations and minimize the punishment in the objective. The altered ILP problem can be formulated as follows,
+\begin{align} 
+\text{minimize} &\quad \mathcal{A} \cdot \sum_{m=1, \dots, n_p}p_m + \mathcal{B} \cdot \sum_{m=1}^{n_t} \sum_{v_i \in V} l^m_i
+\label{eq:ilp_1_ll}\\
+\text{subject to} & \quad (\ref{eq:ilp_1})-(\ref{eq:ilp_2}), (\ref{eq:flow_reserver}) \and (\ref{eq:disjoint_loop_violation}).
+\label{eq:ilp_2_ll}
+\end{align} 
+where $\mathcal{A}$ and $\mathcal{B}$ are the positive constants that help the ILP model optimize two objectives together. 
+
+Because the ILP model \text{(\ref{eq:ilp_1_ll})-(\ref{eq:ilp_2_ll})} minimize the occurrence of disjoint loops, the optimization result of this model will generate trees together the minimum number of disjoint loops. Such an example is shown in Fig.~\ref{fig:minimum_loops}. Fig.~\ref{fig:minimum_loops}a is a flow path that contains a disjoint loop. The valves covered by this loop cannot be tested since they are isolated from the pressure source and pressure sensors. Additional trees are needed to be built to cover these valves.
+
+Because these valves are in a loop, at least 2 more trees are needed to cover all these valves. However, we can alter this flow path to partially cover the valves on the loop. In Fig.~\ref{fig:minimum_loops}b, it is altered to cover 3 valves in the loop. There are still 2 valves left uncovered. But since the loop has been broken down, the 2 valves can be covered by just 1 addtional. Fig.~\ref{fig:minimum_loops}c is a flowpath dedicated to cover these 2 valves. We can use the ILP model \text{(\ref{eq:ilp_1})-(\ref{eq:ilp_2})} with non-disjonint-loop constraints to find the flow path that cover these valves. 
+\begin{figure*}[t]
+{\figurefontsize
+\centering
+\input{Fig/minimum_loops.pdf_tex}
+\caption{Eliminating a disjoint loop. (a)A flow path contains a disjoint loop. (c) Altered flow path partially covers valves in the loop. (d) An additional flow path is created to cover the valves left.}
+\label{fig:minimum_loops}
+}
+\end{figure*}
+

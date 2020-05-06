@@ -1,0 +1,29 @@
+\contentsline {section}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {2}Background}{2}
+\contentsline {subsection}{\numberline {2.1}Technology platform and key application areas}{2}
+\contentsline {subsection}{\numberline {2.2}Digital microfluidic biochips}{2}
+\contentsline {subsection}{\numberline {2.3}Continuous-flow microfluidic biochips}{2}
+\contentsline {section}{\numberline {3}State of the art: Design automation for continuous-flow microfluidic biochips}{2}
+\contentsline {subsection}{\numberline {3.1}Synthesis for continuous-flow microfluidic biochips}{2}
+\contentsline {subsection}{\numberline {3.2}Testing and diagnosis for continuous-flow microfluidic biochips}{2}
+\contentsline {section}{\numberline {4}Synthesis and design-for-testability of continuous-flow microfluidic biochips using distributed channel storage}{2}
+\contentsline {subsection}{\numberline {4.1}Dedicated storage of continuous-flow microfluidic biochip}{2}
+\contentsline {subsection}{\numberline {4.2}Modeling distributed storage with channel segments as caching units}{2}
+\contentsline {subsection}{\numberline {4.3}Storage awareness scheduling and binding}{2}
+\contentsline {subsection}{\numberline {4.4}Synthesizing microfluidic biochips with distributed channel storage}{2}
+\contentsline {subsection}{\numberline {4.5}Compact physical design with distributed channel storage}{2}
+\contentsline {subsection}{\numberline {4.6}Flow paths construction}{2}
+\contentsline {subsection}{\numberline {4.7}Synthesis for single-port testability of continuous-flow microfluidic biochips}{2}
+\contentsline {subsection}{\numberline {4.8}Controll singnal sharing between testing and assay execution}{2}
+\contentsline {subsection}{\numberline {4.9}Experimental results}{2}
+\contentsline {section}{\numberline {5}Testing of fully programmable valve-array microfluidics}{2}
+\contentsline {subsection}{\numberline {5.1}Dynamically-reconfigurable microfluidic biochips}{2}
+\contentsline {subsection}{\numberline {5.2}Synthesis of fully programmable valve-array microfluidics}{2}
+\contentsline {subsection}{\numberline {5.3}Models of continuous-flow microfluidic manufacturing faults and testing enviroments}{2}
+\contentsline {subsection}{\numberline {5.4}Challange in testing fully programmable valve-array microfluidics}{2}
+\contentsline {subsection}{\numberline {5.5}Test pattern generation, stuck-at-1 faults}{2}
+\contentsline {subsection}{\numberline {5.6}Test pattern generation, stuck-at-0 faults}{2}
+\contentsline {subsection}{\numberline {5.7}Test pattern generation acceleration, an architectural approach}{2}
+\contentsline {subsection}{\numberline {5.8}Multiple port testing for continuous-flow microfluidics}{2}
+\contentsline {subsection}{\numberline {5.9}Experimental results}{2}
+\contentsline {section}{\numberline {6}Conclusion}{2}

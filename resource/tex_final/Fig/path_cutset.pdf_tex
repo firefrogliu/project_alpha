@@ -1,0 +1,97 @@
+%% Creator: Inkscape inkscape 0.92.3, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'path_cutset.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{257.44990564bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.00777318)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{path_cutset.pdf}}%
+    \put(0.52668259,0.88237203){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}pressure\end{tabular}}}}%
+    \put(0.52571585,0.85227999){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}sensor\end{tabular}}}}%
+    \put(0.00009957,0.64591962){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}pressure\end{tabular}}}}%
+    \put(0.00444935,0.6152458){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}source\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{path_cutset.pdf}}%
+    \put(0.20421121,0.98754587){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}valve under test\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{path_cutset.pdf}}%
+    \put(0.35809036,0.95820685){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}path 1\end{tabular}}}}%
+    \put(0.49969542,0.77663721){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}path 2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{path_cutset.pdf}}%
+    \put(0.74451826,0.95674883){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}cut\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{path_cutset.pdf}}%
+    \put(0.28690947,0.49637158){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(a)\end{tabular}}}}%
+    \put(0.76974034,0.49637158){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(b)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{path_cutset.pdf}}%
+    \put(0.20828797,0.95820685){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(stuck-at-0)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{path_cutset.pdf}}%
+    \put(0.49672231,0.27987836){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}test\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{path_cutset.pdf}}%
+    \put(0.35953291,0.06074719){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}valve cannot open\end{tabular}}}}%
+    \put(0.28198173,0.00623035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(c)\end{tabular}}}}%
+    \put(0.49774203,0.25103275){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}path\end{tabular}}}}%
+    \put(0.11676614,0.05783116){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}valve cannot close\end{tabular}}}}%
+    \put(0.36397293,0.0266481){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(valve 1)\end{tabular}}}}%
+    \put(0.11933776,0.0266481){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(valve 2)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{path_cutset.pdf}}%
+    \put(0.74240902,0.4666076){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}cut\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{path_cutset.pdf}}%
+    \put(0.63390859,0.06074719){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}leaked pressure   \end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{path_cutset.pdf}}%
+    \put(0.76683436,0.00623035){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}(d)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{path_cutset.pdf}}%
+    \put(0.81491014,0.23029762){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$c_{i_1,j_1}^m$\end{tabular}}}}%
+    \put(0.86582977,0.06275676){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$c_{i_2,j_2}^m$\end{tabular}}}}%
+    \put(0.92846473,0.07194067){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}$v_{i,j}^m$\end{tabular}}}}%
+    \put(0.63257753,0.02667655){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}blocked by valve 1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{path_cutset.pdf}}%
+    \put(0.11856839,0.50032067){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}pressure leaked\end{tabular}}}}%
+    \put(0.12303775,0.46809406){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{0}\smash{\begin{tabular}[t]{c}through valve 2\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

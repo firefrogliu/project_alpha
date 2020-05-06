@@ -1,0 +1,153 @@
+\section{Simulation Results}\label{sec:results}
+
+\input{tb_input_graph}
+
+\input{tb_test}
+
+The proposed method was implemented in C++ and tested on a PC with \SI[mode=text]{3.20}{\GHz} CPU and
+\SI{8}{GB} memory. We demonstrate the results using three real-life assays and three randomly generated assays. The information of these test cases is shown in Table~\ref{tb_input_graph}, where CPA (Colorimetric Protein Assay), IVD (In-Vitro Diagnostics) and PCR (Polymerase Chain Reaction) are real-world assays \textcolor{red}{\cite{pop2016microfluidic}} and the other three assays are randomly generated. The Column $\boldsymbol{|O|}$ in Table~\ref{tb_input_graph} shows the number of operations in each assay. The Columns $\boldsymbol{n_i}$ and $\boldsymbol{n_o}$ are the number of inputs and outputs of each assay, respectively. The Column $\boldsymbol{D_p}$ gives the depth of the sequencing graph corresponding to each assay. The Column $\boldsymbol{D_e}$ lists the number of available devices for each assay, respectively. \textcolor{red}{The execution latencies of mixing, detection, and filtration operations are set to 4 s, 7 s, and 3 s in the benchmarks, respectively \cite{pop2016microfluidic}.} Moreover, in the experiments, we used Gurobi \cite{gurobi} to solve the optimization problems.
+
+\subsection{\textcolor{red}{Synthesis Results of the Proposed Design Flow}}
+
+\textcolor{red}{In this part, we first report the synthesis results of each stage in the proposed design flow in Table~\ref{tb_test}, including scheduling, architectural synthesis, as well as flow-path planning.}
+
+The result of scheduling with storage minimization is shown in the columns $\boldsymbol{c_t}$, $\boldsymbol{t^E}$ and $\boldsymbol{t_s}$, where \textcolor{red}{$\boldsymbol{c_t}$ is the total amount of time that fluids are stored,} $\boldsymbol{t^E}$ is the execution time of the assay defined in (\ref{eq:latest_finishing}), and $\boldsymbol{t_s}$ is the runtime for solving the optimization problem (\ref{eq:minobj})--(\ref{eq:op_cond}), which was limited to 30 minutes for the solver to return the best-effort results. It can be seen that the execution of each bioassay is completed within a reasonable time.
+
+In architectural synthesis, we use a connection grid to determine device locations and channel segments connecting them. The size of the grid is shown in column $\boldsymbol{G}$. Moreover, \textcolor{red}{the numbers of
+channel segments} and valves in the chip are shown in the columns $\boldsymbol{n_e}$ and $\boldsymbol{n_v}$, respectively. Note the valves counted in the experiments do not include those used in mixers. The runtimes to generate chip architectures are shown in the column $\boldsymbol{t_r}$.
+\textcolor{red}{Moreover, with the generated chip architecture, we re-perform the proposed scheduling method to map the bioassay onto the synthesized architecture, thus generating an updated scheduling with accurate transportation latencies. Correspondingly, the updated execution times of assays are shown in the column $\boldsymbol{t^{Eu}}$.}
+
+%After completing the architectural synthesis, transportation tasks specified in the scheduling are mapped to the chip, so that certain flow paths can be constructed to realize the transportation network without any conflict.
+% During the flow-path planning, the total number of transportation-task groups generated after performing the sweepline algorithm is shown in the column $\boldsymbol{n_g}$. Inside each group, when mapping the transportation tasks to the biochip, their corresponding flow paths may conflict with each other, leading to a conflicting group. Accordingly, the number of conflicting transportation-task groups is shown in the column $\boldsymbol{n_{cg}}$. We can see that transportation conflicts exists in most groups and all these conflicts are eliminated successfully after implementing the proposed adjustment strategies.
+
+After flow-path planning, the total number of valves in the chip is reported in the column $\boldsymbol{n_{tv}}$.
+\textcolor{red}{It can be seen that new valves are introduced into the chip. We analyze this for two reasons: 1) since pumps and waste ports are added to the chip in this stage, these devices should be connected to the previously allocated devices such as mixers by constructing new flow channels. These channels may intersect with previously constructed flow paths, thereby leading to some extra valves and 2) the number of pumps and waste ports introduced to the chip is minimized to reduce extra chip cost (see columns $\boldsymbol{n_p}$ and $\boldsymbol{n_w}$), thus increasing the number of new constructed channels.}
+The numbers of crossings and T-junctions in the final chip architecture are shown in the columns $\boldsymbol{n_{cr}}$ and $\boldsymbol{n_{tj}}$, respectively.
+
+Moreover, the total length of flow channels in the final chip is reported in the column $\boldsymbol{l_n}$.
+% Moreover, the number of deadlocks is shown in the column $\boldsymbol{d_{k}}$, and all of them are eliminated by solving the ILP model defined in Section~\ref{sec:res_storage_deadlock}.
+The final execution time of the assay is shown in the column $\boldsymbol{t^{E'}}$, which is a little bit longer than the one shown in the column $\boldsymbol{t^{Eu}}$ due to the effects of the proposed scheduling adjustment method. Finally, the runtimes of the flow-path planning are shown in the column $\boldsymbol{t_p}$, which are acceptable for a high-quality transportation network without any conflict.
+
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.85\linewidth]{Visio/storage_cmp.pdf}
+  \caption{\textcolor{red}{Comparison of the total amount of time that fluids are stored before and after applying the proposed storage optimization method.}}
+      \label{fig:storage_cmp}
+%\vspace{-0.5cm}
+\end{figure}
+
+
+
+\pgfplotsset{compat=1.3,
+    /pgfplots/ybar legend/.style={
+    /pgfplots/legend image code/.code={%
+       \draw[##1,/tikz/.cd,yshift=-0.25em]
+        (0cm,0cm) rectangle (5pt,0.8em);},
+   }
+}
+
+\subsection{\textcolor{red}{Performance Validation of the Proposed Optimization Methods}}
+
+\textcolor{red}{In this subsection, the performance of several optimization methods in the proposed synthesis flow is validated in detail.}
+
+We first evaluate the effectiveness of the proposed storage optimization method in scheduling. \figname~\ref{fig:storage_cmp} shows the comparison results on \textcolor{red}{the total amount of time that fluids are stored before and after incorporating this method into the scheduling.} It can be seen that \textcolor{red}{the total amount of time that fluids are stored} in each assay is reduced significantly after applying the proposed optimization method.  Moreover, \figname~\ref{fig:ideal_cmp} shows the comparison of execution time of assays, the number of \textcolor{red}{routing channels}, and the number of valves in the two cases with and without considering storage optimization.
+It can be observed that storage optimization generated comparable execution time in the cases IVD and PCR, but the execution time of RA30 is slightly increased, which is acceptable for most biochemical experiments. However, the numbers of \textcolor{red}{routing channels} and valves in the result of RA30 are much smaller, \textcolor{red}{because storage optimization is partially achieved by reducing the number of fluid-storage operations, thus reducing the numbers of routing channels and valves that need to be constructed during architectural synthesis.}
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/ideal_cmp.pdf_tex}
+\caption{\textcolor{red}{Comparison results in terms of the execution time of assay and the numbers of routing channels and valves before and after applying the proposed storage optimization method.}}
+\label{fig:ideal_cmp}
+}
+\end{figure}
+%improves the efficiency of channels and thus valves effectively so that fewer resources are required to execute the assays.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\vskip 5pt
+\input{edge_valve_percentage.tex}
+%\input{Fig/edge_valve_percentage.pdf_tex}
+\caption{
+\textcolor{red}{Channel and valve ratios with respect to the results of
+architectural synthesis and the original channels and valves
+in the connection grid.}}
+\label{fig:edge_valve_percentage}
+}
+\end{figure}
+
+ \begin{figure}[t]
+ {\figurefontsize
+ \centering
+ \input{exe_time_valve_cmp.tex}
+% \input{Fig/exe_time_valve_cmp.pdf_tex}
+ \caption{\textcolor{red}{Execution time and valve ratios with respect to the results using
+distributed channel storage and dedicated storage units.}}
+ \label{fig:exe_time_valve_cmp}
+ }
+ \end{figure}
+\input{tb_Minhass_compare}
+
+
+\begin{figure}[t]
+{
+  \figurefontsize
+\centering
+%\vskip 5pt
+\input{iteration_cost.tex}
+%\input{Fig/edge_valve_percentage.pdf_tex}
+\caption{Average convergence curves of the proposed genetic algorithm.}
+\label{fig:iteration}
+}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Visio/RA30_exe_flow.pdf}
+    %\input{Fig/RA30_exe_flow.pdf_tex}
+  \caption{Snapshots of the synthesized chip executing RA30 at different times. The channel segments in blue are transporting and in purple are caching fluid samples.}
+      \label{fig:RA30_exe_1}
+%\vspace{-0.5cm}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.7\linewidth]{Visio/RA30_exe_flow_test_ver3.png}
+    %\input{Fig/RA30_exe_flow_test.pdf_tex}
+  \caption{Snapshots of the synthesized chip executing RA30 with constructed flow paths at different times. The channel segments in blue are transporting and in purple are caching fluid samples.}
+      \label{fig:RA30_exe_2}
+%\vspace{-0.5cm}
+\end{figure}
+
+In architectural synthesis, we start with a connection grid. After synthesis, only the channels that are used at least once are kept in the result. The ratios of the number of used channels to the total number of all the channels in the grid is shown in \figname~\ref{fig:edge_valve_percentage}, where all these ratios are smaller than 1, and a half of them are even below 0.5, indicating that the architectural synthesis approach confines resource usage effectively on only a part of channels.  After removing the unused channels, the number of valves is also reduced, as shown by the valve ratios in \figname~\ref{fig:edge_valve_percentage}.
+
+To validate the efficiency of the proposed distributed channel-storage architecture, the results of comparing execution time and number of valves for our method and the method using a dedicated storage are reported in \figname~\ref{fig:exe_time_valve_cmp}.
+\textcolor{red}{The ratios are computed as ¡°our results/the results using dedicated storage¡±.}
+
+\textcolor{red}{It can be seen from \figname~\ref{fig:exe_time_valve_cmp} that channel storage architecture leads to a relatively higher execution efficiency of bioassays, mainly due to the following reasons: 1) channel storage can be considered as distributing the storage cells of a dedicated storage to the whole chip plane in an optimized manner, leading to an ``on-the-spot" fluid store/fetch with high efficiency, 2) in the proposed method, by constructing storage channels at appropriate positions while finding optimized flow paths for fluid transportation tasks, congestion problem can be alleviated effectively, 3) when using a dedicated storage with fixed position, conflicts can also occur between store/fetch operations and fluid transportation tasks since they may share the same flow channels during their execution, and 4) the structure of a dedicated storage (see \figname~\ref{fig:valve_mixer_storage}(c) and \figname~\ref{fig:device_storage}(c)), as discussed in Section I, suffers from the drawback of bandwidth limitation.}
+
+\textcolor{red}{Additionally, from the comparison in \figname~\ref{fig:exe_time_valve_cmp}, we can see that the number of valves used in the chip is also reduced in the channel storage architecture. This is mainly because: 1) a dedicated storage usually contains quite a number of valves inside the multiplexer-like ports as shown in \figname~\ref{fig:valve_mixer_storage}(c) and 2) although two valves should be placed at the ends of a storage channel, these valves can be saved in most cases by sharing the valves placed at channel crossings.}
+
+\textcolor{red}{
+  Moreover, in \cite{minhass2012architectural} a top-down synthesis flow is proposed to generate chip architectures with minimized application completion time. This method, however, still adopts the traditional dedicated storage to deal with the intermediate fluids generated during the execution of bioassays. To further verify the effectiveness of the proposed method and the distributed channel-storage architecture, we implemented the method in \cite{minhass2012architectural} and ran both algorithms on the same benchmarks. Table~\ref{tb_Minhass_compare} shows the comparison results, where the columns $t^{E'}$, $n_v$ and $l_n$ represent the completion time of the bioassay, the number of valves in the chip, and the total channel length.}
+
+\textcolor{red}{
+   It can be seen from Table~\ref{tb_Minhass_compare} that the proposed algorithm achieves shorter completion time of the bioassay on most test cases. There are two major reasons for these resutls: 1) dedicated storage suffers from the drawbacks of bandwidth limitation and fixed position on the chip as discussed in Section~\ref{introduction}, leading to a low efficiency of fluid store and fetch. In contrast, by caching fluids on-the-spot with distributed channel storage and coordinating the relations between fluid caching and transportation without any conflict, the efficiency of fluid store and fetch can be improved significantly and 2) in \cite{minhass2012architectural} the traditional heuristic list-scheduling method is adopted to compute a feasible scheduling scheme. The solution quality, however, is limited due to the greedy strategy adopted in the list scheduling. On the other hand, the proposed method further takes the storage optimization into account in the high-level synthesis stage to reduce the total amount of storage time, thus improving the execution efficiency of the assay. Moreover, the number of valves used in the proposed method is fewer than that of \cite{minhass2012architectural} due to the following reasons: 1) independent flow paths need to be constructed between devices and dedicated storages, leading to more channel crossings and 2) a dedicated storage also requires quite a number of valves to direct the fluid flow as can be seen from \figname~\ref{fig:valve_mixer_storage}(c). Also, the proposed method leads to an overall shorter channel length as can be seen from Table~\ref{tb_Minhass_compare}.}
+
+In the flow-path planning stage, since the proposed genetic algorithm plays an important role in determining the new biochip architecture, to evaluate its efficiency, Fig.~\ref{fig:iteration} illustrates the corresponding convergence curves with respect to different bioassays. It can be seen that the average fitness level of the population is improved as iteration time increases, and the proposed algorithm reaches a convergence quickly in most of the test cases.
+% Note that since the genetic algorithm works in a random manner, stochastic fluctuations may occur during iterations, leading to an unstable region in the convergence curve of the assay ``CPA", but our algorithm can still find a feasible flow-path planning solution for this assay.
+
+
+\subsection{\textcolor{red}{Snapshots of Assay Execution}}
+
+  Finally, We show the execution snapshots of the assay RA30
+  in \figname~\ref{fig:RA30_exe_1} and \figname~\ref{fig:RA30_exe_2}, respectively.
+  \figname~\ref{fig:RA30_exe_1} demonstrates the fluid transportation without considering the actual flow paths construction. In \figname~\ref{fig:RA30_exe_1}(a), a transportation path is formed as $d_2\to A\to B \to C \to D $ to store a fluid sample into the channel segment between $C$ and $D$. In \figname~\ref{fig:RA30_exe_1}(b), a transportation path is constructed as $d_1\to D \to A \to d_2$ while the channel segment between $C$ and $D$ is caching a fluid sample.
+  \figname~\ref{fig:RA30_exe_2} demonstrates the fluid transportation on the chip architecture after completing the flow-path palnning. In \figname~\ref{fig:RA30_exe_2}(a), a flow path is
+formed as $pump \to d_2\to A \to B \to C \to D\to waste$ to store a fluid sample
+into the channel segment between $C$ and $D$. In \figname~\ref{fig:RA30_exe_2}(b), a flow path is formed as $pump
+\to d_1 \to D \to A \to d_2 \to waste$, while an intermediate liquid is stored between $C$ and $D$.
+
+
+

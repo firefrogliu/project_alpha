@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Introduction of microfluidic platforms}{3}
+\contentsline {subsection}{\numberline {1.1}Motivation and key application areas}{3}
+\contentsline {subsection}{\numberline {1.2}Digital microfluidic biochips}{3}
+\contentsline {subsection}{\numberline {1.3}Continuous-flow microfluidic biochips}{3}
+\contentsline {subsection}{\numberline {1.4}Fully programmable valve arrays}{3}
+\contentsline {section}{\numberline {2}Design continuous-flow microfluidic biochips}{3}
+\contentsline {subsection}{\numberline {2.1}Storage of continuous-flow microfluidic biochips}{3}
+\contentsline {subsubsection}{\numberline {2.1.1}Traditional dedicated storage of continuous-flow microfluidic biochips}{3}
+\contentsline {subsubsection}{\numberline {2.1.2}Concept of distributed storage with channel segments as caching units}{3}
+\contentsline {subsection}{\numberline {2.2}Architectural synthesis of continuous-flow microfluidic biochips with distributed storage}{3}
+\contentsline {subsubsection}{\numberline {2.2.1}Storage-aware scheduling and binding}{3}
+\contentsline {subsubsection}{\numberline {2.2.2}Synthesizing microfluidic biochips with caching}{3}
+\contentsline {subsubsection}{\numberline {2.2.3}Compact physical design considering distributed channel storage}{3}
+\contentsline {subsubsection}{\numberline {2.2.4}Flow path construction}{3}
+\contentsline {subsection}{\numberline {2.3}Experimental results}{3}
+\contentsline {section}{\numberline {3}Test fully programmable valve arrays and continuous-flow microfluidic biochips}{3}
+\contentsline {subsection}{\numberline {3.1}Manufacturing faults and test challanges}{3}
+\contentsline {subsection}{\numberline {3.2}Test of fully programmable valve arrays}{3}
+\contentsline {subsubsection}{\numberline {3.2.1}Test pattern generation for stuck-at-0 faults and stuck-at-1 faults}{3}
+\contentsline {subsubsection}{\numberline {3.2.2}Multiple port test}{3}
+\contentsline {subsection}{\numberline {3.3}Design for testability of continuous-flow microfluidic biochips}{3}
+\contentsline {subsection}{\numberline {3.4}Experimental results}{3}
+\contentsline {section}{\numberline {4}Conclusion}{3}

@@ -1,0 +1,21 @@
+\section{Conclusion}\label{sec:conclusion}
+
+In this paper, we have proposed the first strategy to generate
+test patterns with paths and cuts for fully programmable valve
+arrays (FPVAs) to detect faults such as blockage and leakage in the flow
+layer and the control layer. The method produces an efficient test set and
+can handle a vast majority of flow-based networks that can be
+configured on such an array.
+In the multiple-port test scenario, these patterns are expanded accordingly to take
+advantage of multiple pressure sensors to improve test efficiency.
+%we introduce a method to construct test trees and test cuts
+%to help generate the test patterns. 
+%The number of test vectors from the proposed method is roughly linear to the square
+%root of the number of valves, much smaller than the number of test vectors 
+%when each valve is tested individually.  
+The proposed method can guarantee 
+the detection of any two faults in FPVAs, while multiple faults can
+actually be captured effectively. When applied to traditional flow-based
+biochips, the generated patterns also demonstrate a high test efficiency.
+
+

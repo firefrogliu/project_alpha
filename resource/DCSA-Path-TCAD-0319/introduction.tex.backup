@@ -1,0 +1,393 @@
+\section{Introduction}
+Microfluidic biochips have reshaped the traditional biochemical experiment 
+flow with their high execution efficiency and 
+miniaturized fluid manipulation \cite{EVNR03,JMSQ07}. %,JEMP08}. 
+With this miniaturization, biochemical assays can be scaled down to nanoliter volumes,
+so that precious reagents can be saved to reduce experiment cost.
+Since operations executed on a biochip are automated and controlled 
+by a microcontroller, the reliability in executing biochemical experiments 
+can also be improved significantly compared with the traditional 
+manual experiment flow.   
+%\cite{JMSQ07,JEMP08,KrCh10}.
+%droplets/segments at nanoliter level, using electrowetting in digital
+%biochips or
+%micropumps in flow-based biochips.  
+%and executed by
+%manipulating minuscule fluid samples precisely %between exact locations
+%precisely
+%These technologies provide atomic operations for manipulating fluid
+%samples such as move, mix, split, and detect, with which a traditional
+%bioassay can be constructed and executed efficiently
+%\cite{JMSQ07,JEMP08,KrCh10}.
+%
+%On a microfluidic biochip, 
+%and 
+%In recent years, genomic bioassay protocols, such as nucleic-acid
+%isolation, DNA purification and DNA sequencing, have been successfully
+%demonstrated with microfluidic biochips. In addition, this technology has also
+%attracted a lot of commercial attention, e.g., from Illumina \cite{illumina}, 
+%a market leader in DNA sequencing.
+
+%Microfluidic biochip technologies have many advantages due to the
+%miniaturization of reaction samples.  Since all the atomic operations are
+%performed at the nanoliter level, only very small volumes of test samples 
+%are required. In other words, the normal volumes of test samples 
+%can now support a large number of reactions, e.g., for disease diagnosis.
+%In addition, nanoliter sample droplets on a biochip can be moved very
+%quickly,
+%and the reaction between two droplets takes significantly less time to finish
+%due to the reduced reaction volumes. Furthermore, this miniaturization
+%enables
+%the long-aspired large system integration, where many
+%applications can be executed in parallel. 
+
+%The state-of-the-art microfluidic technologies can be categorized into two
+%groups.
+%In the first group, fluid droplets are located on a patterned array of
+%electrodes and
+%moved by the force of electrowetting. 
+%This technique has the advantage of dynamic reconfiguration
+%but it is limited when dealing
+%with some applications due to the applied high voltage.  The second group of
+%microfluidic biochips, which we will focus on in this paper, 
+Microfluidic biochips based on continuous flow use valves
+to control the movement of samples and reagents.  The structure of a valve
+is shown in \figname~\ref{fig:valve_mixer_storage}(a).  
+On a substrate, a flow channel is constructed for the transportation of fluids.
+Above the flow channel, a control channel 
+%is constructed and
+connected to an air pressure source is used to control the open/closed state of
+the valve. Both channels are built from elastic materials, so that air pressure 
+in the control channel squeezes the flow channel below to block the movement 
+of the fluid. Conversely, if the pressure in the control channel is released, 
+the fluid can resume its movement. 
+
+
+
+%to the target destination. 
+%Consequently, a valve is formed at the intersection of the two channels. 
+%to control the flow direction. 
+%Compared with electrowetting-driven biochips, valve-based biochips
+%can execute nearly all experiments so that they have
+%become the focus of the research community in recent years. 
+
+With valves as the basic controlling components, complex devices can
+be constructed. For example, mixers can be built from channels and 
+valves to execute mixing operations, which are very common in biochemical
+assays. The structure of a mixer %in flow-based biochips 
+is shown in \figname~\ref{fig:valve_mixer_storage}(b), where the 
+three valves at the top are actuated alternately by applying
+and releasing air pressure in the control channels to
+form a circular flow around the device. The other six valves are used to
+control the entering and exiting of fluids. 
+
+Besides mixers, a dedicated storage unit can also be built from channels and
+valves. \figname~\ref{fig:valve_mixer_storage}(c) shows a schematic 
+of a biochip with a mixer connected to a storage unit.
+This storage unit contains eight side-by-side cells to store fluid samples.
+%simultaneously. 
+At a port of the storage unit, valves in a multiplexer-like
+structure direct a fluid sample to enter a specific cell or 
+to leave the storage unit.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/valve_mixer_storage_own_mixer.pdf_tex}
+\caption{Components and structure of flow-based biochips. (a)
+Valve structure. (b) Mixer. (c) Biochip with eight
+storage cells \cite{AminTA09}.}
+\label{fig:valve_mixer_storage}
+}
+\end{figure}
+
+
+Biochips are used to execute operations in biochemical assays, whose protocols
+%by time multiplexing. 
+%With the dedicated devices discussed above, a biochip can be built to execute
+%an
+%Such an assay %or assay, which 
+are usually described by sequencing graphs. In 
+\figname~\ref{fig:pcr}(a), the sequencing graph of 
+the mixing phase of the polymerase chain reaction
+(PCR) is illustrated. This assay takes eight input samples ($i_1\sim i_8$) and
+processes them with seven mixing operations ($o_1\sim o_7$) to generate copies
+of a DNA sequence. The edges in the sequencing graph define the dependency of
+operations, where a
+parent operation should always be executed before its child operations. 
+%In this example, there are seven mixing operations, each of
+%which takes two different samples or reagents as inputs. 
+If for each operation a mixer is assigned, seven mixers have to be built on the
+chip. However, 
+%owing to
+%area or cost constraints, 
+it is  unusual to assign resource so freely
+due to cost. Instead,
+mixers are reused to execute the operations %of an assay
+while maintaining their dependency as specified by the sequencing graph. 
+%For example, a mixer can be used repeatedly to execute the operations
+%in \figurename~\ref{fig:pcr}.
+%the subtree with $o_1$, $o_2$ and $o_3$ on the left can be
+%executed by a set of mixers. Thereafter, the subtree on the right can be
+%executed by
+%the same set of mixers. Consequently, the number of mixers on the chip
+%might be reduced. In this multiplexing, 
+%In this reaction process, 
+%after an operation is finished, 
+%After the peristaltic mixing is performed in a mixer, 
+%the result of one mixing operation is the input of another operation. 
+%But it happens very often that the target mixer is occupied by another
+%operation. In this case, 
+%In this process, 
+%Meanwhile,
+%intermediate reaction samples such as the output of $o_1$ 
+%%transported to the next available mixer, or saved 
+%%transported and 
+%can be saved in a storage unit until the result of $o_2$ is available. 
+%%These samples are fetched later when mixers become ready for the following
+%%operations.
+%With this time multiplexing, the number of mixers on the chip
+%can be reduced significantly. 
+%%%But a cosynthsis of these devices and storage units are still
+%needed.
+
+%Synthesis of microfluidic biochips is similar to the synthesis flow for
+%integrated circuits \cite{PopAC15}. 
+%First, during scheduling and binding 
+%operations are assigned to specific devices in an order 
+%respecting the dependency conditions specified by the sequencing graph.
+%In addition,
+%the execution time of the assay is minimized to improve the execution
+%efficiency. 
+%
+%Thereafter, the binding step associates the operations in the given order to
+%specific devices. 
+%%In this step, additional optimization objectives can be included, for
+%%example, to minimize
+%%the pin count in droplet-based biochips \cite{TXKC08,CLYC10,THYH11}. 
+%The operations are first assigned to a given number
+%devices while the dependency between the operations is guaranteed in the
+%schedule and binding step. 
+%The
+%intermediate results of operations are transported to the next devices or
+%stored in the storage unit until they are needed again. 
+%
+%Thereafter, the locations of devices and the routing 
+%of the transportation channels are determined during 
+%physical design. 
+%
+%Since a microfluidc biochip is only a two-dimentional
+%design, switches are inserted at the crossing points of channels to avoid
+%fluid contamination.   
+
+%Synthesis of microfluidic biochips is similar to the synthsis flow for
+%integrated circuits.
+%%High-level synthesis for biochips is similar to the synthesis of 
+%%digital circuits \cite{Micheli94} 
+%%and can be split into scheduling and binding
+%First, the scheduling step arranges operations along the timeline 
+%to meet dependency conditions specified by the sequencing graph, so that a
+%parent operation is always executed before its child operations. At the same
+%time, the execution time of the application should be minimized. 
+%Thereafter, the binding step associates the operations in the given order to
+%specific devices. 
+%%In this step, additional optimization objectives can be included, for
+%%example, to minimize
+%%the pin count in droplet-based biochips \cite{TXKC08,CLYC10,THYH11}. 
+
+%To deal with the scheduling problem, an ILP model is proposed  \cite{JDCF01} to assign operations to
+%time slots while guaranteeing their time dependency.
+%This model is extended in \cite{SuCh04} to incorporate memory units and 
+%a heuristic algorithm based on list scheduling is applied to improve the computational efficiency.
+%The model in \cite{CLYC10} 
+%%allows continuous operation durations and enhances synchronous control for
+%adapts \cite{SuCh04} to enhance synchronous control for
+%pin-count reduction. In addition, a method based on genetic algorithm 
+%is proposed in  \cite{RIVI06} to solve this scheduling problem. 
+%The locations of droplets are also considered during synthesis 
+%in \cite{MEPJ13}, and the method in \cite{DGPB14} deals with the 
+%challenges in fast online synthesis. 
+%While the aforementioned methods are applicable to droplet-based biochips,
+%flow-based biochips face additional challenges in synthesis due to their
+%restricted structures. The method in \cite{HMPM11} proposes a scheduling and
+%binding method to map an application to a given flow-based biochip structure.
+%This method is extended in \cite{DYHA13} for a better execution time of the
+%application. In addition, the method in \cite{TYLH13} considers the number of
+%%valve switching in binding during synthesis.
+%%to improve device reliability. 
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/pcr.pdf_tex}
+\caption{Sequencing graph and different schemes of scheduling with
+one mixer. 
+(a) Sequencing
+graph of PCR. (b) Scheduling with four store operations. 
+Required storage capacity is three. 
+%The numbers in the parentheses are the numbers of fetch operations. 
+(c) Scheduling with three store operations. Required storage capacity is two. 
+The execution time of the assay with the second schedule is shorter.}
+\label{fig:pcr}
+}
+\end{figure}
+
+Given biochip architecture and scheduling and binding information, we need to design the fluid transportation routes to
+move fluid to their right place at the right time.
+A fluid transportation route consists of several flow channel segments, which are 
+definded by the open/closed states of valves along these channel segments.
+To actually drive the fluid to move in these flow channel segments, a pressure pump and a waste
+are needed to connected to the start and the end of the route. The pressure generated by the pump 
+push the fluid through these channel segments, while the pressure or the waste is released at the 
+waste port. This route that connects a pressure pump, several flow channel segments and the waste is called
+a flow path. Before the assay is executed, flow paths need to be constructed to manipulate fluid around a 
+microfluidic biochip intended.
+
+In recent years, design automation tools have been introduced to deal with
+design challenges of biochips. %\cite{Wille2016}.
+%Several methods have been proposed to synthesize flow-based biochips. 
+The method in \cite{MinhassPMB12} proposes a top-down
+flow to generate a biochip architecture while minimizing the execution time of
+the assay,  while the method in \cite{TsengYLH13} minimizes valve
+switching activities during architectural synthesis. 
+For scheduling and binding, the method in
+\cite{DinhYHH13} uses a maximum clique finding formulation to reduce assay
+execution time.
+Furthermore, fault-tolerance is considered during synthesis in \cite{HGRH17} using a
+progressive optimization procedure.  
+The method in \cite{LinLCLH14} proposes to solve the flow channel
+routing problem considering obstacles with an
+algorithm based on rectilinear Steiner minimum tree, while they are formulated as a SAT problem in \cite{GrimmerWYHW17} to achieve a close-to-optimal result. 
+The placement/routing iterations are performed in \cite{WangRYHC16} to reduce flow-channel
+crossings.
+Both routability and assay completion time are considered
+to achieve an efficient flow-layer design in \cite{SuHL16}
+
+Control logic synthesis is investigated in \cite{MinhassPMH13}
+to reduce the number of control pins, in \cite{WangZYHLSC17} 
+to optimize valve switching considering the relation between control patterns, 
+and in \cite{YaoHC15} to match lengths of control channels.
+The method in \cite{HuDHC17} minimizes
+pressure propagation delay in the control layer to reduce the response
+time of valves and synchronize their actuations.
+Switching patterns of valves are examined in \cite{WZYH17,WangXZYHLSC17} to reduce the
+largest number of switching activities in the control logic to avoid potential
+reliability problems.
+In \cite{YaoWRCH15}, flow layer and control layer codesign is proposed to
+achieve valid routing on both layers iteratively, and in \cite{TsengLLHS16} 
+interactions on both flow and control layers are
+modeled by an ILP formulation to achieve a better codesign efficiency. 
+ 
+
+
+To avoid contamination, washing is implemented in 
+\cite{HuHC14,HuHC16} to clean devices and channel segments after they are
+used. This method still traces path sets and block-based partial washing has not been
+explored. The latter requires a co-optimization between operation scheduling
+and washing activities.
+The volume management problem in biochips has been explored in
+\cite{AminTVWJ08} and \cite{MitraRBCB14} for the specific bioassay sample 
+preparation, but the optimization of volume management for general
+bioassays and the interaction of this task with fluid transportation 
+for normal operations have not been taken into account. 
+
+%Furthermore,				
+To deal with manufacturing defects,
+fault models and an ATPG-based test strategy for flow-based biochips are proposed
+in \cite{HuHC13,HuYHC14,LLHS17}. 
+Design-for-testability and defect diagnosis are further addressed in
+\cite{HuHC14_vts,HuBC15,Liu2018}.
+
+On system level,
+a general architecture of biochips from \cite{matrix11}, 
+where valves instead of dedicated devices 
+are built regularly and connected with short channels to implement 
+Programmable Microfluidic Devices (PMDs) or
+Fully Programmable Valve
+Arrays (FPVAs), has been explored in 
+\cite{TsengLHS15,TBMTtcad} to provide better reliability and flexibility
+in executing bioassays.
+Though dynamic flow connections can be constructed
+on these chips relatively easily, channel crossing needs to be avoided
+\cite{GLLH18} and valve control sequences need to be arranged carefully
+\cite{GKHW18}. Test generation for this new architecture
+is also proposed in \cite{CBBK17}.
+
+
+
+
+%Since a microfluidic biochip is a two-dimensional design, channels 
+%intersect with each other do not allow flow transportation at the same time. 
+%Therefore, the transportation tasks should be considered when operations are
+%assigned to devices and scheduled to specific time slots.
+%In addition, how intermediate fluid samples are stored in the storage unit and how
+%they are fetched should also be considered during synthesis.
+%incorporated in the synthesis framework.
+%of flow-based biochips. 
+%Both problems affect the execution of assays,
+%because the
+%inputs to devices might be delayed due to transportation conflict and the
+%%bandwidth limit of the storage unit. These
+%problems, however, 
+%but they have not been dealt with by any previous method.
+
+In this paper, we propose the first %storage-oriented 
+synthesis framework that 
+%incorporates 
+models distributed channel storage and time multiplexing 
+at intersections of flow channels, so that an assay can be executed very
+efficiently. %even with fewer resources built in the chip.
+We also propose the first flow path construction method to enalbe actual fluid manipulation during the assay execution.
+Our contributions include:
+\begin{easylist}
+& Instead of using a dedicated storage unit, we cache intermediate fluid
+samples in channels, so that not only the access bandwidth limit at the ports
+of the
+dedicated storage unit is overcome, but also the efficiency of channels and
+valves is improved.
+
+& Time multiplexing at the intersections of channels is modeled considering all
+transportation tasks for the first time.
+%at the same time. 
+With this model, 
+transportation conflict can be avoided 
+during architectural synthesis so that operations do not need to be postponed
+as in other methods. %leading to a shorter execution time of asssays. 
+
+& This is the first work to consider storage minimization from scheduling to
+architectural synthesis, so that the execution time of the assay can be reduced
+effectively.
+%significantly.
+
+& A compact physical design can be generated from the result of architectural
+synthesis easily. This design is already planar due to the direct modeling of switches at
+intersections of transportation channels.   
+
+\end{easylist}
+
+%Since only a few devices are normally built in a biochip, 
+%intermediate reaction results such as the output of $o_1$ in
+%\figname~\ref{fig:pcr} need to be stored in 
+%the storage unit and fetched when they are needed again 
+%for the next operation. In addition, fluid samples move
+%between devices often because operations are executed in different devices in
+%parallel and the intermediate results should be transported to other devices
+%for further operations. 
+%%For example, the result of $o_2$ should be transported
+%%to the device that executes $o_5$  
+%Consequently, many transportation channels are required between devices and
+%storage units to maintain a good efficiency.
+
+The rest of this paper is organized as follows. In
+Section~\ref{sec:motivation}, we explain the motivation of storage synthesis
+and
+%and timing-multiplexing modeling at crossing points of channels. In addition, we 
+formulate the problem we address in this paper.
+In Section~\ref{sec:storage_synthesis}, we 
+describe the techniques to reduce storage usage and to model 
+distributed channel storage in scheduling and architectural synthesis. We also
+demonstrate how a compact physical design can be generated from the
+synthesized planar connection graph.
+Experimental results are reported in Section~\ref{sec:results}.
+Conclusions are stated in Section~\ref{sec:conclusion}.
+

@@ -1,0 +1,446 @@
+\input{variables_constraints}
+\section{Synthesis of Biochips Considering Storage and Caching}
+\label{sec:storage_synthesis}
+
+Storage and caching should be considered from scheduling to architectural synthesis
+to reduce storage requirements and to construct channels for distributed
+storage.
+In addition, chip area should be reduced as much as possible by the result
+of architectural synthesis.
+Correspondingly, the proposed method includes three major parts:
+1) intermediate fluid storage is minimized in scheduling and binding,
+2) all the allocated devices are assigned to exact locations on a biochip, and 3) channel segments that cache intermediate fluid samples are constructed among devices, leading to a
+distributed channel-storage system which fulfills the tasks of transportation and storage at the same time.
+
+\subsection{Minimizing Storage in Scheduling and Binding}
+\label{sec:scheduling_binding}
+
+Scheduling and binding assign operations in a given sequencing graph
+to time slots of specific devices.
+%This is a common step in high-level synthesis of
+%integrated circuits and has been discussed in detail in
+%\cite{Micheli94}. %Since we
+To optimize storage requirements,
+%when executing the assay,
+we formulate the scheduling and binding task as
+an ILP problem. %instead of the commonly used List algorithm.
+
+The variables and constraints for scheduling and binding are listed in
+Table~\ref{tb:vc_scheduling_binding}. The uniqueness constraint (\ref{eq:uniqueness})
+specifies that operation $o_i$ should be assigned
+to one device only. The duration constraint ensures
+%that operation
+$o_i$ has enough time to finish.
+The precedence constraint (\ref{eq:precedence}) guarantees that a child
+operation must be executed later than its parents. Finally, the
+non-overlapping constraint (\ref{eq:non_overlapping}) prevents two operations
+whose operation periods overlap from being executed by the same device.
+These constraints are common for high-level synthesis and
+widely used in synthesis methods for biochips \cite{SuCh04}.
+
+To minimize the execution time of the assay, another variable $t^E$ is
+used to represent
+the latest ending time of all operations, constrained as
+\begin{equation}\label{eq:latest_finishing}
+t^e_i \le t^E,  \quad \forall o_i\in O.
+\end{equation}
+\vskip 7pt
+By minimizing $t^E$, the operations in the sequencing graph
+are assigned to proper time slots %as early as possible
+to produce a compact schedule.
+
+% as in \figname~\ref{fig:pcr}(b) and \ref{fig:pcr}(c).
+%These two schedules
+%%in \figname~\ref{fig:pcr}(b) and \ref{fig:pcr}(c),
+%however, require different storage access and capacity.
+%Consequently, they lead to different execution times of the bioassay
+%eventually.
+
+%Model transportation starting and ending time?
+
+To reduce storage requirements, we introduce an additional \textit{storage minimization
+objective}.
+Assume that the pure transportation time from a device to another device
+%or the storage channel
+is a constant $u_c$.
+If the schedule produces a transportation time larger
+than $u_c$, the fluid sample must be cached somewhere before it is
+used.
+Fig.~\ref{fig:schedule_storage} illustrates
+the schedules of executing an assay with five operations by two devices. The sequencing graph of this assay is shown in Fig.~\ref{fig:schedule_storage}(a).
+In \figname~\ref{fig:schedule_storage}(b),
+operation $o_2$ is scheduled before $o_3$. Consequently, the result of $o_2$
+must be stored until it is used by $o_4$ and $o_5$, leading to two storage
+requirements. %lasting six time units in total.
+In \figname~\ref{fig:schedule_storage}(c), $o_3$ is scheduled before $o_2$,
+leading to only one storage requirement lasting a shorter time.
+%four time units.
+%Although these two schedules lead to the same execution time for the assay,
+%the additional storage requirements in \figname~\ref{fig:schedule_storage}(b)
+In this example, we can observe that
+%should be met by more resource built in the chip.
+the lifetime of stored fluid samples is determined by the difference between
+the ending time of the parent operation and the starting time of the child
+operation $u_{i,j}$ defined in Table~\ref{tb:vc_scheduling_binding}. Consequently, the total storage requirement can be reduced by
+solving the following ILP problem:
+\begin{align}
+\text{minimize} & \quad \alpha t^E+\beta\sum_{{(o_i,o_j)\in E\bigwedge d_i\ne d_j }}u_{i,j}
+ \label{eq:minobj}\\
+\text{subject to} & \quad
+\text{(\ref{eq:uniqueness})--(\ref{eq:latest_finishing}})\label{eq:op_cond}
+\end{align}
+%where $\sum_{\substack{(o_i,o_j)\in O\\d_i\ne d_j  }}(u_{i,j}-u_c)$ is the total storage
+%time in the schedule.
+where $\alpha$ and $\beta$ are constants to control the priority of
+execution time and storage requirement minimization.
+$d_i \ne d_j $ excludes the operation pairs assigned to the same device
+so that they do not need transportation.
+%Note that the formulation above
+%overestimates the storage requirement of $o_2\to o_5$ in
+%\figname~\ref{fig:schedule_storage}(b). This difference is
+%modeled in our method with another variable and the solver determines which
+%fluid sample should be transported first.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/schedule_storage.pdf_tex}
+\caption{Storage reduction. (a) Sequencing graph. (b) Schedule with two
+storage requirements. (c) Schedule with one storage requirement. The execution
+times of the assay with these two schedules are equal. }
+\label{fig:schedule_storage}
+}
+%\vspace{-0.5cm}
+\end{figure}
+
+%where all operation are assigned to
+%given devices and their starting and end times as well as the time slots for
+%storage are determined
+
+
+%!!!! CAnother issue in the storage-aware scheduling is the
+%order of the result of one operation
+%going to two devices. For example, the result of operation $o_2$ goes to $o_4$
+%and $o_5$. The precedence of these two transportation
+%is modeled with a 0-1 variable. Similarly, the order of two inputs entering
+%one device is also modeled one such a variable. The solver determines which
+%tranportation is performed first to minimize the execution time and storage
+%requirement.
+
+\subsection{Architectural Synthesis with Distributed Channel Storage}\label{sec:channel_storage_synthesis}
+After solving the
+optimization problem (\ref{eq:minobj})--(\ref{eq:op_cond}), we have a schedule
+similar to \figname~\ref{fig:schedule_storage}(c),
+including the information: 1) to which devices operations are
+assigned; 2) the starting time and the ending time of each operation; 3) the
+%existing periods
+starting time and the ending time of each fluid storage requirement.
+%$of all fluid samples stored in the chip.
+
+The schedule, however, only defines the transportation requirements between
+devices after operations are executed. In the chip, physical channels need
+be constructed to conduct these transportation tasks.
+When a large assay is executed by several devices,
+transportation channels need to be built between nearly
+any pair of devices to move fluid samples
+%between devices
+efficiently.
+Since the flow-layer in a biochip is only two-dimensional, eventually
+intersections between channels cannot be avoided. At an intersection,
+a switch should be built to direct the transportation
+flow to the target device. A switch is constructed by
+four valves at an intersection, as shown in \figname~\ref{fig:switch}(a). At a
+given moment, two out of the four valves in a switch are opened to
+connect two channel segments. Consequently, a transportation
+channel between two devices becomes a path
+formed by several channel segments connected by switches.
+Such a path is called a \textit{transportation path} henceforth.
+
+Besides channels, the locations of devices should also be determined.
+These locations should be assigned together with the construction of
+transportation channels, because the distance and relative locations of devices
+affect how channels are constructed and how they intersect with each other.
+
+Considering devices and channels together, the architecture of a biochip can
+be described as devices surrounded by channel segments in the form of a grid.
+%This is different from normal IC design because crossing is allowed in this
+%architeture, but the channels crossing the same node should not be used at the
+%same time to avoid contamination.
+For example, the architecture of a biochip with five devices is
+shown in \figname~\ref{fig:switch}(b), where the smaller nodes
+represent switches and the larger nodes represent devices.
+Transportation paths between devices are
+formed from channel segments connected by switches, e.g., path 1 and path 2
+in \figname~\ref{fig:switch}(b).
+Since transportation paths are used only when there is a fluid sample
+traveling along it, channel segments can be reused by
+different paths so that the efficiency of channel segments increases.
+
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/switch.pdf_tex}
+\caption{Switch and channel storage. Large nodes represent devices and
+small nodes represent switches.  (a) Switch structure. (b) Two paths
+sharing one channel segment with time multiplexing. (c) Fluid sample to
+channel storage. (d) Storage in channel segment. (d) Fluid sample from channel
+storage to device.}
+\label{fig:switch}
+}
+%\vspace{-0.5cm}
+\end{figure}
+
+With transportation paths formed from channel segments, the proposed
+distributed channel storage concept can thus be formulated.
+%In addition, the fluid storage need also be implemented in the
+%chip.
+%As discussed in Section~\ref{sec:motivation},
+%overcome the bandwidth limit problem at the ports of the dedicated storage unit
+As illustrated in \figname~\ref{fig:device_storage}(c),
+%a port of the dedicated storage unit is
+%designed in the style of a multiplex. When the storage unit is accessed, the valves
+%to one cell is opened to allow the fluid sample to flow in. The other valves are closed to
+a dedicated storage unit suffers bandwidth problem at its ports
+because multiple fluid samples must be queued when they access the storage unit
+at the same time.
+Observing that the storage cells
+inside a dedicated storage unit
+%that store fluid samples
+are in fact channel segments, as shown in
+\figname~\ref{fig:valve_mixer_storage}(c), we distribute fluid storage
+directly in channel segments. For example, in
+\figname~\ref{fig:switch}(c), along path 3 a fluid sample is moved to the channel
+segment between A and B. However, the next operation using this
+fluid sample is scheduled later, so that the fluid sample must stay in the
+channel segment. During the lifetime of this storage, the channel segment
+between A and B cannot
+be used by other paths
+and the valves at the two ends of this channel segment should be closed.
+Further transportation tasks between devices are, however, still
+fulfilled by paths not including this channel segment,
+as path 4 and 5 in \figname~\ref{fig:switch}(d).
+When the stored fluid sample is finally needed, it is moved to the target
+device again by a newly constructed transportation path, shown as path 6
+in \figname~\ref{fig:switch}(e).
+
+Unlike the dedicated storage unit shown in
+\figname~\ref{fig:valve_mixer_storage}(c), the distributed storage in a
+channel segment has a higher access efficiency.
+When a fluid sample stays in a channel segment,
+that segment is turned into a \textit{storage segment}. When the
+fluid sample moves again, the segment becomes a part of
+the transportation path. This concept of channel role switching
+unifies transportation and storage,
+%so that a dedicated storage unit is not required anymore. Consequently, the efficiency
+and
+%increases channel usage significantly.
+%because
+the low-efficiency channels forming storage cells
+in a dedicated storage unit are excluded completely.
+In addition, this on-the-spot caching is closer to the target
+device than a dedicated storage unit, so that the execution efficiency of
+the assay can also be improved.
+
+\begin{figure}[t]
+{\figurefontsize
+\centering
+\input{Fig/grid_model.pdf_tex}
+\caption{Connection grid.}
+\label{fig:grid_model}
+}
+%\vspace{-0.5cm}
+\end{figure}
+
+To synthesize the architecture of a biochip from its schedule requires to
+determine the relative locations of devices
+as well as channel segments and the switches connecting them as shown by the examples
+in  \figname~\ref{fig:switch}(b)--(e). The devices, switches and their connections together form a
+\textit{connection graph}. %nodes edges}
+A valid connection graph should be capable of
+constructing all transportation paths specified in the schedule and caching
+intermediate fluid samples in channel segments.
+To reduce resource usage, the synthesized connection graph
+should contain as few edges as possible.
+
+The connection graph is generated using a general \textit{connection grid}, as
+shown in \figname~\ref{fig:grid_model}. At each node $n_i$ on the grid,
+either a device or a switch can be assigned. An edge $e_j$ represents
+a channel segment capable of caching a fluid sample.
+%The transportation channels are contructed by the
+%channel segments.
+%
+%At each channel segment, we can cache one fluid sample. To
+%determine on which nodes the devices are assigned and to construct the
+%transportation channels, we establish a ILP formulation. In solving the
+%optimization problem, we minimize the number of edges in the grid used by
+%transportation channels, so that only the minimum connections are kept in the
+%final result of architectural systhesis.
+%
+%In the connection grid, a node is denoted by $n_i$ and an edge is denoted
+%by $e_j$, where $i$ and $j$ are the node and edge indexes, respectively.
+We use a 0-1 variable $a_{i,k}$ to represent whether device $d_k$
+is assigned to node $n_i$. Since a node can be occupied by no more than one device
+and a device must be assigned once, $a_{i,k}$ can be constrained as
+\begin{equation} \label{eq:device_node_1}
+\sum_{d_k\in D} a_{i,k}\le 1, \forall n_i\in N, \quad
+\sum_{n_i\in N} a_{i,k}=1, \forall d_k\in D
+\end{equation}
+%+a_{i,k_2}\le 1$ for two devices
+where $N$ is the set of nodes in the connection grid and $D$ is the set of
+devices.
+
+Assume there is a transportation path $p_r$ between
+device $d_{k_1}$ and device $d_{k_2}$ in the period between
+$t^s_{r}$ and ${t^e_{r}}$, where $r$ is the index of the path.
+$t^s_{r}$ and ${t^e_{r}}$ are constants determined in the
+scheduling and binding step in Section~\ref{sec:scheduling_binding}.
+We use a 0-1 variable $\epsilon_{j,r}$ to represent whether the edge
+$e_j$ is on the path $p_r$.
+To construct a path between $d_{k_1}$ and $d_{k_2}$, we need to
+guarantee that the path starts from the node for $d_{k_1}$
+and ends at the node for $d_{k_2}$.
+Consequently, at one of these two nodes, only one of the four edges incident
+to the node can be covered in the path.
+At each other node on the path, exactly two edges are covered by the path, as
+illustrated with path $p_r$ in \figname~\ref{fig:grid_model}.
+%For each node $n_i$, we then assign
+%another variable $g_{i,r}$ to represent the number of edges incident to $n_i$
+%and covered by the path $p_r$.
+Accordingly, we can
+construct the path with the following constraints
+\begin{equation}\label{eq:degree}
+\sum_{e_j\in E_i}{\epsilon_{j,r}}\ge 2-a_{i, k_1}-a_{i, k_2}-(1-y_{i,r})M, \quad
+\sum_{e_j\in E_i}{\epsilon_{j,r}}\le y_{i,r}M
+\end{equation}
+where $E_i$ is the set of edges incident to node $n_i$; $y_{i,r}$ is an
+auxiliary 0-1 variable to indicate
+whether there is an edge on $p_r$ that is incident to $n_i$;
+%an edge incident to $n_i$ is covered by the transporation path,
+$M$ is a very large constant to transform the two
+situations indicated by $y_{i,r}$ into linear constraints
+\cite{chen2011applied}.
+%The two constaints
+%(\ref{eq:degree_zero}) guarantees that a continuous
+%path is contructed from a subset of edges in the connection grid.
+%%when the number of edges is minimized.
+
+The path construction constraints become more complex when a storage is involved,
+which leads to three sub-paths: 1) from $d_{k_1}$ to a storage segment; 2)
+the storage segment caching the fluid sample; 3) from the storage segment to the
+target device $d_{k_2}$.
+We denote the three transportation paths as $p_{r, 1}$,
+$p_{r, 2}$ and $p_{r,3}$, as illustrated in \figname~\ref{fig:grid_model}.
+Since the end node of $p_{r,1}$ and the starting
+node of $p_{r, 3}$ can be any node on the connection grid as long as they are
+the two end nodes of the same edge,
+we use 0-1 variables $a_{i_1,r_1}$ to represent that node
+$n_{i_1}$ is the last node on the path $p_{r,1}$ and the
+variables $a_{i_2,r_2}$ to represent that node
+$n_{i_2}$ is the first node on the path $p_{r,2}$.
+Afterwards, we create constraints similar to (\ref{eq:degree}) for each
+sub path. In addition, we include the constraint that $n_{i_1}$ and $n_{i_2}$
+are the two end nodes of the same edge. %as
+%For path $s_2$, the constraint is a liitle different,
+%because the cached fluid samples does not flow, so that the two nodes at the
+%ends of the storage segment can be used by other transportation paths.
+
+In the schedule, there are many transportation paths
+%, which should be contructed on the connection graph.
+at a given moment. These paths should not
+intersect at a node or share the same edge to avoid conflict.
+%In our formulation,
+Therefore, we examine the paths on the connection grid at the starting time of each
+transportation path, because this is the moment a new transportation is
+initiated. At each such moment $t$, we constrain that all the paths existing on
+the connection grid should not share any edge or intersect at a node, as,
+\begin{equation}\label{eq:edge_node_sharing}
+\sum_{e_j\in E} \epsilon_{j,r}\le 1, \forall p_r\in P_t, \quad
+\sum_{n_i\in N} \eta_{i,r}\le 1, \forall  p_r\in P_t
+\end{equation}
+where $P_t$ is the set of paths existing at time $t$;
+$\eta_{i,r}$ represents whether node $n_i$ is on path $p_r$;
+$E$ and $N$ are the sets
+of edges and nodes in the connection grid, respectively. Exception of
+constraint (\ref{eq:edge_node_sharing}) is that the two ending nodes of the
+storage segment $p_{r,2}$ can be passed by other paths when the fluid sample is stored,
+as path $p'_r$ in \figname~\ref{fig:grid_model}, so that their variables
+$\eta_{i,r}$ are not included in (\ref{eq:edge_node_sharing}) when $p_{r,2}$
+exists. %in the grid.
+
+When generating the architecture of the chip, we minimize the number of edges
+that are really used by the transportation paths
+to reduce resource usage. If an edge is used once by any transportation path,
+it should appear in the chip. We use a 0-1 variable $s_j$ to represent whether
+a channel segment should be kept in the chip, and constrain it as
+\begin{equation}\label {eq:edge_app}
+s_j\ge \epsilon_{i,r}, \; \forall p_r\in P
+\end{equation}
+where $P$ is the set including all transportation paths.
+
+Finally, the architecture of the biochip can be determined by solving the
+following optimization problem
+\begin{align} \label{eq:edge_opt}
+\text{minimize} & \quad \sum_{e_j\in E}s_j\\
+\text{subject to} & \quad
+\text{(\ref{eq:device_node_1})--(\ref{eq:edge_app})}\label{eq:edge_opt_cond}
+\end{align}
+After determining $s_j$, the edges and nodes
+that are not used in the connection grid
+are removed to generate the chip architecture as a planar
+connection graph similar to
+\figname~\ref{fig:switch}(b)--(e).
+
+% \subsection{Iterative compression of chip area}
+%
+% The chip architecture defines the relative locations of devices and
+% their connections by switches. The length of an edge, if used as storage,
+% should be large enough to accommodate one fluid sample.
+% %Although we can
+% %build a chip with the architecture that works with distributed
+% %channel storage directly,
+% Although we can directly build a biochip with a distributed
+% channel storage architecture as shown in
+% \figname~\ref{fig:layout}(a)$\to$(b), the size of the chip may be too large because there is
+% much unused space between the channel segments.
+% %Furthermore, in the architecture, the
+% %devices are abstracted as nodes.
+% %In reality, their dimentions are quite large,
+% %so that  assigning a device to a node directly lead to wire conflict.
+%
+% To generate the physical design of a biochip from its architecture, we first
+% insert the devices to the connection graph. Since devices are relatively large,
+% we extend the lengths of channel segments to meet all length requirements for
+% channel storage. Afterwards, we collapse the segments toward the upper
+% right corner iteratively. In each iteration, we either
+% reduce the horizontal dimension or the vertical dimension by
+% a constant number and generate bending points on the
+% segments to extend segment lengths.
+% The iterations stop when the layout cannot be compressed further and the
+% result is the final physical design. The major steps of this process are
+% illustrated in \figname~\ref{fig:layout}.
+%
+%
+% \begin{figure}[t]
+% {\figurefontsize
+% \centering
+% \input{Fig/layout.pdf_tex}
+% \caption{Iterative layout compression. (a) Device assignment. (b) Layout
+% expansion. (c) Layout compression.}
+% \label{fig:layout}
+% }
+% \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

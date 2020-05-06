@@ -1,0 +1,126 @@
+\documentclass{article}
+
+\input{pagesetting}
+
+\usepackage[ampersand]{easylist}
+\usepackage[binary-units=true]{siunitx}
+
+\usepackage{graphicx}
+\graphicspath{{./Fig/}}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+
+\usepackage{eurosym}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{amssymb,amsmath}
+%amsthm for theorem definition, must after amsmath.
+%\proof is already defined in amsthm, so undefine it before loading
+\makeatletter
+\let\oldproof\proof
+\let\oldendproof\endproof
+\let\proof\@undefined
+\let\endproof\@undefined
+\makeatother
+
+
+\makeatletter
+%change spaces around equations in amsmath
+\g@addto@macro\normalsize{%
+  \setlength\abovedisplayskip{2pt}
+  \setlength\belowdisplayskip{2pt}
+  \setlength\abovedisplayshortskip{-3pt}
+  \setlength\belowdisplayshortskip{-3pt}
+}
+\makeatother
+\usepackage{amsthm}
+
+
+\setlength{\parskip}{0.5em}
+
+
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{2ex}{1ex}
+\titlespacing{\subsection}{0pt}{1ex}{0ex}
+\titlespacing{\subsubsection}{0pt}{0.5ex}{0ex}
+
+%\setlength{\abovedisplayskip}{-4pt plus 1pt minus 1pt}
+%\setlength{\abovedisplayshortskip}{-4pt plus 1pt minus 0.5pt}
+%\setlength{\belowdisplayskip}{1pt plus 1pt minus 1pt}
+%\setlength{\belowdisplayshortskip}{1pt plus 1pt minus 0.5pt}
+\setlength\floatsep{1pt plus 0.5pt minus 0.5pt}
+\setlength\dblfloatsep{1pt plus 0.5pt minus 0.5pt}
+\setlength\intextsep{10pt}
+\setlength\textfloatsep{3.5pt plus 1pt minus 1pt}
+\setlength\dbltextfloatsep{1pt plus 1pt minus 1pt}
+\setlength\abovecaptionskip{1pt plus 0.5pt minus 0.5pt}
+\setlength\belowcaptionskip{1pt plus 0.5pt minus 0.5pt}
+
+\setlength{\abovecaptionskip}{10pt plus 3pt minus 2pt}
+\setlength{\belowcaptionskip}{0pt plus 3pt minus 2pt}
+
+%\renewcommand{\baselinestretch}{1.05}
+
+\RequirePackage[normalem]{ulem}
+%revision add/delete macros
+%\providecommand{\revadd}[1]{{\protect\color{blue}\uwave{#1}}} 
+%\providecommand{\revdel}[1]{{\protect\color{red}\sout{#1}}}  
+%\providecommand{\revspace}[1]{{#1}}  
+
+%revision add/delete macros
+\providecommand{\revadd}[1]{#1}%
+\providecommand{\revdel}[1]{\ignorespaces}%
+\providecommand{\revspace}[1]{\ignorespaces}%
+
+\graphicspath{{Fig/}}
+\def\figname{Figure}
+\def\algname{Algorithm}
+%\def\algname{Procedure}
+%\newcommand{\figurefontsize}{\fontsize{7.0pt}{1}\selectfont}
+\newcommand{\figurefontsize}{\normalfont\fontsize{8}{1}\selectfont}
+%\newcommand{\figuretitlefontsize}{\normalfont\fontsize{10}{1}\selectfont}
+%\newcommand{\figuretitlefontsize}{\small}
+
+
+%\newcommand{\tum}{Technische Universit\"{a}t M\"{u}nchen\ }
+\newcommand{\tum}{Technical University of Munich}
+
+\begin{document}
+
+\setcounter{page}{1}
+
+\input{title}
+\input{introduction}
+\vskip 20pt
+\input{objectives}
+\vskip 20pt
+
+%\clearpage
+%\let\oldthebibliography=\thebibliography
+%\let\endoldthebibliography=\endthebibliography
+%\renewenvironment{thebibliography}[1]{%
+%    \begin{oldthebibliography}{#1}%
+%        \fontsize{10pt}{2}\selectfont
+%        %\setlength{\parskip}{0ex}%
+%        %\setlength{\itemsep}{0.1ex}%
+%        %\def\baselinestretch{1.1} %%%%bil
+%        %\scriptsize
+%        % \small
+%}%
+%{%
+%    \end{oldthebibliography}%
+%}
+%
+\renewcommand\refname{Bibliography}
+%\bibliographystyle{apalike}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,CONFabrv,bibfile}
+
+\vskip 20pt
+\input{funding_requirements}
+
+\end{document}
+
+
+

@@ -1,0 +1,97 @@
+\setcounter{page}{0} 
+\pagenumbering{roman}
+
+
+
+\clearpage
+\thispagestyle{empty} 
+\begin{table*}
+\begin{center}
+\begin{minipage}[t][21.5cm][t]{12.8cm}
+%\fontsize{10}{10}\selectfont
+\renewcommand{\baselinestretch}{1.2} 
+\normalsize
+
+
+\vspace{10pt}
+
+Dear Editors, dear Reviewers,\\
+
+\vspace{3pt}
+
+Enclosed please find our manuscript entitled \textit{\papertitle}. We submit this
+manuscript as a regular paper for publication in \textit{IEEE Transactions on
+Computer-Aided Design of Integrated Circuits and Systems}.
+%for publication in the Special Issue on Deep Physical Design Techniques for
+%Next Generation Technologies, IEEE Transactions on Computer-Aided Design of
+%Integrated Circuits and Systems.
+
+\vspace{3pt}
+
+This work builds on the method in the appended paper, which was published at the 
+\textit{Design, Automation and Test in Europe} Conference in 2017 as [1].
+In this manuscript, we enhance the previous work as follows: 
+
+\vspace{3pt}
+
+\begin{enumerate} 
+
+  \item The model for testing Fully Programmable Valve Arrays (FPVAs) in [1] 
+    has been extended to take advantage of multiple test
+    ports to improve test efficiency. Accordingly, the number of test patterns
+    can be decreased by up to 50\%, leading to a significant
+    reduction of test cost. This extension is described in
+    Section~\ref{sec:multiple_port_tree} and Section~\ref{sec:multiple_port_cut}.
+
+  \item The extended test model is capable of generating test patterns for
+    traditional flow-based microfluidic biochips, and the number of the
+    resulting test patterns is much smaller than that from the other previous
+    method based on ATPG, as described in Section~\ref{sec:adapt_traditional}.
+   
+  \item In the extension, test of control layer leakage is covered with additional
+    constraints and explained in detail in Section~\ref{sec:control_layer_test}.
+    In addition, long channels and obstacles are merged to facilitate 
+    the generation of test patterns, as described in detail in Section~\ref{sec:walls_holes}. 
+
+  \item Furthermore, a loop relaxation technique is introduced to improve the scalability of the
+    original model based of ILP. Constraint violations are addressed by
+    amending the test patterns to improve the efficiency of test
+    generation. Consequently, large designs can be dealt with using this
+    enhanced method, as described in Section~\ref{sec:loop_relax}.
+
+  \item Simulation results have been extended according to the new improvements 
+    to demonstrate their effectiveness and efficiency.
+
+\end{enumerate} 
+
+%\vspace{-10pt}
+%We confirm that this manuscript has not been published or submitted elsewhere
+%and all authors have approved the manuscript and agree with the submission.\\
+
+\vspace{10pt}
+
+
+We look forward to hearing from you 
+and thank you very much for your time and consideration.
+
+
+\vspace{25pt}
+
+Yours sincerely,
+
+\vspace{10pt}
+Chunfeng Liu, Bing Li, Bhargab B. Bhattacharya, Krishnendu Chakrabarty,
+Tsung-Yi Ho and Ulf Schlichtmann \\
+
+
+
+\end{minipage}
+\end{center}
+\end{table*}
+
+\clearpage
+%\thispagestyle{empty} 
+%\mbox{}
+%\clearpage
+\setcounter{page}{0} 
+\pagenumbering{arabic}

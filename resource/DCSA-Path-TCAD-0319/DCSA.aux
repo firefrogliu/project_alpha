@@ -1,0 +1,210 @@
+\relax 
+\citation{liu2017transport}
+\citation{EVNR03,JMSQ07}
+\citation{hu2017computer}
+\citation{kartalov2006high}
+\citation{einav2008discovery}
+\citation{hong2006molecular}
+\citation{zhu2018multi}
+\citation{squires2005microfluidics}
+\citation{HuDHC17}
+\citation{AminTA09}
+\citation{Chen2019DCSA}
+\citation{zhang2002microelectrofluidic}
+\citation{AminTA09}
+\citation{AminTA09}
+\citation{MinhassPMB12}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
+\newlabel{introduction}{{I}{1}}
+\citation{MinhassPMB12}
+\citation{LinLCLH14}
+\citation{huang2019timing}
+\citation{WangRYHC16}
+\citation{MinhassPMH13}
+\citation{WangZYHLSC17}
+\citation{YaoHC15}
+\citation{Huang2019DAC}
+\citation{YaoWRCH15}
+\citation{TsengLLHS16}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Components and structure of flow-based biochips. (a) Valve structure. (b) Mixer. (c) A biochip with eight storage cells \cite  {AminTA09}.\relax }}{2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:valve_mixer_storage}{{1}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Sequencing graph and different schemes of scheduling with one mixer. (a) Sequencing graph of PCR. (b) Scheduling with four store operations. Required storage capacity is three. (c) Scheduling with three store operations. Required storage capacity is two.\relax }}{2}}
+\newlabel{fig:pcr}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Storage mechanisms. (a) Storage with dedicated unit. (b) \leavevmode {\color {red}Channel storage.} (c) Port of dedicated storage unit.\relax }}{3}}
+\newlabel{fig:device_storage}{{3}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Motivation and Problem Formulation}{3}}
+\newlabel{sec:motivation}{{II}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Storage Minimization and Proposed Concept of Distributed Channel Storage}{3}}
+\newlabel{ta}{{\caption@xref {ta}{ on input line 95}}{3}}
+\newlabel{tb}{{\caption@xref {tb}{ on input line 98}}{3}}
+\newlabel{tc}{{\caption@xref {tc}{ on input line 101}}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Flow-path planning. (a) Sequencing graph of a bioassay. (b) A scheduling and binding solution with minimized execution time. (c) Flow paths constructed on a given chip architecture.\relax }}{3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{3}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{3}}
+\newlabel{fig:motivation}{{4}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Design Challenges in Flow-Path Planning}{3}}
+\newlabel{sec:flow_path_chan}{{\unhbox \voidb@x \hbox {II-B}}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-B}1}Transportation conflict}{3}}
+\newlabel{ta1}{{\caption@xref {ta1}{ on input line 113}}{4}}
+\newlabel{tb1}{{\caption@xref {tb1}{ on input line 116}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Strategies for transportation conflict elimination. (a) Scheduling adjustment. (b) Architecture ajustment.\relax }}{4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{4}}
+\newlabel{fig:strategy}{{5}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-B}2}Caching deadlock}{4}}
+\newlabel{ta}{{\caption@xref {ta}{ on input line 150}}{4}}
+\newlabel{tb}{{\caption@xref {tb}{ on input line 153}}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Illustration of caching deadlock. (a) Scheduling scheme of a bioassay. (b) A flow-path planning solution with caching deadlock.\relax }}{4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{4}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{4}}
+\newlabel{fig:deadlock}{{6}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Problem Formulation}{4}}
+\citation{SuCh04}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Variables and Constraints for Scheduling and Binding\relax }}{5}}
+\newlabel{tb:vc_scheduling_binding}{{I}{5}}
+\newlabel{eq:uniqueness}{{1}{5}}
+\newlabel{eq:duration}{{2}{5}}
+\newlabel{eq:precedence}{{3}{5}}
+\newlabel{eq:non_overlapping}{{4}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Synthesis of Biochips Considering Storage and Caching}{5}}
+\newlabel{sec:storage_synthesis}{{III}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Minimizing Storage in Scheduling and Binding}{5}}
+\newlabel{sec:scheduling_binding}{{\unhbox \voidb@x \hbox {III-A}}{5}}
+\newlabel{eq:latest_finishing}{{5}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Storage reduction. (a) Sequencing graph. (b) Schedule with two storage requirements. (c) Schedule with one storage requirement. The execution times of the assay with these two schedules are equal. \relax }}{5}}
+\newlabel{fig:schedule_storage}{{7}{5}}
+\newlabel{eq:minobj}{{6}{5}}
+\newlabel{eq:op_cond}{{7}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Architectural Synthesis with Distributed Channel Storage}{5}}
+\newlabel{sec:channel_storage_synthesis}{{\unhbox \voidb@x \hbox {III-B}}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Switch and channel storage. Large nodes represent devices and small nodes represent switches. (a) Switch structure. (b) Two paths sharing one channel segment with time multiplexing. (c) Fluid sample to channel storage. (d) Storage in channel segment. (d) Fluid sample from channel storage to device.\relax }}{6}}
+\newlabel{fig:switch}{{8}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Connection grid.\relax }}{6}}
+\newlabel{fig:grid_model}{{9}{6}}
+\newlabel{eq:device_node_1}{{8}{6}}
+\citation{chen2011applied}
+\citation{minhass2012architectural}
+\citation{lane1979generalized}
+\newlabel{eq:degree}{{9}{7}}
+\newlabel{eq:edge_node_sharing}{{10}{7}}
+\newlabel{eq:edge_app}{{11}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Illustration of transportation-task grouping during flow-path planning.\relax }}{7}}
+\newlabel{fig:concurrent_set}{{10}{7}}
+\newlabel{eq:edge_opt}{{12}{7}}
+\newlabel{eq:edge_opt_cond}{{13}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}\leavevmode {\color {red}Scheduling Recomputation}}{7}}
+\newlabel{sec:schedual_recomputation}{{\unhbox \voidb@x \hbox {III-C}}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Flow-Path Planning}{7}}
+\newlabel{sec:flow_paths}{{IV}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Flow-Path Planning on A Certian Biochip Architecture}{7}}
+\newlabel{sec:constructing_paths_given}{{\unhbox \voidb@x \hbox {IV-A}}{7}}
+\citation{hu2015fault}
+\newlabel{eq:flow_node_1}{{14}{8}}
+\newlabel{eq:flow_node_2}{{15}{8}}
+\newlabel{eq:flow_node_3}{{16}{8}}
+\newlabel{eq:continuous}{{17}{8}}
+\newlabel{eq:continuous_last}{{22}{8}}
+\newlabel{eq:bypass0}{{23}{8}}
+\newlabel{eq:bypass}{{24}{8}}
+\newlabel{eq:nonconflict}{{25}{8}}
+\newlabel{eq:ILP_flow_paths}{{26}{8}}
+\newlabel{eq:ILP_flow_paths_last}{{27}{8}}
+\citation{lawler1993sequencing}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Deadlock Removal}{9}}
+\newlabel{sec:res_storage_deadlock}{{\unhbox \voidb@x \hbox {IV-B}}{9}}
+\newlabel{eq:bypass_move}{{28}{9}}
+\newlabel{eq:ILP_flow_paths_deadlock}{{29}{9}}
+\newlabel{eq:ILP_flow_paths_deadlock_last}{{30}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Conflict Elimination -- Scheduling Adjustment}{9}}
+\newlabel{sec:ILP_flow_paths}{{\unhbox \voidb@x \hbox {IV-C}}{9}}
+\newlabel{ta}{{\caption@xref {ta}{ on input line 105}}{9}}
+\newlabel{tb}{{\caption@xref {tb}{ on input line 108}}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Comparison on different scheduling-adjustment schemes. (a) Postpone the execution of task $f_1$. (b) Postpone the execution of task $f_2$. \relax }}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{9}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{9}}
+\newlabel{fig:adjusment_choice}{{11}{9}}
+\newlabel{eq:postpone1}{{31}{9}}
+\newlabel{eq:postpone2}{{32}{9}}
+\newlabel{eq:ILP_flow_paths_deadlock_postpone}{{33}{9}}
+\newlabel{eq:ILP_flow_paths_deadlock_postpone_last}{{34}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Conflict Elimination -- Architecture Adjustment}{9}}
+\newlabel{sec:GA}{{\unhbox \voidb@x \hbox {IV-D}}{9}}
+\citation{mitchell1998introduction}
+\citation{pop2016microfluidic}
+\citation{pop2016microfluidic}
+\citation{gurobi}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Details of the benchmarks used in this paper.\relax }}{10}}
+\newlabel{tb_input_graph}{{II}{10}}
+\newlabel{eq:fitness}{{37}{10}}
+\newlabel{item:iteration_begin}{{2}{10}}
+\newlabel{item:new_gen}{{4}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Simulation Results}{10}}
+\newlabel{sec:results}{{V}{10}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Results of Scheduling, Architectural Synthesis, and Flow-Path Planning\relax }}{11}}
+\newlabel{tb_test}{{III}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}\leavevmode {\color {red}Synthesis Results of the Proposed Design Flow}}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \leavevmode {\color {red}Comparison of the total amount of time that fluids are stored before and after applying the proposed storage optimization method.}\relax }}{11}}
+\newlabel{fig:storage_cmp}{{12}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}\leavevmode {\color {red}Performance Validation of the Proposed Optimization Methods}}{11}}
+\citation{minhass2012architectural}
+\citation{minhass2012architectural}
+\citation{minhass2012architectural}
+\citation{minhass2012architectural}
+\citation{minhass2012architectural}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces \leavevmode {\color {red}Comparison results in terms of the execution time of assay and the numbers of routing channels and valves before and after applying the proposed storage optimization method.}\relax }}{12}}
+\newlabel{fig:ideal_cmp}{{13}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces  \leavevmode {\color {red}Channel and valve ratios with respect to the results of architectural synthesis and the original channels and valves in the connection grid.}\relax }}{12}}
+\newlabel{fig:edge_valve_percentage}{{14}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces \leavevmode {\color {red}Execution time and valve ratios with respect to the results using distributed channel storage and dedicated storage units.}\relax }}{12}}
+\newlabel{fig:exe_time_valve_cmp}{{15}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces \leavevmode {\color {red}Comparison with the method in \cite  {minhass2012architectural}.}\relax }}{12}}
+\newlabel{tb_Minhass_compare}{{IV}{12}}
+\citation{minhass2012architectural}
+\citation{minhass2012architectural}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Average convergence curves of the proposed genetic algorithm.\relax }}{13}}
+\newlabel{fig:iteration}{{16}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Snapshots of the synthesized chip executing RA30 at different times. The channel segments in blue are transporting and in purple are caching fluid samples.\relax }}{13}}
+\newlabel{fig:RA30_exe_1}{{17}{13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Snapshots of the synthesized chip executing RA30 with constructed flow paths at different times. The channel segments in blue are transporting and in purple are caching fluid samples.\relax }}{13}}
+\newlabel{fig:RA30_exe_2}{{18}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}\leavevmode {\color {red}Snapshots of Assay Execution}}{13}}
+\bibstyle{IEEEtran}
+\bibdata{IEEEabrv,CONFabrv,bibfile}
+\bibcite{liu2017transport}{1}
+\bibcite{EVNR03}{2}
+\bibcite{JMSQ07}{3}
+\bibcite{hu2017computer}{4}
+\bibcite{kartalov2006high}{5}
+\bibcite{einav2008discovery}{6}
+\bibcite{hong2006molecular}{7}
+\bibcite{zhu2018multi}{8}
+\bibcite{squires2005microfluidics}{9}
+\bibcite{HuDHC17}{10}
+\bibcite{AminTA09}{11}
+\bibcite{Chen2019DCSA}{12}
+\bibcite{zhang2002microelectrofluidic}{13}
+\bibcite{MinhassPMB12}{14}
+\bibcite{LinLCLH14}{15}
+\bibcite{huang2019timing}{16}
+\bibcite{WangRYHC16}{17}
+\bibcite{MinhassPMH13}{18}
+\bibcite{WangZYHLSC17}{19}
+\bibcite{YaoHC15}{20}
+\bibcite{Huang2019DAC}{21}
+\bibcite{YaoWRCH15}{22}
+\bibcite{TsengLLHS16}{23}
+\bibcite{SuCh04}{24}
+\bibcite{chen2011applied}{25}
+\bibcite{minhass2012architectural}{26}
+\bibcite{lane1979generalized}{27}
+\bibcite{hu2015fault}{28}
+\bibcite{lawler1993sequencing}{29}
+\bibcite{mitchell1998introduction}{30}
+\bibcite{pop2016microfluidic}{31}
+\bibcite{gurobi}{32}
+\bibcite{lim2010lab}{33}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{14}}
+\newlabel{sec:conclusion}{{VI}{14}}
+\@writefile{toc}{\contentsline {section}{References}{14}}

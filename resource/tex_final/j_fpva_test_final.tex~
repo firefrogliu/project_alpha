@@ -1,0 +1,136 @@
+\documentclass[journal]{IEEEtran}
+
+%\usepackage{pdfpages}
+\usepackage{cite}
+
+\usepackage{amsthm}
+\usepackage{lipsum} % for filler text
+\newtheorem{theorem}{Theorem}
+\usepackage{color}
+\usepackage[caption=false,font=footnotesize]{subfig}
+
+\usepackage{amssymb,amsmath}
+
+
+%\newcommand{\subparagraph}{}
+%\usepackage[compact]{titlesec}
+%\usepackage{titlesec}
+%\titlespacing{\section}{25pt}{2pt}{2pt}
+%\titlespacing{\subsection}{15pt}{2pt}{2pt}
+
+%\setlength\floatsep{5pt plus 0.5pt minus 0.5pt}
+%\setlength\dblfloatsep{3pt plus 0.5pt minus 0.5pt}
+%\setlength\intextsep{2pt plus 0.5pt minus 0.5pt}
+\setlength\textfloatsep{5pt plus 1pt minus 1pt}
+\setlength\dbltextfloatsep{5pt plus 1pt minus 1pt}
+%\setlength\abovecaptionskip{2pt plus 0.5pt minus 0.5pt}
+%\setlength\belowcaptionskip{2pt plus 0.5pt minus 0.5pt}
+\setlength\abovedisplayskip{4pt plus 1pt minus 1pt}
+\setlength\belowdisplayskip{4pt plus 1pt minus 1pt}
+\setlength\abovedisplayshortskip{2pt plus 1pt minus 1pt}
+\setlength\belowdisplayshortskip{2pt plus 1pt minus 1pt}
+
+
+\makeatletter
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+\makeatother
+\usepackage[binary-units=true]{siunitx}
+\usepackage[algoruled,noline,longend,linesnumbered]{algorithm2e}
+
+\usepackage{graphicx}
+\usepackage{pgfplots}
+
+\thinmuskip=2mu 
+\medmuskip=2mu plus 2mu minus 2mu
+\thickmuskip=2mu plus 1mu minus 1mu
+
+\begin{document}
+
+
+\graphicspath{{Fig/}}
+\def\figname{Fig.}
+\def\algname{Algorithm}
+\newcommand{\figurefontsize}{\footnotesize}
+\newcommand{\papertitle}{Test Generation for Flow-Based Microfluidic
+Biochips with General Architectures}
+\newcommand{\tum}{Technical University of Munich (TUM)}
+
+%\input{cover_letter}
+
+
+\title{\papertitle}
+
+\author{	
+Chunfeng~Liu, Bing~Li, Bhargab~B.~Bhattacharya,~\IEEEmembership{Fellow,~IEEE,} Krishnendu~Chakrabarty,~\IEEEmembership{Fellow,~IEEE,}
+Tsung-Yi~Ho,~\IEEEmembership{Senior~Member,~IEEE,} and Ulf~Schlichtmann,~\IEEEmembership{Senior~Member,~IEEE}
+
+\thanks{A preliminary version of this paper was published as \cite{CBBK17} in
+the Proceedings of the Design, Automation and Test in Europe (DATE)
+conference, 2017. The improvements include an acceleration technique with loop
+relaxation, test of leakage in the control layer and test of chips with multiple
+pressure sensors.}
+%\thanks{The work of B. B. Bhattacharya was funded, in part, by INAE Chair
+%Professorship, and by a special grant provided to Nanotechnology
+%Research Triangle from Indian Statistical Institute, Kolkata.
+%The work of B. Li and U. Schlichtmann was supported, in part, by Deutsche
+%Forschungsgemeinschaft (DFG) through TUM International Graduate School of
+%Science and Engineering (IGSSE).
+%The work of T.-Y. Ho, K. Chakrabarty and U. Schlichtmann
+%was supported, in part, by the Technical University
+%of Munich -- Institute for Advanced Study, funded by the German
+%Excellence Initiative and the European Union Seventh Framework Programme under
+%grant agreement n$^\circ$ 291763.
+%}
+          \thanks{Chunfeng Liu, Bing Li and Ulf Schlichtmann are with the Chair
+	    of Electronic Design Automation,
+          \tum, Munich 80333, Germany (e-mail: chunfeng.liu@tum.de; b.li@tum.de;
+  ulf.schlichtmann@tum.de).}
+          %\thanks{Bhargab B. Bhattacharya is with the Indian Statistical Institute, Kolkata, India
+   %(e-mail: bhargab@isical.ac.in).}
+  \thanks{Bhargab B. Bhattacharya is with the
+    Department of Computer Science \& Engineering, Indian Institute of
+    Technology Kharagpur, India (e-mail: bhargab@cse.iitkgp.ac.in).}
+           \thanks{Krishnendu Chakrabarty is with the Department of 
+	     Electrical and Computer Engineering and the Department of Computer
+	     Science, Duke University, Durham, NC, USA (e-mail: krish@ee.duke.edu).}
+            \thanks{Tsung-Yi Ho is with the Department of Computer Science,  
+	    National Tsing Hua University, Hsinchu, Taiwan (e-mail: tyho@cs.nthu.edu.tw).}
+}
+
+\maketitle
+ \markboth{IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS}
+ {Liu \MakeLowercase{\textit{et al.}}: \papertitle}
+
+ 
+ \IEEEpeerreviewmaketitle
+
+%\thispagestyle{fancy}
+
+\input{abstract}
+\input{introduction}
+\input{formulation}
+\input{test_method}
+\input{test_model}
+\input{multi_port}
+\input{results}
+\input{conclusion}
+
+
+\input{acknowledgment}
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,CONFabrv,bibfile}
+
+\input{biographies}
+
+%\clearpage
+%\includepdf[pages=1-last]{07926964.pdf}
+
+
+\end{document}
+
+
+
+

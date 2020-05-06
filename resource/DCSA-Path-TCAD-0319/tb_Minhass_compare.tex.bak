@@ -1,0 +1,15 @@
+\begin{table}[t]\small
+    \centering
+    \caption{\textcolor{red}{Comparison with the method in \cite{minhass2012architectural}.}}
+      \begin{tabular}{|c||c|c|c|c|c|c|}\hline
+        \multirow{2}[0]{*}{Benchmark} &  \multicolumn{3}{c|}{Minhass \cite{minhass2012architectural}} & \multicolumn{3}{c|}{Proposed method}   \\\cline{2-7}
+           & $t^{E'}$ & $n_v$    & $l_n$   & $t^{E'}$ & $n_v$    & $l_n$  \\\hline\hline
+      RA70         &238	&117	&286 &183	&82	&270      \\\hline
+      CPA         &185	&93	&227	&152	&72	&220      \\\hline
+      RA30         &99	&59	&188	&81	&43	&170      \\\hline
+      IVD         &42	&37	&137	&47	&32	&110      \\\hline
+      PCR         &33	&18	&106	&32	&18	&90      \\\hline
+      \end{tabular}%
+ %     \caption*{RA100, RA70 and RA30 are randomly generated assays.}\footnotesize
+    \label{tb_Minhass_compare}%
+  \end{table}%

@@ -1,0 +1,48 @@
+\documentclass{article}
+
+\begin{document}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+
+
+\section{Background}
+\subsection{Technology platform and key application areas}
+\subsection{Digital microfluidic biochips}
+\subsection{Continuous-flow microfluidic biochips}
+
+\section{State of the art: Design automation for continuous-flow microfluidic biochips}
+\subsection{Synthesis for continuous-flow microfluidic biochips}
+\subsection{Testing and diagnosis for continuous-flow microfluidic biochips}
+
+\section{Synthesis and design-for-testability of continuous-flow microfluidic biochips using distributed channel storage}
+\subsection{Dedicated storage of continuous-flow microfluidic biochip}
+\subsection{Modeling distributed storage with channel segments as caching units}
+\subsection{Storage awareness scheduling and binding}
+\subsection{Synthesizing microfluidic biochips with distributed channel storage}
+\subsection{Compact physical design with distributed channel storage}
+\subsection{Flow paths construction}
+\subsection{Synthesis for single-port testability of continuous-flow microfluidic biochips}
+\subsection{Experimental results}
+
+\section{Testing of fully programmable valve-array microfluidics}
+\subsection{Dynamically-Reconfigurable Microfluidic Biochips}
+\subsection{Synthesis of fully programmable valve-array microfluidics}
+\subsection{Models of continuous-flow microfluidic manufacturing faults and testing enviroments}
+\subsection{Challange in testing fully programmable valve-array microfluidics}
+\subsection{Test pattern generation, stuck-at-1 faults}
+\subsection{Test pattern generation, stuck-at-0 faults}
+\subsection{Test pattern generation acceleration, an architectural approach}
+\subsection{Multiple port testing for continuous-flow microfluidics}
+\subsection{Experimental results}
+
+
+\section{Conclusion}
+
+
+
+
+\end{document}

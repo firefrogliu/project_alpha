@@ -1,0 +1,24 @@
+
+\subsection{Dealing with long channels and obstacles}\label{sec:walls_holes}
+A FPVA may contain long channels and obstacles to enable certain functionalities such as allowing special devices to be built into the chip. \figname~\ref{fig:dynamic_devices}d has shown such long channels and obstacles made up by missing valves or the valves that always closed. When building a flow-path test vector, we open all the valves on the path and close the others. However, we cannot close the missing valves in the long channels. The same rules apply when we build the cut-sets test vectors. \figname~\ref{fig:dynamic_devices} demonstrates a flow path runs through a long channel twice. However, the test vector based on this flow path is invalid because the missing valve in the long channels cannot be closed. Therefore, a leakage will occur between the two cells in this long channel, masking the potential faults of the valves on this path. 
+
+\begin{figure}
+{\figurefontsize
+\centering
+\input{Fig/long_channel.pdf_tex}
+\caption{A flow path runs through a long channel twice. The missing valve causes a leakage. }
+\label{fig:long_channel}
+}
+\end{figure}
+
+We introduce the idea to of `super cell` to address this issue. \figname~\ref{fig:super_cell}a is a FPVA with a long channel. In \figname~\ref{fig:super_cell}b, the orignal FPVA is converted to a connection graph to show the relationships between cells and valves, where nodes represent the cells in the valve array, and edges represent the valves. Because the cells in the long channel are always connected together, we can collide them into one super cell. All the valves surrounding the long channel are then surrounding this new super cell. The new connection graph of is shown in \figname~\ref{fig:super_cell}c. We can apply the ILP model (\ref{eq:ilp_1})--(\ref{eq:ilp_2}) on the new connection graph to find the flow paths. Because all cells in a long channel are treated as one cell, the corresponding paths will not run through the long channel more than once. \figname~\ref{fig:super_cell}d demonstrates one of the actual flow paths on the orginal FPVA. The same method can be applied for generating cut-sets on FPVAs with obstacles because it is a complementary problem of generating flow paths on FPVAs with long channels.
+
+\begin{figure*}
+{\figurefontsize
+\centering
+\input{Fig/supper_cell.pdf_tex}
+\caption{Generating flow paths on a FPVA with a long channel. (a) The orginal FPVA architecture. (b) Converting the FPVA into a connection graph. (c) Cells in a long channel collide into one super cell. Flow paths are constructed on the new connection graph. (d) The corresponding flow path on the orginal FPVA. }
+\label{fig:super_cell}
+}
+\end{figure*}
+

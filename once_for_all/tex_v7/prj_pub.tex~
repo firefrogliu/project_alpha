@@ -1,0 +1,119 @@
+%\newcommand{\listcntskip}[1]{#1 \hskip 10pt}
+\ListProperties(Hang=true, Margin1=0pt,Style1*=, Align1=fixed, FinalMark=.\hskip10pt)
+
+\begin{easylist}
+
+%\textit{\underline{Biochip-related publications}}
+
+& T.-M. Tseng, \textbf{B.~Li}, U.~Schlichtmann, and T.-Y. Ho, ``Storage and caching:
+  Synthesis of flow-based microfluidic biochips,'' \emph{{IEEE} Design {\&}
+  Test}, vol.~32, no.~6, pp. 69--75, 2015.
+
+& T.-M. Tseng, \textbf{B.~Li}, T.-Y. Ho, and U.~Schlichtmann, ``Reliability-aware
+  synthesis for flow-based microfluidic biochips by dynamic-device mapping,''
+  in \emph{Proc. {ACM/IEEE} Design Autom. Conf. (DAC)}, 2015, pp. 141:1--141:6.
+
+& T.-M. Tseng, \textbf{B.~Li}, M.~Li, T.-Y. Ho, and U.~Schlichtmann, ``Reliability-aware
+  synthesis with dynamic device mapping and fluid routing for flow-based
+  microfluidic biochips,'' \emph{{IEEE} Transactions on Computer-Aided 
+  Design of Integrated Circuits and Systems (TCAD)}, vol.~35, no.~12, pp. 1981--1994, 2016.
+
+%& M.~Li, T.-M. Tseng, \textbf{B.~Li}, T.-Y. Ho, and U.~Schlichtmann, ``Sieve-valve-aware
+  %synthesis of flow-based microfluidic biochips considering specific biological
+  %execution limitations,'' in \emph{Proc. {IEEE} Design, Autom., and Test Europe Conf.
+  %(DATE)}, 2016, pp. 624--629.
+
+& T.-M. Tseng, M.~Li, \textbf{B.~Li}, T.-Y. Ho, and U.~Schlichtmann, ``Columba: Co-layout
+  synthesis for continuous-flow microfluidic biochips,'' in 
+\emph{Proc. {ACM/IEEE} Design Automation Conference (DAC)}, 2016, pp. 147:1--147:6.
+
+& Q.~Wang, Z.~Li, H.~Cheong, O.~Kwon, H.~Yao, T.-Y. Ho, K.~Shin,
+\textbf{B.~Li},
+  U.~Schlichtmann, and Y.~Cai, ``Control-fluidic codesign for paper-based
+  digital microfluidic biochips,'' in \emph{Proc. {IEEE} Int. Conf. Comput.-Aided Des.
+  (ICCAD)}, 2016, pp. 103:1--103:8.
+
+%& R.~Wille, B.~Li, U.~Schlichtmann, and R.~Drechsler, ``From biochips to quantum
+ %circuits: Computer-aided design for emerging technologies,'' in
+%\emph{Proceedings of International Conference on Computer-Aided Design
+%(ICCAD)}, 2016, pp. 132:1--132:6.
+
+& Q.~Wang, S.~Zuo, H.~Yao, T.-Y. Ho, \textbf{B.~Li}, and Y.~C., Ulf~Schlichtmann,
+  ``Hamming-distance-based valve-switching optimization for control-layer
+  multiplexing in flow-based microfluidic biochips,'' in \emph{Proc. {IEEE} Asia and
+  South Pacific Des. Autom. Conf. (ASP-DAC)}, 2017, pp. 524--529.
+
+& C.~Liu, \textbf{B.~Li}, B.~B. Bhattacharya, K.~Chakrabarty, T.-Y. Ho, and
+  U.~Schlichtmann, ``Testing microfluidic fully programmable valve arrays
+  ({FPVAs}),'' in \emph{Proc. {IEEE} Design, Autom., and Test Europe Conf. (DATE)},
+  2017, pp. 91--96.
+
+  & C.~Liu, \textbf{B.~Li}, T.-Y. Ho, K.~Chakrabarty, and U.~Schlichtmann,
+  ``Design-for-testability for continuous-flow microfluidic biochips,'' in
+  \emph{Proc. {ACM/IEEE} Design Autom. Conf. (DAC)}, 2018, pp. 164:1--164:6.
+
+  & Y.~Zhu, \textbf{B.~Li}, T.-Y. Ho, Q.~Wang, H.~Yao, R.~Wille, and U.~Schlichtmann,
+  ``Multi-channel and fault-tolerant control multiplexing for flow-based
+  microfluidic biochips,'' in \emph{Proc. {IEEE/ACM} Int. Conf. Comput.-Aided
+  Des. (ICCAD)}, 2018, pp. 123:1--123:8.
+
+  & A.~Bernardini, C.~Liu, \textbf{B.~Li}, and U.~Schlichtmann, ``Fault localization in
+  programmable microfluidic devices,'' in \emph{Proc. {IEEE} Design, Autom.,
+  and Test Europe Conf. (DATE)}, 2019.
+  
+
+%& M.~Ibrahim, K.~Chakrabarty, and U.~Schlichtmann, ``CoSyn: Efficient single-cell
+%  analysis using a hybrid microfluidic platform,'' in \emph{Proceedings of Design,
+%&  Automation, and Test in Europe (DATE)}, 2017, \textbf{Best Paper Award}.
+
+%\vskip 15pt
+%\hskip -21.3pt \textit{\underline{EDA-related publications}}
+
+%& J.~Zou, D.~Mueller, H.~Graeb, and U.~Schlichtmann, ``A {CPPLL} hierarchical
+%  optimization methodology considering jitter, power and locking time,'' in
+%  \emph{Proc. Design Autom. Conf. (DAC)}, 2006, pp. 19--24.
+
+%& P.~Spindler, U.~Schlichtmann, and F.~M. Johannes, ``Kraftwerk2 -- a fast
+%  force-directed quadratic placement approach using an accurate net model,''
+%  \emph{{IEEE} Trans. Comput.-Aided Design Integr. Circuits Syst. (TCAD)},
+%  vol.~27, no.~8, pp. 1398--1411, 2008.
+
+%& M.~Strasser, M.~Eick, H.~Graeb, U.~Schlichtmann, and F.~M. Johannes,
+%  ``Deterministic analog circuit placement using hierarchically bounded
+%  enumeration and enhanced shape functions,'' in \emph{Proc. Int. Conf.
+%  Comput.-Aided Des. (ICCAD)}, 2008, pp. 306--313.
+
+%& D.~Mueller-Gritschneder and H.~Graeb, ``Computation of yield-optimized pareto
+%  fronts for analog integrated circuit specifications,'' in \emph{Proc. Design,
+%  Autom., and Test Europe Conf. (DATE)}, 2010, pp. 1088--1093.
+
+%& B.~Li, N.~Chen, Y.~Xu, and U.~Schlichtmann, ``On timing model extraction and
+%  hierarchical statistical timing analysis,'' \emph{{IEEE} Trans. Comput.-Aided
+%  Design Integr. Circuits Syst. (TCAD)}, vol.~32, no.~3, pp. 367--380, 2013.
+
+%& M.~Jassi, D.~Mueller-Gritschneder, and U.~Schlichtmann, ``GRIP:
+%  Grammar-based {IP} integration and packaging for acceleration-rich SoC
+%  designs,'' in \emph{Proceedings of Design Automation Conference (DAC)}, 2015, pp. 46:1--46:6.
+
+%& M.~Barke and U.~Schlichtmann, ``A cross-layer approach to measure the
+%  robustness of integrated circuits,'' \emph{ACM 
+%Journal of Emerging Technologies in Computing Systems},
+%  vol.~12, no.~3, pp. 24:1--24:22, 2015.
+
+%& A.~Lange, C.~Sohrmann, R.~Jancke, J.~Haase, B.~Cheng, A.~Asenov, and
+%  U.~Schlichtmann, ``Multivariate modeling of variability supporting
+%  non-Gaussian and correlated parameters,'' 
+%\emph{{IEEE} Transactions on Computer-Aided Design of Integrated Circuits and Systems 
+%(TCAD)}, vol.~35, no.~2, pp. 197--210, 2016.
+
+%& G.~L. Zhang, B.~Li, and U.~Schlichtmann, ``EffiTest: Efficient delay test and
+%  statistical prediction for configuring post-silicon tunable buffers,'' in
+%  \emph{Proceedings of Design Automation Conference (DAC)}, 2016, pp. 60:1--60:6, \textbf{Best
+%Paper Award Nomination}.
+%
+%& A.~Bernardini, W.~Ecker, and U.~Schlichtmann, ``Where formal verification can
+%  help in functional safety analysis,'' in 
+%\emph{Proceedings of International Conference on Computer-Aided Design
+%(ICCAD)}, 2016, pp. 85:1--85:8.
+
+\end{easylist}
